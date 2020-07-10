@@ -1,0 +1,52 @@
+{
+  "resources": [
+    {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},"order":7,},
+    {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":2,},
+    {"id":{"name":"sPlayer_mask","path":"sprites/sPlayer_mask/sPlayer_mask.yy",},"order":3,},
+    {"id":{"name":"scrPlayer_states","path":"scripts/scrPlayer_states/scrPlayer_states.yy",},"order":1,},
+    {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},"order":0,},
+    {"id":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"order":3,},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
+    {"id":{"name":"oInit","path":"objects/oInit/oInit.yy",},"order":1,},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
+    {"id":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"order":4,},
+    {"id":{"name":"rTest","path":"rooms/rTest/rTest.yy",},"order":1,},
+  ],
+  "Options": [
+    {"name":"HTML5","path":"options/html5/options_html5.yy",},
+    {"name":"Linux","path":"options/linux/options_linux.yy",},
+    {"name":"macOS","path":"options/mac/options_mac.yy",},
+    {"name":"Main","path":"options/main/options_main.yy",},
+    {"name":"Windows","path":"options/windows/options_windows.yy",},
+  ],
+  "isDnDProject": false,
+  "isEcma": false,
+  "tutorialPath": "",
+  "configs": {
+    "name": "Default",
+    "children": [],
+  },
+  "RoomOrder": [
+    {"name":"rInit","path":"rooms/rInit/rInit.yy",},
+    {"name":"rTest","path":"rooms/rTest/rTest.yy",},
+  ],
+  "Folders": [
+    {"folderPath":"folders/Player.yy","order":2,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Init.yy","order":5,"resourceVersion":"1.0","name":"Init","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Camera.yy","order":6,"resourceVersion":"1.0","name":"Camera","tags":[],"resourceType":"GMFolder",},
+  ],
+  "AudioGroups": [
+    {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
+  ],
+  "TextureGroups": [
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
+  ],
+  "IncludedFiles": [],
+  "MetaData": {
+    "IDEVersion": "23.1.1.169",
+  },
+  "resourceVersion": "1.3",
+  "name": "ActionCleanupCrew",
+  "tags": [],
+  "resourceType": "GMProject",
+}
