@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sTitle_background",
+    "path": "sprites/sTitle_background/sTitle_background.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -17,18 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oInit","path":"objects/oInit/oInit.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"parent":{"name":"oInit","path":"objects/oInit/oInit.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Init",
-    "path": "folders/Init.yy",
+    "name": "Title Page",
+    "path": "folders/Title Page.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oInit",
+  "name": "oTitle_background",
   "tags": [],
   "resourceType": "GMObject",
 }
