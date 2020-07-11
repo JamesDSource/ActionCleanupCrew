@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oSolid",
-    "path": "objects/oSolid/oSolid.yy",
+    "name": "oDepth_object",
+    "path": "objects/oDepth_object/oDepth_object.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -21,17 +21,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oCover","path":"objects/oCover/oCover.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oCover","path":"objects/oCover/oCover.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Cover",
-    "path": "folders/Cover.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCover",
+  "name": "oProjectile",
   "tags": [],
   "resourceType": "GMObject",
 }

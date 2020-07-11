@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sBoxes",
+    "path": "sprites/sBoxes/sBoxes.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oDepth_object",
-    "path": "objects/oDepth_object/oDepth_object.yy",
+    "name": "oCover",
+    "path": "objects/oCover/oCover.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ActionCleanupCrew",
-    "path": "ActionCleanupCrew.yyp",
+    "name": "Boxes",
+    "path": "folders/Cover/Boxes.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oSolid",
+  "name": "oBoxes",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oSolid",
-    "path": "objects/oSolid/oSolid.yy",
+    "name": "oDepth_object",
+    "path": "objects/oDepth_object/oDepth_object.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,7 +24,14 @@
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [],
+  "properties": [
+    {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"priority","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":6,"value":"TEAM.NONE","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+        "TEAM.WHITE",
+        "TEAM.BLACK",
+        "TEAM.NONE",
+      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"team","tags":[],"resourceType":"GMObjectProperty",},
+  ],
   "overriddenProperties": [],
   "parent": {
     "name": "ActionCleanupCrew",

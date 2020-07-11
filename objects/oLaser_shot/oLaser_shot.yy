@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oSolid",
-    "path": "objects/oSolid/oSolid.yy",
+    "name": "oProjectile",
+    "path": "objects/oProjectile/oProjectile.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -21,17 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oCover","path":"objects/oCover/oCover.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oCover","path":"objects/oCover/oCover.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oLaser_shot","path":"objects/oLaser_shot/oLaser_shot.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Cover",
-    "path": "folders/Cover.yy",
+    "name": "Laser Shot",
+    "path": "folders/Projectile/Laser Shot.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCover",
+  "name": "oLaser_shot",
   "tags": [],
   "resourceType": "GMObject",
 }

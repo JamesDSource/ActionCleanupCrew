@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sRifle_shot",
+    "path": "sprites/sRifle_shot/sRifle_shot.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oDepth_object",
-    "path": "objects/oDepth_object/oDepth_object.yy",
+    "name": "oProjectile",
+    "path": "objects/oProjectile/oProjectile.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ActionCleanupCrew",
-    "path": "ActionCleanupCrew.yyp",
+    "name": "Rifle Shot",
+    "path": "folders/Projectile/Rifle Shot.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oSolid",
+  "name": "oRifle_shot",
   "tags": [],
   "resourceType": "GMObject",
 }

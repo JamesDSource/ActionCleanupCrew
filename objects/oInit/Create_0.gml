@@ -1,9 +1,11 @@
-#macro VIEWWIDTH 1920/6
-#macro VIEWHEIGHT 1080/6
+#macro VIEWWIDTH 320
+#macro VIEWHEIGHT 180
 #macro SCREENWIDTH 1920
 #macro SCREENHEIGHT 1080
 surface_resize(application_surface, SCREENWIDTH, SCREENHEIGHT);
 window_set_size(SCREENWIDTH, SCREENHEIGHT);
+
+instance_create_depth(x, y, 0, oDepth);
 
 randomize();
 
