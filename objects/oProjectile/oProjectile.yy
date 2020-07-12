@@ -23,8 +23,15 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"parent":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [],
+  "properties": [
+    {"varType":6,"value":"DEATHTYPE.PIERCING","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+        "DEATHTYPE.PIERCING",
+        "DEATHTYPE.BURN",
+        "DEATHTYPE.EXPLOSION",
+      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"death_type","tags":[],"resourceType":"GMObjectProperty",},
+  ],
   "overriddenProperties": [],
   "parent": {
     "name": "Projectile",

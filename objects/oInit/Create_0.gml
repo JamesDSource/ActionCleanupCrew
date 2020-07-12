@@ -11,5 +11,5 @@ instance_create_depth(x, y, 0, oTransitions);
 
 randomize();
 
-
+cursor_sprite = sCursor;
 alarm[0] = 1;

@@ -1,8 +1,14 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sSolid",
+    "path": "sprites/sSolid/sSolid.yy",
+  },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sSolid",
+    "path": "sprites/sSolid/sSolid.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oDepth_object",
@@ -20,12 +26,14 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ActionCleanupCrew",
-    "path": "ActionCleanupCrew.yyp",
+    "name": "Solid",
+    "path": "folders/Solid.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSolid",

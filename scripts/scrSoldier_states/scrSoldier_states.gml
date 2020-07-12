@@ -4,8 +4,6 @@ function soldier_state_decidie() {
 	if(decide_timer <= 0) {
 		if(irandom_range(1, 100) < 50) {
 			new_cover();
-			move_point.x = cover_point.x;
-			move_point.y = cover_point.y;
 		}
 		else state = states.shoot; 
 		
@@ -13,17 +11,15 @@ function soldier_state_decidie() {
 	}
 	else if(abs(move_point.x - x) < 1 && abs(move_point.y - y) < 1) decide_timer--;
 	
-	move_point.x = cover_point.x;
-	move_point.y = cover_point.y;
+	new_move_point(cover_point.x, cover_point.y);
 	gun_angle = 0;
 }
 
 
 function soldier_state_shoot() {
-	move_point.x = cover_point.x + cover_side * 16;
-	move_point.y = cover_point.y;
+	new_move_point(cover_point.x + cover_side * 16, cover_point.y);
 	
-	if(gun_target == noone) {
+	if(gun_target == noone || !instance_exists(gun_target)) {
 		var gun_targets = ds_list_create();
 		collision_circle_list(x, y, gun_using.range, oEntity, false, true, gun_targets, true);
 		var highest_priority = -1;
@@ -46,6 +42,7 @@ function soldier_state_shoot() {
 				spd = other.gun_using.spd;
 			}
 			gun_shoot_recharge = gun_using.recharge_time;	
+			gun_kick = gun_using.kickback;
 		}
 		else gun_shoot_recharge--;
 	}
@@ -57,4 +54,11 @@ function soldier_state_shoot() {
 		gun_target = noone;
 	}
 	else shoot_timer--;
+}
+
+function soldier_state_exit() {
+	new_move_point(exit_point.x, exit_point.y);
+	gun_angle = 0;
+	
+	if(point_distance(x, y, exit_point.x, exit_point.y) < 1) instance_destroy(); 
 }

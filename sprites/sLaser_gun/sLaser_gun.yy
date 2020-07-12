@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 16,
-  "height": 8,
+  "width": 24,
+  "height": 12,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2f76bc91-3ee6-46c4-b302-238ede569d2d","path":"sprites/sLaser_gun/sLaser_gun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2f76bc91-3ee6-46c4-b302-238ede569d2d","path":"sprites/sLaser_gun/sLaser_gun.yy",},"LayerId":{"name":"3e938c22-2333-47f4-8a06-070960c6fbe1","path":"sprites/sLaser_gun/sLaser_gun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sLaser_gun","path":"sprites/sLaser_gun/sLaser_gun.yy",},"resourceVersion":"1.0","name":"2f76bc91-3ee6-46c4-b302-238ede569d2d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6b38782e-4729-4b19-8c5e-2f2b043e6def","path":"sprites/sLaser_gun/sLaser_gun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6b38782e-4729-4b19-8c5e-2f2b043e6def","path":"sprites/sLaser_gun/sLaser_gun.yy",},"LayerId":{"name":"efb706fe-4438-413b-bc7a-098cd5ff8561","path":"sprites/sLaser_gun/sLaser_gun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sLaser_gun","path":"sprites/sLaser_gun/sLaser_gun.yy",},"resourceVersion":"1.0","name":"6b38782e-4729-4b19-8c5e-2f2b043e6def","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sLaser_gun","path":"sprites/sLaser_gun/sLaser_gun.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"145e5857-ea3f-4046-b579-f4a6c9011a2e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2f76bc91-3ee6-46c4-b302-238ede569d2d","path":"sprites/sLaser_gun/sLaser_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f30eb593-719f-4ea9-9c5f-1063e094ff4e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6b38782e-4729-4b19-8c5e-2f2b043e6def","path":"sprites/sLaser_gun/sLaser_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,7 +54,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 6,
+    "xorigin": 5,
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3e938c22-2333-47f4-8a06-070960c6fbe1","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"efb706fe-4438-413b-bc7a-098cd5ff8561","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Guns",

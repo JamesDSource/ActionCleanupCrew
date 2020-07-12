@@ -11,3 +11,4 @@ if(place_meeting(x, y + vsp, oSolid)) {
 x += hsp;
 y += vsp;
 
+push_out();
