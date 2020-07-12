@@ -23,6 +23,7 @@
             {"propertyId":{"name":"ideal_soldiers","path":"objects/oBattle_manager/oBattle_manager.yy",},"objectId":{"name":"oBattle_manager","path":"objects/oBattle_manager/oBattle_manager.yy",},"value":"12","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"mins","path":"objects/oBattle_manager/oBattle_manager.yy",},"objectId":{"name":"oBattle_manager","path":"objects/oBattle_manager/oBattle_manager.yy",},"value":"4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oBattle_manager","path":"objects/oBattle_manager/oBattle_manager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_12EECE35","path":"rooms/rLevel_parent/rLevel_parent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":96.0,"resourceVersion":"1.0","name":"inst_12EECE35","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oPause","path":"objects/oPause/oPause.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":128.0,"resourceVersion":"1.0","name":"inst_7C8ADF0E","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Controllers","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[
@@ -239,6 +240,7 @@
     {"name":"inst_779D1945","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_BB9C3CC","path":"rooms/rLevel2/rLevel2.yy",},
     {"name":"inst_22796275","path":"rooms/rLevel2/rLevel2.yy",},
+    {"name":"inst_7C8ADF0E","path":"rooms/rLevel2/rLevel2.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,

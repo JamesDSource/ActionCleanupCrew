@@ -38,6 +38,7 @@ kill_function = function kill_player(death_type) {
 	}
 	else if(iframes == 0){
 		instance_create_layer(0, 0, "Controllers", oYou_died);
+		instance_destroy(oPause);
 		kill(death_type);
 	}
 }

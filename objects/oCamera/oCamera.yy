@@ -28,8 +28,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Camera",
-    "path": "folders/Camera.yy",
+    "name": "Views",
+    "path": "folders/Views.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCamera",

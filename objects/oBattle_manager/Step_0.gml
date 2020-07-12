@@ -46,6 +46,7 @@ if(started) {
 		global.game_score.total = round((global.game_score.blood + global.game_score.ash + global.game_score.bits + global.game_score.bodies)/4.0);
 		global.game_score.finished = true;
 		
+		instance_destroy(oPause);
 		transition_to(rResults);
 	}
 	

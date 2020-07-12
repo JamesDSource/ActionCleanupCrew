@@ -11,6 +11,7 @@ function player_state_free() {
 	
 	// sucking with vaccum
 	if(tool_using == TOOL.VACUUM && mouse_check_button(mb_left)) {
+		if(mouse_check_button_pressed(mb_left)) audio_play_sound(sdVacuum, SOUNDPRIORITY.IMPORTANT, true);
 		var list_x = x + lengthdir_x(10, tool_angle);
 		var list_y = y - tool_height + lengthdir_y(10, tool_angle);
 		var bits = ds_list_create();
@@ -32,6 +33,7 @@ function player_state_free() {
 		}
 		ds_list_destroy(bits);
 	}
+	else if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	
 	// picking up bodies
 	var bod = instance_place(x, y, oBody)
