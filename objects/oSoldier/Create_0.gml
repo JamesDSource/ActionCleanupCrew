@@ -34,7 +34,7 @@ guns = [
 	new gun(
 		"Rifle",		// name
 		oRifle_shot,	// bullet
-		3,				// speed
+		1.5,			// speed
 		room_speed,		// recharge time
 		sRifle,			// sprite
 		200,			// range
@@ -46,7 +46,7 @@ guns = [
 	new gun(
 		"Laser Gun",
 		oLaser_shot,
-		3,
+		1.5,
 		room_speed * 1.5,
 		sLaser_gun,
 		200,
@@ -58,7 +58,7 @@ guns = [
 	new gun(
 		"Sniper",
 		oSniper_shot,
-		4,
+		3,
 		room_speed * 3,
 		sSniper_rifle,
 		400,
@@ -70,7 +70,7 @@ guns = [
 	new gun(
 		"Submachine Gun",
 		oSubmachine_gun_shot,
-		2,
+		1,
 		room_speed /3,
 		sSubmachine_gun,
 		150,
@@ -82,7 +82,7 @@ guns = [
 	new gun(
 		"Laser Canon",
 		oLaser_canon_shot,
-		2,
+		1,
 		room_speed * 5,
 		sLaser_canon,
 		500,
