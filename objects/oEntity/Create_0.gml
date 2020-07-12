@@ -23,6 +23,7 @@ kill_function = function kill(death_type) {
 			instance_create_layer(x, y, "Instances", oAsh_pile);
 			break;
 	}
+	audio_play_sound_on(audio_emitter, screams[irandom_range(0, array_length(screams)-1)], false, SOUNDPRIORITY.IMPORTANT);
 	instance_destroy();
 }
 
@@ -82,3 +83,5 @@ function push_out() {
 // audio
 audio_emitter = audio_emitter_create();
 audio_emitter_falloff(audio_emitter, 16, 1000, 1);
+
+screams = [sdScream1, sdScream2, sdScream3];
