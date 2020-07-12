@@ -89,6 +89,7 @@ function player_state_holding() {
 }
 
 function player_state_read() {
+	if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	tool_using = TOOL.NONE;
 	image_speed = 0;
 	recharge_mask();
