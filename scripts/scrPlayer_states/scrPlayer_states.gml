@@ -19,8 +19,8 @@ function player_state_free() {
 		for(var i = 0; i < ds_list_size(bits); i++) {
 			var bit = bits[| i];
 			with(bit) {
-				x = approach(x, list_x, 0.5);
-				y = approach(y, list_y, 0.5);
+				x = approach(x, list_x, 1);
+				y = approach(y, list_y, 1);
 				if(point_distance(x, y, list_x, list_y) < 1) instance_destroy();
 			}
 		}

@@ -15,11 +15,11 @@ tool_offset = {
 
 event_inherited();
 
-spd = 1.5;
+spd = 1.7;
 
 
 mask_on = true;
-mask_time = 5 * room_speed;
+mask_time = 4 * room_speed;
 mask_timer = mask_time;
 
 body_held = noone;
