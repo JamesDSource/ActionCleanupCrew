@@ -1,5 +1,5 @@
-if(tool_using == TOOL.VACCUM) {
-	draw_sprite_ext(sVaccum_pack, 0, x, y - 10, image_xscale, image_yscale, image_angle, image_blend, image_alpha);	
+if(tool_using == TOOL.VACUUM) {
+	draw_sprite_ext(sVacuum_pack, 0, x, y - 10, image_xscale, image_yscale, image_angle, image_blend, image_alpha);	
 }
 
 draw_self();
@@ -25,11 +25,11 @@ switch(tool_using) {
 		draw_sprite_ext(sMop, 0, x + tool_offset.x, y - tool_height + tool_offset.y, image_xscale, image_yscale, tool_angle, image_blend, image_alpha);	
 		break;
 	
-	case TOOL.VACCUM:
+	case TOOL.VACUUM:
 		if(mouse_check_button(mb_left)) {
 			tool_offset.x = irandom_range(-1, 1);	
 			tool_offset.y = irandom_range(-1, 1);	
 		}
-		draw_sprite_ext(sVaccum_toob, 0, x + tool_offset.x, y - tool_height + tool_offset.y, image_xscale, image_yscale, tool_angle, image_blend, image_alpha);	
+		draw_sprite_ext(sVacuum_toob, 0, x + tool_offset.x, y - tool_height + tool_offset.y, image_xscale, image_yscale, tool_angle, image_blend, image_alpha);	
 		break;
 }

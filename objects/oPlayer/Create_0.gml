@@ -1,9 +1,9 @@
 enum TOOL {
 	NONE,
 	MOP,
-	VACCUM
+	VACUUM
 }
-tools = [TOOL.MOP, TOOL.VACCUM];
+tools = [TOOL.MOP, TOOL.VACUUM];
 tool_index = 0;
 tool_using = tools[tool_index];
 tool_height = 6;

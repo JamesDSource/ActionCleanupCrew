@@ -10,7 +10,7 @@ function player_state_free() {
 	tool_using = tools[tool_index];
 	
 	// sucking with vaccum
-	if(tool_using == TOOL.VACCUM && mouse_check_button(mb_left)) {
+	if(tool_using == TOOL.VACUUM && mouse_check_button(mb_left)) {
 		var list_x = x + lengthdir_x(10, tool_angle);
 		var list_y = y - tool_height + lengthdir_y(10, tool_angle);
 		var bits = ds_list_create();
