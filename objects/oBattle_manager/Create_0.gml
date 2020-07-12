@@ -9,6 +9,7 @@ global.game_score = {
 	blood: 100,
 	ash: 100,
 	bits: 100,
+	bodies: 100,
 	total: 0,
 	finished: false	
 };

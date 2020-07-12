@@ -12,6 +12,11 @@ kill_function = function kill(death_type) {
 		case DEATHTYPE.PIERCING:
 			var chunks = irandom_range(40, 60);
 			repeat(chunks) instance_create_layer(x, y, "Instances", oBlood_jiblet);
+			if(death_sprite != noone) {
+				with(instance_create_layer(x, y, "Instances", oBody)) {
+					sprite_index = other.death_sprite;
+				}
+			}
 			break;
 		
 		case DEATHTYPE.BURN:

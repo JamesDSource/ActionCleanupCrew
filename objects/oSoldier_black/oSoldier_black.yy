@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oSoldier_black","path":"objects/oSoldier_black/oSoldier_black.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"","path":"",},"objectId":{"name":"oSoldier","path":"objects/oSoldier/oSoldier.yy",},"value":"TEAM.BLACK","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

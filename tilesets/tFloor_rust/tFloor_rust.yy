@@ -1,5 +1,4 @@
 {
-  "name": "tFloor_rust",
   "spriteId": {
     "name": "sFloor_tiles_rust",
     "path": "sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",
@@ -40,6 +39,7 @@
     "path": "folders/FloorTiles/Rust Warehouse.yy",
   },
   "resourceVersion": "1.0",
+  "name": "tFloor_rust",
   "tags": [],
   "resourceType": "GMTileSet",
 }

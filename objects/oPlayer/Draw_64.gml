@@ -23,3 +23,21 @@ if(!mask_on) {
 	draw_set_alpha(1);
 	draw_rectangle(x1, y1, x1 + bar_w*progress, y1 + bar_h, false);
 }
+
+// dialogue box
+if(state == states.read) {
+	draw_set_font(fHUD);
+	draw_set_halign(fa_left);	
+	draw_set_valign(fa_top);	
+	draw_set_color(c_white);
+	
+	draw_rectangle_color(0, display_get_gui_height() - dialogue_box_height, display_get_gui_width(), display_get_gui_height(), c_black, c_black, c_black, c_black, false);
+	draw_line(0, display_get_gui_height() - dialogue_box_height, display_get_gui_width(), display_get_gui_height() - dialogue_box_height);
+	
+	var str_whole = dialogues[dialogue_index];
+	var str_cut = string_copy(str_whole, 1, line_index);
+	
+	var str_draw_x = display_get_gui_width()/2 - string_width(str_whole)/2;
+	var str_draw_y = display_get_gui_height() - dialogue_box_height/2 - string_height(str_whole)/2;
+	draw_text(str_draw_x, str_draw_y, str_cut);
+}

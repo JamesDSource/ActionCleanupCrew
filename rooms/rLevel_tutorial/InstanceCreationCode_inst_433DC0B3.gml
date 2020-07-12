@@ -1,0 +1,1 @@
+kill(DEATHTYPE.BURN);

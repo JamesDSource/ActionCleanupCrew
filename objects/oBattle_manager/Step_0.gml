@@ -37,9 +37,11 @@ if(started) {
 		red_count = clamp(red_count, 0, min_score);
 		global.game_score.blood *= 1 - red_count/min_score;
 		// ash piles
-		global.game_score.ash -= clamp(instance_number(oAsh_pile)*20, 0, 100);
+		global.game_score.ash -= clamp(instance_number(oAsh_pile)*10, 0, 100);
 		// bits
 		global.game_score.bits -= clamp(instance_number(oBit)*4, 0, 100);
+		// bodies
+		global.game_score.bodies -= clamp(instance_number(oBody)*20, 0, 100);
 		
 		global.game_score.total = round((global.game_score.blood + global.game_score.ash + global.game_score.bits)/3.0);
 		global.game_score.finished = true;

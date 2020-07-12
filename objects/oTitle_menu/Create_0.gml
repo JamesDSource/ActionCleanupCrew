@@ -8,6 +8,7 @@ pages = {
 	],
 	
 	level_select: [
+		["Tutorial", function menu_level_test() {transition_to(rLevel_tutorial);}],
 		["Level 1", function menu_level_test() {transition_to(rLevel1);}],
 		["Back", function menu_ls_back() {page = pages.main;}]
 	]

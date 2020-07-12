@@ -1,28 +1,7 @@
 function player_state_free() {
-	// movement
-	var hDir = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-	var vDir = keyboard_check(ord("S")) - keyboard_check(ord("W"));
-	
-	if(hDir != 0 || vDir != 0) { 
-		var ang = point_direction(0, 0, hDir, vDir);
-		hsp = lengthdir_x(spd, ang);
-		vsp = lengthdir_y(spd, ang);
-		
-		image_speed = 1;
-	}
-	else {
-		hsp = 0;
-		vsp = 0;
-		image_speed = 0;
-		image_index = 0;
-	}
-	
-	// mask recharge
-	if(!mask_on && mask_timer > 0) mask_timer--;
-	else if(!mask_on) {
-		mask_on = true;
-		mask_timer = mask_time;
-	}
+	move();
+	recharge_mask();
+	sprite_index = sPlayer;
 	
 	// swapping tools
 	if(mouse_wheel_up()) tool_index--;
@@ -54,5 +33,81 @@ function player_state_free() {
 		ds_list_destroy(bits);
 	}
 	
+	// picking up bodies
+	var bod = instance_place(x, y, oBody)
+	if((bod != noone && keyboard_check_pressed(vk_space)) || instance_exists(body_held)) {
+		if(instance_exists(bod)) body_held = bod;
+		state = states.holding;
+	}
+	
 	event_inherited();
+}
+
+function player_state_holding() {
+	sprite_index = sPlayer_carry;
+	tool_using = TOOL.NONE;
+	move();
+	recharge_mask();
+	event_inherited();
+	
+	if(instance_exists(body_held)) {
+		body_held.x = x;
+		body_held.y = y;
+		body_held.z = sprite_yoffset;
+		
+		if(keyboard_check_pressed(vk_space)) {
+			var incen_inst = collision_circle(x, y, 10, oIncinerator, false, true);
+			if(incen_inst == noone || incen_inst.burn_timer > 0) {
+				body_held.z = 0;
+				body_held = noone;
+				state = states.free;
+			}
+			else {
+				instance_destroy(body_held);
+				body_held = noone;
+				incen_inst.burn_timer = incen_inst.burn_time;
+			}
+		}
+		
+		if(irandom_range(1, 100) < 5) {
+			with(instance_create_layer(x, y, "Instances", oBlood_jiblet)) {
+				z = 0;
+				hsp = 0;
+				vsp = 0;
+				esp = 0;
+			}
+		}
+	}
+	else state = states.free;
+}
+
+function player_state_read() {
+	tool_using = TOOL.NONE;
+	image_speed = 0;
+	recharge_mask();
+	
+	if(dialogue_ready) {
+		if(keyboard_check_pressed(vk_space)) {
+			dialogue_index++;
+			if(dialogue_index >= array_length(dialogues)) state = states.free;
+			dialogue_ready = false;
+			line_index = 1;
+			
+			audio_play_sound(sdMenu_select, SOUNDPRIORITY.MENUS, false);
+		}
+	}
+	else {
+		if(keyboard_check_pressed(vk_space)) {
+			audio_play_sound(sdMenu_select, SOUNDPRIORITY.MENUS, false);
+			line_index = string_length(dialogues[dialogue_index]);
+			dialogue_ready = true;
+		}
+		if(dialogue_type_timer > 0) dialogue_type_timer--;	
+		else {
+			line_index++;
+			if(string_char_at(dialogues[dialogue_index], line_index) != " ")audio_play_sound(sdText_scroll, SOUNDPRIORITY.MENUS, false);
+			if(line_index > string_length(dialogues[dialogue_index])) dialogue_ready = true;
+			dialogue_type_timer = dialogue_type_time;
+		}
+	}
 }
