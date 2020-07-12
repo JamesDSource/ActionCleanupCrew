@@ -4,9 +4,14 @@ function player_state_free() {
 	sprite_index = sPlayer;
 	
 	// swapping tools
-	if(mouse_wheel_up()) tool_index--;
-	else if(mouse_wheel_down()) tool_index++;
-	tool_index = clamp(tool_index, 0, array_length(tools)-1);
+	if(mouse_wheel_up()) {
+		tool_index--;
+		if(tool_index < 0) tool_index = array_length(tools) - 1;	
+	}
+	else if(mouse_wheel_down()) {
+		tool_index++;
+		if(tool_index == array_length(tools)) tool_index = 0;
+	}
 	tool_using = tools[tool_index];
 	
 	// sucking with vaccum

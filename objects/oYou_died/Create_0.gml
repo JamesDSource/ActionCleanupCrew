@@ -5,3 +5,5 @@ scale = 0;
 start = false;
 transitioned = false;
 alarm[0] = room_speed;
+
+target = rTitle_page;
