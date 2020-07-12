@@ -41,7 +41,7 @@ if(started) {
 		// bits
 		global.game_score.bits -= clamp(instance_number(oBit)*4, 0, 100);
 		
-		global.game_score.total = (global.game_score.blood + global.game_score.ash + global.game_score.bits)/3.0;
+		global.game_score.total = round((global.game_score.blood + global.game_score.ash + global.game_score.bits)/3.0);
 		global.game_score.finished = true;
 		
 		transition_to(rResults);
