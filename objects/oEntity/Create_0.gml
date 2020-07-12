@@ -73,3 +73,7 @@ function push_out() {
 		}
 	}
 }
+
+// audio
+audio_emitter = audio_emitter_create();
+audio_emitter_falloff(audio_emitter, 16, 1000, 1);

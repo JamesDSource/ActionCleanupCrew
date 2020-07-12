@@ -9,6 +9,8 @@ display_set_gui_size(VIEWWIDTH, VIEWHEIGHT);
 instance_create_depth(x, y, 0, oDepth);
 instance_create_depth(x, y, 0, oTransitions);
 
+audio_falloff_set_model(audio_falloff_exponent_distance);
+
 randomize();
 
 cursor_sprite = sCursor;

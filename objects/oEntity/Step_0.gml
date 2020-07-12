@@ -12,3 +12,5 @@ x += hsp;
 y += vsp;
 
 push_out();
+
+audio_emitter_position(audio_emitter, x, y, 0);

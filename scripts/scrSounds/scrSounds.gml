@@ -1,0 +1,5 @@
+enum SOUNDPRIORITY {
+	MENUS,
+	GUNS,
+	IMPORTANT
+}

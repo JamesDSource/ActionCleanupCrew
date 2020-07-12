@@ -34,3 +34,5 @@ kill_function = function kill_player(death_type) {
 		kill(death_type);
 	}
 }
+
+audio_listener_orientation(0, 1, 0, 0, 0, 1);

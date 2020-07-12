@@ -41,6 +41,7 @@ function soldier_state_shoot() {
 				ang = other.gun_angle_real;
 				spd = other.gun_using.spd;
 			}
+			audio_play_sound_on(audio_emitter, gun_using.sound, false, SOUNDPRIORITY.GUNS);
 			gun_shoot_recharge = gun_using.recharge_time;	
 			gun_kick = gun_using.kickback;
 		}
