@@ -15,3 +15,5 @@ global.game_score = {
 };
 
 winner_message = "";
+
+retreat_time = 15;

@@ -32,8 +32,11 @@ states = {
 state = states.free;
 
 kill_function = function kill_player(death_type) {
-	if(mask_on) mask_on = false;
-	else {
+	if(mask_on) {
+		mask_on = false;
+		iframes = 30;	
+	}
+	else if(iframes == 0){
 		instance_create_layer(0, 0, "Controllers", oYou_died);
 		kill(death_type);
 	}
@@ -81,3 +84,5 @@ function play_lines(lines) {
 }
 dialogue_box_height = 40;
 dialogue_type_time = 5;
+
+iframes = 0;

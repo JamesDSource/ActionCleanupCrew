@@ -3,7 +3,7 @@ if(started) {
 	black_soldiers = instance_number(oSoldier_black);
 
 	if(random_tick_timer > 0) random_tick_timer--;
-	else if(frames_left > 30*room_speed) {
+	else if(frames_left > retreat_time*room_speed) {
 		if(white_soldiers < ideal_soldiers) {
 			ds_list_shuffle(white_spawns);
 			var spawn = white_spawns[| 0];
@@ -49,7 +49,7 @@ if(started) {
 		transition_to(rResults);
 	}
 	
-	if(frames_left <= 30*room_speed) {
+	if(frames_left <= retreat_time*room_speed) {
 		var winner;
 		var exit_points;
 		if(global.white_kills < global.black_kills) {
