@@ -79,6 +79,7 @@
     {"id":{"name":"oResults","path":"objects/oResults/oResults.yy",},"order":1,},
     {"id":{"name":"sAsh_mid","path":"sprites/sAsh_mid/sAsh_mid.yy",},"order":1,},
     {"id":{"name":"sdLaser_canon","path":"sounds/sdLaser_canon/sdLaser_canon.yy",},"order":6,},
+    {"id":{"name":"sdDing","path":"sounds/sdDing/sdDing.yy",},"order":4,},
     {"id":{"name":"sVacuum_toob","path":"sprites/sVacuum_toob/sVacuum_toob.yy",},"order":2,},
     {"id":{"name":"rTitle_page","path":"rooms/rTitle_page/rTitle_page.yy",},"order":2,},
     {"id":{"name":"oIncinerator","path":"objects/oIncinerator/oIncinerator.yy",},"order":1,},

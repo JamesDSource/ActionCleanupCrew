@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sdIncinerator.wav",
-  "duration": 6.039286,
+  "soundFile": "sdDing.wav",
+  "duration": 8.838146,
   "parent": {
     "name": "Incinerator",
     "path": "folders/Incinerator.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sdIncinerator",
+  "name": "sdDing",
   "tags": [],
   "resourceType": "GMSound",
 }
