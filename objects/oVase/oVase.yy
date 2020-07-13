@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oVase","path":"objects/oVase/oVase.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"bits_sprite","path":"objects/oBreakable/oBreakable.yy",},"objectId":{"name":"oBreakable","path":"objects/oBreakable/oBreakable.yy",},"value":"sVase_pieces","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

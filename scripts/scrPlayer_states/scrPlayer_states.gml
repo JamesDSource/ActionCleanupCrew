@@ -63,7 +63,7 @@ function player_state_holding() {
 		body_held.z = sprite_yoffset;
 		
 		if(keyboard_check_pressed(vk_space)) {
-			var incen_inst = collision_circle(x, y, 10, oIncinerator, false, true);
+			var incen_inst = collision_circle(x, y, 20, oIncinerator, false, true);
 			if(incen_inst == noone || incen_inst.burn_timer > 0) {
 				body_held.z = 0;
 				body_held = noone;

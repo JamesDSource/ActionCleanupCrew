@@ -1,6 +1,12 @@
 var hsp = lengthdir_x(spd, ang);
 var vsp = lengthdir_y(spd, ang);
 
+var breakable_inst = instance_place(x + hsp, y + vsp, oBreakable);
+if(breakable_inst != noone) {
+	instance_destroy(breakable_inst);
+	instance_destroy();
+}
+
 if(place_meeting(x + hsp, y + vsp, oSolid)) instance_destroy();
 
 var inst = instance_place(x + hsp, y + vsp, oEntity)
