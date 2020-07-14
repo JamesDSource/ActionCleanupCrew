@@ -77,7 +77,7 @@ guns = [
 	new gun(
 		"Submachine Gun",
 		oSubmachine_gun_shot,
-		room_speed * 2,
+		room_speed/2,
 		6,
 		5,
 		sSubmachine_gun,
