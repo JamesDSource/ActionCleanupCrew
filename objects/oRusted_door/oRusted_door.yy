@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oSolid",
-    "path": "objects/oSolid/oSolid.yy",
+    "name": "oPlayer_solid",
+    "path": "objects/oPlayer_solid/oPlayer_solid.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Solid/Walls.yy",
+    "name": "Doors",
+    "path": "folders/Solid/Player Solid/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "oRusted_door",

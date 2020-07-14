@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b98f02c9-5623-4f08-8731-f7e53d020360","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Solid/Walls.yy",
+    "name": "Doors",
+    "path": "folders/Solid/Player Solid/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDoor",

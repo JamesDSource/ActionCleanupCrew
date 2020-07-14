@@ -39,6 +39,6 @@ if(place_meeting(x, y + vsp, oSolid)) {
 x += hsp;
 y += vsp;
 
-push_out();
+push_out(oSolid);
 
 audio_emitter_position(audio_emitter, x, y, 0);

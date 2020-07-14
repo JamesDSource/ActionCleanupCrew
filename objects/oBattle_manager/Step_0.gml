@@ -2,6 +2,7 @@ if(started) {
 	white_soldiers = instance_number(oSoldier_white);
 	black_soldiers = instance_number(oSoldier_black);
 
+	// random tick spawns soldiers if there is too little
 	if(random_tick_timer > 0) random_tick_timer--;
 	else if(frames_left > retreat_time*room_speed) {
 		if(white_soldiers < ideal_soldiers) {
@@ -19,37 +20,40 @@ if(started) {
 	}
 	
 	if(frames_left > 0) frames_left--;
-	else if(!global.game_score.finished){
-		// blood
-		var buffer = buffer_create(4 * room_width * room_height, buffer_fixed, 1);
-		buffer_get_surface(buffer, global.liquid_surf, buffer_surface_copy, 0, 0);
+	else if(!global.game_score.finished) {
+		#region scoring at the end of the game
+			// blood
+			var buffer = buffer_create(4 * room_width * room_height, buffer_fixed, 1);
+			buffer_get_surface(buffer, global.liquid_surf, buffer_surface_copy, 0, 0);
 		
-		var red_count = 0;
-		for(var i = 0; i < room_width; i++) {
-			for(var j = 0; j < room_height; j++) {
-				var offset = 4 * (i + (j * room_width));
-				var alpha = buffer_peek(buffer, offset + 3, buffer_u8);
-				if(alpha > 0) red_count++;
+			var red_count = 0;
+			for(var i = 0; i < room_width; i++) {
+				for(var j = 0; j < room_height; j++) {
+					var offset = 4 * (i + (j * room_width));
+					var alpha = buffer_peek(buffer, offset + 3, buffer_u8);
+					if(alpha > 0) red_count++;
+				}
 			}
-		}
-		buffer_delete(buffer);
-		min_score = 12000;
-		red_count = clamp(red_count, 0, min_score);
-		global.game_score.blood *= 1 - red_count/min_score;
-		// ash piles
-		global.game_score.ash -= clamp(instance_number(oAsh_pile)*5, 0, 100);
-		// bits
-		global.game_score.bits -= clamp(instance_number(oBit)*4, 0, 100);
-		// bodies
-		global.game_score.bodies -= clamp(instance_number(oBody)*5, 0, 100);
+			buffer_delete(buffer);
+			min_score = 12000;
+			red_count = clamp(red_count, 0, min_score);
+			global.game_score.blood *= 1 - red_count/min_score;
+			// ash piles
+			global.game_score.ash -= clamp(instance_number(oAsh_pile)*5, 0, 100);
+			// bits
+			global.game_score.bits -= clamp(instance_number(oBit)*4, 0, 100);
+			// bodies
+			global.game_score.bodies -= clamp(instance_number(oBody)*5, 0, 100);
 		
-		global.game_score.total = round((global.game_score.blood + global.game_score.ash + global.game_score.bits + global.game_score.bodies)/4.0);
-		global.game_score.finished = true;
+			global.game_score.total = round((global.game_score.blood + global.game_score.ash + global.game_score.bits + global.game_score.bodies)/4.0);
+			global.game_score.finished = true;
 		
-		instance_destroy(oPause);
-		transition_to(rResults);
+			instance_destroy(oPause);
+			transition_to(rResults);
+		#endregion
 	}
 	
+	// retreating and winning sides
 	if(frames_left <= retreat_time*room_speed) {
 		var winner;
 		var exit_points;
@@ -74,4 +78,40 @@ if(started) {
 			}
 		}
 	}
+	
+	// auto killing if something hasn't died in awhile
+	if(autokill_timer > 0) autokill_timer--;
+	else {
+		var entities = ds_list_create();
+		var kill_entity = noone;
+		
+		if(instance_exists(oEntity)) {
+			with(oEntity) {
+				ds_list_add(entities, id);	
+			}
+		}
+		
+		ds_list_shuffle(entities);
+		for(var i = 0; i < ds_list_size(entities); i++) {
+			with(entities[| i]) {
+				var padding = 30;
+				var cx = oCamera.x - VIEWWIDTH/2 - padding;
+				var cy = oCamera.y - VIEWHEIGHT/2 - padding;
+				if(!point_in_rectangle(x, y, cx, cy, cx + VIEWWIDTH + padding, cy + VIEWHEIGHT + padding)) {
+					kill_entity = id;
+				}
+			}
+			if(kill_entity != noone) break;
+		}
+		
+		if(kill_entity != noone) {
+			var deaths = [DEATHTYPE.PIERCING, DEATHTYPE.BURN];
+			var death = deaths[irandom_range(0, array_length(deaths)-1)];
+			kill_entity.hp = 1;
+			kill_entity.kill_function(death);
+		}
+		
+		ds_list_destroy(entities);
+	}
 }
+else if(autostart) start();

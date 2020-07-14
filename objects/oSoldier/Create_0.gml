@@ -200,7 +200,7 @@ draw_function = function draw_soldier() {
 }
 
 // hp regen
-max_hp = 3;
+max_hp = 2;
 hp = max_hp;
 hp_regen_time = room_speed;
 hp_regen_timer = hp_regen_time;

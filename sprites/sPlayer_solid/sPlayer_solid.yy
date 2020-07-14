@@ -1,5 +1,5 @@
 {
-  "bboxMode": 2,
+  "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
   "origin": 0,
@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 31,
-  "bbox_top": 16,
-  "bbox_bottom": 31,
+  "bbox_right": 15,
+  "bbox_top": 0,
+  "bbox_bottom": 15,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 32,
-  "height": 32,
+  "width": 16,
+  "height": 16,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"017a670b-82c9-412c-a253-a0375f65ae95","path":"sprites/sRusted_door/sRusted_door.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"017a670b-82c9-412c-a253-a0375f65ae95","path":"sprites/sRusted_door/sRusted_door.yy",},"LayerId":{"name":"3f4a5ae3-c05e-4b9e-a2ab-3c2e4559c77b","path":"sprites/sRusted_door/sRusted_door.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRusted_door","path":"sprites/sRusted_door/sRusted_door.yy",},"resourceVersion":"1.0","name":"017a670b-82c9-412c-a253-a0375f65ae95","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a27b32d9-7081-4e13-9fa5-44acfd2fbbdc","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a27b32d9-7081-4e13-9fa5-44acfd2fbbdc","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"LayerId":{"name":"a0ba5b69-c7bb-4c86-a642-50f167b35fe8","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayer_solid","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"resourceVersion":"1.0","name":"a27b32d9-7081-4e13-9fa5-44acfd2fbbdc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sRusted_door","path":"sprites/sRusted_door/sRusted_door.yy",},
+    "spriteId": {"name":"sPlayer_solid","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"cbd3e143-d53a-4c3c-84cd-f6cf32db3da9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"017a670b-82c9-412c-a253-a0375f65ae95","path":"sprites/sRusted_door/sRusted_door.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"40145efb-d147-466f-a5a5-eec1701aacda","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a27b32d9-7081-4e13-9fa5-44acfd2fbbdc","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sRusted_door","path":"sprites/sRusted_door/sRusted_door.yy",},
+    "parent": {"name":"sPlayer_solid","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},
     "resourceVersion": "1.3",
-    "name": "sRusted_door",
+    "name": "sPlayer_solid",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3f4a5ae3-c05e-4b9e-a2ab-3c2e4559c77b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a0ba5b69-c7bb-4c86-a642-50f167b35fe8","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Doors",
-    "path": "folders/Solid/Player Solid/Doors.yy",
+    "name": "Player Solid",
+    "path": "folders/Solid/Player Solid.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sRusted_door",
+  "name": "sPlayer_solid",
   "tags": [],
   "resourceType": "GMSprite",
 }
