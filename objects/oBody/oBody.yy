@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ActionCleanupCrew",
-    "path": "ActionCleanupCrew.yyp",
+    "name": "Entity",
+    "path": "folders/Entity.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBody",

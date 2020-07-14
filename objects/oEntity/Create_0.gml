@@ -9,6 +9,7 @@ enum DEATHTYPE {
 
 kill_function = function kill(death_type) {
 	hp--;
+	flash_frames_left = flash_frames;
 	if(hp <= 0) {
 		switch(death_type) {
 			case DEATHTYPE.PIERCING:
@@ -88,3 +89,17 @@ audio_emitter = audio_emitter_create();
 audio_emitter_falloff(audio_emitter, 16, 1000, 1);
 
 screams = [sdScream1, sdScream2, sdScream3];
+
+// flash
+flash_frames = 20;
+flash_frames_left = 0;
+
+// pathfinding
+move_point = {
+	x: 0,
+	y: 0
+};
+
+path = -1;
+point = 0;
+path_movement_speed = 1;

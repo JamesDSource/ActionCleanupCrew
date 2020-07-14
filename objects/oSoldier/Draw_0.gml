@@ -1,13 +1,4 @@
-draw_self();
-
-// helmat
-if(helmat) {
-	var helmat_spr = noone;
-	if(team == TEAM.BLACK) helmat_spr = sSoldier_black_mask;
-	else if(team == TEAM.WHITE) helmat_spr = sSoldier_white_mask;
-	
-	if(helmat_spr != noone) draw_sprite_ext(helmat_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
-}
+event_inherited();
 
 // gun
 var dif = angle_difference(gun_angle_real, gun_angle);

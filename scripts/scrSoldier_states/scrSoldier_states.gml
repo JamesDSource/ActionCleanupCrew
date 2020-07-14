@@ -25,7 +25,7 @@ function soldier_state_shoot() {
 	var highest_priority = -1;
 	for(var i = 0; i < ds_list_size(gun_targets); i++) {
 		var current_gun_target = gun_targets[| i];
-		if(current_gun_target.team != team && collision_line(x, y - gun_height, current_gun_target.x, current_gun_target.y, oSolid, false, true) == noone && current_gun_target.priority > highest_priority) {
+		if(current_gun_target.team != team && collision_line(x, y, current_gun_target.x, current_gun_target.y, oSolid, false, true) == noone && current_gun_target.priority > highest_priority) {
 			gun_target = current_gun_target;	
 			highest_priority = gun_target.priority;
 		}

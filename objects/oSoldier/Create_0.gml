@@ -157,7 +157,7 @@ function new_cover() {
 		cover_side = result[rand_cover_index][1];
 		cover.sides[v_side][clamp(cover_side, 0, 1)] = id;
 	
-		cover_point.x = cover.x - cover.sprite_xoffset + cover.sprite_width/2 + cover_side*8;
+		cover_point.x = cover.x - cover.sprite_xoffset + cover.sprite_width/2 + cover_side*10;
 	
 		if(team == TEAM.WHITE) cover_point.y = cover.bbox_bottom + 8;
 		else cover_point.y = cover.bbox_top - 8;
@@ -166,10 +166,6 @@ function new_cover() {
 }
 
 // movement
-move_point = {
-	x: 0,
-	y: 0
-};
 cover_point = {
 	x: 0,
 	y: 0
@@ -179,9 +175,7 @@ exit_point = {
 	y: 0
 }
 
-path = -1;
-point = 0;
-movement_speed = 1;
+path_movement_speed = 1;
 
 function new_move_point(x_pos, y_pos) {
 	if(point_distance(move_point.x, move_point.y, x_pos, y_pos) >= 1) {
@@ -193,3 +187,23 @@ function new_move_point(x_pos, y_pos) {
 
 // shoot state
 shoot_timer = -1;
+
+// draw function
+draw_function = function draw_soldier() {
+	draw_depth_object();
+	
+	// helmat
+	if(helmat) {
+		var helmat_spr = noone;
+		if(team == TEAM.BLACK) helmat_spr = sSoldier_black_mask;
+		else if(team == TEAM.WHITE) helmat_spr = sSoldier_white_mask;
+	
+		if(helmat_spr != noone) draw_sprite_ext(helmat_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+	}
+}
+
+// hp regen
+max_hp = 3;
+hp = max_hp;
+hp_regen_time = room_speed;
+hp_regen_timer = hp_regen_time;

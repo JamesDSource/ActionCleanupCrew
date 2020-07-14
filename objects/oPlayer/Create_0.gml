@@ -34,13 +34,19 @@ state = states.free;
 kill_function = function kill_player(death_type) {
 	if(mask_on) {
 		mask_on = false;
-		iframes = 30;	
+		iframes = 30;
+		flash_frames_left = flash_frames;
 	}
 	else if(iframes == 0){
 		instance_create_layer(0, 0, "Controllers", oYou_died);
 		instance_destroy(oPause);
 		kill(death_type);
 	}
+}
+
+draw_function = function draw_player() {
+	draw_depth_object();
+	if(mask_on) draw_sprite_ext(sPlayer_mask, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 }
 
 function move() {

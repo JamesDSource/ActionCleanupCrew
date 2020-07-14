@@ -2,8 +2,7 @@ if(tool_using == TOOL.VACUUM) {
 	draw_sprite_ext(sVacuum_pack, 0, x, y - 10, image_xscale, image_yscale, image_angle, image_blend, image_alpha);	
 }
 
-draw_self();
-if(mask_on) draw_sprite_ext(sPlayer_mask, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+event_inherited();
 
 tool_angle = point_direction(x, y - tool_height, mouse_x, mouse_y)
 switch(tool_using) {

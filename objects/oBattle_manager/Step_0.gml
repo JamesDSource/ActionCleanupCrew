@@ -64,7 +64,7 @@ if(started) {
 		
 		with(oSoldier) {
 			if(state != states.flee) {
-				if(winner != team) movement_speed = 2;
+				if(winner != team) path_movement_speed = 1.5;
 				
 				ds_list_shuffle(exit_points);
 				var flee_point = exit_points[| 0];
