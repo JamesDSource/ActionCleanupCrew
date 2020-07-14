@@ -3,7 +3,7 @@ started = true;
 white_soldiers = 0;
 black_soldiers = 0;
 
-random_tick_time = room_speed;
+random_tick_time = room_speed * 2;
 random_tick_timer = random_tick_time;
 
 white_spawns = ds_list_create();

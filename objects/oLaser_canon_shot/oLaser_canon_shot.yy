@@ -22,10 +22,12 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oLaser_canon_shot","path":"objects/oLaser_canon_shot/oLaser_canon_shot.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oLaser_canon_shot","path":"objects/oLaser_canon_shot/oLaser_canon_shot.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"death_type","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"DEATHTYPE.BURN","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"spd","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"1.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Laser Canon",

@@ -18,26 +18,31 @@ states = {
 state = states.decide;
 
 // gun
-function gun(gun_name, bullet_projectile, bullet_speed, gun_recharge_time, gun_sprite, gun_range, shoot_time, gun_kickback, gun_sound) constructor {
+function gun(gun_name, bullet_projectile, gun_recharge_time, burst_amount, gun_burst_time, gun_sprite, gun_range, shoot_time, gun_kickback, gun_sound) constructor {
 	name = gun_name;
 	bullet = bullet_projectile;
-	spd = bullet_speed;
 	recharge_time = gun_recharge_time;
+	burst = burst_amount;
+	burst_time = gun_burst_time;
 	sprite = gun_sprite;
 	range = gun_range;
 	time = shoot_time;
 	kickback = gun_kickback;
 	sound = gun_sound;
+	
+	burst_timer = 0;
+	bursts_left = burst;
 }
 
 guns = [
 	new gun(
 		"Rifle",		// name
 		oRifle_shot,	// bullet
-		1.5,			// speed
 		room_speed,		// recharge time
+		2,				// burst
+		10,				// burst time
 		sRifle,			// sprite
-		200,			// range
+		300,			// range
 		room_speed*6,	// time out of cover
 		5,				// gun kick
 		sdRifle			// sound
@@ -46,10 +51,11 @@ guns = [
 	new gun(
 		"Laser Gun",
 		oLaser_shot,
-		1.5,
 		room_speed * 1.5,
+		1,
+		1,
 		sLaser_gun,
-		200,
+		300,
 		room_speed * 10,
 		3,
 		sdLaser_rifle
@@ -58,10 +64,11 @@ guns = [
 	new gun(
 		"Sniper",
 		oSniper_shot,
-		3,
 		room_speed * 3,
+		1,
+		1,
 		sSniper_rifle,
-		400,
+		500,
 		room_speed * 10,
 		8,
 		sdSniper
@@ -70,10 +77,11 @@ guns = [
 	new gun(
 		"Submachine Gun",
 		oSubmachine_gun_shot,
-		1,
-		room_speed /3,
+		room_speed * 2,
+		6,
+		5,
 		sSubmachine_gun,
-		150,
+		250,
 		room_speed * 4,
 		2,
 		sdLaser_rifle
@@ -82,10 +90,11 @@ guns = [
 	new gun(
 		"Laser Canon",
 		oLaser_canon_shot,
-		1,
 		room_speed * 5,
+		1,
+		1,
 		sLaser_canon,
-		500,
+		600,
 		room_speed * 10,
 		12,
 		sdLaser_canon

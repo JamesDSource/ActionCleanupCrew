@@ -1,7 +1,7 @@
 #macro VIEWWIDTH 320
 #macro VIEWHEIGHT 180
-#macro SCREENWIDTH 1920
-#macro SCREENHEIGHT 1080
+#macro SCREENWIDTH display_get_width()
+#macro SCREENHEIGHT display_get_height()
 surface_resize(application_surface, SCREENWIDTH, SCREENHEIGHT);
 window_set_size(SCREENWIDTH, SCREENHEIGHT);
 display_set_gui_size(VIEWWIDTH, VIEWHEIGHT);

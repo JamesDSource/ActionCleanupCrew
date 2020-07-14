@@ -25,7 +25,9 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"spd","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Sniper Shot",
     "path": "folders/Projectile/Sniper Shot.yy",

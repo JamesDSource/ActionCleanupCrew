@@ -83,7 +83,7 @@ function play_lines(lines) {
 	dialogue_ready = false;
 	state = states.read;
 }
-dialogue_box_height = 40;
-dialogue_type_time = 5;
+dialogue_box_height = 60;
+dialogue_type_time = 2;
 
 iframes = 0;
