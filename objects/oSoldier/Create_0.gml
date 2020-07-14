@@ -177,12 +177,9 @@ exit_point = {
 
 path_movement_speed = 1;
 
-function new_move_point(x_pos, y_pos) {
-	if(point_distance(move_point.x, move_point.y, x_pos, y_pos) >= 1) {
-		move_point.x = x_pos;
-		move_point.y = y_pos;
-		if(path_exists(path)) path_delete(path);
-	}
+kill_function = function kill_soldier(death_type) {
+	hp_regen_timer = hp_regen_time;
+	kill(death_type);
 }
 
 // shoot state

@@ -103,3 +103,11 @@ move_point = {
 path = -1;
 point = 0;
 path_movement_speed = 1;
+
+function new_move_point(x_pos, y_pos) {
+	if(point_distance(move_point.x, move_point.y, x_pos, y_pos) >= 1) {
+		move_point.x = x_pos;
+		move_point.y = y_pos;
+		if(path_exists(path)) path_delete(path);
+	}
+}
