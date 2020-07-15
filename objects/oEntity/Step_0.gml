@@ -26,19 +26,13 @@ if(uses_pathfinding) {
 	}
 }
 
-if(place_meeting(x + hsp, y, oSolid)) {
-	repeat(hsp) if(!place_meeting(x + sign(hsp), y, oSolid)) x += sign(hsp);
-	hsp = 0;
-}
-
-if(place_meeting(x, y + vsp, oSolid)) {
-	repeat(vsp) if(!place_meeting(x, y + sign(vsp), oSolid)) y += sign(vsp);
-	vsp = 0;
-}
+check_for_collisions(oSolid);
+if(object_index == oPlayer) check_for_collisions(oPlayer_solid);
 
 x += hsp;
 y += vsp;
 
 push_out(oSolid);
+if(object_index == oPlayer) push_out(oPlayer_solid);
 
 audio_emitter_position(audio_emitter, x, y, 0);

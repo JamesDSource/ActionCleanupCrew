@@ -3,5 +3,3 @@ if(scale == 1 && !transitioned) {
 	audio_play_sound(sdYou_died, SOUNDPRIORITY.IMPORTANT, false);
 	transitioned = true;
 }
-
-if(keyboard_check_pressed(ord("R"))) target = room;

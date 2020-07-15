@@ -6,8 +6,17 @@ enum TEAM {
 	NONE
 }
 
+// helmat and hp
 helmat = false;
-if(irandom_range(1, 100) < 50) helmat = true;
+max_hp = 2;
+if(irandom_range(1, 100) < 50) {
+	helmat = true;
+	max_hp = 3;
+}
+hp = max_hp;
+hp_regen_time = room_speed * 2;
+hp_regen_timer = hp_regen_time;
+
 
 states = {
 	decide: soldier_state_decidie,	
@@ -18,9 +27,10 @@ states = {
 state = states.decide;
 
 // gun
-function gun(gun_name, bullet_projectile, bullet_spread, gun_recharge_time, burst_amount, gun_burst_time, gun_sprite, gun_range, shoot_time, gun_kickback, gun_sound) constructor {
+function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_time, burst_amount, gun_burst_time, gun_sprite, gun_range, shoot_time, gun_kickback, gun_sound) constructor {
 	name = gun_name;
 	bullet = bullet_projectile;
+	shots = bullets;
 	spread = bullet_spread;
 	recharge_time = gun_recharge_time;
 	burst = burst_amount;
@@ -39,6 +49,7 @@ guns = [
 	new gun(
 		"Rifle",		// name
 		oRifle_shot,	// bullet
+		1,				// bullets
 		5,				// bullet spread
 		room_speed,		// recharge time
 		2,				// burst
@@ -53,6 +64,7 @@ guns = [
 	new gun(
 		"Laser Gun",
 		oLaser_shot,
+		1,
 		0,
 		room_speed * 1.5,
 		1,
@@ -67,6 +79,7 @@ guns = [
 	new gun(
 		"Sniper",
 		oSniper_shot,
+		1,
 		0,
 		room_speed * 3,
 		1,
@@ -81,6 +94,7 @@ guns = [
 	new gun(
 		"Submachine Gun",
 		oSubmachine_gun_shot,
+		1,
 		10,
 		room_speed,
 		4,
@@ -95,6 +109,7 @@ guns = [
 	new gun(
 		"Laser Canon",
 		oLaser_canon_shot,
+		1,
 		0,
 		room_speed * 5,
 		1,
@@ -198,9 +213,3 @@ draw_function = function draw_soldier() {
 		if(helmat_spr != noone) draw_sprite_ext(helmat_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 	}
 }
-
-// hp regen
-max_hp = 2;
-hp = max_hp;
-hp_regen_time = room_speed;
-hp_regen_timer = hp_regen_time;

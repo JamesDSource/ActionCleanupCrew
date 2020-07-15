@@ -37,13 +37,16 @@ function soldier_state_shoot() {
 		
 		// recharge timer
 		if(gun_shoot_recharge <= 0) {
-				// burst timer
-				if(gun_using.burst_timer <= 0) {
-				var bullet_spread = irandom_range(-gun_using.spread, gun_using.spread);
-				with(instance_create_layer(x + lengthdir_x(5, gun_angle_real), y + lengthdir_y(5, gun_angle_real), "Instances", gun_using.bullet)) {
-					z = other.gun_height;
-					team = other.team;
-					ang = other.gun_angle_real + bullet_spread;
+			// burst timer
+			if(gun_using.burst_timer <= 0) {
+				// repeating shooting for each shot
+				repeat(gun_using.shots) {
+					var bullet_spread = irandom_range(-gun_using.spread, gun_using.spread);
+					with(instance_create_layer(x + lengthdir_x(5, gun_angle_real), y + lengthdir_y(5, gun_angle_real), "Instances", gun_using.bullet)) {
+						z = other.gun_height;
+						team = other.team;
+						ang = other.gun_angle_real + bullet_spread;
+					}
 				}
 				
 				audio_play_sound_on(audio_emitter, gun_using.sound, false, SOUNDPRIORITY.GUNS);

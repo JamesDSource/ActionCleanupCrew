@@ -48,7 +48,6 @@ function player_state_free() {
 	}
 	
 	event_inherited();
-	push_out(oPlayer_solid);
 }
 
 function player_state_holding() {
@@ -57,7 +56,6 @@ function player_state_holding() {
 	move();
 	recharge_mask();
 	event_inherited();
-	push_out(oPlayer_solid);
 	
 	if(instance_exists(body_held)) {
 		body_held.x = x;

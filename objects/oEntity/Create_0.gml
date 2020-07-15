@@ -26,7 +26,21 @@ kill_function = function kill(death_type) {
 				instance_create_layer(x, y, "Instances", oAsh_pile);
 				break;
 		}
-		audio_play_sound_on(audio_emitter, screams[irandom_range(0, array_length(screams)-1)], false, SOUNDPRIORITY.IMPORTANT);
+		
+		// reseting autokill timer
+		if(instance_exists(oBattle_manager)) {
+			with(oBattle_manager) {
+				autokill_timer = autokill_time;	
+			}
+		}
+		
+		// death sound
+		if(death_sound_type != -1) {
+			var ds = instance_create_layer(x, y, "Instances", oDeath_sound);
+			ds.play_death_sound(death_sound_type, audio_emitter);
+		}
+		else audio_emitter_free(audio_emitter);
+
 		instance_destroy();
 	}
 }
@@ -84,11 +98,22 @@ function push_out(obj) {
 	}
 }
 
+function check_for_collisions(obj) {
+	if(place_meeting(x + hsp, y, obj)) {
+		repeat(hsp) if(!place_meeting(x + sign(hsp), y, obj)) x += sign(hsp);
+		hsp = 0;
+	}
+
+	if(place_meeting(x, y + vsp, obj)) {
+		repeat(vsp) if(!place_meeting(x, y + sign(vsp), obj)) y += sign(vsp);
+		vsp = 0;
+	}
+}
+
 // audio
 audio_emitter = audio_emitter_create();
 audio_emitter_falloff(audio_emitter, 16, 1000, 1);
 
-screams = [sdScream1, sdScream2, sdScream3];
 
 // flash
 flash_frames = 20;

@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sdScream2.wav",
+  "soundFile": "sdDeath_man2.wav",
   "duration": 5.055,
   "parent": {
-    "name": "Screams",
-    "path": "folders/Soldiers/Screams.yy",
+    "name": "Death Sounds",
+    "path": "folders/Entity/Death Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sdScream2",
+  "name": "sdDeath_man2",
   "tags": [],
   "resourceType": "GMSound",
 }
