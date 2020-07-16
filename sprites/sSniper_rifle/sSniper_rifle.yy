@@ -15,7 +15,7 @@
   "VTile": false,
   "For3D": false,
   "width": 24,
-  "height": 12,
+  "height": 8,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e6682435-ce8f-4cd9-bf53-7a0135d14664","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e6682435-ce8f-4cd9-bf53-7a0135d14664","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"LayerId":{"name":"38821f4c-ac03-4fb2-b4aa-20a9b3b5bda7","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSniper_rifle","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","name":"e6682435-ce8f-4cd9-bf53-7a0135d14664","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"065d37c9-1855-4e4f-994a-79085c701683","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"065d37c9-1855-4e4f-994a-79085c701683","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"LayerId":{"name":"3714aa16-6a52-4771-b719-56eb85bca7e2","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sSniper_rifle","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","name":"065d37c9-1855-4e4f-994a-79085c701683","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sSniper_rifle","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"3938af80-1355-494c-950f-2c4429fd57be","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e6682435-ce8f-4cd9-bf53-7a0135d14664","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4c97bf9c-190f-4e3f-813c-24c0ecda0efb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"065d37c9-1855-4e4f-994a-79085c701683","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"38821f4c-ac03-4fb2-b4aa-20a9b3b5bda7","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3714aa16-6a52-4771-b719-56eb85bca7e2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Guns",

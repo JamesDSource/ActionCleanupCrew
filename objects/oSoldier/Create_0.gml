@@ -119,6 +119,21 @@ guns = [
 		room_speed * 10,
 		12,
 		sdLaser_canon
+	),
+	
+	new gun(
+		"Shotgun",
+		oShotgun_shot,
+		8,
+		35,
+		room_speed * 2,
+		3,
+		room_speed,
+		sShotgun,
+		200,
+		room_speed * 8,
+		6,
+		sdRifle
 	)
 ]
 
@@ -129,6 +144,9 @@ gun_angle_real = 0;
 gun_target = noone;
 gun_shoot_recharge = 0;
 gun_kick = 0;
+gun_flash_time = 3;
+gun_flash = 0;
+gun_bullet_offset = 6;
 
 // decide
 decide_timer = 0;

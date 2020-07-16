@@ -25,9 +25,9 @@ function player_state_free() {
 		for(var i = 0; i < ds_list_size(bits); i++) {
 			var bit = bits[| i];
 			with(bit) {
-				x = approach(x, list_x, 1);
-				y = approach(y, list_y, 1);
-				if(point_distance(x, y, list_x, list_y) < 1) instance_destroy();
+				x += (list_x - x)/10;
+				y += (list_y - y)/10;
+				if(point_distance(x, y, list_x, list_y) < 3) instance_destroy();
 			}
 		}
 		ds_list_clear(bits);
@@ -60,7 +60,7 @@ function player_state_holding() {
 	if(instance_exists(body_held)) {
 		body_held.x = x;
 		body_held.y = y;
-		body_held.z = sprite_yoffset;
+		body_held.z = 10;
 		
 		if(keyboard_check_pressed(vk_space)) {
 			var incen_inst = collision_circle(x, y, 20, oIncinerator, false, true);

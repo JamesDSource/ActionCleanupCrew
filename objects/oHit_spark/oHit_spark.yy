@@ -27,7 +27,9 @@
     {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"oHit_spark","path":"objects/oHit_spark/oHit_spark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"has_shadow","path":"objects/oDepth_object/oDepth_object.yy",},"objectId":{"name":"oDepth_object","path":"objects/oDepth_object/oDepth_object.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Hitspark",
     "path": "folders/Projectile/Hitspark.yy",

@@ -42,7 +42,7 @@ function soldier_state_shoot() {
 				// repeating shooting for each shot
 				repeat(gun_using.shots) {
 					var bullet_spread = irandom_range(-gun_using.spread, gun_using.spread);
-					with(instance_create_layer(x + lengthdir_x(5, gun_angle_real), y + lengthdir_y(5, gun_angle_real), "Instances", gun_using.bullet)) {
+					with(instance_create_layer(x + lengthdir_x(gun_bullet_offset, gun_angle_real), y + lengthdir_y(gun_bullet_offset, gun_angle_real), "Instances", gun_using.bullet)) {
 						z = other.gun_height;
 						team = other.team;
 						ang = other.gun_angle_real + bullet_spread;
@@ -51,6 +51,7 @@ function soldier_state_shoot() {
 				
 				audio_play_sound_on(audio_emitter, gun_using.sound, false, SOUNDPRIORITY.GUNS);
 				gun_kick = gun_using.kickback;
+				gun_flash = gun_flash_time;
 				
 				gun_using.burst_timer = gun_using.burst_time;
 				gun_using.bursts_left--;

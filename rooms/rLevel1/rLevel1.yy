@@ -130,6 +130,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":-48.0,"resourceVersion":"1.0","name":"inst_79DE754F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":-48.0,"resourceVersion":"1.0","name":"inst_2DC79C04","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":48.0,"y":-48.0,"resourceVersion":"1.0","name":"inst_5F25605","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oCloning_machine","path":"objects/oCloning_machine/oCloning_machine.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":416.0,"resourceVersion":"1.0","name":"inst_20D291EC","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oLiquids","path":"objects/oLiquids/oLiquids.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_3CEAB046","path":"rooms/rLevel_parent/rLevel_parent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":64.0,"resourceVersion":"1.0","name":"inst_3CEAB046","tags":[],"resourceType":"GMRInstance",},
@@ -345,6 +346,7 @@
     {"name":"inst_2DC79C04","path":"rooms/rLevel1/rLevel1.yy",},
     {"name":"inst_5F25605","path":"rooms/rLevel1/rLevel1.yy",},
     {"name":"inst_348AF12F","path":"rooms/rLevel1/rLevel1.yy",},
+    {"name":"inst_20D291EC","path":"rooms/rLevel1/rLevel1.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,

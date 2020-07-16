@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 9,
+  "origin": 4,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 24,
-  "height": 12,
+  "width": 16,
+  "height": 9,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a541f81b-73a5-44a8-b6b0-3bb2c9ffc939","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a541f81b-73a5-44a8-b6b0-3bb2c9ffc939","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"LayerId":{"name":"05785106-c951-4bb2-97ba-fb41b55de887","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSubmachine_gun","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","name":"a541f81b-73a5-44a8-b6b0-3bb2c9ffc939","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9e6c512d-51f7-48cf-8942-d275d35fe508","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9e6c512d-51f7-48cf-8942-d275d35fe508","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"LayerId":{"name":"3116121a-dcb3-4f05-b27a-2812e378fde5","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sSubmachine_gun","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","name":"9e6c512d-51f7-48cf-8942-d275d35fe508","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sSubmachine_gun","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"db105fe6-8481-4aeb-93f5-fef24ae6d1e1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a541f81b-73a5-44a8-b6b0-3bb2c9ffc939","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e4ee6b0e-4576-4a2a-a9b9-796e3e47fe60","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e6c512d-51f7-48cf-8942-d275d35fe508","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,7 +54,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 7,
+    "xorigin": 8,
     "yorigin": 4,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"05785106-c951-4bb2-97ba-fb41b55de887","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3116121a-dcb3-4f05-b27a-2812e378fde5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Guns",
