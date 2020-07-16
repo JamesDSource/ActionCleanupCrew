@@ -25,15 +25,15 @@ function player_state_free() {
 		for(var i = 0; i < ds_list_size(bits); i++) {
 			var bit = bits[| i];
 			with(bit) {
-				var dist_div = point_distance(x, y, list_x, list_y) div 2;
-				x += (list_x - x)/dist_div;
-				y += (list_y - y)/dist_div;
-				if(point_distance(x, y, list_x, list_y) < 3) instance_destroy();
+				var dist_div = point_distance(x, y, list_x, list_y) div 3;
+				x += (sign(list_x - x)*8)/dist_div;
+				y += (sign(list_y - y)*8)/dist_div;
+				if(point_distance(x, y, list_x, list_y) < 10) instance_destroy();
 			}
 		}
 		ds_list_clear(bits);
 
-		collision_circle_list(list_x, list_y, 10, oAsh_pile, false, true, bits, false);
+		collision_circle_list(list_x + lengthdir_x(30, tool_angle), list_y + lengthdir_y(30, tool_angle), 30, oAsh_pile, false, true, bits, false);
 		for(var i = 0; i < ds_list_size(bits); i++) {
 			bits[| i].suck_bits();
 		}
