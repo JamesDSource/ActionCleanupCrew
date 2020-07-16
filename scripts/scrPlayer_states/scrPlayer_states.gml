@@ -21,12 +21,13 @@ function player_state_free() {
 		var list_y = y - tool_height + lengthdir_y(10, tool_angle);
 		var bits = ds_list_create();
 		
-		collision_circle_list(list_x + lengthdir_x(15, tool_angle), list_y + lengthdir_y(15, tool_angle), 30, oBit, false, true, bits, false);
+		collision_circle_list(list_x + lengthdir_x(30, tool_angle), list_y + lengthdir_y(30, tool_angle), 30, oBit, false, true, bits, false);
 		for(var i = 0; i < ds_list_size(bits); i++) {
 			var bit = bits[| i];
 			with(bit) {
-				x += (list_x - x)/10;
-				y += (list_y - y)/10;
+				var dist_div = point_distance(x, y, list_x, list_y) div 2;
+				x += (list_x - x)/dist_div;
+				y += (list_y - y)/dist_div;
 				if(point_distance(x, y, list_x, list_y) < 3) instance_destroy();
 			}
 		}
