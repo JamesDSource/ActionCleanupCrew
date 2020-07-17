@@ -14,6 +14,8 @@ if(place_meeting(x + hsp, y + vsp, oSolid) || place_meeting(x + hsp, y + vsp, oP
 		ang *= -1;
 		hsp = 0;
 		vsp = 0;
+		push_out(oSolid);
+		push_out(oPlayer_solid);
 		bounce--;
 	}
 	else instance_destroy();

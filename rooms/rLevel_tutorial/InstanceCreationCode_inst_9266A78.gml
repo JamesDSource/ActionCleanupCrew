@@ -1,2 +1,2 @@
+hp = 0;
 kill(DEATHTYPE.PIERCING);
-audio_stop_all();
