@@ -45,99 +45,120 @@ function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_t
 	bursts_left = burst;
 }
 
-guns = [
-	new gun(
-		"Rifle",		// name
-		oRifle_shot,	// bullet
-		1,				// bullets
-		5,				// bullet spread
-		room_speed,		// recharge time
-		2,				// burst
-		10,				// burst time
-		sRifle,			// sprite
-		300,			// range
-		room_speed*6,	// time out of cover
-		5,				// gun kick
-		sdRifle			// sound
-	),
-	
-	new gun(
-		"Laser Gun",
-		oLaser_shot,
-		1,
-		0,
-		room_speed * 1.5,
-		1,
-		1,
-		sLaser_gun,
-		300,
-		room_speed * 10,
-		3,
-		sdLaser_rifle
-	),
-	
-	new gun(
-		"Sniper",
-		oSniper_shot,
-		1,
-		0,
-		room_speed * 3,
-		1,
-		1,
-		sSniper_rifle,
-		500,
-		room_speed * 10,
-		8,
-		sdSniper
-	),
-	
-	new gun(
-		"Submachine Gun",
-		oSubmachine_gun_shot,
-		1,
-		10,
-		room_speed,
-		4,
-		5,
-		sSubmachine_gun,
-		250,
-		room_speed * 4,
-		2,
-		sdLaser_rifle
-	),
-	
-	new gun(
-		"Laser Canon",
-		oLaser_canon_shot,
-		1,
-		0,
-		room_speed * 5,
-		1,
-		1,
-		sLaser_canon,
-		600,
-		room_speed * 10,
-		12,
-		sdLaser_canon
-	),
-	
-	new gun(
-		"Shotgun",
-		oShotgun_shot,
-		8,
-		35,
-		room_speed * 2,
-		3,
-		room_speed,
-		sShotgun,
-		200,
-		room_speed * 8,
-		6,
-		sdRifle
-	)
-]
+guns = ds_map_create();;
 
-gun_using = guns[irandom_range(0, array_length(guns)-1)];
+
+guns[? "Rifle"] = new gun(
+	"Rifle",		// name
+	oRifle_shot,	// bullet
+	1,				// bullets
+	5,				// bullet spread
+	room_speed,		// recharge time
+	2,				// burst
+	10,				// burst time
+	sRifle,			// sprite
+	300,			// range
+	room_speed*6,	// time out of cover
+	5,				// gun kick
+	sdRifle			// sound
+);
+	
+guns[? "Laser Gun"] = new gun(
+	"Laser Gun",
+	oLaser_shot,
+	1,
+	0,
+	room_speed * 1.5,
+	1,
+	1,
+	sLaser_gun,
+	300,
+	room_speed * 10,
+	3,
+	sdLaser_rifle
+);
+	
+guns[? "Sniper"] = new gun(
+	"Sniper",
+	oSniper_shot,
+	1,
+	0,
+	room_speed * 3,
+	1,
+	1,
+	sSniper_rifle,
+	500,
+	room_speed * 10,
+	8,
+	sdSniper
+);
+	
+guns[? "Submachine Gun"] = new gun(
+	"Submachine Gun",
+	oSubmachine_gun_shot,
+	1,
+	10,
+	room_speed,
+	4,
+	5,
+	sSubmachine_gun,
+	250,
+	room_speed * 4,
+	2,
+	sdLaser_rifle
+);
+	
+guns[? "Laser Canon"] = new gun(
+	"Laser Canon",
+	oLaser_canon_shot,
+	1,
+	0,
+	room_speed * 5,
+	1,
+	1,
+	sLaser_canon,
+	600,
+	room_speed * 10,
+	12,
+	sdLaser_canon
+);
+	
+guns[? "Shotgun"] = new gun(
+	"Shotgun",
+	oShotgun_shot,
+	8,
+	35,
+	room_speed * 2,
+	3,
+	room_speed,
+	sShotgun,
+	200,
+	room_speed * 8,
+	6,
+	sdRifle
+);
+
+guns[? "Laser Shotgun"] = new gun(
+	"Laser Shotgun",
+	oLaser_shotgun_shot,
+	3,
+	30,
+	room_speed * 3,
+	2,
+	room_speed/2,
+	sLaser_shotgun,
+	200,
+	room_speed * 5,
+	4,
+	sdLaser_rifle
+);
+
+if(instance_exists(oBattle_manager)) {
+	var available = oBattle_manager.guns_available;
+	var gun_using_name = available[irandom_range(0, array_length(available) - 1)]
+	gun_using = guns[? gun_using_name];
+}
+else gun_using = guns[? "Rifle"];
 gun_height = 5;
 gun_angle = 0;
 gun_angle_real = 0;

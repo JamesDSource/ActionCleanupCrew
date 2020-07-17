@@ -1,6 +1,7 @@
 event_inherited();
 
-lives_remaining = 3;
+max_lives = 3;
+lives_remaining = max_lives;
 image_speed = 0;
 image_index = 0;
 

@@ -21,7 +21,11 @@ if(started) {
 	
 	if(frames_left > 0) frames_left--;
 	else if(!global.game_score.finished) {
-		#region scoring at the end of the game
+		#region scoring at the end ofd the game
+			// lives
+			if(instance_exists(oCloning_machine)) {
+				global.game_score.life *= oCloning_machine.lives_remaining/oCloning_machine.max_lives;
+			}
 			// blood
 			var buffer = buffer_create(4 * room_width * room_height, buffer_fixed, 1);
 			buffer_get_surface(buffer, global.liquid_surf, buffer_surface_copy, 0, 0);

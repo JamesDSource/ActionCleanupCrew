@@ -8,9 +8,15 @@ if(breakable_inst != noone) {
 	if(!piercing) instance_destroy();
 }
 
-if(place_meeting(x + hsp, y + vsp, oSolid)) {
+if(place_meeting(x + hsp, y + vsp, oSolid) || place_meeting(x + hsp, y + vsp, oPlayer_solid)) {
 	hit_spark();
-	instance_destroy();
+	if(bounce > 0) {
+		ang *= -1;
+		hsp = 0;
+		vsp = 0;
+		bounce--;
+	}
+	else instance_destroy();
 }
 
 var inst = instance_place(x + hsp, y + vsp, oEntity)
