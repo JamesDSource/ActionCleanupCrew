@@ -32,7 +32,7 @@
   ],
   "parent": {
     "name": "Vases",
-    "path": "folders/Breakables/Vases.yy",
+    "path": "folders/Bits/Breakables/Vases.yy",
   },
   "resourceVersion": "1.0",
   "name": "oVase",

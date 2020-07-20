@@ -5,6 +5,7 @@ frames_left = mins * 60 * room_speed;
 global.white_kills = 0;
 global.black_kills = 0;
 global.game_score = {
+	level: "level " + room_get_name(room),
 	life: 100,
 	blood: 100,
 	ash: 100,

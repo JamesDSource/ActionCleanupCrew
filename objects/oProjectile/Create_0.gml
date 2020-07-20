@@ -1,5 +1,7 @@
 ang = 0;
 team = TEAM.NONE;
+hDir = 1;
+vDir = 1;
 
 hit_list = ds_list_create();
 

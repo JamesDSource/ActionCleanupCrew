@@ -126,8 +126,8 @@ guns[? "Laser Canon"] = new gun(
 guns[? "Shotgun"] = new gun(
 	"Shotgun",
 	oShotgun_shot,
-	8,
-	35,
+	6,
+	40,
 	room_speed * 2,
 	3,
 	room_speed,
