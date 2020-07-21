@@ -67,7 +67,7 @@
         25,
         35,
         36,
-      ],"closed_edge":false,"resourceVersion":"1.0","name":"atCeiling_office","tags":[],"resourceType":"GMAutoTileSet",},
+      ],"closed_edge":false,"resourceVersion":"1.0","name":"atCeiling_rust","tags":[],"resourceType":"GMAutoTileSet",},
   ],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,

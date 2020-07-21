@@ -36,7 +36,7 @@
   },
   "parent": {
     "name": "Rust Warehouse",
-    "path": "folders/FloorTiles/Rust Warehouse.yy",
+    "path": "folders/Floor Tiles/Rust Warehouse.yy",
   },
   "resourceVersion": "1.0",
   "name": "tFloor_rust",

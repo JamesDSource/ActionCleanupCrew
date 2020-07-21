@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Solid/Walls.yy",
+    "name": "Rusted",
+    "path": "folders/Solid/Walls/Rusted.yy",
   },
   "resourceVersion": "1.0",
   "name": "oRusted_wall",

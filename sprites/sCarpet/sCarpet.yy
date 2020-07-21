@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Carpet",
-    "path": "folders/FloorTiles/Carpet.yy",
+    "path": "folders/Floor Tiles/Carpet.yy",
   },
   "resourceVersion": "1.0",
   "name": "sCarpet",

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sOffice_wall",
-    "path": "sprites/sOffice_wall/sOffice_wall.yy",
+    "name": "sHub_wall1",
+    "path": "sprites/sHub_wall1/sHub_wall1.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Office",
-    "path": "folders/Solid/Walls/Office.yy",
+    "name": "Walls",
+    "path": "folders/Solid/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oOffice_wall",
+  "name": "oHub_wall1",
   "tags": [],
   "resourceType": "GMObject",
 }

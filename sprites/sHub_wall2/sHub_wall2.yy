@@ -24,15 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8124e889-303f-4664-9b90-bfce34f6c9b8","path":"sprites/sRusted_wall/sRusted_wall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8124e889-303f-4664-9b90-bfce34f6c9b8","path":"sprites/sRusted_wall/sRusted_wall.yy",},"LayerId":{"name":"757a7057-624f-4df2-b49f-e0befdb2fe53","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRusted_wall","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","name":"8124e889-303f-4664-9b90-bfce34f6c9b8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c153a552-026d-4221-b7e5-39bd4dff2542","path":"sprites/sHub_wall2/sHub_wall2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c153a552-026d-4221-b7e5-39bd4dff2542","path":"sprites/sHub_wall2/sHub_wall2.yy",},"LayerId":{"name":"28e2e478-b675-468a-8d99-b6ba839a8f09","path":"sprites/sHub_wall2/sHub_wall2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sHub_wall2","path":"sprites/sHub_wall2/sHub_wall2.yy",},"resourceVersion":"1.0","name":"c153a552-026d-4221-b7e5-39bd4dff2542","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sRusted_wall","path":"sprites/sRusted_wall/sRusted_wall.yy",},
+    "spriteId": {"name":"sHub_wall2","path":"sprites/sHub_wall2/sHub_wall2.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 1.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2b3beeb8-5b0f-479e-9438-ca57c4279cd7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8124e889-303f-4664-9b90-bfce34f6c9b8","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a26d1a0e-1d6f-4ded-8142-de40e660a2b2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c153a552-026d-4221-b7e5-39bd4dff2542","path":"sprites/sHub_wall2/sHub_wall2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sRusted_wall","path":"sprites/sRusted_wall/sRusted_wall.yy",},
+    "parent": {"name":"sHub_wall2","path":"sprites/sHub_wall2/sHub_wall2.yy",},
     "resourceVersion": "1.3",
-    "name": "sRusted_wall",
+    "name": "sHub_wall2",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"757a7057-624f-4df2-b49f-e0befdb2fe53","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"28e2e478-b675-468a-8d99-b6ba839a8f09","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Rusted",
-    "path": "folders/Solid/Walls/Rusted.yy",
+    "name": "Hub",
+    "path": "folders/Solid/Walls/Hub.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sRusted_wall",
+  "name": "sHub_wall2",
   "tags": [],
   "resourceType": "GMSprite",
 }

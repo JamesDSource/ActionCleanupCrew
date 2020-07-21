@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sCeiling_office",
-    "path": "sprites/sCeiling_office/sCeiling_office.yy",
+    "name": "sCeiling_rust",
+    "path": "sprites/sCeiling_rust/sCeiling_rust.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -67,7 +67,7 @@
         25,
         35,
         36,
-      ],"closed_edge":false,"resourceVersion":"1.0","name":"atCeiling_office","tags":[],"resourceType":"GMAutoTileSet",},
+      ],"closed_edge":false,"resourceVersion":"1.0","name":"atCeiling_rust","tags":[],"resourceType":"GMAutoTileSet",},
   ],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -141,7 +141,7 @@
     "path": "folders/Ceiling Tiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "tCeiling_office",
+  "name": "tCeiling_rust",
   "tags": [],
   "resourceType": "GMTileSet",
 }

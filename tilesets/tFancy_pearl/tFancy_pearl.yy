@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sCarpet",
-    "path": "sprites/sCarpet/sCarpet.yy",
+    "name": "sFancy_pearl",
+    "path": "sprites/sFancy_pearl/sFancy_pearl.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -34,11 +34,11 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Carpet",
-    "path": "folders/Floor Tiles/Carpet.yy",
+    "name": "Fancy Pearl",
+    "path": "folders/Floor Tiles/Fancy Pearl.yy",
   },
   "resourceVersion": "1.0",
-  "name": "tCarpet",
+  "name": "tFancy_pearl",
   "tags": [],
   "resourceType": "GMTileSet",
 }

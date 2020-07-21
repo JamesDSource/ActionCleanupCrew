@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sCeiling_office",
-    "path": "sprites/sCeiling_office/sCeiling_office.yy",
+    "name": "sFancy_carpet",
+    "path": "sprites/sFancy_carpet/sFancy_carpet.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -67,7 +67,7 @@
         25,
         35,
         36,
-      ],"closed_edge":false,"resourceVersion":"1.0","name":"atCeiling_office","tags":[],"resourceType":"GMAutoTileSet",},
+      ],"closed_edge":false,"resourceVersion":"1.0","name":"atFancy_carpet","tags":[],"resourceType":"GMAutoTileSet",},
   ],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -137,11 +137,11 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Ceiling Tiles",
-    "path": "folders/Ceiling Tiles.yy",
+    "name": "Fancy Carpet",
+    "path": "folders/Floor Tiles/Fancy Carpet.yy",
   },
   "resourceVersion": "1.0",
-  "name": "tCeiling_office",
+  "name": "tCeiling_office6",
   "tags": [],
   "resourceType": "GMTileSet",
 }

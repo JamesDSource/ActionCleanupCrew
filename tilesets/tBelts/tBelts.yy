@@ -362,7 +362,7 @@
   },
   "parent": {
     "name": "Belts",
-    "path": "folders/FloorTiles/Belts.yy",
+    "path": "folders/Floor Tiles/Belts.yy",
   },
   "resourceVersion": "1.0",
   "name": "tBelts",

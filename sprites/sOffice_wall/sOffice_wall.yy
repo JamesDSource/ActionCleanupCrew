@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"278ac997-7b99-4001-9a90-df4884d80414","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Solid/Walls.yy",
+    "name": "Office",
+    "path": "folders/Solid/Walls/Office.yy",
   },
   "resourceVersion": "1.0",
   "name": "sOffice_wall",
