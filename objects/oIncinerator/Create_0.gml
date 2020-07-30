@@ -7,3 +7,16 @@ audio_play_sound_on(emitter, sdIncinerator, true, SOUNDPRIORITY.INCEN);
 
 burn_time = room_speed * 4;
 burn_timer = 0;
+
+init_interactable(
+	function action_incinerator() {
+		with(oPlayer) {
+			if(instance_exists(body_held)) {
+				instance_destroy(body_held);
+				body_held = noone;
+				state = states.free;
+				other.burn_timer = other.burn_time;
+			}
+		}
+	}
+);

@@ -1,20 +1,25 @@
-
+show_pause_menu = false;
 global.pause = false;
 function toggle_pause() {
 	global.pause = !global.pause;
 	
 	if(global.pause) {
 		global.sPause = sprite_create_from_surface(application_surface, 0, 0, SCREENWIDTH, SCREENHEIGHT, false, false, 0, 0);
+		show_pause_menu = true;
+		if(argument_count > 0 && !argument[0]) show_pause_menu = false;
 		
 		instance_deactivate_object(oDepth_object);
 		instance_deactivate_object(oBattle_manager);
 		instance_deactivate_object(oCamera);
+		
+		audio_pause_all();
 	}
 	else {
 		instance_activate_all();
-		
-		sprite_delete(global.sPause);
-		global.sPause = noone;
+		audio_resume_all();
+		show_pause_menu = false;
+		global.pause = true;
+		alarm[0] = 1;
 	}
 	
 }

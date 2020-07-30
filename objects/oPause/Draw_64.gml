@@ -1,1 +1,1 @@
-if(global.pause) event_inherited();
+if(global.pause && show_pause_menu) event_inherited();

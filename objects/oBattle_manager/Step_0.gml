@@ -35,11 +35,12 @@ if(started) {
 				for(var j = 0; j < room_height; j++) {
 					var offset = 4 * (i + (j * room_width));
 					var alpha = buffer_peek(buffer, offset + 3, buffer_u8);
-					if(alpha > 0) red_count++;
+					if(alpha > 20) red_count++;
 				}
 			}
 			buffer_delete(buffer);
 			min_score = 12000;
+			show_debug_message(red_count);
 			red_count = clamp(red_count, 0, min_score);
 			global.game_score.blood *= 1 - red_count/min_score;
 			// ash piles

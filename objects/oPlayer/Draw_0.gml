@@ -11,7 +11,9 @@ switch(tool_using) {
 		if(mouse_check_button(mb_left)) {
 			surface_set_target(global.liquid_surf);
 			gpu_set_blendmode(bm_subtract);
+			gpu_set_colorwriteenable(false, false, false, true);
 			draw_sprite(sMop_mask, 0, x + lengthdir_x(10, tool_angle), y - tool_height + lengthdir_y(10, tool_angle));
+			gpu_set_colorwriteenable(true, true, true, true);
 			gpu_set_blendmode(bm_normal);
 			surface_reset_target();
 			

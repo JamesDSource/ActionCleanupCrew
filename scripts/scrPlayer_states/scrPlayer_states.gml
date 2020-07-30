@@ -1,6 +1,7 @@
 function player_state_free() {
 	move();
 	recharge_mask();
+	interactables();
 	sprite_index = sPlayer;
 	
 	// swapping tools
@@ -31,7 +32,7 @@ function player_state_free() {
 				var dist_div = point_distance(x, y, list_x, list_y) div 3;
 				x += (sign(list_x - x)*8)/dist_div;
 				y += (sign(list_y - y)*8)/dist_div;
-				if(point_distance(x, y, list_x, list_y) < 10) instance_destroy();
+				if(point_distance(x, y, list_x, list_y) < 5) instance_destroy();
 			}
 		}
 		ds_list_clear(bits);
@@ -44,12 +45,8 @@ function player_state_free() {
 	}
 	else if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	
-	// picking up bodies
-	var bod = instance_place(x, y, oBody)
-	if((bod != noone && keyboard_check_pressed(vk_space)) || instance_exists(body_held)) {
-		if(instance_exists(bod)) body_held = bod;
-		state = states.holding;
-	}
+	// if holding a body, go to the body state
+	if(instance_exists(body_held)) state = states.holding;
 	
 	event_inherited();
 }
@@ -59,6 +56,7 @@ function player_state_holding() {
 	tool_using = TOOL.NONE;
 	move();
 	recharge_mask();
+	interactables();
 	event_inherited();
 	
 	if(instance_exists(body_held)) {
@@ -66,18 +64,9 @@ function player_state_holding() {
 		body_held.y = y;
 		body_held.z = 10;
 		
-		if(keyboard_check_pressed(vk_space)) {
-			var incen_inst = collision_circle(x, y, 20, oIncinerator, false, true);
-			if(incen_inst == noone || incen_inst.burn_timer > 0) {
-				body_held.z = 0;
-				body_held = noone;
-				state = states.free;
-			}
-			else {
-				instance_destroy(body_held);
-				body_held = noone;
-				incen_inst.burn_timer = incen_inst.burn_time;
-			}
+		if(keyboard_check_pressed(vk_space) && !instance_exists(selected_interactable)) {
+			body_held = noone;
+			state = states.free;
 		}
 		
 		if(irandom_range(1, 100) < 5) {

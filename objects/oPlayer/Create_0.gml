@@ -18,9 +18,9 @@ event_inherited();
 spd = 1.7;
 
 
-mask_on = true;
-mask_time = 4 * room_speed;
-mask_timer = mask_time;
+helmat_on = true;
+helmat_time = 4 * room_speed;
+helmat_timer = helmat_time;
 
 body_held = noone;
 
@@ -32,8 +32,8 @@ states = {
 state = states.free;
 
 kill_function = function kill_player(death_type) {
-	if(mask_on) {
-		mask_on = false;
+	if(helmat_on) {
+		helmat_on = false;
 		iframes = 30;
 		flash_frames_left = flash_frames;
 	}
@@ -44,7 +44,7 @@ kill_function = function kill_player(death_type) {
 
 draw_function = function draw_player() {
 	draw_depth_object();
-	if(mask_on) draw_sprite_ext(sPlayer_mask, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+	if(helmat_on) draw_sprite_ext(sPlayer_helmat, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 }
 
 function move() {
@@ -68,11 +68,31 @@ function move() {
 
 function recharge_mask() {
 	// mask recharge
-	if(!mask_on && mask_timer > 0) mask_timer--;
-	else if(!mask_on) {
-		mask_on = true;
-		mask_timer = mask_time;
+	if(!helmat_on && helmat_timer > 0) helmat_timer--;
+	else if(!helmat_on) {
+		helmat_on = true;
+		helmat_timer = helmat_time;
 	}
+}
+
+selected_interactable = noone;
+interactable_radius = 20;
+function interactables() {
+	selected_interactable = noone;
+	var interactable_list = ds_list_create();
+	var num = collision_circle_list(x, y, interactable_radius, oDepth_object, false, true, interactable_list, true);
+	for(var i = 0; i < num; i++) {
+		if(interactable_list[| i].is_interactable) {
+			selected_interactable = interactable_list[| i];
+			break;
+		}
+	}
+	
+	if(keyboard_check_pressed(vk_space) && instance_exists(selected_interactable)) {
+		selected_interactable.interact_method();	
+	}
+	
+	ds_list_destroy(interactable_list);
 }
 
 audio_listener_orientation(0, 1, 0, 0, 0, 1);

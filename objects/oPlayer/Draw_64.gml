@@ -1,5 +1,5 @@
-if(!mask_on) {
-	var str = "Recharging Mask..."
+if(!helmat_on) {
+	var str = "Recharging Helmat..."
 	
 	var margin = 10;
 	draw_set_font(fHUD);
@@ -9,7 +9,7 @@ if(!mask_on) {
 	
 	draw_text(margin, margin, str);
 	
-	var progress = 1 - (mask_timer/mask_time);
+	var progress = 1 - (helmat_timer/helmat_time);
 	var bar_w = string_width(str);
 	var bar_h = 5;
 	var x1 = margin;
