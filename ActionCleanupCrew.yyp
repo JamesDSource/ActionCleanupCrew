@@ -139,6 +139,7 @@
     {"id":{"name":"scrNumbers","path":"scripts/scrNumbers/scrNumbers.yy",},"order":19,},
     {"id":{"name":"sCeiling_rust","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"order":0,},
     {"id":{"name":"oHub_wall1","path":"objects/oHub_wall1/oHub_wall1.yy",},"order":0,},
+    {"id":{"name":"fLevel_select","path":"fonts/fLevel_select/fLevel_select.yy",},"order":3,},
     {"id":{"name":"sSoldier_white","path":"sprites/sSoldier_white/sSoldier_white.yy",},"order":0,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sDesk","path":"sprites/sDesk/sDesk.yy",},"order":1,},
