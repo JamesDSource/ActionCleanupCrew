@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"sIncinerator_opened","path":"sprites/sIncinerator_opened/sIncinerator_opened.yy",},"order":2,},
     {"id":{"name":"tCarpet","path":"tilesets/tCarpet/tCarpet.yy",},"order":1,},
+    {"id":{"name":"oDev_console","path":"objects/oDev_console/oDev_console.yy",},"order":0,},
     {"id":{"name":"sGrades_background","path":"sprites/sGrades_background/sGrades_background.yy",},"order":5,},
     {"id":{"name":"sdMenu_scroll","path":"sounds/sdMenu_scroll/sdMenu_scroll.yy",},"order":2,},
     {"id":{"name":"sdSniper","path":"sounds/sdSniper/sdSniper.yy",},"order":7,},
@@ -17,6 +18,7 @@
     {"id":{"name":"sCeiling_office","path":"sprites/sCeiling_office/sCeiling_office.yy",},"order":2,},
     {"id":{"name":"sdDeath_man1","path":"sounds/sdDeath_man1/sdDeath_man1.yy",},"order":0,},
     {"id":{"name":"sOffice_wall","path":"sprites/sOffice_wall/sOffice_wall.yy",},"order":1,},
+    {"id":{"name":"scrStrings","path":"scripts/scrStrings/scrStrings.yy",},"order":44,},
     {"id":{"name":"oShelves","path":"objects/oShelves/oShelves.yy",},"order":1,},
     {"id":{"name":"scrSoldier_states","path":"scripts/scrSoldier_states/scrSoldier_states.yy",},"order":4,},
     {"id":{"name":"sSoldier_white_mask","path":"sprites/sSoldier_white_mask/sSoldier_white_mask.yy",},"order":1,},
@@ -111,6 +113,7 @@
     {"id":{"name":"sdIncinerator","path":"sounds/sdIncinerator/sdIncinerator.yy",},"order":3,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
     {"id":{"name":"sReceptionist","path":"sprites/sReceptionist/sReceptionist.yy",},"order":0,},
+    {"id":{"name":"fDev_console","path":"fonts/fDev_console/fDev_console.yy",},"order":1,},
     {"id":{"name":"oResults","path":"objects/oResults/oResults.yy",},"order":1,},
     {"id":{"name":"sAsh_mid","path":"sprites/sAsh_mid/sAsh_mid.yy",},"order":1,},
     {"id":{"name":"sdLaser_canon","path":"sounds/sdLaser_canon/sdLaser_canon.yy",},"order":6,},
@@ -208,7 +211,9 @@
   "tutorialPath": "",
   "configs": {
     "name": "Default",
-    "children": [],
+    "children": [
+      {"name":"Dev","children":[],},
+    ],
   },
   "RoomOrder": [
     {"name":"rInit","path":"rooms/rInit/rInit.yy",},
@@ -280,6 +285,7 @@
     {"folderPath":"folders/Solid/Walls/Rusted.yy","order":2,"resourceVersion":"1.0","name":"Rusted","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/NPCs.yy","order":41,"resourceVersion":"1.0","name":"NPCs","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Levels/Level Select.yy","order":4,"resourceVersion":"1.0","name":"Level Select","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Dev Console.yy","order":43,"resourceVersion":"1.0","name":"Dev Console","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
