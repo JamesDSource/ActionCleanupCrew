@@ -6,11 +6,13 @@ enum DEATHTYPE {
 	BURN,
 	EXPLOSION
 }
+#macro DEATHS 3
 
 kill_function = function kill(death_type) {
 	hp--;
 	flash_frames_left = flash_frames;
 	if(hp <= 0) {
+		if(death_type == "random") death_type = irandom_range(0, DEATHS-1);
 		switch(death_type) {
 			case DEATHTYPE.PIERCING:
 				var chunks = irandom_range(40, 60);

@@ -86,7 +86,7 @@ if(started) {
 	
 	// auto killing if something hasn't died in awhile
 	if(autokill_timer > 0) autokill_timer--;
-	else {
+	else if(frames_left > retreat_time*room_speed) {
 		var entities = ds_list_create();
 		var kill_entity = noone;
 		
@@ -110,10 +110,8 @@ if(started) {
 		}
 		
 		if(kill_entity != noone) {
-			var deaths = [DEATHTYPE.PIERCING, DEATHTYPE.BURN];
-			var death = deaths[irandom_range(0, array_length(deaths)-1)];
-			kill_entity.hp = 1;
-			kill_entity.kill_function(death);
+			kill_entity.hp = 0;
+			kill_entity.kill_function("random");
 		}
 		
 		ds_list_destroy(entities);
