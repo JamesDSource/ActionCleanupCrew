@@ -7,7 +7,7 @@ trigger_function = function tut_intro() {
 		"Just aim your ACC combat mop with your mouse,\nand hold the left mouse button."
 	]
 	
-	oPlayer.play_lines(lines);
+	oPlayer.play_lines("Loud Speaker", lines);
 }
 
 

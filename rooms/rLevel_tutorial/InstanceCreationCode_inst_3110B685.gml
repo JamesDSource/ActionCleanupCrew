@@ -7,5 +7,5 @@ trigger_function = function tut_suck() {
 		"Once you are finished, please\nhead towards the exit."
 	]
 	
-	oPlayer.play_lines(lines);
+	oPlayer.play_lines("Loud Speaker", lines);
 }

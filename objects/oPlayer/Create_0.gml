@@ -99,8 +99,9 @@ audio_listener_orientation(0, 1, 0, 0, 0, 1);
 
 // read state
 dialogues = array_create(0);
-function play_lines(lines) {
+function play_lines(speaker, lines) {
 	dialogues = lines;
+	dialogue_speaker = speaker;
 	dialogue_index = 0;
 	line_index = 1;
 	dialogue_type_timer = dialogue_type_time;
@@ -110,4 +111,4 @@ function play_lines(lines) {
 dialogue_box_height = 60;
 dialogue_type_time = 2;
 
-iframes = 0;
+iframes = room_speed;

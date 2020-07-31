@@ -25,7 +25,7 @@ function player_state_free() {
 		var list_y = y - tool_height + lengthdir_y(10, tool_angle);
 		var bits = ds_list_create();
 		
-		collision_circle_list(list_x + lengthdir_x(30, tool_angle), list_y + lengthdir_y(30, tool_angle), 30, oBit, false, true, bits, false);
+		collision_circle_list(list_x + lengthdir_x(20, tool_angle), list_y + lengthdir_y(20, tool_angle), 30, oBit, false, true, bits, false);
 		for(var i = 0; i < ds_list_size(bits); i++) {
 			var bit = bits[| i];
 			with(bit) {

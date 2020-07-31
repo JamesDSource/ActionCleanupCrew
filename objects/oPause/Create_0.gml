@@ -25,16 +25,37 @@ function toggle_pause() {
 }
 
 event_inherited();
-
-pages = {
-	main: [
-		["Resume", toggle_pause],
-		["Title Screen", function pause_title_screen() {
-			toggle_pause();
-			transition_to(rTitle_page);
-		}],
-		["Quit", function menu_quit() {transition_quit();}]
-	]
+if(is_level) {
+	pages = {
+		main: [
+			["Resume", toggle_pause],
+			["Title Screen", function pause_title_screen() {
+				toggle_pause();
+				transition_to(rTitle_page);
+			}],
+			["Back to headquarters", function pause_headquarters() {
+				toggle_pause();
+				transition_to(rHub);
+			}],
+			["Level Restart", function pause_restart() {
+				toggle_pause();
+				transition_to(room);
+			}],
+			["Quit", function menu_quit() {transition_quit();}]
+		]
+	}
+}
+else {
+	pages = {
+		main: [
+			["Resume", toggle_pause],
+			["Title Screen", function pause_title_screen() {
+				toggle_pause();
+				transition_to(rTitle_page);
+			}],
+			["Quit", function menu_quit() {transition_quit();}]
+		]
+	}
 }
 
 page = pages.main;

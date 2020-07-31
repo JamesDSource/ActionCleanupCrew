@@ -26,13 +26,14 @@ if(!helmat_on) {
 
 // dialogue box
 if(state == states.read) {
+	var border = 2;
+	
 	draw_set_font(fHUD);
 	draw_set_halign(fa_left);	
 	draw_set_valign(fa_top);	
 	draw_set_color(c_white);
 	
-	draw_rectangle_color(0, display_get_gui_height() - dialogue_box_height, display_get_gui_width(), display_get_gui_height(), c_black, c_black, c_black, c_black, false);
-	draw_line(0, display_get_gui_height() - dialogue_box_height, display_get_gui_width(), display_get_gui_height() - dialogue_box_height);
+	draw_rectange_border(0, display_get_gui_height() - dialogue_box_height, display_get_gui_width(), dialogue_box_height, border, c_black, c_white);
 	
 	var str_whole = dialogues[dialogue_index];
 	var str_cut = string_copy(str_whole, 1, line_index);
@@ -40,4 +41,8 @@ if(state == states.read) {
 	var str_draw_x = display_get_gui_width()/2 - string_width(str_whole)/2;
 	var str_draw_y = display_get_gui_height() - dialogue_box_height/2 - string_height(str_whole)/2;
 	draw_text(str_draw_x, str_draw_y, str_cut);
+	
+	var speaker_padding = 3;
+	draw_rectange_border(0, 0, display_get_gui_width(), string_height(dialogue_speaker) + (border + speaker_padding)*2, border, c_black, c_white);
+	draw_text(border + speaker_padding, border + speaker_padding, dialogue_speaker);
 }

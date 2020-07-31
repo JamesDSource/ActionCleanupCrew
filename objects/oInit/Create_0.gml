@@ -12,6 +12,4 @@ instance_create_depth(x, y, 0, oRender);
 audio_falloff_set_model(audio_falloff_exponent_distance);
 
 randomize();
-
-cursor_sprite = sCursor;
 alarm[0] = 1;

@@ -1,8 +1,8 @@
-surf = -1;
 dw = display_get_gui_width();
 dh = display_get_gui_height();
 w = dw;
-h = dh/1.5;
+h = dh/1.2;
+current_w = 1;
 x_org = dw/2 - w/2;
 y_org = dh/2 - h/2;
 
@@ -16,15 +16,20 @@ function level(level_room, level_name) constructor {
 
 levels = [
 	new level(rLevel_tutorial, "Tutorial"),
-	new level(rLevel1, "Warehouse"),
-	new level(rLevel2, "Office")
+	new level(rWarehouse1, "First Encounter"),
+	new level(rLevel1_jam, "Game Jam Level 1"),
+	new level(rLevel2_jam, "Game Jam Level 2")
 ]
 
 level_index = 0;
 level_index_left = -1;
 level_index_right = 1;
 
-pos_spd = 10;
-scale_spd = 0.1;
+pos_spd = 5;
+scale_spd = 0.05;
 
 init = false;
+
+progress = 0;
+
+locked = false;

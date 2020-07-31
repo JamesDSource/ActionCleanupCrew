@@ -7,5 +7,5 @@ trigger_function = function tut_bodies() {
 		"The Incinerator can only hold one body at a time."
 	]
 	
-	oPlayer.play_lines(lines);
+	oPlayer.play_lines("Loud Speaker", lines);
 }
