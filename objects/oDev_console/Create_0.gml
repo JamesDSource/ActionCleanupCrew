@@ -19,8 +19,14 @@ function evaluate_command(cmd) {
 		var words = string_get_words(cmd);
 		for(var i = 0; i < array_length(words); i++) words[i] = string_lower(words[i]);
 		switch(words[0]) {
-			default: return [LOGTYPE.ERROR, "Invalid command " + "\"" + words[0] + "\"."]
+			case "godmode":
+				global.godmode = !global.godmode;
+				if(global.godmode) return [LOGTYPE.CHANGE, "godmode activated"];
+				else return [LOGTYPE.CHANGE, "godmode deactivated"];
+				break;
+			
+			default: return [LOGTYPE.ERROR, "Invalid command " + "\"" + words[0] + "\""]; break;
 		}
 	}
-	else return [LOGTYPE.ERROR, "Pease write something."];
+	else return [LOGTYPE.ERROR, "Pease write something"];
 }

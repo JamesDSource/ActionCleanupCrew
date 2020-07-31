@@ -21,7 +21,10 @@ if(open) {
 					col = c_red; 
 					pretext = "ERROR: ";
 					break;
-				case LOGTYPE.CHANGE: col = c_lime; break;
+				case LOGTYPE.CHANGE: 
+					col = c_lime; 
+					pretext = "CMD: "
+					break;
 				default: col = c_white; break;
 			}
 			draw_set_color(col);

@@ -21,6 +21,7 @@ audio_falloff_set_model(audio_falloff_exponent_distance);
 // Dev mode
 #macro DEVBUILD false
 #macro Dev:DEVBUILD true
+global.godmode = false;
 
 randomize();
 alarm[0] = 1;

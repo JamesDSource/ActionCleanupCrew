@@ -1,4 +1,5 @@
 if(DEVBUILD && keyboard_check_pressed(vk_f4)) open = !open;
+if(variable_global_exists("pause") && global.pause) open = false;
 
 if(open) {
 	if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_down)) {
@@ -12,7 +13,16 @@ if(open) {
 		if(input_string_length > 0) input_string = string_copy(input_string, 1, input_string_length - 1);
 	}
 	else if(keyboard_check_pressed(vk_up)) input_string = last_input;
-	else if(keyboard_check_pressed(vk_anykey) && !keyboard_check_pressed(vk_f4) && !keyboard_check_pressed(vk_shift)) input_string += keyboard_lastchar;
+	else if(keyboard_check_pressed(vk_anykey)) {
+		var invalid_inputs = [
+			vk_f4,
+			vk_shift,
+			vk_escape
+		]
+		var valid = true;
+		for(var i = 0; i < array_length(invalid_inputs); i++) if(keyboard_check_pressed(invalid_inputs[i])) valid = false;
+		if(valid) input_string += keyboard_lastchar;
+	}
 
 	if(pipe_flash_timer > 0) pipe_flash_timer--;
 	else {

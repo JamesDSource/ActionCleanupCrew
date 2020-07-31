@@ -32,13 +32,15 @@ states = {
 state = states.free;
 
 kill_function = function kill_player(death_type) {
-	if(helmat_on) {
-		helmat_on = false;
-		iframes = 30;
-		flash_frames_left = flash_frames;
-	}
-	else if(iframes == 0){
-		kill(death_type);
+	if(!global.godmode) {
+		if(helmat_on) {
+			helmat_on = false;
+			iframes = 30;
+			flash_frames_left = flash_frames;
+		}
+		else if(iframes == 0){
+			kill(death_type);
+		}
 	}
 }
 
