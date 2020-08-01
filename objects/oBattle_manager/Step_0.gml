@@ -46,7 +46,7 @@ if(started) {
 			// ash piles
 			global.game_score.ash -= clamp(instance_number(oAsh_pile)*5, 0, 100);
 			// bits
-			global.game_score.bits -= clamp(instance_number(oBit)*4, 0, 100);
+			global.game_score.bits -= clamp(instance_number(oBit)*2, 0, 100);
 			// bodies
 			global.game_score.bodies -= clamp(instance_number(oBody)*5, 0, 100);
 		

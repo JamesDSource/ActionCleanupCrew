@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sdLaser_rifle.wav",
-  "duration": 1.83432007,
+  "duration": 7.050351,
   "parent": {
     "name": "Guns",
     "path": "folders/Soldiers/Guns.yy",
