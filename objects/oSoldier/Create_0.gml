@@ -48,7 +48,7 @@ function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_t
 guns = ds_map_create();;
 
 
-guns[? "Rifle"] = new gun(
+guns[? "rifle"] = new gun(
 	"Rifle",		// name
 	oRifle_shot,	// bullet
 	1,				// bullets
@@ -63,7 +63,7 @@ guns[? "Rifle"] = new gun(
 	sdRifle			// sound
 );
 	
-guns[? "Laser Gun"] = new gun(
+guns[? "laser_gun"] = new gun(
 	"Laser Gun",
 	oLaser_shot,
 	1,
@@ -78,7 +78,7 @@ guns[? "Laser Gun"] = new gun(
 	sdLaser_rifle
 );
 	
-guns[? "Sniper"] = new gun(
+guns[? "sniper"] = new gun(
 	"Sniper",
 	oSniper_shot,
 	1,
@@ -93,7 +93,7 @@ guns[? "Sniper"] = new gun(
 	sdSniper
 );
 	
-guns[? "Submachine Gun"] = new gun(
+guns[? "submachine_gun"] = new gun(
 	"Submachine Gun",
 	oSubmachine_gun_shot,
 	1,
@@ -108,7 +108,7 @@ guns[? "Submachine Gun"] = new gun(
 	sdLaser_rifle
 );
 	
-guns[? "Laser Canon"] = new gun(
+guns[? "laser_canon"] = new gun(
 	"Laser Canon",
 	oLaser_canon_shot,
 	1,
@@ -123,7 +123,7 @@ guns[? "Laser Canon"] = new gun(
 	sdLaser_canon
 );
 	
-guns[? "Shotgun"] = new gun(
+guns[? "shotgun"] = new gun(
 	"Shotgun",
 	oShotgun_shot,
 	6,
@@ -138,7 +138,7 @@ guns[? "Shotgun"] = new gun(
 	sdRifle
 );
 
-guns[? "Laser Shotgun"] = new gun(
+guns[? "laser_shotgun"] = new gun(
 	"Laser Shotgun",
 	oLaser_shotgun_shot,
 	3,
@@ -158,7 +158,7 @@ if(instance_exists(oBattle_manager)) {
 	var gun_using_name = available[irandom_range(0, array_length(available) - 1)]
 	gun_using = guns[? gun_using_name];
 }
-else gun_using = guns[? "Rifle"];
+else gun_using = guns[? "rifle"];
 gun_height = 5;
 gun_angle = 0;
 gun_angle_real = 0;

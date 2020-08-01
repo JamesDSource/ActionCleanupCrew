@@ -25,6 +25,8 @@ function evaluate_command(cmd) {
 		return string(number) + " arguments required for " + "\"" + name + "\"";
 	}
 	var number_expected_error = "Number expected";
+	var bool_expected_error = "Boolean expected";
+	var required_object_error = "Required object does not exists";
 	
 	if(string_length(cmd) > 0) {
 		var words = string_get_words(cmd);
@@ -97,13 +99,52 @@ function evaluate_command(cmd) {
 								default: return [LOGTYPE.ERROR, invalid_command_error(words[1])]; break;
 							}
 						}
-						else return [LOGTYPE.ERROR, "Required object does not exists"];
+						else return [LOGTYPE.ERROR, required_object_error];
 					}
 					else return [LOGTYPE.ERROR, arguments_error(words[0], 3)];
 				#endregion
 				break;
+			case "gun":
+				#region gun
+					if(array_length(words) == 3) {
+						if(instance_exists(oBattle_manager)) {
+							var guns = oBattle_manager.guns_available;
+							switch(words[2]) {
+								case "true":
+									var gun_not_there = true;
+									for(var i = 0; i < array_length(guns); i++) {
+										if(guns[i] == words[1]) gun_not_there = false;	
+									}
+									if(gun_not_there) {
+										guns[array_length(guns)] = words[1];
+										oBattle_manager.guns_available = guns;
+										return [LOGTYPE.CHANGE, "Gun \"" + words[1] + "\" is now available"];
+									}
+									else return [LOGTYPE.ERROR, "Gun already is available"];
+									break;
+						
+								case "false":
+									var new_list = array_create(0);
+									for(var i = 0; i < array_length(guns); i++) {
+										if(guns[i] != words[1]) new_list[array_length(new_list)] = guns[i];	
+									}
+									if(array_length(guns) == array_length(new_list)) return [LOGTYPE.ERROR, "Gun is already unavailable"];
+									else {
+										oBattle_manager.guns_available = new_list;
+										return [LOGTYPE.CHANGE, "Gun \"" + words[1] + "\" is now unavailable"];
+									}
+									break;
+							
+								default: return [LOGTYPE.ERROR, bool_expected_error]; break; 
+							}
+						}
+						else return [LOGTYPE.ERROR, required_object_error];
+					}
+					else return[LOGTYPE.ERROR, arguments_error(words[0], 3)];
+					break;
 			
-			default: return [LOGTYPE.ERROR, invalid_command_error(words[0])]; break;
+				default: return [LOGTYPE.ERROR, invalid_command_error(words[0])]; break;
+			#endregion
 		}
 	}
 	else return [LOGTYPE.ERROR, "Pease write something"];
