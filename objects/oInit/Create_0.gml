@@ -23,5 +23,21 @@ audio_falloff_set_model(audio_falloff_exponent_distance);
 #macro Dev:DEVBUILD true
 global.godmode = false;
 
+// levels
+function level(level_room, level_name) constructor {
+	name = level_name;
+	room_index = level_room;
+	x_pos = 0;
+	y_pos = 0;
+	scale = 0;
+}
+
+global.levels = [
+	new level(rLevel_tutorial, "Tutorial"),
+	new level(rWarehouse1, "First Encounter"),
+	new level(rLevel1_jam, "Game Jam Level 1"),
+	new level(rLevel2_jam, "Game Jam Level 2")
+]
+
 randomize();
 alarm[0] = 1;

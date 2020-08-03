@@ -23,12 +23,15 @@ function init_save_file() {
 	var levels = ds_map_create();
 	ds_map_add_map(new_save, "levels", levels);
 	
+	new_save[? "level lock"] = 0;
+	
 	save_json_to_file(SAVEFILENAME, new_save);
 	ds_map_destroy(new_save);
 }
 
 #region	global stats
 	global.highest_grades = {};
+	global.level_lock = 0;
 #endregion
 
 function save() {
@@ -40,6 +43,8 @@ function save() {
 		var grade = variable_struct_get(global.highest_grades, highest_grade_names[i]);
 		save_map[? "levels"][? highest_grade_names[i]] = grade;
 	}
+	
+	save_map[? "level lock"] = global.level_lock;
 	
 	save_json_to_file(SAVEFILENAME, save_map);	
 	ds_map_destroy(save_map);
@@ -57,6 +62,8 @@ function load() {
 			map_key = ds_map_find_next(high_scores, map_key);
 		}
 	}
+	
+	global.level_lock = save_map[? "level lock"];
 	
 	ds_map_destroy(save_map);
 }

@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Init",
-    "path": "folders/Levels/Init.yy",
+    "path": "folders/Init.yy",
   },
   "resourceVersion": "1.0",
   "name": "oInit",

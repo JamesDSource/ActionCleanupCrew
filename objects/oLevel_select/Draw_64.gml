@@ -10,7 +10,7 @@ if(progress == 1) {
 	draw_set_font(fLevel_select);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
-	for(var i = 0; i < array_length(levels); i++) {
-		if(i <= level_limiter) draw_text_transformed(x_org + levels[i].x_pos, y_org + 15, levels[i].name, levels[i].scale, levels[i].scale, 0);
+	for(var i = 0; i < array_length(global.levels); i++) {
+		if(i <= global.level_lock) draw_text_transformed(x_org + global.levels[i].x_pos, y_org + 15, global.levels[i].name, global.levels[i].scale, global.levels[i].scale, 0);
 	}
 }
