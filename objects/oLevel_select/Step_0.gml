@@ -15,7 +15,7 @@ else {
 		transition_to(levels[level_index].room_index);	
 	}
 
-	level_index = clamp(level_index, 0, array_length(levels) - 1);
+	level_index = clamp(level_index, 0, level_limiter);
 	level_index_left = level_index - 1;
 	level_index_right = level_index + 1;
 

@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oPlayer_solid",
-    "path": "objects/oPlayer_solid/oPlayer_solid.yy",
+    "name": "oDoor",
+    "path": "objects/oDoor/oDoor.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

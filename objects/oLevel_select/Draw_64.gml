@@ -11,6 +11,6 @@ if(progress == 1) {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 	for(var i = 0; i < array_length(levels); i++) {
-		draw_text_transformed(x_org + levels[i].x_pos, y_org + 15, levels[i].name, levels[i].scale, levels[i].scale, 0);
+		if(i <= level_limiter) draw_text_transformed(x_org + levels[i].x_pos, y_org + 15, levels[i].name, levels[i].scale, levels[i].scale, 0);
 	}
 }

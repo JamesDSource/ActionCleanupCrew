@@ -24,6 +24,7 @@ levels = [
 level_index = 0;
 level_index_left = -1;
 level_index_right = 1;
+level_limiter = 0;
 
 pos_spd = 5;
 scale_spd = 0.05;
