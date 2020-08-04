@@ -22,7 +22,7 @@ if(total_score != "F") {
 	show_debug_message(global.level_lock);
 	for(var i = 0; i < array_length(global.levels); i++) {
 		if(global.game_score.level == "level " + room_get_name(global.levels[i].room_index) && i == global.level_lock) {
-			global.level_lock++; 
+			global.level_lock = min(global.level_lock + 1, array_length(global.levels) - 1);
 			break;
 		}
 	}
