@@ -38,5 +38,7 @@ function start() {
 	with(oSpawn_point) {
 		if(team == TEAM.WHITE) ds_list_add(other.white_spawns, id);	
 		else if(team == TEAM.BLACK) ds_list_add(other.black_spawns, id);	
-	}		
+	}
 }
+
+start_lines = array_create(0);

@@ -37,7 +37,7 @@ global.levels = [
 	new level(rWarehouse1, "First Encounter"),
 	new level(rLevel1_jam, "Game Jam Level 1"),
 	new level(rLevel2_jam, "Game Jam Level 2")
-]
+];
 
 randomize();
 alarm[0] = 1;

@@ -117,4 +117,10 @@ if(started) {
 		ds_list_destroy(entities);
 	}
 }
-else if(autostart) start();
+else if(instance_exists(oPlayer)) {
+	if(array_length(start_lines) != 0) {
+		oPlayer.play_lines("Radio", start_lines);
+		start_lines = array_create(0);
+	}
+	else if(oPlayer.state != oPlayer.states.read) start();
+}

@@ -22,7 +22,7 @@ function evaluate_command(cmd) {
 		return "Invalid command " + "\"" + name + "\"";
 	}
 	function arguments_error(name, number) {
-		return string(number) + " arguments required for " + "\"" + name + "\"";
+		return string(number) + " arguments expected for " + "\"" + name + "\"";
 	}
 	var number_expected_error = "Number expected";
 	var bool_expected_error = "Boolean expected";
@@ -145,6 +145,37 @@ function evaluate_command(cmd) {
 			
 				default: return [LOGTYPE.ERROR, invalid_command_error(words[0])]; break;
 			#endregion
+				break;
+			case "progression":
+				#region progression
+					if(array_length(words) >= 2) {
+						switch(words[1]) {
+							case "flush":
+								if(array_length(words) == 2) {
+									global.level_lock = 0;
+									save();
+									return [LOGTYPE.CHANGE, "Progression flushed"];
+								}
+								else return[LOGTYPE.ERROR, arguments_error(words[0], 2)];
+								break;
+							case "set":
+								if(array_length(words) == 3) {
+									var numb = string_digits(words[2]);
+									if(numb != "") numb = real(numb);
+									else return [LOGTYPE.ERROR, number_expected_error];
+									
+									global.level_lock = clamp(numb, 0, array_length(global.levels) - 1);
+									save();
+									return [LOGTYPE.CHANGE, "Progression set to " + string(numb)];
+								}
+								else return[LOGTYPE.ERROR, arguments_error(words[0], 3)];
+								break;
+							default: return [LOGTYPE.ERROR, invalid_command_error(words[1])]; break;
+						}
+					}
+					else return[LOGTYPE.ERROR, arguments_error(words[0], 2)];
+				#endregion
+				break;
 		}
 	}
 	else return [LOGTYPE.ERROR, "Pease write something"];
