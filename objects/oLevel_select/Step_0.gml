@@ -2,18 +2,22 @@ var progress_spd = 0.05;
 if(!global.pause) locked = true 	
 
 if(locked) {
+	if(progress == 1) audio_play_sound(sdLevel_select_close, SOUNDPRIORITY.MENUS, false);
 	progress = approach(progress, 0, progress_spd);	
 	if(progress == 0) instance_destroy();	
 }
 else { 
 	progress = approach(progress, 1, progress_spd);
 
-	if(keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) level_index--;
-	else if(keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) level_index++;
-	else if(keyboard_check_pressed(vk_space) && progress == 1) {
-		oPause.toggle_pause();
-		transition_to(global.levels[level_index].room_index);	
+	if(keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
+		level_index--;
+		audio_play_sound(sdLevel_select_scroll, SOUNDPRIORITY.MENUS, false);
 	}
+	else if(keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) {
+		level_index++;
+		audio_play_sound(sdLevel_select_scroll, SOUNDPRIORITY.MENUS, false);
+	}
+	global.level_target = global.levels[level_index].room_index;	
 
 	level_index = clamp(level_index, 0, global.level_lock);
 	level_index_left = level_index - 1;

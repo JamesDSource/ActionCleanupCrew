@@ -1,0 +1,11 @@
+--For Release--
+More enemies
+More levels
+More guns
+Basic story
+Space station title background
+Music
+More sound effects
+
+--Later Consideration--
+Abilities and ability shop

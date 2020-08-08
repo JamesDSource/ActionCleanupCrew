@@ -105,7 +105,7 @@ guns[? "submachine_gun"] = new gun(
 	250,
 	room_speed * 4,
 	2,
-	sdLaser_rifle
+	sdRifle
 );
 	
 guns[? "laser_canon"] = new gun(
@@ -135,7 +135,7 @@ guns[? "shotgun"] = new gun(
 	200,
 	room_speed * 8,
 	6,
-	sdRifle
+	sdSniper
 );
 
 guns[? "laser_shotgun"] = new gun(

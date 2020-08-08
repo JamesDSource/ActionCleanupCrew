@@ -19,3 +19,5 @@ init = false;
 progress = 0;
 
 locked = false;
+
+audio_play_sound(sdLevel_select_open, SOUNDPRIORITY.MENUS, false);

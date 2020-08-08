@@ -4,14 +4,14 @@
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 0,
+  "type": 2,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sdLaser_canon.wav",
-  "duration": 4.099014,
+  "duration": 2.65552187,
   "parent": {
     "name": "Guns",
     "path": "folders/Soldiers/Guns.yy",
