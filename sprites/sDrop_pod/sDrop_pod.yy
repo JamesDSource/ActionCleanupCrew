@@ -134,7 +134,7 @@
     "spriteId": {"name":"sDrop_pod","path":"sprites/sDrop_pod/sDrop_pod.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

@@ -153,12 +153,14 @@ function evaluate_command(cmd) {
 							case "flush":
 								if(array_length(words) == 2) {
 									global.level_lock = 0;
+									delete global.highest_grades;
+									global.highest_grades = {};
 									save();
 									return [LOGTYPE.CHANGE, "Progression flushed"];
 								}
 								else return[LOGTYPE.ERROR, arguments_error(words[0], 2)];
 								break;
-							case "set":
+							case "level":
 								if(array_length(words) == 3) {
 									var numb = string_digits(words[2]);
 									if(numb != "") numb = real(numb);
