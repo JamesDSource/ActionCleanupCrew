@@ -23,7 +23,7 @@ if(progress == 1) {
 	if(variable_struct_exists(global.highest_grades, hs_name)) {
 		var hs_index = variable_struct_get(global.highest_grades, hs_name);
 		hs_index = grade_index_from_percent(hs_index);
-		var hs_spr_x = x_org + w + hs_x_margin - sprite_get_width(sGrade_letter)/2 - string_width(hs_str)/2;
+		var hs_spr_x = x_org + w + hs_x_margin - string_width(hs_str)/2;
 		var hs_spr_y = y_org + hs_y_margin + sprite_get_height(sGrade_letter)/2 + string_height(hs_str);
 		draw_sprite(sGrade_letter, hs_index, hs_spr_x, hs_spr_y);
 	}

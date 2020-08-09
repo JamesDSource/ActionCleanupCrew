@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sdMenu_scroll.wav",
-  "duration": 0.205,
+  "duration": 0.105,
   "parent": {
     "name": "Menus",
     "path": "folders/Menus.yy",

@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sdLevel_select_scroll.wav",
-  "duration": 0.304546,
+  "duration": 0.257585,
   "parent": {
     "name": "Level Select",
     "path": "folders/Levels/Level Select.yy",
