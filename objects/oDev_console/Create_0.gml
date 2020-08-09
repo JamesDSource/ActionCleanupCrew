@@ -155,7 +155,8 @@ function evaluate_command(cmd) {
 									global.level_lock = 0;
 									delete global.highest_grades;
 									global.highest_grades = {};
-									save();
+									file_delete(SAVEFILENAME);
+									init_save_file();
 									return [LOGTYPE.CHANGE, "Progression flushed"];
 								}
 								else return[LOGTYPE.ERROR, arguments_error(words[0], 2)];
