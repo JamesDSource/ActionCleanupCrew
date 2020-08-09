@@ -38,8 +38,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Soldiers",
-    "path": "folders/Soldiers.yy",
+    "name": "Battle Manager",
+    "path": "folders/Battle Manager.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBattle_manager",

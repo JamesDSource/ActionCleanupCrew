@@ -4,5 +4,5 @@ if(letter_scale == 1) letter_background_scale = approach(letter_background_scale
 
 if(keyboard_check_pressed(vk_space) && letter_scale == 1) {
 	audio_play_sound(sdMenu_select, SOUNDPRIORITY.MENUS, false);
-	transition_to(rTitle_page);	
+	transition_to(rHub);	
 }
