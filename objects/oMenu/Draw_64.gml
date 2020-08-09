@@ -26,3 +26,11 @@ for(var i = 0; i < array_length(page); i++) {
 	draw_text(margin_x + x_offset, draw_y, page[i][0]);
 	draw_y += margin_y + string_height(page[i][0]);
 }
+
+var key_margin = 5;
+var key_draw_x = display_get_gui_width() - key_margin;
+draw_key_prompt(sPrompt_w, ord("W"), key_draw_x, key_margin);
+key_draw_x -= key_margin + sprite_get_width(sPrompt_w);
+draw_key_prompt(sPrompt_s, ord("S"), key_draw_x, key_margin);
+key_draw_x -= key_margin + sprite_get_width(sPrompt_s) + sprite_get_width(sPrompt_space)/2;
+draw_key_prompt(sPrompt_space, vk_space, key_draw_x, key_margin + sprite_get_yoffset(sPrompt_space))

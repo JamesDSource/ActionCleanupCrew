@@ -6,7 +6,7 @@ rand_dialogue = [
 	["You think you can work overtime today?"],
 	["How're the *BOOP* kids?\nDo you have kids?"],
 	["Just go down the hall\nfor your next *BEEPIDY* assignment."],
-	["The shop on our *BEEP* right should\nhave something good for you *BOOP*."],
+	//["The shop on our *BEEP* right should\nhave something good for you *BOOP*."],
 	["Keep up the good work *BOOP*."],
 	["I wonder who will get employee of the *BEEP* month."]
 ]

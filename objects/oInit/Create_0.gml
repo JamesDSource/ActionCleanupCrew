@@ -23,6 +23,10 @@ audio_falloff_set_model(audio_falloff_exponent_distance);
 #macro Dev:DEVBUILD true
 global.godmode = false;
 
+// Demo
+#macro DEMO false
+#macro Demo:DEMO true
+
 // levels
 function level(level_room, level_name) constructor {
 	name = level_name;
