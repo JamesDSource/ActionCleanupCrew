@@ -16,6 +16,7 @@ if(open) {
 	else if(keyboard_check_pressed(vk_anykey)) {
 		var invalid_inputs = [
 			vk_f4,
+			vk_f3,
 			vk_shift,
 			vk_escape
 		]

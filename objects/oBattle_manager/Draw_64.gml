@@ -1,4 +1,4 @@
-if(started) {
+if(started && global.hud) {
 	var seconds = frames_left div room_speed;
 	
 	var mins_left = seconds div 60;

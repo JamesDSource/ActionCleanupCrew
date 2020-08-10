@@ -13,3 +13,8 @@ camera_set_proj_mat(camera, pm);
 slow = 20;
 target_x = x;
 target_y = y;
+jut = 40;
+
+screen_shake_force = 0;
+screen_shake_time = 0;
+screen_shake_timer = 0;

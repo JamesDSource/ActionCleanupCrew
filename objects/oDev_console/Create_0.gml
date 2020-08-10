@@ -17,6 +17,9 @@ pipe_flash_timer = pipe_flash_time;
 blood_clear = false;
 blood_fill = false;
 
+record = false;
+gif = -1;
+
 function evaluate_command(cmd) {
 	function invalid_command_error(name) {
 		return "Invalid command " + "\"" + name + "\"";
@@ -32,6 +35,11 @@ function evaluate_command(cmd) {
 		var words = string_get_words(cmd);
 		for(var i = 0; i < array_length(words); i++) words[i] = string_lower(words[i]);
 		switch(words[0]) {
+			case "hud":
+				global.hud = !global.hud;
+				if(global.hud) return [LOGTYPE.CHANGE, "Godmode activated"];
+				else return [LOGTYPE.CHANGE, "Godmode deactivated"];
+				break;
 			case "godmode":
 				global.godmode = !global.godmode;
 				if(global.godmode) return [LOGTYPE.CHANGE, "Godmode activated"];
@@ -182,4 +190,13 @@ function evaluate_command(cmd) {
 		}
 	}
 	else return [LOGTYPE.ERROR, "Pease write something"];
+}
+
+function get_filename(subject) {
+	var file_name = "ACC_" + subject + "_";
+	if(current_month < 10) file_name += "0";
+	file_name += string(current_month) + "_";
+	if(current_day < 10) file_name += "0";
+	file_name += string(current_day) + "_" + string(current_year) + "_at_" + string(current_hour) + "_" + string(current_minute) + "_" + string(current_second);
+	return file_name;
 }

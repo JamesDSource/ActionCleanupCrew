@@ -16,7 +16,8 @@ else {
 	else if(keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) {
 		level_index++;
 		audio_play_sound(sdLevel_select_scroll, SOUNDPRIORITY.MENUS, false);
-	}	
+	}
+	else if(keyboard_check_pressed(vk_space) && instance_exists(oPause)) oPause.toggle_pause(); 
 	
 	level_index = clamp(level_index, 0, global.level_lock);
 	level_index_left = level_index - 1;

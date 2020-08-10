@@ -33,6 +33,7 @@ state = states.free;
 
 kill_function = function kill_player(death_type) {
 	if(!global.godmode) {
+		screen_shake(3, 5);
 		if(helmat_on) {
 			helmat_on = false;
 			iframes = 30;

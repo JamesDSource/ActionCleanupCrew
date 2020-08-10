@@ -1,4 +1,7 @@
 {
+  "ConfigValues": {
+    "Demo": {"option_windows_version":"1.0.0.3",},
+  },
   "option_windows_display_name": "Action Cleanup Crew",
   "option_windows_executable_name": "ActionCleanupCrew.exe",
   "option_windows_version": "1.0.0.2",

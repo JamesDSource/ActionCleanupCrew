@@ -22,6 +22,7 @@ audio_falloff_set_model(audio_falloff_exponent_distance);
 #macro DEVBUILD false
 #macro Dev:DEVBUILD true
 global.godmode = false;
+global.hud = true;
 
 // Demo
 #macro DEMO false

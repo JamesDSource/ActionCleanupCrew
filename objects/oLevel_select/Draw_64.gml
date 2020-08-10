@@ -28,3 +28,8 @@ if(progress == 1) {
 		draw_sprite(sGrade_letter, hs_index, hs_spr_x, hs_spr_y);
 	}
 }
+
+var prompt_margin = 5;
+draw_key_prompt(sPrompt_a, ord("A"), prompt_margin, 0);
+draw_key_prompt(sPrompt_d, ord("D"), display_get_gui_width() - prompt_margin, 0);
+draw_key_prompt(sPrompt_space, vk_space, display_get_gui_width()/2, sprite_get_height(sPrompt_space));

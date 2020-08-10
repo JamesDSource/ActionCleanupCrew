@@ -1,4 +1,4 @@
-if(!helmat_on) {
+if(!helmat_on && global.hud) {
 	var str = "Recharging Helmat..."
 	
 	var margin = 10;

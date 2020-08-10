@@ -14,3 +14,7 @@ else {
 	draw_surface(application_surface, 0, 0);
 }
 display_set_gui_size(VIEWWIDTH, VIEWHEIGHT);
+
+if(sprite_exists(spr_cursor)) {
+	draw_sprite(spr_cursor, 0, device_mouse_x_to_gui(0), device_mouse_y_to_gui(0));	
+}
