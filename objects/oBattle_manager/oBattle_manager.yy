@@ -24,7 +24,7 @@
     {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"parent":{"name":"oBattle_manager","path":"objects/oBattle_manager/oBattle_manager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
-    {"varType":1,"value":"10","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"ideal_soldiers","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"4","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"soldier_points","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"6","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"mins","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":6,"value":"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "\"rifle\"",
@@ -35,6 +35,9 @@
         "\"shotgun\"",
         "\"laser_shotgun\"",
       ],"multiselect":true,"filters":[],"resourceVersion":"1.0","name":"guns_available","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":6,"value":"\"standard\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+        "\"standard\"",
+      ],"multiselect":true,"filters":[],"resourceVersion":"1.0","name":"enemies_available","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

@@ -1,21 +1,17 @@
 if(started) {
-	white_soldiers = instance_number(oSoldier_white);
-	black_soldiers = instance_number(oSoldier_black);
-
+	white_points = 0;
+	black_points = 0;
+	for(var i = 0; i < array_length(enemies_available); i++) {
+		var cost = *enemies[? enemies_available[i]].cost;
+		white_points += instance_number(enemies[? enemies_available[i]].white)*enemies[? enemies_available[i]].cost;
+		black_points += instance_number(enemies[? enemies_available[i]].black)*enemies[? enemies_available[i]].cost;
+	}
+	
 	// random tick spawns soldiers if there is too little
 	if(random_tick_timer > 0) random_tick_timer--;
 	else if(frames_left > retreat_time*room_speed) {
-		if(white_soldiers < ideal_soldiers) {
-			ds_list_shuffle(white_spawns);
-			var spawn = white_spawns[| 0];
-			instance_create_layer(spawn.x, spawn.y, "Instances", oSoldier_white);
-		}
-	
-		if(black_soldiers < ideal_soldiers) {
-			ds_list_shuffle(black_spawns);
-			var spawn = black_spawns[| 0];
-			instance_create_layer(spawn.x, spawn.y, "Instances", oSoldier_black);
-		}
+		if(white_points < soldier_points) spawn_enemy(TEAM.WHITE);
+		if(black_points < soldier_points) spawn_enemy(TEAM.BLACK);
 		random_tick_timer = random_tick_time;	
 	}
 	

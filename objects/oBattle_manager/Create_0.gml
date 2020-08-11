@@ -15,20 +15,57 @@ global.game_score = {
 	finished: false	
 };
 
-winner_message = "";
-
 retreat_time = 15;
 
 // auto kill
 autokill_time = room_speed * 30;
 autokill_timer = autokill_time;
 
+function soldier(obj_white, obj_black, point_cost, soldier_probability) constructor {
+	white = obj_white;
+	black = obj_black;
+	cost = point_cost;
+	probability = soldier_probability;
+}
+
+enemies = ds_map_create();
+
+enemies[? "standard"] = new soldier(
+	oSoldier_white,
+	oSoldier_black,
+	1,
+	4
+);
+
+function spawn_enemy(team) {
+	var spawns;
+	var points;
+	if(team == TEAM.WHITE) spawns = white_spawns;
+	else spawns = black_spawns;
+	
+	ds_list_shuffle(spawns);
+	var spawn = spawns[| 0];
+	var possible_enemies = array_create(0);
+	for(var i = 0; i < array_length(enemies_available); i++) {
+		repeat(enemies[? enemies_available[i]].probability) {
+			show_debug_message("found")
+			possible_enemies[array_length(possible_enemies)] = enemies[? enemies_available[i]];
+		}
+	}
+	if(array_length(possible_enemies) > 0) {
+		var spawn_obj = possible_enemies[irandom_range(0, array_length(possible_enemies) - 1)];
+		if(team == TEAM.WHITE) spawn_obj = spawn_obj.white;
+		else spawn_obj = spawn_obj.black;
+		instance_create_layer(spawn.x, spawn.y, "Instances", spawn_obj);
+	}
+}
+
 function start() {
 	started = true;
 
-	white_soldiers = 0;
-	black_soldiers = 0;
-
+	white_points = 0;
+	black_points = 0;
+	
 	random_tick_time = room_speed * 2;
 	random_tick_timer = random_tick_time;
 
