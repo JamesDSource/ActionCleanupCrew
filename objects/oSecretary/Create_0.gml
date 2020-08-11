@@ -8,7 +8,8 @@ rand_dialogue = [
 	["Just go down the hall\nfor your next *BEEPIDY* assignment."],
 	//["The shop on our *BEEP* right should\nhave something good for you *BOOP*."],
 	["Keep up the good work *BOOP*."],
-	["I wonder who will get employee of the *BEEP* month."]
+	["I wonder who will get employee of the *BEEP* month."],
+	["*BEEP*"]
 ]
 
 

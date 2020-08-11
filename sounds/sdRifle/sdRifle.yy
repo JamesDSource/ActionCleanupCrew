@@ -14,7 +14,7 @@
   "duration": 1.834333,
   "parent": {
     "name": "Guns",
-    "path": "folders/Soldiers/Guns.yy",
+    "path": "folders/Enemies/Guns.yy",
   },
   "resourceVersion": "1.0",
   "name": "sdRifle",

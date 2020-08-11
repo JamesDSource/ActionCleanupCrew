@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b5248b88-5ace-40f5-9a4b-a571eef4c92c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sniper Shot",
-    "path": "folders/Projectile/Sniper Shot.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSniper_shot",

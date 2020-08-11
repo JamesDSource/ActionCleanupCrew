@@ -29,8 +29,8 @@
     {"propertyId":{"name":"spd","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"2.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Sniper Shot",
-    "path": "folders/Projectile/Sniper Shot.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSniper_shot",

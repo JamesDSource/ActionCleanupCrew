@@ -28,10 +28,11 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"death_sound_type","path":"objects/oEntity/oEntity.yy",},"objectId":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"value":"\"man\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"priority","path":"objects/oEntity/oEntity.yy",},"objectId":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Soldiers",
-    "path": "folders/Soldiers.yy",
+    "path": "folders/Enemies/Soldiers.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSoldier",

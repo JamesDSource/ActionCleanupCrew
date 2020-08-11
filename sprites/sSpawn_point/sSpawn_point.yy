@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1c0d9b3e-49de-44f9-a242-486405e0bda1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Soldiers",
-    "path": "folders/Soldiers.yy",
+    "name": "Enemies",
+    "path": "folders/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSpawn_point",

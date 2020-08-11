@@ -14,7 +14,7 @@
   "duration": 7.050351,
   "parent": {
     "name": "Guns",
-    "path": "folders/Soldiers/Guns.yy",
+    "path": "folders/Enemies/Guns.yy",
   },
   "resourceVersion": "1.0",
   "name": "sdLaser_rifle",

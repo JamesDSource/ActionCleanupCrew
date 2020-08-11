@@ -47,20 +47,34 @@ function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_t
 
 guns = ds_map_create();;
 
+guns[? "pistol"] = new gun(
+	"Pistol",				// name
+	oSubmachine_gun_shot,	// bullet
+	1,						// bullets
+	15,						// bullet spread
+	room_speed/1.2,			// recharge time
+	1,						// burst
+	0,						// burst time
+	sRifle,					// sprite
+	200,					// range
+	room_speed*4,			// time out of cover
+	3,						// gun kick
+	sdRifle					// sound
+);
 
 guns[? "rifle"] = new gun(
-	"Rifle",		// name
-	oRifle_shot,	// bullet
-	1,				// bullets
-	5,				// bullet spread
-	room_speed,		// recharge time
-	2,				// burst
-	10,				// burst time
-	sRifle,			// sprite
-	300,			// range
-	room_speed*6,	// time out of cover
-	5,				// gun kick
-	sdRifle			// sound
+	"Rifle",	
+	oRifle_shot,
+	1,			
+	5,			
+	room_speed,	
+	2,			
+	10,			
+	sRifle,		
+	300,		
+	room_speed*6,
+	5,			
+	sdRifle		
 );
 	
 guns[? "laser_gun"] = new gun(
@@ -242,6 +256,17 @@ shoot_timer = -1;
 // draw function
 draw_function = function draw_soldier() {
 	draw_depth_object();
+	
+	if(team == TEAM.WHITE) {
+		sprite_index = sSoldier_white;
+		if(helmat) death_sprite = sSoldier_white_corpse_helmat;
+		else death_sprite = sSoldier_white_corpse;
+	}
+	else {
+		sprite_index = sSoldier_black;
+		if(helmat) death_sprite = sSoldier_black_corpse_helmat;
+		else death_sprite = sSoldier_black_corpse;
+	}
 	
 	// helmat
 	if(helmat) {

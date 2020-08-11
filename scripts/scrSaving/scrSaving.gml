@@ -24,6 +24,7 @@ function init_save_file() {
 	ds_map_add_map(new_save, "levels", levels);
 	
 	new_save[? "level lock"] = 0;
+	new_save[? "intro done"] = false;
 	
 	save_json_to_file(SAVEFILENAME, new_save);
 	ds_map_destroy(new_save);
@@ -32,6 +33,7 @@ function init_save_file() {
 #region	global stats
 	global.highest_grades = {};
 	global.level_lock = 0;
+	global.intro_done = false;
 #endregion
 
 function save() {
@@ -45,6 +47,7 @@ function save() {
 	}
 	
 	save_map[? "level lock"] = global.level_lock;
+	save_map[? "intro done"] = global.intro_done;
 	
 	save_json_to_file(SAVEFILENAME, save_map);	
 	ds_map_destroy(save_map);
@@ -64,6 +67,7 @@ function load() {
 	}
 	
 	global.level_lock = save_map[? "level lock"];
+	global.intro_done = save_map[? "intro done"];
 	
 	ds_map_destroy(save_map);
 }

@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Shotgun shot",
-    "path": "folders/Projectile/Shotgun shot.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "oShotgun_shot",

@@ -14,7 +14,7 @@
   "duration": 1.124433,
   "parent": {
     "name": "Guns",
-    "path": "folders/Soldiers/Guns.yy",
+    "path": "folders/Enemies/Guns.yy",
   },
   "resourceVersion": "1.0",
   "name": "sdSniper",

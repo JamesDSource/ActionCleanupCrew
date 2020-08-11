@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"80f0f26f-9c22-427e-b647-65d03776fafa","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Laser Canon",
-    "path": "folders/Projectile/Laser Canon.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLaser_canon_shot_white",

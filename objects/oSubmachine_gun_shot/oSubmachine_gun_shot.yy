@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sSubmachine_gun_shot",
-    "path": "sprites/sSubmachine_gun_shot/sSubmachine_gun_shot.yy",
+    "name": "sBalistic_small",
+    "path": "sprites/sBalistic_small/sBalistic_small.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Submachine Gun Shot",
-    "path": "folders/Projectile/Submachine Gun Shot.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "oSubmachine_gun_shot",

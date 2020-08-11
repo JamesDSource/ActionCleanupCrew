@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"42cdd7c4-d673-47be-97b2-5d8e3dd76f8b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Laser Shotgun Shot",
-    "path": "folders/Projectile/Laser Shotgun Shot.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLaser_shotgun_shot_black",

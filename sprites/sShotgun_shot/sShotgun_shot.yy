@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6e618ef8-e36a-4539-9d27-91bda33e3ea9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Shotgun shot",
-    "path": "folders/Projectile/Shotgun shot.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "sShotgun_shot",

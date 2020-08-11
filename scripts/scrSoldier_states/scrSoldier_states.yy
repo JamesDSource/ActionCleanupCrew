@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Soldiers",
-    "path": "folders/Soldiers.yy",
+    "path": "folders/Enemies/Soldiers.yy",
   },
   "resourceVersion": "1.0",
   "name": "scrSoldier_states",

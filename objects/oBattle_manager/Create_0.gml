@@ -21,9 +21,8 @@ retreat_time = 15;
 autokill_time = room_speed * 30;
 autokill_timer = autokill_time;
 
-function soldier(obj_white, obj_black, point_cost, soldier_probability) constructor {
-	white = obj_white;
-	black = obj_black;
+function soldier(obj, point_cost, soldier_probability) constructor {
+	entity = obj;
 	cost = point_cost;
 	probability = soldier_probability;
 }
@@ -31,16 +30,14 @@ function soldier(obj_white, obj_black, point_cost, soldier_probability) construc
 enemies = ds_map_create();
 
 enemies[? "standard"] = new soldier(
-	oSoldier_white,
-	oSoldier_black,
+	oSoldier,
 	1,
 	4
 );
 
-function spawn_enemy(team) {
+function spawn_enemy(spawn_team) {
 	var spawns;
-	var points;
-	if(team == TEAM.WHITE) spawns = white_spawns;
+	if(spawn_team == TEAM.WHITE) spawns = white_spawns;
 	else spawns = black_spawns;
 	
 	ds_list_shuffle(spawns);
@@ -53,10 +50,8 @@ function spawn_enemy(team) {
 		}
 	}
 	if(array_length(possible_enemies) > 0) {
-		var spawn_obj = possible_enemies[irandom_range(0, array_length(possible_enemies) - 1)];
-		if(team == TEAM.WHITE) spawn_obj = spawn_obj.white;
-		else spawn_obj = spawn_obj.black;
-		instance_create_layer(spawn.x, spawn.y, "Instances", spawn_obj);
+		var spawn_obj = possible_enemies[irandom_range(0, array_length(possible_enemies) - 1)].entity;
+		with(instance_create_layer(spawn.x, spawn.y, "Instances", spawn_obj)) team = spawn_team;
 	}
 }
 

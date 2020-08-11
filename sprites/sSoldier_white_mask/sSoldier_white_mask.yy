@@ -81,7 +81,7 @@
   ],
   "parent": {
     "name": "Soldier White",
-    "path": "folders/Soldiers/Soldier White.yy",
+    "path": "folders/Enemies/Soldiers/Soldier White.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSoldier_white_mask",

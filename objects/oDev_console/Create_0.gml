@@ -96,9 +96,9 @@ function evaluate_command(cmd) {
 						else return [LOGTYPE.ERROR, number_expected_error];
 						if(instance_exists(oBattle_manager)) {
 							switch(words[1]) {
-								case "soldiers":
-									oBattle_manager.ideal_soldiers = numb;
-									return [LOGTYPE.CHANGE, "Soldiers changed to " + string(numb)];
+								case "points":
+									oBattle_manager.soldier_points = numb;
+									return [LOGTYPE.CHANGE, "Soldier points changed to " + string(numb)];
 									break;
 								case "time":
 									oBattle_manager.frames_left = room_speed * numb;
@@ -161,6 +161,7 @@ function evaluate_command(cmd) {
 							case "flush":
 								if(array_length(words) == 2) {
 									global.level_lock = 0;
+									global.intro_done = false;
 									delete global.highest_grades;
 									global.highest_grades = {};
 									file_delete(SAVEFILENAME);

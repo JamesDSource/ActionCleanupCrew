@@ -81,7 +81,7 @@
   ],
   "parent": {
     "name": "Soldier Black",
-    "path": "folders/Soldiers/Soldier Black.yy",
+    "path": "folders/Enemies/Soldiers/Soldier Black.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSoldier_black",

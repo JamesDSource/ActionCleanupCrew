@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0dd07a4c-7a7e-4d33-a450-bcd402a2b066","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Laser Shot",
-    "path": "folders/Projectile/Laser Shot.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLaser_shot_white",

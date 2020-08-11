@@ -2,9 +2,11 @@ if(started) {
 	white_points = 0;
 	black_points = 0;
 	for(var i = 0; i < array_length(enemies_available); i++) {
-		var cost = *enemies[? enemies_available[i]].cost;
-		white_points += instance_number(enemies[? enemies_available[i]].white)*enemies[? enemies_available[i]].cost;
-		black_points += instance_number(enemies[? enemies_available[i]].black)*enemies[? enemies_available[i]].cost;
+		var cost = enemies[? enemies_available[i]].cost;
+		with(enemies[? enemies_available[i]].entity) {
+			if(team == TEAM.WHITE) other.white_points += cost;
+			else if(team == TEAM.BLACK) other.black_points += cost;
+		}
 	}
 	
 	// random tick spawns soldiers if there is too little

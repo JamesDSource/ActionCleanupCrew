@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3ef6f604-e1bf-4222-95d7-0a47bf515367","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Rifle Shot",
-    "path": "folders/Projectile/Rifle Shot.yy",
+    "name": "Projectile",
+    "path": "folders/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRifle_shot",
