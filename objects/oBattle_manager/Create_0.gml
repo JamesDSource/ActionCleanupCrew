@@ -34,6 +34,11 @@ enemies[? "standard"] = new soldier(
 	1,
 	4
 );
+enemies[? "claw"] = new soldier(
+	oClaw,
+	3,
+	2
+);
 
 function spawn_enemy(spawn_team) {
 	var spawns;
@@ -45,7 +50,6 @@ function spawn_enemy(spawn_team) {
 	var possible_enemies = array_create(0);
 	for(var i = 0; i < array_length(enemies_available); i++) {
 		repeat(enemies[? enemies_available[i]].probability) {
-			show_debug_message("found")
 			possible_enemies[array_length(possible_enemies)] = enemies[? enemies_available[i]];
 		}
 	}

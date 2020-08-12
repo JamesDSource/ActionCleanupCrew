@@ -17,6 +17,14 @@ hp = max_hp;
 hp_regen_time = room_speed * 2;
 hp_regen_timer = hp_regen_time;
 
+// peeking
+peek = false;
+peek_direction = 1;
+peek_time_min = room_speed * 3;
+peek_time_max = room_speed * 6;
+peek_recharge_min = room_speed * 5;
+peek_recharge_max = room_speed * 10;
+peek_timer = 0;
 
 states = {
 	decide: soldier_state_decidie,	
@@ -24,10 +32,86 @@ states = {
 	flee: soldier_state_exit
 }
 
-state = states.decide;
+entity_states.free = function soldier_state_free() {
+	// cover
+	if(!instance_exists(cover)) new_cover();
+	if(cover_timer > 0) cover_timer--;
+	else {
+		new_cover();
+		cover_timer = irandom_range(cover_time_min, cover_time_max);
+	}
+	
+	// peeking
+	if(peek_timer > 0) peek_timer--;
+	else {
+		peek = !peek;
+		if(peek) {
+			peek_timer = irandom_range(peek_time_min, peek_time_max);
+			if(irandom_range(1, 100) < 50) peek_direction = 1;
+			else peek_direction = -1;
+		}
+		else peek_timer = irandom_range(peek_recharge_min, peek_recharge_max);
+	}
+	
+	// move point
+	var x_offset = 0;
+	if(peek && instance_exists(cover))	x_offset = peek_direction*(cover.sprite_width/2 + sprite_width);
+	new_move_point(cover_point.x + x_offset, cover_point.y);
+	
+	// shooting
+	
+	// finding target
+	gun_target = noone;
+	var gun_targets = ds_list_create();
+	collision_circle_list(x, y, gun_using.range, oEntity, false, true, gun_targets, true);
+	var highest_priority = -1;
+	for(var i = 0; i < ds_list_size(gun_targets); i++) {
+		var current_gun_target = gun_targets[| i];
+		if(current_gun_target.team != team && collision_line(x, y, current_gun_target.x, current_gun_target.y, oSolid, false, true) == noone && current_gun_target.priority > highest_priority) {
+			gun_target = current_gun_target;	
+			highest_priority = gun_target.priority;
+		}
+	}
+	ds_list_destroy(gun_targets);
+	
+	if(instance_exists(gun_target)) {
+		gun_angle = point_direction(x, y - gun_height, gun_target.x, gun_target.y);
+		
+		// recharge timer
+		if(gun_shoot_recharge <= 0) {
+			// burst timer
+			if(gun_using.burst_timer <= 0) {
+				// repeating shooting for each shot
+				repeat(gun_using.shots) {
+					var bullet_spread = irandom_range(-gun_using.spread, gun_using.spread);
+					with(instance_create_layer(x + lengthdir_x(gun_bullet_offset, gun_angle_real), y + lengthdir_y(gun_bullet_offset, gun_angle_real), "Instances", gun_using.bullet)) {
+						z = other.gun_height;
+						team = other.team;
+						ang = other.gun_angle_real + bullet_spread;
+					}
+				}
+				
+				audio_play_sound_on(audio_emitter, gun_using.sound, false, SOUNDPRIORITY.GUNS);
+				gun_kick = gun_using.kickback;
+				gun_flash = gun_flash_time;
+				
+				gun_using.burst_timer = gun_using.burst_time;
+				gun_using.bursts_left--;
+				if(gun_using.bursts_left == 0) {
+					gun_shoot_recharge = gun_using.recharge_time;
+					gun_using.bursts_left = gun_using.burst;
+				}
+			}
+			else gun_using.burst_timer--;
+		}
+		else gun_shoot_recharge--;
+	}
+}
+
+state = entity_states.free;
 
 // gun
-function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_time, burst_amount, gun_burst_time, gun_sprite, gun_range, shoot_time, gun_kickback, gun_sound) constructor {
+function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_time, burst_amount, gun_burst_time, gun_sprite, gun_range, gun_kickback, gun_sound) constructor {
 	name = gun_name;
 	bullet = bullet_projectile;
 	shots = bullets;
@@ -37,7 +121,6 @@ function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_t
 	burst_time = gun_burst_time;
 	sprite = gun_sprite;
 	range = gun_range;
-	time = shoot_time;
 	kickback = gun_kickback;
 	sound = gun_sound;
 	
@@ -49,15 +132,14 @@ guns = ds_map_create();;
 
 guns[? "pistol"] = new gun(
 	"Pistol",				// name
-	oSubmachine_gun_shot,	// bullet
+	oPistol_shot,			// bullet
 	1,						// bullets
-	15,						// bullet spread
+	25,						// bullet spread
 	room_speed/1.2,			// recharge time
 	1,						// burst
 	0,						// burst time
-	sRifle,					// sprite
-	200,					// range
-	room_speed*4,			// time out of cover
+	sPistol,				// sprite
+	250,					// range
 	3,						// gun kick
 	sdRifle					// sound
 );
@@ -72,7 +154,6 @@ guns[? "rifle"] = new gun(
 	10,			
 	sRifle,		
 	300,		
-	room_speed*6,
 	5,			
 	sdRifle		
 );
@@ -87,7 +168,6 @@ guns[? "laser_gun"] = new gun(
 	1,
 	sLaser_gun,
 	300,
-	room_speed * 10,
 	3,
 	sdLaser_rifle
 );
@@ -102,7 +182,6 @@ guns[? "sniper"] = new gun(
 	1,
 	sSniper_rifle,
 	500,
-	room_speed * 10,
 	8,
 	sdSniper
 );
@@ -117,7 +196,6 @@ guns[? "submachine_gun"] = new gun(
 	5,
 	sSubmachine_gun,
 	250,
-	room_speed * 4,
 	2,
 	sdRifle
 );
@@ -132,7 +210,6 @@ guns[? "laser_canon"] = new gun(
 	1,
 	sLaser_canon,
 	600,
-	room_speed * 10,
 	12,
 	sdLaser_canon
 );
@@ -147,7 +224,6 @@ guns[? "shotgun"] = new gun(
 	room_speed,
 	sShotgun,
 	200,
-	room_speed * 8,
 	6,
 	sdSniper
 );
@@ -162,7 +238,6 @@ guns[? "laser_shotgun"] = new gun(
 	room_speed/2,
 	sLaser_shotgun,
 	200,
-	room_speed * 5,
 	4,
 	sdLaser_rifle
 );
@@ -188,45 +263,27 @@ decide_timer = 0;
 
 // cover
 cover = noone;
-cover_side = 0;
+cover_time_min = room_speed * 5;
+cover_time_max = room_speed * 40;
+cover_timer = irandom_range(cover_time_min, cover_time_max);
 
 function new_cover() {	
 	var covers = ds_list_create();
-	
-	var v_side;
-	if(team == TEAM.WHITE) v_side = 1;
-	else v_side = 0;
-	
-	if(instance_exists(cover)) {
-		cover.sides[v_side][clamp(cover_side, 0, 1)] = noone;	
-	}
-	
-	cover_side = 0;
-	
-	var sz = collision_circle_list(x, y, max(room_width, room_height), oCover, false, true, covers, true);
+	var sz = collision_rectangle_list(0, 0, room_width, room_height, oCover, false, true, covers, false);
 	var result = array_create(0);
 	for(var i = 0; i < sz; i++) {
 		if(covers[| i] != cover && covers[| i].team == team) {
-			var cover_data = [-1, 0];
-			if(covers[| i].sides[v_side][0] == noone) cover_data[1] = -1;
-			else if(covers[| i].sides[v_side][1] == noone) cover_data[1] = 1;
-			
-			if(cover_data[1] != 0) {
-				cover_data[0] = covers[| i];
-				result[array_length(result)] = cover_data;
-			}
+			var another_using = false;
+			with(oSoldier) if(covers[| i] == cover) another_using = true;
+			if(!another_using) result[array_length(result)] = covers[| i];
 		}
 	}
 	ds_list_destroy(covers);
 	
 	if(array_length(result) > 0) {
 		var rand_cover_index = irandom_range(0, array_length(result)-1);
-		cover = result[rand_cover_index][0];
-		cover_side = result[rand_cover_index][1];
-		cover.sides[v_side][clamp(cover_side, 0, 1)] = id;
-	
-		cover_point.x = cover.x - cover.sprite_xoffset + cover.sprite_width/2 + cover_side*10;
-	
+		cover = result[rand_cover_index];
+		cover_point.x = cover.x - cover.sprite_xoffset + cover.sprite_width/2;
 		if(team == TEAM.WHITE) cover_point.y = cover.bbox_bottom + 8;
 		else cover_point.y = cover.bbox_top - 8;
 	}

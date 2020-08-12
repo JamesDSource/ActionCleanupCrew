@@ -30,7 +30,9 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oPlayer_solid","path":"objects/oPlayer_solid/oPlayer_solid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"has_shadow","path":"objects/oDepth_object/oDepth_object.yy",},"objectId":{"name":"oDepth_object","path":"objects/oDepth_object/oDepth_object.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Player Solid",
     "path": "folders/Solid/Player Solid.yy",

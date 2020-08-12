@@ -36,3 +36,6 @@ push_out(oSolid);
 if(object_index == oPlayer) push_out(oPlayer_solid);
 
 audio_emitter_position(audio_emitter, x, y, 0);
+
+// states
+if(uses_entity_states && is_method(state)) state();

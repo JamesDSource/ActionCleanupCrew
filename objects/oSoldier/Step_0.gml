@@ -6,8 +6,6 @@ if(hsp == 0 && vsp == 0) {
 }
 else image_speed = 1;
 
-if(state != -1) state();
-
 if(hp_regen_timer > 0) hp_regen_timer--;
 else {
 	hp = clamp(hp + 1, 0, max_hp);

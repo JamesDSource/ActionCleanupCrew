@@ -1,6 +1,17 @@
 vsp = 0;
 hsp = 0;
 
+// entity states
+entity_states = {
+	free: -1,	
+	flee: -1
+}
+
+entity_states.flee = function entity_flee() {
+	if(place_meeting(x, y, oSpawn_point)) instance_destroy();
+}
+state = entity_states.free;
+
 enum DEATHTYPE {
 	PIERCING,
 	BURN,
@@ -15,8 +26,7 @@ kill_function = function kill(death_type) {
 		if(death_type == "random") death_type = irandom_range(0, DEATHS-1);
 		switch(death_type) {
 			case DEATHTYPE.PIERCING:
-				var chunks = irandom_range(40, 60);
-				repeat(chunks) instance_create_layer(x, y, "Instances", oBlood_jiblet);
+				repeat(irandom_range(40, 60)) instance_create_layer(x, y, "Instances", oBlood_jiblet);
 				if(death_sprite != noone) {
 					with(instance_create_layer(x, y, "Instances", oBody)) {
 						sprite_index = other.death_sprite;
@@ -26,6 +36,10 @@ kill_function = function kill(death_type) {
 		
 			case DEATHTYPE.BURN:
 				instance_create_layer(x, y, "Instances", oAsh_pile);
+				break;
+				
+			case DEATHTYPE.EXPLOSION:
+				repeat(irandom_range(40, 60)) instance_create_layer(x, y, "Instances", oBlood_jiblet);
 				break;
 		}
 		
@@ -72,8 +86,8 @@ flash_frames_left = 0;
 
 // pathfinding
 move_point = {
-	x: 0,
-	y: 0
+	x: xstart,
+	y: ystart
 };
 
 path = -1;

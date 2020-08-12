@@ -40,6 +40,7 @@
         "-1",
         "\"man\"",
       ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"death_sound_type","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":3,"value":"True","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"uses_entity_states","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"has_shadow","path":"objects/oDepth_object/oDepth_object.yy",},"objectId":{"name":"oDepth_object","path":"objects/oDepth_object/oDepth_object.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

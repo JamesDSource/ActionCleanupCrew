@@ -69,15 +69,14 @@ if(started) {
 			exit_points = black_spawns;			
 		}
 		
-		with(oSoldier) {
-			if(state != states.flee) {
-				if(winner != team) path_movement_speed = 1.5;
-				
-				ds_list_shuffle(exit_points);
-				var flee_point = exit_points[| 0];
-				exit_point.x = flee_point.x;
-				exit_point.y = flee_point.y;
-				state = states.flee;
+		for(var i = 0; i < array_length(enemies_available); i++) { 
+			with(enemies[? enemies_available[i]].entity) {
+				if(state != entity_states.flee) {
+					ds_list_shuffle(exit_points);
+					var flee_point = exit_points[| 0];
+					new_move_point(flee_point.x, flee_point.y);
+					state = entity_states.flee;
+				}
 			}
 		}
 	}

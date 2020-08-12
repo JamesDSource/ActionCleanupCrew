@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sClaw",
+    "path": "sprites/sClaw/sClaw.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -20,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oClaw","path":"objects/oClaw/oClaw.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"priority","path":"objects/oEntity/oEntity.yy",},"objectId":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

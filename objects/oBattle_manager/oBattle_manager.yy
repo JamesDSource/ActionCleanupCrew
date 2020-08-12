@@ -27,8 +27,8 @@
     {"varType":1,"value":"4","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"soldier_points","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"6","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"mins","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":6,"value":"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
-        "\"rifle\"",
         "\"pistol\"",
+        "\"rifle\"",
         "\"laser_gun\"",
         "\"sniper\"",
         "\"submachine_gun\"",
@@ -38,6 +38,7 @@
       ],"multiselect":true,"filters":[],"resourceVersion":"1.0","name":"guns_available","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":6,"value":"\"standard\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "\"standard\"",
+        "\"claw\"",
       ],"multiselect":true,"filters":[],"resourceVersion":"1.0","name":"enemies_available","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
