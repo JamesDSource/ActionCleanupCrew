@@ -65,7 +65,7 @@ function player_state_holding() {
 	
 	if(instance_exists(body_held)) {
 		body_held.x = x;
-		body_held.y = y;
+		body_held.y = y + 1;
 		body_held.z = 10;
 		
 		if(keyboard_check_pressed(vk_space) && !instance_exists(selected_interactable)) {

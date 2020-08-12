@@ -14,7 +14,7 @@
   "duration": 2.65552187,
   "parent": {
     "name": "Guns",
-    "path": "folders/Enemies/Guns.yy",
+    "path": "folders/Enemies/Soldiers/Guns.yy",
   },
   "resourceVersion": "1.0",
   "name": "sdLaser_canon",

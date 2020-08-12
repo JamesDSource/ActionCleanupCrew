@@ -27,3 +27,5 @@ entity_states.free = function claw_state_free() {
 }
 
 state = entity_states.free;
+
+path_movement_speed = 0.4;

@@ -26,12 +26,6 @@ peek_recharge_min = room_speed * 5;
 peek_recharge_max = room_speed * 10;
 peek_timer = 0;
 
-states = {
-	decide: soldier_state_decidie,	
-	shoot: soldier_state_shoot,
-	flee: soldier_state_exit
-}
-
 entity_states.free = function soldier_state_free() {
 	// cover
 	if(!instance_exists(cover)) new_cover();
@@ -57,8 +51,6 @@ entity_states.free = function soldier_state_free() {
 	var x_offset = 0;
 	if(peek && instance_exists(cover))	x_offset = peek_direction*(cover.sprite_width/2 + sprite_width);
 	new_move_point(cover_point.x + x_offset, cover_point.y);
-	
-	// shooting
 	
 	// finding target
 	gun_target = noone;
@@ -142,6 +134,20 @@ guns[? "pistol"] = new gun(
 	250,					// range
 	3,						// gun kick
 	sdRifle					// sound
+);
+
+guns[? "laser_pistol"] = new gun(
+	"Laser Pistol",			
+	oLaser_pistol_shot,		
+	1,						
+	35,						
+	room_speed*6,			
+	6,						
+	room_speed/3,			
+	sLaser_pistol,				
+	250,					
+	3,						
+	sdLaser_rifle					
 );
 
 guns[? "rifle"] = new gun(
@@ -247,7 +253,7 @@ if(instance_exists(oBattle_manager)) {
 	var gun_using_name = available[irandom_range(0, array_length(available) - 1)]
 	gun_using = guns[? gun_using_name];
 }
-else gun_using = guns[? "rifle"];
+else gun_using = guns[? "pistol"];
 gun_height = 5;
 gun_angle = 0;
 gun_angle_real = 0;
@@ -295,10 +301,6 @@ cover_point = {
 	x: 0,
 	y: 0
 };
-exit_point = {
-	x: 0,
-	y: 0
-}
 
 path_movement_speed = 1;
 

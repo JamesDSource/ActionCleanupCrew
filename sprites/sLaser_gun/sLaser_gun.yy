@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Guns",
-    "path": "folders/Enemies/Guns.yy",
+    "path": "folders/Enemies/Soldiers/Guns.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLaser_gun",
