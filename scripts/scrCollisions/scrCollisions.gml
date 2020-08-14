@@ -48,3 +48,25 @@ function push_out(obj) {
 		}
 	}
 }
+
+function get_push_offset(x_pos, y_pos, obj) {
+	var offset_found = false;
+	var offset = {
+		x: 0,
+		y: 0
+	};
+	for(var i = 0; i <= 1000; i++) {
+		for(var j = 0; j < 360; j += 45) {
+			var offset_x = lengthdir_x(i, j);
+			var offset_y = lengthdir_y(i, j);
+			if(!place_meeting(x_pos + offset_x, y_pos + offset_y, obj)) {
+				offset.x = offset_x;
+				offset.y = offset_y;
+				offset_found = true;
+				break;
+			}
+		} 
+		if(offset_found) break;
+	}
+	return offset;
+}
