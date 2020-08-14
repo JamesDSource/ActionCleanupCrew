@@ -1,16 +1,28 @@
+// states
+if(uses_entity_states && is_method(state)) state();
+
 // pathfinding
 if(uses_pathfinding) {
-	if(point_distance(x, y, move_point.x, move_point.y) > 1) {	
+	t++;
+	if(path_update && t%5 == 0) {
+		if(path_exists(path)) path_delete(path);
+		path_update = false;
+	}
+	if(point_distance(x, y, move_point.x, move_point.y) > 1) {
 		if(!path_exists(path)) {
 			path = path_add();
-			point = 0;
+			point = 1;
 			if(!mp_grid_path(global.grid, path, x, y, move_point.x, move_point.y, true)) {
 				move_point.x = x;
 				move_point.y = y;	
 			}
 		}
 		else {	
-			if(point_distance(x, y, path_get_point_x(path, point), path_get_point_y(path, point)) < 1) point = clamp(point + 1, 0, path_get_number(path)-1);
+			if(point_distance(x, y, path_get_point_x(path, point), path_get_point_y(path, point)) < 1) {
+				x = path_get_point_x(path, point);
+				y = path_get_point_y(path, point);
+				point = clamp(point + 1, 0, path_get_number(path)-1);
+			}
 			var temp_x = path_get_point_x(path, point);
 			var temp_y = path_get_point_y(path, point);
 			var ang = point_direction(x, y, temp_x, temp_y);
@@ -36,6 +48,3 @@ push_out(oSolid);
 if(object_index == oPlayer) push_out(oPlayer_solid);
 
 audio_emitter_position(audio_emitter, x, y, 0);
-
-// states
-if(uses_entity_states && is_method(state)) state();
