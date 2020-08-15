@@ -36,6 +36,8 @@
         "\"laser_canon\"",
         "\"shotgun\"",
         "\"laser_shotgun\"",
+        "\"rpg\"",
+        "\"cluster_rpg\"",
       ],"multiselect":true,"filters":[],"resourceVersion":"1.0","name":"guns_available","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":6,"value":"\"standard\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "\"standard\"",

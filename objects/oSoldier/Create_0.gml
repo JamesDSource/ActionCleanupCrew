@@ -239,12 +239,40 @@ guns[? "laser_shotgun"] = new gun(
 	oLaser_shotgun_shot,
 	3,
 	30,
-	room_speed * 3,
+	room_speed*3,
 	2,
 	room_speed/2,
 	sLaser_shotgun,
 	200,
 	4,
+	sdLaser_rifle
+);
+
+guns[? "rpg"] = new gun(
+	"RPG",
+	oRocket,
+	1,
+	0,
+	room_speed*6,
+	1,
+	0,
+	sRPG_loaded,
+	300,
+	6,
+	sdLaser_rifle
+);
+
+guns[? "cluster_rpg"] = new gun(
+	"Cluster RPG",
+	oCluster_rocket,
+	4,
+	20,
+	room_speed * 9,
+	2,
+	room_speed/2,
+	sCluster_RPG,
+	300,
+	6,
 	sdLaser_rifle
 );
 

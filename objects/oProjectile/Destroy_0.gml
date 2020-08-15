@@ -1,0 +1,1 @@
+if(death_type == DEATHTYPE.EXPLOSION) instance_create_layer(x, y, "Instances", oExplosion);
