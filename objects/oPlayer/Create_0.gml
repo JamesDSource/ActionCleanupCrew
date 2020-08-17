@@ -35,11 +35,13 @@ kill_function = function kill_player(death_type) {
 	if(!global.godmode) {
 		screen_shake(3, 5);
 		if(helmat_on) {
+			audio_play_sound(sdPlayer_hurt, SOUNDPRIORITY.IMPORTANT, false);
 			helmat_on = false;
 			iframes = 30;
 			flash_frames_left = flash_frames;
 		}
 		else if(iframes == 0){
+			audio_play_sound(sdPlayer_hurt, SOUNDPRIORITY.IMPORTANT, false);
 			kill(death_type);
 		}
 	}

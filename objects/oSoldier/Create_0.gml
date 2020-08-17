@@ -191,7 +191,7 @@ guns[? "sniper"] = new gun(
 	8,
 	sdSniper
 );
-	
+
 guns[? "submachine_gun"] = new gun(
 	"Submachine Gun",
 	oSubmachine_gun_shot,

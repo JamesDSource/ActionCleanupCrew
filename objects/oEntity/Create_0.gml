@@ -77,7 +77,7 @@ function check_for_collisions(obj) {
 
 // audio
 audio_emitter = audio_emitter_create();
-audio_emitter_falloff(audio_emitter, 16, 1000, 1);
+audio_emitter_falloff(audio_emitter, 200, 800, 1);
 
 
 // flash

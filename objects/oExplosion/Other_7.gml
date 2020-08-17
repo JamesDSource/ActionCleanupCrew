@@ -1,1 +1,1 @@
-instance_destroy();
+sprite_index = noone;

@@ -31,7 +31,3 @@ if(open) {
 		pipe_flash_timer = pipe_flash_time;	
 	}
 }
-
-if(DEVBUILD && mouse_check_button_pressed(mb_left)) {
-	instance_create_layer(mouse_x, mouse_y, "Instances", oExplosion);
-}

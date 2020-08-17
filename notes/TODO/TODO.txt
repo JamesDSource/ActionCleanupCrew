@@ -6,6 +6,12 @@ Basic story
 Space station title background
 Music
 More sound effects
+	-Rocket Launcher sounds
+	-Hurt Sound
+	-Cloning machine sound
+	-Sounds of the alien
+	-Launch pod sound
+	-Secretary sounds
 
 --Later Consideration--
 Abilities and ability shop
