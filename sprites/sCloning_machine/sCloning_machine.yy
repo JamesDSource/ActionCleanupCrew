@@ -254,7 +254,7 @@
     "spriteId": {"name":"sCloning_machine","path":"sprites/sCloning_machine/sCloning_machine.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 20.0,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

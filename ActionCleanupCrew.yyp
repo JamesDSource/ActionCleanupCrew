@@ -166,6 +166,7 @@
     {"id":{"name":"sPrompt_a","path":"sprites/sPrompt_a/sPrompt_a.yy",},"order":6,},
     {"id":{"name":"oChairs","path":"objects/oChairs/oChairs.yy",},"order":0,},
     {"id":{"name":"sBelt_tiles","path":"sprites/sBelt_tiles/sBelt_tiles.yy",},"order":0,},
+    {"id":{"name":"sdCloning_machine","path":"sounds/sdCloning_machine/sdCloning_machine.yy",},"order":3,},
     {"id":{"name":"sdLevel_select_open","path":"sounds/sdLevel_select_open/sdLevel_select_open.yy",},"order":7,},
     {"id":{"name":"sPrompt_s","path":"sprites/sPrompt_s/sPrompt_s.yy",},"order":4,},
     {"id":{"name":"sSoldier_white_corpse_helmat","path":"sprites/sSoldier_white_corpse_helmat/sSoldier_white_corpse_helmat.yy",},"order":3,},

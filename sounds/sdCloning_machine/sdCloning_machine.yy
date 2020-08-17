@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.5,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sdPlayer_hurt.wav",
-  "duration": 0.854955,
+  "soundFile": "sdCloning_machine.wav",
+  "duration": 5.411372,
   "parent": {
-    "name": "Player",
-    "path": "folders/Player.yy",
+    "name": "Cloning Machine",
+    "path": "folders/Cloning Machine.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sdPlayer_hurt",
+  "name": "sdCloning_machine",
   "tags": [],
   "resourceType": "GMSound",
 }
