@@ -79,6 +79,7 @@
     {"id":{"name":"sCloning_machine","path":"sprites/sCloning_machine/sCloning_machine.yy",},"order":0,},
     {"id":{"name":"oSniper_shot","path":"objects/oSniper_shot/oSniper_shot.yy",},"order":12,},
     {"id":{"name":"sLaser_gun","path":"sprites/sLaser_gun/sLaser_gun.yy",},"order":1,},
+    {"id":{"name":"sdDrop_pod","path":"sounds/sdDrop_pod/sdDrop_pod.yy",},"order":11,},
     {"id":{"name":"shFlash","path":"shaders/shFlash/shFlash.yy",},"order":2,},
     {"id":{"name":"sLaser_shot_white","path":"sprites/sLaser_shot_white/sLaser_shot_white.yy",},"order":23,},
     {"id":{"name":"sPlayer_helmat","path":"sprites/sPlayer_helmat/sPlayer_helmat.yy",},"order":9,},
@@ -338,7 +339,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "23.1.1.175",
+    "IDEVersion": "2.3.0.529",
   },
   "resourceVersion": "1.3",
   "name": "ActionCleanupCrew",

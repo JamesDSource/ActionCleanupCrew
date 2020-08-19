@@ -10,5 +10,6 @@ init_interactable(
 		instance_destroy(oPlayer);
 		oCamera.follow = id;
 		image_speed = 1;
+		audio_play_sound(sdDrop_pod, SOUNDPRIORITY.IMPORTANT, false);
 	}
 );
