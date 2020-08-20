@@ -1,4 +1,12 @@
 event_inherited();
+snorts = [sdClaw_snort1, sdClaw_snort2];
+snort_timer = 0;
+snort_timer_min = room_speed*3;
+snort_timer_max = room_speed*8;
+
+interest_time = room_speed * 5;
+interest_timer = 0;
+
 target = noone;
 detection_range = 400;
 free_state = "roam";
@@ -21,6 +29,9 @@ entity_states.free = function claw_state_free() {
 			}
 			break;
 		case "chase":
+			if(interest_timer > 0) interest_timer--;
+			else target = noone;
+			
 			if(instance_exists(target)) {
 				var offsets = get_push_offset(target.x, target.y, oSolid);
 				new_move_point(target.x + offsets.x, target.y + offsets.y);
@@ -35,7 +46,10 @@ entity_states.free = function claw_state_free() {
 					free_state = "attack";
 				}
 			}
-			else free_state = "roam";
+			else {
+				free_state = "roam";
+				interest_timer = interest_time;	
+			}
 			break;
 		case "roam":
 			// moving a random point in the room
