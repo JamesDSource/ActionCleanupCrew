@@ -292,8 +292,6 @@ gun_flash_time = 3;
 gun_flash = 0;
 gun_bullet_offset = 6;
 
-// decide
-decide_timer = 0;
 
 // cover
 cover = noone;

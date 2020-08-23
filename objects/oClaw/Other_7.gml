@@ -3,5 +3,6 @@ if(free_state == "attack") {
 	interest_timer = interest_time;
 	target = noone;
 	can_attack = true;
+	can_swipe = true;
 	free_state = "roam";
 }

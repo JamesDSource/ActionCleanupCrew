@@ -37,7 +37,12 @@ enemies[? "standard"] = new soldier(
 enemies[? "claw"] = new soldier(
 	oClaw,
 	3,
-	2
+	1
+);
+enemies[? "voliore"] = new soldier(
+	oVoliore,
+	2,
+	1
 );
 
 function spawn_enemy(spawn_team) {

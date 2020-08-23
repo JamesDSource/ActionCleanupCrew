@@ -42,6 +42,7 @@
     {"varType":6,"value":"\"standard\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "\"standard\"",
         "\"claw\"",
+        "\"voliore\"",
       ],"multiselect":true,"filters":[],"resourceVersion":"1.0","name":"enemies_available","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],

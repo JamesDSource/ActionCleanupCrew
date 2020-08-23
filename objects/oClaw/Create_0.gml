@@ -17,6 +17,7 @@ entity_states.free = function claw_state_free() {
 	switch(free_state) {
 		case "attack":
 			if(round(image_index) == 15 && can_attack) {
+				audio_play_sound_on(audio_emitter, sdClaw_swipe, false, SOUNDPRIORITY.GUNS);
 				var damage_rad = 40;
 				screen_shake(4, 5);
 				var entities = ds_list_create();
