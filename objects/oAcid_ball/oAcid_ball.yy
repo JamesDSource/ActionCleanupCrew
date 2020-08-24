@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oAcid_ball","path":"objects/oAcid_ball/oAcid_ball.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"death_type","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"DEATHTYPE.PIERCING","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

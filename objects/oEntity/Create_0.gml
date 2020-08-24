@@ -12,12 +12,24 @@ entity_states.flee = function entity_flee() {
 }
 state = entity_states.free;
 
+enum BLOOD {
+	RED,
+	GREEN	
+}
+
 enum DEATHTYPE {
 	PIERCING,
 	BURN,
 	EXPLOSION
 }
 #macro DEATHS 3
+
+function bleed(blood_min, blood_max) {
+	repeat(irandom_range(blood_min, blood_max)) {
+		var jib = instance_create_layer(x, y, "Instances", oBlood_jiblet);
+		jib.type = blood_type;
+	}
+}
 
 kill_function = function kill(death_type) {
 	hp--;
@@ -26,10 +38,11 @@ kill_function = function kill(death_type) {
 		if(death_type == "random") death_type = irandom_range(0, DEATHS-1);
 		switch(death_type) {
 			case DEATHTYPE.PIERCING:
-				repeat(irandom_range(40, 60)) instance_create_layer(x, y, "Instances", oBlood_jiblet);
+				bleed(40, 60);
 				if(death_sprite != noone) {
 					with(instance_create_layer(x, y, "Instances", oBody)) {
 						sprite_index = other.death_sprite;
+						blood_type = other.blood_type;
 					}
 				}
 				break;
@@ -39,7 +52,7 @@ kill_function = function kill(death_type) {
 				break;
 				
 			case DEATHTYPE.EXPLOSION:
-				repeat(irandom_range(40, 60)) instance_create_layer(x, y, "Instances", oBlood_jiblet);
+				bleed(40, 60);
 				break;
 		}
 		
@@ -59,6 +72,7 @@ kill_function = function kill(death_type) {
 
 		instance_destroy();
 	}
+	else bleed(0, 3);
 }
 
 event_inherited();

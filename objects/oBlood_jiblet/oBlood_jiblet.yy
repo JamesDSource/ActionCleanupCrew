@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sBlood_chunks",
-    "path": "sprites/sBlood_chunks/sBlood_chunks.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

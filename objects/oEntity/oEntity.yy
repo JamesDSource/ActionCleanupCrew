@@ -35,6 +35,10 @@
         "TEAM.NONE",
       ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"team","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"death_sprite","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":6,"value":"BLOOD.RED","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+        "BLOOD.RED",
+        "BLOOD.GREEN",
+      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"blood_type","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":3,"value":"True","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"uses_pathfinding","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":6,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "-1",
