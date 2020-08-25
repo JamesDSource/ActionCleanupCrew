@@ -14,5 +14,5 @@ ds_list_destroy(collisions);
 
 emitter = audio_emitter_create();
 audio_emitter_falloff(emitter, 300, 1200, 1);
-audio_play_sound_on(emitter, sdExplosion, false, SOUNDPRIORITY.IMPORTANT);
+audio_play_sound_on(emitter, sdExplosion, false, SOUNDPRIORITY.EXPLOSION);
 life = audio_sound_length(sdExplosion) * room_speed;

@@ -13,8 +13,19 @@ free_state = "roam";
 spd = 0.8;
 path_movement_speed = spd;
 can_attack = true;
+
+max_hp = 10;
+hp = max_hp;
 entity_states.free = function claw_state_free() {
 	switch(free_state) {
+		case "eat":
+			if(instance_exists(target)) {
+				instance_destroy(target);
+				hp++;	
+			}
+			target = noone;
+			free_state = "roam";
+			break;
 		case "attack":
 			if(round(image_index) == 15 && can_attack) {
 				audio_play_sound_on(audio_emitter, sdClaw_swipe, false, SOUNDPRIORITY.GUNS);
@@ -44,7 +55,8 @@ entity_states.free = function claw_state_free() {
 				
 				if(collision_circle(x, y, attack_range, target, false, true) != noone) {
 					path_movement_speed = 0;
-					free_state = "attack";
+					if(target.object_index == oBody) free_state = "eat";
+					else free_state = "attack";
 				}
 			}
 			else {
@@ -91,8 +103,20 @@ entity_states.free = function claw_state_free() {
 					break;
 				}
 			}
-			ds_list_destroy(detection_collisions);
 			
+			// change the target to a normal or small body if one exists
+			if(hp < max_hp) {
+				ds_list_clear(detection_collisions);
+				collision_circle_list(x, y, detection_range/5, oBody, false, true, detection_collisions, true);
+				for(var i = 0; i < ds_list_size(detection_collisions); i++) {
+					if(detection_collisions[| i].size != SIZE.LARGE) {
+						target = detection_collisions[| i];
+						break;
+					}
+				}
+			}
+			ds_list_destroy(detection_collisions);			
+
 			if(instance_exists(target)) free_state = "chase";
 			break;
 	}

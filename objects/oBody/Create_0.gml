@@ -9,3 +9,4 @@ init_interactable(
 )
 
 blood_type = BLOOD.RED;
+size = SIZE.NORMAL;

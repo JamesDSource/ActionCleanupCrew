@@ -1,6 +1,7 @@
 sound_groups = ds_map_create();
 sound_groups[? "man"] = [sdDeath_man1, sdDeath_man2, sdDeath_man3];
 sound_groups[? "claw"] = [sdDeath_claw1, sdDeath_claw2];
+sound_groups[? "voliore"] = [sdDeath_voliore1, sdDeath_voliore2, sdDeath_voliore3, sdDeath_voliore4];
 sound_time = room_speed;
 s_emitter = -1;
 

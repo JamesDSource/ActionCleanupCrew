@@ -28,6 +28,11 @@
   ],
   "properties": [
     {"varType":1,"value":"1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hp","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":6,"value":"SIZE.NORMAL","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+        "SIZE.SMALL",
+        "SIZE.NORMAL",
+        "SIZE.LARGE",
+      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"size","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"priority","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":6,"value":"TEAM.NONE","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "TEAM.WHITE",
@@ -44,6 +49,7 @@
         "-1",
         "\"man\"",
         "\"claw\"",
+        "\"voliore\"",
       ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"death_sound_type","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":3,"value":"True","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"uses_entity_states","tags":[],"resourceType":"GMObjectProperty",},
   ],

@@ -7,7 +7,7 @@ Space station title background
 Music
 More sound effects
 	-Rocket Launcher sounds
-	-Sounds of the alien
+	-Sounds of the aliens
 	-Secretary sounds
 
 --Later Consideration--

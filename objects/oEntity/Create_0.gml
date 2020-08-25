@@ -1,3 +1,9 @@
+enum SIZE {
+	SMALL,
+	NORMAL,
+	LARGE
+}
+
 vsp = 0;
 hsp = 0;
 
@@ -43,12 +49,28 @@ kill_function = function kill(death_type) {
 					with(instance_create_layer(x, y, "Instances", oBody)) {
 						sprite_index = other.death_sprite;
 						blood_type = other.blood_type;
+						size = other.size;
 					}
 				}
 				break;
 		
 			case DEATHTYPE.BURN:
-				instance_create_layer(x, y, "Instances", oAsh_pile);
+				var ash_amount = 0;
+				switch(size) {
+					case SIZE.LARGE:
+						ash_amount = irandom_range(3, 4);
+						break;
+					case SIZE.NORMAL:
+						ash_amount = irandom_range(1, 2);
+						break;
+					case SIZE.SMALL:
+						ash_amount = 1;
+						break;
+				}
+				
+				repeat(ash_amount) {
+					instance_create_layer(x + irandom_range(-5, 5), y + irandom_range(-5, 5), "Instances", oAsh_pile);
+				}
 				break;
 				
 			case DEATHTYPE.EXPLOSION:
