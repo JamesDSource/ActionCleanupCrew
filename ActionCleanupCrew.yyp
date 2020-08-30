@@ -242,6 +242,7 @@
     {"id":{"name":"sBoxes","path":"sprites/sBoxes/sBoxes.yy",},"order":0,},
     {"id":{"name":"rLevel_tutorial","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},"order":2,},
     {"id":{"name":"scrCamera","path":"scripts/scrCamera/scrCamera.yy",},"order":1,},
+    {"id":{"name":"seqResults","path":"sequences/seqResults/seqResults.yy",},"order":7,},
     {"id":{"name":"sExplosion","path":"sprites/sExplosion/sExplosion.yy",},"order":0,},
     {"id":{"name":"sDoor_rusted","path":"sprites/sDoor_rusted/sDoor_rusted.yy",},"order":3,},
     {"id":{"name":"sVoliore_blue","path":"sprites/sVoliore_blue/sVoliore_blue.yy",},"order":0,},

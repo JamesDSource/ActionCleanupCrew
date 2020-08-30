@@ -17,3 +17,7 @@ function grade_index_from_percent(percent) {
 		case "F": return 5;
 	}	
 }
+
+function seq_results_reviel_grade() {
+	if(instance_exists(oResults)) oResults.started = true;	
+}

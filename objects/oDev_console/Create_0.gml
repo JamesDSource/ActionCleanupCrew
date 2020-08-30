@@ -102,7 +102,7 @@ function evaluate_command(cmd) {
 									break;
 								case "time":
 									oBattle_manager.frames_left = room_speed * numb;
-									return [LOGTYPE.CHANGE, "time changed to " + string(numb) + " minutes"];
+									return [LOGTYPE.CHANGE, "time changed to " + string(numb) + " seconds"];
 									break;
 								default: return [LOGTYPE.ERROR, invalid_command_error(words[1])]; break;
 							}

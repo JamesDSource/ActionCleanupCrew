@@ -1,11 +1,9 @@
-grade_y = - 32;
-grade_spd = 2;
+started = false;
+transitioned = false;
+transition_timer = room_speed*3;
 
 letter_scale = 0;
 letter_spd = 0.01;
-
-letter_background_scale = 0;
-letter_background_spd = 0.05;
 
 var total_score = grade_letter_from_percent(global.game_score.total);
 letter_index = grade_index_from_percent(global.game_score.total);
