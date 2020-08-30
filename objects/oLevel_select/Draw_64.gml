@@ -27,6 +27,11 @@ if(progress == 1) {
 		var hs_spr_y = y_org + hs_y_margin + sprite_get_height(sGrade_letter)/2 + string_height(hs_str);
 		draw_sprite(sGrade_letter, hs_index, hs_spr_x, hs_spr_y);
 	}
+	
+	var desc_margin = 10;
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_bottom);
+	draw_text(x_org + desc_margin, y_org + h - desc_margin, global.levels[level_index].desc);
 }
 
 var prompt_margin = 5;

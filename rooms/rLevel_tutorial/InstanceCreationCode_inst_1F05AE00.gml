@@ -1,0 +1,2 @@
+hp = 0;
+kill(DEATHTYPE.PIERCING);

@@ -29,19 +29,42 @@ global.hud = true;
 #macro Demo:DEMO true
 
 // levels
-function level(level_room, level_name) constructor {
+function level(level_room, level_name, level_description) constructor {
 	name = level_name;
 	room_index = level_room;
+	desc = level_description;
 	x_pos = 0;
 	y_pos = 0;
 	scale = 0;
 }
 
 global.levels = [
-	new level(rLevel_tutorial, "Tutorial"),
-	new level(rWarehouse1, "First Encounter"),
-	new level(rLevel1_jam, "Game Jam Level 1"),
-	new level(rLevel2_jam, "Game Jam Level 2")
+	new level(
+		rLevel_tutorial, 
+		"Tutorial",
+		string_create_paragraph(
+			"Please make way to",
+			"the training room",
+			"and show us that",
+			"you are ready to be",
+			"an Action Cleanup Crew", 
+			"janitor!"
+		)
+	),
+	
+	new level(
+		rWarehouse1, 
+		"First Encounter",
+		string_create_paragraph(
+			"We hope you are as",
+			"excited as we are for",
+			"your first mission!",
+			"We heard word that there",
+			"might be some disturbances,",
+			"but don't worry about it."
+		
+		)
+	),
 ];
 
 randomize();

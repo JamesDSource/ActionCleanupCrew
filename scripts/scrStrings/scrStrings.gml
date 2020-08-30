@@ -14,3 +14,12 @@ function string_get_words(str) {
 	
 	return output;
 }
+
+function string_create_paragraph() {
+	var str = "";
+	for(var i = 0; i < argument_count; i++) {
+		str += argument[i];
+		if(i != argument_count - 1) str += "\n";
+	}
+	return str;
+}
