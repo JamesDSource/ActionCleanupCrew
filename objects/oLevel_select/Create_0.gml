@@ -10,6 +10,13 @@ level_index = 0;
 level_index_left = -1;
 level_index_right = 1;
 
+for(var i = 0; i < array_length(global.levels); i++) {
+	if(global.level_target == global.levels[i]) {
+		level_index = i;
+		break;	
+	}
+}
+
 pos_spd = 5;
 scale_spd = 0.05;
 

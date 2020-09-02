@@ -469,8 +469,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Levels",
-    "path": "folders/Levels.yy",
+    "name": "Game Jam Levels",
+    "path": "folders/Levels/Game Jam Levels.yy",
   },
   "resourceVersion": "1.0",
   "name": "rLevel1_jam",

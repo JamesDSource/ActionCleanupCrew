@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 16,
+  "bbox_left": 0,
   "bbox_right": 175,
   "bbox_top": 0,
-  "bbox_bottom": 15,
+  "bbox_bottom": 79,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 176,
-  "height": 16,
+  "height": 80,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"adad2d28-fb1e-496e-9b47-beeffea4ebb7","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"adad2d28-fb1e-496e-9b47-beeffea4ebb7","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"LayerId":{"name":"953798c4-c1c5-4339-9db7-5b4f2c6dbe61","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sFloor_tiles_rust","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","name":"adad2d28-fb1e-496e-9b47-beeffea4ebb7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"85c22919-7906-4004-8989-b6e4edfb0cd2","path":"sprites/sHazard_floor/sHazard_floor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"85c22919-7906-4004-8989-b6e4edfb0cd2","path":"sprites/sHazard_floor/sHazard_floor.yy",},"LayerId":{"name":"bd143e62-8563-45c2-b41c-8120fab64bcc","path":"sprites/sHazard_floor/sHazard_floor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sHazard_floor","path":"sprites/sHazard_floor/sHazard_floor.yy",},"resourceVersion":"1.0","name":"85c22919-7906-4004-8989-b6e4edfb0cd2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sFloor_tiles_rust","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},
+    "spriteId": {"name":"sHazard_floor","path":"sprites/sHazard_floor/sHazard_floor.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0a28cc2c-da4d-4254-96db-d24a0d205fa8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"adad2d28-fb1e-496e-9b47-beeffea4ebb7","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1b2d39f0-a2df-47a6-84d4-6b4dd91a1dfd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"85c22919-7906-4004-8989-b6e4edfb0cd2","path":"sprites/sHazard_floor/sHazard_floor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sFloor_tiles_rust","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},
+    "parent": {"name":"sHazard_floor","path":"sprites/sHazard_floor/sHazard_floor.yy",},
     "resourceVersion": "1.3",
-    "name": "sFloor_tiles_rust",
+    "name": "sHazard_floor",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"953798c4-c1c5-4339-9db7-5b4f2c6dbe61","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bd143e62-8563-45c2-b41c-8120fab64bcc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Rust Warehouse",
-    "path": "folders/Floor Tiles/Rust Warehouse.yy",
+    "name": "Hazard",
+    "path": "folders/Floor Tiles/Hazard.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sFloor_tiles_rust",
+  "name": "sHazard_floor",
   "tags": [],
   "resourceType": "GMSprite",
 }

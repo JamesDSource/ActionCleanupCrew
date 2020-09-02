@@ -17,13 +17,13 @@ else {
 		level_index++;
 		audio_play_sound(sdLevel_select_scroll, SOUNDPRIORITY.MENUS, false);
 	}
-	else if(keyboard_check_pressed(vk_space) && instance_exists(oPause)) oPause.toggle_pause(); 
-	
+	else if(keyboard_check_pressed(vk_space) && instance_exists(oPause)) {
+		if(keyboard_check_pressed(vk_space)) global.level_target = global.levels[level_index];	
+		oPause.toggle_pause(); 
+	}	
 	level_index = clamp(level_index, 0, global.level_lock);
 	level_index_left = level_index - 1;
 	level_index_right = level_index + 1;
-
-	global.level_target = global.levels[level_index].room_index;
 
 	draw_set_font(fLevel_select);
 	for(var i = 0; i < array_length(global.levels); i++) {

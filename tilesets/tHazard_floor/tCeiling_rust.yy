@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sFancy_carpet",
-    "path": "sprites/sFancy_carpet/sFancy_carpet.yy",
+    "name": "sCeiling_rust",
+    "path": "sprites/sCeiling_rust/sCeiling_rust.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -67,7 +67,7 @@
         25,
         35,
         36,
-      ],"closed_edge":false,"resourceVersion":"1.0","name":"atFancy_carpet","tags":[],"resourceType":"GMAutoTileSet",},
+      ],"closed_edge":false,"resourceVersion":"1.0","name":"atCeiling_rust","tags":[],"resourceType":"GMAutoTileSet",},
   ],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -137,11 +137,11 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Fancy Carpet",
-    "path": "folders/Floor Tiles/Fancy Carpet.yy",
+    "name": "Ceiling Tiles",
+    "path": "folders/Ceiling Tiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "tCeiling_office6",
+  "name": "tCeiling_rust",
   "tags": [],
   "resourceType": "GMTileSet",
 }

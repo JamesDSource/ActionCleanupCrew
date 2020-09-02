@@ -3,7 +3,7 @@ event_inherited();
 image_speed = 0;
 image_index = 0;
 
-global.level_target = noone;
+global.level_target = undefined;
 
 init_interactable(
 	function action_drop_pod() {
