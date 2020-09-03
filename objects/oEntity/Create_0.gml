@@ -91,7 +91,8 @@ kill_function = function kill(death_type) {
 			ds.play_death_sound(death_sound_type, audio_emitter);
 		}
 		else audio_emitter_free(audio_emitter);
-
+			
+		instance_create_layer(x, y - 8, "Above", oSkull);
 		instance_destroy();
 	}
 	else bleed(0, 3);

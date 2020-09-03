@@ -7,8 +7,11 @@ Space station title background
 Music
 More sound effects
 	-Rocket Launcher sounds
-	-Sounds of the aliens
-	-Secretary sounds
+	-Claw sounds for eating bodies
+	-Mop sounds
+	-Pistol sounds
+	-Incinerator door close
+	-New soldier death sounds
 
 --Later Consideration--
 Abilities and ability shop
