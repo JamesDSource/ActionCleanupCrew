@@ -16,7 +16,6 @@ init_interactable(
 				body_held = noone;
 				state = states.free;
 				other.burn_timer = other.burn_time;
-				audio_play_sound_on(other.emitter, sdIncinerator_close, false, SOUNDPRIORITY.IMPORTANT);
 			}
 		}
 	}

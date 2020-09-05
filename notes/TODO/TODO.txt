@@ -12,7 +12,6 @@ More sound effects
 	-Pistol sounds
 	-Incinerator door close
 	-New soldier death sounds
-	-Voliore projectile sound
 
 --Later Consideration--
 Abilities and ability shop
