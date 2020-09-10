@@ -13,6 +13,7 @@ free_state = "roam";
 spd = 0.8;
 path_movement_speed = spd;
 can_attack = true;
+animations = undefined;
 
 max_hp = 10;
 hp = max_hp;
@@ -21,10 +22,9 @@ entity_states.free = function claw_state_free() {
 		case "eat":
 			if(instance_exists(target)) {
 				instance_destroy(target);
+				target = noone;
 				hp++;	
 			}
-			target = noone;
-			free_state = "roam";
 			break;
 		case "attack":
 			if(round(image_index) == 15 && can_attack) {
@@ -100,7 +100,6 @@ entity_states.free = function claw_state_free() {
 				if(target_inst.team != team && target_inst.priority > highest_priority && collision_line(x, y, target_inst.x, target_inst.y, oSolid, false, true) == noone) {
 					highest_priority = target_inst.priority;
 					target = target_inst;
-					break;
 				}
 			}
 			

@@ -20,6 +20,8 @@
     {"id":{"name":"sClaw_red_dead","path":"sprites/sClaw_red_dead/sClaw_red_dead.yy",},"order":3,},
     {"id":{"name":"sLaser_pistol","path":"sprites/sLaser_pistol/sLaser_pistol.yy",},"order":12,},
     {"id":{"name":"sVase_pieces","path":"sprites/sVase_pieces/sVase_pieces.yy",},"order":2,},
+    {"id":{"name":"sClaw_red_eat","path":"sprites/sClaw_red_eat/sClaw_red_eat.yy",},"order":11,},
+    {"id":{"name":"sClaw_blue_eat","path":"sprites/sClaw_blue_eat/sClaw_blue_eat.yy",},"order":10,},
     {"id":{"name":"sCluster_RPG","path":"sprites/sCluster_RPG/sCluster_RPG.yy",},"order":14,},
     {"id":{"name":"sCeiling_office","path":"sprites/sCeiling_office/sCeiling_office.yy",},"order":2,},
     {"id":{"name":"sdDeath_man1","path":"sounds/sdDeath_man1/sdDeath_man1.yy",},"order":0,},
