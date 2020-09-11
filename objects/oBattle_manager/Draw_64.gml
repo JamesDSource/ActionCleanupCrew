@@ -1,4 +1,5 @@
 if(started && global.hud) {
+	draw_set_alpha(0.85);
 	var seconds = frames_left div room_speed;
 	
 	var mins_left = seconds div 60;
@@ -29,4 +30,5 @@ if(started && global.hud) {
 	if(mins_left >= 10) digit_index = mins_left div 10;
 	else digit_index = 10;
 	draw_sprite(sDigits, digit_index, digit_x, digit_y);
+	draw_set_alpha(1);
 }

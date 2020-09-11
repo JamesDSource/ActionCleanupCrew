@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a27b32d9-7081-4e13-9fa5-44acfd2fbbdc","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a27b32d9-7081-4e13-9fa5-44acfd2fbbdc","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"LayerId":{"name":"a0ba5b69-c7bb-4c86-a642-50f167b35fe8","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlayer_solid","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"resourceVersion":"1.0","name":"a27b32d9-7081-4e13-9fa5-44acfd2fbbdc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"129b8034-6b51-4e5f-b3f7-5206e5ec2f8b","path":"sprites/sSolid/sSolid.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"129b8034-6b51-4e5f-b3f7-5206e5ec2f8b","path":"sprites/sSolid/sSolid.yy",},"LayerId":{"name":"5960b04a-84eb-401d-a2d0-48047061ab19","path":"sprites/sSolid/sSolid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sSolid","path":"sprites/sSolid/sSolid.yy",},"resourceVersion":"1.0","name":"129b8034-6b51-4e5f-b3f7-5206e5ec2f8b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sPlayer_solid","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},
+    "spriteId": {"name":"sSolid","path":"sprites/sSolid/sSolid.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"40145efb-d147-466f-a5a5-eec1701aacda","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a27b32d9-7081-4e13-9fa5-44acfd2fbbdc","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c7df4030-6724-49bd-9c5f-be327b83114f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"129b8034-6b51-4e5f-b3f7-5206e5ec2f8b","path":"sprites/sSolid/sSolid.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sPlayer_solid","path":"sprites/sPlayer_solid/sPlayer_solid.yy",},
+    "parent": {"name":"sSolid","path":"sprites/sSolid/sSolid.yy",},
     "resourceVersion": "1.3",
-    "name": "sPlayer_solid",
+    "name": "sSolid",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a0ba5b69-c7bb-4c86-a642-50f167b35fe8","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5960b04a-84eb-401d-a2d0-48047061ab19","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Player Solid",
-    "path": "folders/Saving and Loading/Player Solid.yy",
+    "name": "Solid",
+    "path": "folders/Solid.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sPlayer_solid",
+  "name": "sSolid",
   "tags": [],
   "resourceType": "GMSprite",
 }
