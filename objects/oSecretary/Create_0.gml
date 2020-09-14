@@ -17,7 +17,10 @@ rand_dialogue = [
 init_interactable(
 	function receptionist_action() {
 		var rand_index = irandom_range(0, array_length(rand_dialogue) - 1);
-		if(instance_exists(oPlayer)) oPlayer.play_lines("Secretary", rand_dialogue[rand_index]);
+		if(instance_exists(oPlayer)) {
+			oPlayer.play_lines("Secretary", rand_dialogue[rand_index]);
+			audio_play_sound(sdSecretary, SOUNDPRIORITY.BARK, false);	
+		}
 	}
 
 );

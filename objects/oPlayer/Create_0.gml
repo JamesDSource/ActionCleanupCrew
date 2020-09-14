@@ -55,12 +55,12 @@ draw_function = function draw_player() {
 function move() {
 	var hDir = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 	var vDir = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+	var acceleration = 0.2;
 	
 	if(hDir != 0 || vDir != 0) { 
 		var ang = point_direction(0, 0, hDir, vDir);
-		hsp = lengthdir_x(spd, ang);
-		vsp = lengthdir_y(spd, ang);
-		
+		hsp = approach(hsp, lengthdir_x(spd, ang), acceleration);
+		vsp = approach(vsp, lengthdir_y(spd, ang), acceleration);
 		image_speed = 1;
 	}
 	else {

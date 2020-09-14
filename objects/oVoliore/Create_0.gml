@@ -25,6 +25,7 @@ entity_states.free = function voliore_state_free() {
 				if(shot_timer > 0) shot_timer--;
 				else {
 					var shoot_ang = point_direction(x, y, target.x, target.y);
+					audio_play_sound_on(audio_emitter, sdVoliore_goop, false, SOUNDPRIORITY.GUNS);
 					with(instance_create_layer(x, y, "Instances", oAcid_ball)) {
 						z = 8;
 						ang = shoot_ang;

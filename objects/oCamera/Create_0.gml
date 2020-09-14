@@ -10,7 +10,7 @@ view_set_camera(0, camera);
 var pm = matrix_build_projection_ortho(VIEWWIDTH, VIEWHEIGHT, -10000000, 10000000);
 camera_set_proj_mat(camera, pm);
 
-slow = 20;
+slow = 10;
 target_x = x;
 target_y = y;
 jut = 40;
