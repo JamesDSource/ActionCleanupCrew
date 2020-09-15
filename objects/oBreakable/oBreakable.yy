@@ -28,8 +28,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Breakables",
-    "path": "folders/Bits/Breakables.yy",
+    "name": "Bits",
+    "path": "folders/Bits.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBreakable",

@@ -14,7 +14,7 @@
   "duration": 8.838146,
   "parent": {
     "name": "Incinerator",
-    "path": "folders/Incinerator.yy",
+    "path": "folders/Objects/Incinerator.yy",
   },
   "resourceVersion": "1.0",
   "name": "sdDing",

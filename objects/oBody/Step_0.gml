@@ -17,3 +17,5 @@ if(instance_exists(oPlayer)) {
 		z = 0;
 	}
 }
+
+push_out(oSolid);

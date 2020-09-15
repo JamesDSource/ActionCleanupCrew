@@ -120,7 +120,7 @@ function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_t
 	bursts_left = burst;
 }
 
-guns = ds_map_create();;
+guns = ds_map_create();
 
 guns[? "pistol"] = new gun(
 	"Pistol",				// name
@@ -133,7 +133,7 @@ guns[? "pistol"] = new gun(
 	sPistol,				// sprite
 	250,					// range
 	3,						// gun kick
-	sdRifle					// sound
+	sdPistol				// sound
 );
 
 guns[? "laser_pistol"] = new gun(
@@ -231,7 +231,7 @@ guns[? "shotgun"] = new gun(
 	sShotgun,
 	200,
 	6,
-	sdSniper
+	sdShotgun
 );
 
 guns[? "laser_shotgun"] = new gun(
@@ -319,7 +319,14 @@ function new_cover() {
 		if(team == TEAM.WHITE) cover_point.y = cover.bbox_bottom + 8;
 		else cover_point.y = cover.bbox_top - 8;
 	}
-	
+	else {
+		var new_point_found = false;	
+		var new_point_attempts = 0;
+		while(!new_point_found && new_point_attempts < 50) {
+			
+			new_point_attempts++;
+		}
+	}
 }
 
 // movement

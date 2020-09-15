@@ -14,7 +14,7 @@
   "duration": 2.465998,
   "parent": {
     "name": "Teleporters",
-    "path": "folders/Teleporters.yy",
+    "path": "folders/Objects/Teleporters.yy",
   },
   "resourceVersion": "1.0",
   "name": "sdTeleporter",

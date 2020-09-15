@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"559c8997-a0f9-4dd6-a1aa-63b04778861e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Mine",
-    "path": "folders/Mine.yy",
+    "name": "Mines",
+    "path": "folders/Objects/Mines.yy",
   },
   "resourceVersion": "1.0",
   "name": "sMine",

@@ -73,7 +73,7 @@
   ],
   "parent": {
     "name": "Incinerator",
-    "path": "folders/Incinerator.yy",
+    "path": "folders/Objects/Incinerator.yy",
   },
   "resourceVersion": "1.0",
   "name": "sIncinerator_opened",

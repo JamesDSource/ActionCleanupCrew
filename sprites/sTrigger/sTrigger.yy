@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1baeb136-9eff-4916-9e98-ded19423bc69","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Trigger",
-    "path": "folders/Trigger.yy",
+    "name": "Triggers",
+    "path": "folders/Triggers.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTrigger",

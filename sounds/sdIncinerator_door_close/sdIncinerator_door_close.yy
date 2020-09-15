@@ -14,7 +14,7 @@
   "duration": 0.215726,
   "parent": {
     "name": "Incinerator",
-    "path": "folders/Incinerator.yy",
+    "path": "folders/Objects/Incinerator.yy",
   },
   "resourceVersion": "1.0",
   "name": "sdIncinerator_door_close",

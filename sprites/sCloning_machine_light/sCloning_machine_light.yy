@@ -77,7 +77,7 @@
   ],
   "parent": {
     "name": "Cloning Machine",
-    "path": "folders/Cloning Machine.yy",
+    "path": "folders/Objects/Cloning Machine.yy",
   },
   "resourceVersion": "1.0",
   "name": "sCloning_machine_light",

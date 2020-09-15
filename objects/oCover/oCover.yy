@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Cover",
-    "path": "folders/Cover.yy",
+    "path": "folders/Objects/Cover.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCover",
