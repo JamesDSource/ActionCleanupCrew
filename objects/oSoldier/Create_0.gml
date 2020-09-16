@@ -259,7 +259,7 @@ guns[? "rpg"] = new gun(
 	sRPG_loaded,
 	300,
 	6,
-	sdLaser_rifle
+	sdRPG
 );
 
 guns[? "cluster_rpg"] = new gun(
@@ -273,7 +273,7 @@ guns[? "cluster_rpg"] = new gun(
 	sCluster_RPG,
 	300,
 	6,
-	sdLaser_rifle
+	sdCluster_RPG
 );
 
 if(instance_exists(oBattle_manager)) {
@@ -323,7 +323,13 @@ function new_cover() {
 		var new_point_found = false;	
 		var new_point_attempts = 0;
 		while(!new_point_found && new_point_attempts < 50) {
-			
+			var v_quad = 1;
+			if(team == TEAM.WHITE) v_quad = 2;
+			var new_point = random_point_room_quadrent(0, v_quad);
+			if(place_meeting(new_point.x, new_point.y, oSolid)) {
+				cover_point = new_point;
+				new_point_found = true;
+			}
 			new_point_attempts++;
 		}
 	}
@@ -331,8 +337,8 @@ function new_cover() {
 
 // movement
 cover_point = {
-	x: 0,
-	y: 0
+	x: xstart,
+	y: ystart
 };
 
 path_movement_speed = 1;

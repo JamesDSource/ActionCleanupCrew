@@ -4,7 +4,7 @@ if(uses_entity_states && is_method(state)) state();
 // pathfinding
 if(uses_pathfinding) {
 	t++;
-	if(path_update && t%5 == 0) {
+	if(path_update && t%10 == 0) {
 		if(path_exists(path)) path_delete(path);
 		path_update = false;
 	}
@@ -29,6 +29,11 @@ if(uses_pathfinding) {
 			var spd = min(path_movement_speed, point_distance(x, y, temp_x, temp_y));
 			hsp = lengthdir_x(spd, ang);
 			vsp = lengthdir_y(spd, ang);
+			
+			if(temp_x == 0 && temp_y == 0) {
+				hsp = 0;
+				vsp = 0;
+			}
 		}
 	}
 	else {

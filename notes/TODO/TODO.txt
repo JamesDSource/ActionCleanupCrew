@@ -1,16 +1,11 @@
 --For Release--
 More enemies
 More levels
-More guns
-Basic story
 Space station title background
 Music
 More sound effects
-	-Rocket Launcher sounds
 	-Claw sounds for eating bodies
 	-Mop sounds
-	-Pistol sounds
-	-Incinerator door close
 	-New soldier death sounds
 
 --Later Consideration--
