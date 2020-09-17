@@ -1,6 +1,6 @@
 show_pause_menu = false;
 global.pause = false;
-function toggle_pause() {
+pause_toggle = function toggle_pause() {
 	global.pause = !global.pause;
 	
 	if(global.pause) {
@@ -25,37 +25,42 @@ function toggle_pause() {
 }
 
 event_inherited();
-if(is_level) {
-	pages = {
-		main: [
-			["Resume", toggle_pause],
-			["Title Screen", function pause_title_screen() {
-				toggle_pause();
-				transition_to(rTitle_page);
-			}],
-			["Back to headquarters", function pause_headquarters() {
-				toggle_pause();
-				transition_to(rHub);
-			}],
-			["Level Restart", function pause_restart() {
-				toggle_pause();
-				transition_to(room);
-			}],
-			["Quit", function menu_quit() {transition_quit();}]
-		]
-	}
-}
-else {
-	pages = {
-		main: [
-			["Resume", toggle_pause],
-			["Title Screen", function pause_title_screen() {
-				toggle_pause();
-				transition_to(rTitle_page);
-			}],
-			["Quit", function menu_quit() {transition_quit();}]
-		]
-	}
+
+pages = {
+	pause: [
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Resume", [pause_toggle]),
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Return to HQ", [function pause_headquarters() {
+			toggle_pause();
+			transition_to(rHub);
+		}]),
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Settings", ["settings"]),
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Quit", [transition_quit])
+	],
+	
+	settings: [
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Audio", ["audio"]),
+		new page_element(PAGEELEMENTTYPE.TOGGLE, "Fullscreen", ["fullscreen"]),
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Back", [function menu_settings_back() {
+			save_settings();
+			page = pages.pause;
+		}])
+	],
+	
+	audio: [
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Master", ["master_audio", 0, 1, 0.05]),
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Music", ["music_audio", 0, 1, 0.05]),
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Death Screams", ["screams_audio", 0, 1, 0.05]),
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Weapons", ["weapons_audio", 0, 1, 0.05]),
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Back", ["settings"])
+	]
 }
 
-page = pages.main;
+if(!is_level) {
+	pages.pause = [
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Resume", [pause_toggle]),
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Settings", ["settings"]),
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Quit", [transition_quit])
+	]
+}
+
+page = pages.pause;

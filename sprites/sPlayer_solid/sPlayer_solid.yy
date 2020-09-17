@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Player Solid",
-    "path": "folders/Saving and Loading/Player Solid.yy",
+    "path": "folders/Solid/Player Solid.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayer_solid",

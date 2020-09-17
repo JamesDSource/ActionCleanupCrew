@@ -7,8 +7,8 @@
   "type": 2,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "DeathScreams",
+    "path": "audiogroups/DeathScreams",
   },
   "soundFile": "sdDeath_claw2.wav",
   "duration": 1.670057,

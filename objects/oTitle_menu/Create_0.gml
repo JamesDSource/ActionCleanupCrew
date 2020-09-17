@@ -1,11 +1,28 @@
 event_inherited();
 
 pages = {
-	main: [
-		["Start Game", function menu_start() {transition_to(rHub);}],
-		["FS", function menu_toggle_fullscreen() {window_set_fullscreen(!window_get_fullscreen());}],
-		["Quit", function menu_quit() {transition_quit();}]
+	select: [
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Start Game", [function menu_start() {transition_to(rHub);}]),
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Settings", ["settings"]),
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Quit", [function menu_quit() {transition_quit();}])
 	],
+	
+	settings: [
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Audio", ["audio"]),
+		new page_element(PAGEELEMENTTYPE.TOGGLE, "Fullscreen", ["fullscreen"]),
+		new page_element(PAGEELEMENTTYPE.SCRIPT, "Back", [function menu_settings_back() {
+			save_settings();
+			page = pages.select;
+		}])
+	],
+	
+	audio: [
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Master", ["master_audio", 0, 1, 0.05]),
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Music", ["music_audio", 0, 1, 0.05]),
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Death Screams", ["screams_audio", 0, 1, 0.05]),
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Weapons", ["weapons_audio", 0, 1, 0.05]),
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Back", ["settings"])
+	]
 }
 
-page = pages.main;
+page = pages.select;

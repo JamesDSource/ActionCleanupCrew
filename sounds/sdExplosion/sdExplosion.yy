@@ -7,8 +7,8 @@
   "type": 2,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "Weapons",
+    "path": "audiogroups/Weapons",
   },
   "soundFile": "sdExplosion.wav",
   "duration": 4.486791,

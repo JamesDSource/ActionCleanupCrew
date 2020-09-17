@@ -5,9 +5,9 @@ var box_padding = 4;
 
 draw_set_font(fMenu);
 for(var i = 0; i < array_length(page); i++) {
-	page_height += margin_y + string_height(page[i][0]); 	
+	page_height += margin_y + string_height(page[i].str); 	
 }
-page_height += box_padding*2;
+page_height -= margin_y;
 
 var draw_y = display_get_gui_height()/2 - page_height/2;
 for(var i = 0; i < array_length(page); i++) {
@@ -22,9 +22,9 @@ for(var i = 0; i < array_length(page); i++) {
 	}
 	else draw_set_color(c_white);
 	
-	draw_rectange_border(-box_padding, draw_y - box_padding, string_width(page[i][0]) + margin_x + box_padding*2 + x_offset, string_height(page[i][0]) + box_padding*2, 1, c_black, c_white);
-	draw_text(margin_x + x_offset, draw_y, page[i][0]);
-	draw_y += margin_y + string_height(page[i][0]);
+	draw_rectange_border(-box_padding, draw_y - box_padding, string_width(page[i].str) + margin_x + box_padding*2 + x_offset, string_height(page[i].str) + box_padding*2, 1, c_black, c_white);
+	draw_text(margin_x + x_offset, draw_y, page[i].str);
+	draw_y += margin_y + string_height(page[i].str);
 }
 
 var key_margin = 5;

@@ -1,4 +1,5 @@
 #macro SAVEFILENAME "ACC.save"
+#macro SAVEFILESETTINGSNAME "setting.ini"
 
 function save_json_to_file(filename, map) {
 	var str = json_encode(map);
@@ -70,4 +71,24 @@ function load() {
 	global.intro_done = save_map[? "intro done"];
 	
 	ds_map_destroy(save_map);
+}
+
+function load_settings() {
+	ini_open(SAVEFILESETTINGSNAME);
+	global.master_audio = ini_read_real("audio", "master", 1.0);
+	global.music_audio = ini_read_real("audio", "music", 1.0);
+	global.screams_audio = ini_read_real("audio", "screams", 1.0);
+	global.weapons_audio = ini_read_real("audio", "weapons", 1.0);
+	global.fullscreen = ini_read_real("settings", "fullscreen", true);
+	ini_close();
+}
+
+function save_settings() {
+	ini_open(SAVEFILESETTINGSNAME);
+	ini_write_real("audio", "master", global.master_audio);
+	ini_write_real("audio", "music", global.music_audio);
+	ini_write_real("audio", "screams", global.screams_audio);
+	ini_write_real("audio", "weapons", global.weapons_audio);
+	ini_write_real("settings", "fullscreen", global.fullscreen);
+	ini_close();
 }
