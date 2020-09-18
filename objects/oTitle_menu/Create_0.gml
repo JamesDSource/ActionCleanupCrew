@@ -9,11 +9,18 @@ pages = {
 	
 	settings: [
 		new page_element(PAGEELEMENTTYPE.TRANSFER, "Audio", ["audio"]),
-		new page_element(PAGEELEMENTTYPE.TOGGLE, "Fullscreen", ["fullscreen"]),
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Graphics", ["graphics"]),
 		new page_element(PAGEELEMENTTYPE.SCRIPT, "Back", [function menu_settings_back() {
 			save_settings();
 			page = pages.select;
 		}])
+	],
+	
+	graphics: [
+		new page_element(PAGEELEMENTTYPE.TOGGLE, "Fullscreen", ["fullscreen"]),
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Brightness", ["brightness", -0.3, 0.3, 0.05]),
+		new page_element(PAGEELEMENTTYPE.SLIDER, "Gamma", ["gamma", 0.7, 1.3, 0.05]),
+		new page_element(PAGEELEMENTTYPE.TRANSFER, "Back", ["settings"])
 	],
 	
 	audio: [
