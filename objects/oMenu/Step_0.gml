@@ -34,6 +34,7 @@ switch(page[index].element_type) {
 		}
 		break;
 	case PAGEELEMENTTYPE.SLIDER:
+		show_horizontal_controls = true
 		var variable = variable_global_get(page[index].global_var);
 		if(keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
 			audio_play_sound(sdMenu_select, SOUNDPRIORITY.MENUS, false);

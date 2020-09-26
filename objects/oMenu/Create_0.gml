@@ -56,3 +56,4 @@ page = pages.example;
 index = 0;
 push = 10;
 push_progress = 0;
+show_horizontal_controls =  false;

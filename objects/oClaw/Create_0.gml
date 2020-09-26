@@ -24,6 +24,8 @@ entity_states.free = function claw_state_free() {
 				instance_destroy(target);
 				target = noone;
 				hp++;	
+				var eating_sounds = [sdClaw_eat1, sdClaw_eat2, sdClaw_eat3]
+				audio_play_sound_on(audio_emitter, eating_sounds[irandom_range(0, array_length(eating_sounds))], false, SOUNDPRIORITY.BARK)
 			}
 			break;
 		case "attack":
