@@ -43,29 +43,12 @@ function level(level_room, level_name, level_description) constructor {
 global.levels = [
 	new level(
 		rLevel_tutorial, 
-		"Tutorial",
-		string_create_paragraph(
-			"Please make way to",
-			"the training room",
-			"and show us that",
-			"you are ready to be",
-			"an Action Cleanup Crew", 
-			"janitor!"
-		)
+		"Tutorial"
 	),
 	
 	new level(
 		rWarehouse1, 
-		"First Encounter",
-		string_create_paragraph(
-			"We hope you are as",
-			"excited as we are for",
-			"your first mission!",
-			"We heard word that there",
-			"might be some disturbances,",
-			"but don't worry about it."
-		
-		)
+		"First Encounter"
 	),
 ];
 

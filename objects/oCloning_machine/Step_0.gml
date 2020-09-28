@@ -5,6 +5,7 @@ if(image_speed == 0 && !instance_exists(oPlayer)) {
 		if(lives_remaining == -1) {
 			instance_create_layer(0, 0, "Controllers", oYou_died);
 			instance_destroy(oPause);
+			if(instance_exists(oBattle_manager)) oBattle_manager.started = false;
 		}
 		else if(lives_remaining >= 0) {
 			image_speed = 1;

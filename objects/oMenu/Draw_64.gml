@@ -22,7 +22,7 @@ for(var i = 0; i < array_length(page); i++) {
 	}
 	else draw_set_color(c_white);
 	
-	draw_rectange_border(-box_padding, draw_y - box_padding, string_width(page[i].str) + margin_x + box_padding*2 + x_offset, string_height(page[i].str) + box_padding*2, 1, c_black, c_white);
+	draw_rectangle_border(-box_padding, draw_y - box_padding, string_width(page[i].str) + margin_x + box_padding*2 + x_offset, string_height(page[i].str) + box_padding*2, 1, c_black, c_white);
 	draw_text(margin_x + x_offset, draw_y, page[i].str);
 	draw_y += margin_y + string_height(page[i].str);
 }

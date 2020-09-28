@@ -1,7 +1,8 @@
 dw = display_get_gui_width();
 dh = display_get_gui_height();
-w = dw;
-h = dh/1.2;
+border_w = 6;
+w = dw - border_w*2;
+h = dh/1.2 - border_w*2;
 current_w = 1;
 x_org = dw/2 - w/2;
 y_org = dh/2 - h/2;
@@ -17,8 +18,8 @@ for(var i = 0; i < array_length(global.levels); i++) {
 	}
 }
 
-pos_spd = 5;
-scale_spd = 0.05;
+pos_spd = 6;
+scale_spd = 0.025;
 
 init = false;
 

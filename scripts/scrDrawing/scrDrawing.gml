@@ -1,4 +1,4 @@
-function draw_rectange_border(x1, y1, width, height, border, col1, col2) {
+function draw_rectangle_border(x1, y1, width, height, border, col1, col2) {
 	// base
 	draw_rectangle_color(x1, y1, x1 + width, y1 + height, col1, col1, col1, col1, false);
 	

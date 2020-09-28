@@ -33,7 +33,7 @@ if(state == states.read) {
 	draw_set_valign(fa_top);	
 	draw_set_color(c_white);
 	
-	draw_rectange_border(0, display_get_gui_height() - dialogue_box_height, display_get_gui_width(), dialogue_box_height, border, c_black, c_white);
+	draw_rectangle_border(0, display_get_gui_height() - dialogue_box_height, display_get_gui_width(), dialogue_box_height, border, c_black, c_white);
 	
 	var str_whole = dialogues[dialogue_index];
 	var str_cut = string_copy(str_whole, 1, line_index);
@@ -43,6 +43,6 @@ if(state == states.read) {
 	draw_text(str_draw_x, str_draw_y, str_cut);
 	
 	var speaker_padding = 3;
-	draw_rectange_border(0, 0, display_get_gui_width(), string_height(dialogue_speaker) + (border + speaker_padding)*2, border, c_black, c_white);
+	draw_rectangle_border(0, 0, display_get_gui_width(), string_height(dialogue_speaker) + (border + speaker_padding)*2, border, c_black, c_white);
 	draw_text(border + speaker_padding, border + speaker_padding, dialogue_speaker);
 }

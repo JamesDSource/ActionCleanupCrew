@@ -1,9 +1,20 @@
 started = false;
 transitioned = false;
-transition_timer = room_speed*3;
+transition_timer = room_speed*5;
 
 letter_scale = 0;
 letter_spd = 0.01;
+
+details_surface = -1;
+details_surf_w = display_get_gui_width()/2;
+details_surf_h = display_get_gui_height();
+details_breakdown = [
+	["Survival", "life"],
+	["Blood Cleanup", "blood"],
+	["Ash Cleanup", "ash"],
+	["Debree Cleanup", "bits"],
+	["Body Cleanup", "bodies"]
+];
 
 var total_score = grade_letter_from_percent(global.game_score.total);
 letter_index = grade_index_from_percent(global.game_score.total);
