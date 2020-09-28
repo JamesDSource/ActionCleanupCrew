@@ -77,7 +77,7 @@
   ],
   "parent": {
     "name": "Boxes",
-    "path": "folders/Bits/Breakables/Boxes.yy",
+    "path": "folders/Objects/Cover/Breakables/Boxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBox_small",

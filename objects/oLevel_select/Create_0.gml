@@ -11,6 +11,11 @@ level_index = 0;
 level_index_left = -1;
 level_index_right = 1;
 
+show_state_max = 3;
+show_state = 0;
+show_state_time = 0.1 * room_speed;
+show_state_timer = show_state_time;
+
 for(var i = 0; i < array_length(global.levels); i++) {
 	if(global.level_target == global.levels[i]) {
 		level_index = i;

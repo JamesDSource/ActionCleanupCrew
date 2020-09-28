@@ -25,7 +25,7 @@ if(total_score != "F") {
 	for(var i = 0; i < array_length(global.levels); i++) {
 		if(global.game_score.level == "level " + room_get_name(global.levels[i].room_index) && i == global.level_lock) {
 			var upper_limit = array_length(global.levels) - 1;
-			if(DEMO) upper_limit = 1;
+			if(DEMO) upper_limit = global.demo_level_limit;
 			global.level_lock = min(global.level_lock + 1, upper_limit);
 			break;
 		}

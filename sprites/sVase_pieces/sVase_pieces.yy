@@ -97,7 +97,7 @@
   ],
   "parent": {
     "name": "Vases",
-    "path": "folders/Bits/Breakables/Vases.yy",
+    "path": "folders/Objects/Cover/Breakables/Vases.yy",
   },
   "resourceVersion": "1.0",
   "name": "sVase_pieces",

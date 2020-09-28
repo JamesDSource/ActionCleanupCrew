@@ -97,7 +97,7 @@
   ],
   "parent": {
     "name": "Chairs",
-    "path": "folders/Bits/Breakables/Chairs.yy",
+    "path": "folders/Objects/Cover/Breakables/Chairs.yy",
   },
   "resourceVersion": "1.0",
   "name": "sChair_pieces",

@@ -17,11 +17,11 @@ else {
 		level_index++;
 		audio_play_sound(sdLevel_select_scroll, SOUNDPRIORITY.MENUS, false);
 	}
-	else if(keyboard_check_pressed(vk_space) && instance_exists(oPause)) {
-		if(keyboard_check_pressed(vk_space)) global.level_target = global.levels[level_index];
+	else if(keyboard_check_pressed(vk_space) && level_index <= global.level_lock) {
+		global.level_target = global.levels[level_index];
 		audio_play_sound(sdLevel_select_choose, SOUNDPRIORITY.MENUS, false);
 	}	
-	level_index = clamp(level_index, 0, global.level_lock);
+	level_index = clamp(level_index, 0, array_length(global.levels)-1)
 	level_index_left = level_index - 1;
 	level_index_right = level_index + 1;
 
@@ -57,4 +57,14 @@ else {
 		}
 	}
 	init = true;
+}
+
+// show states
+if(progress == 1 && show_state < show_state_max) {
+	if(show_state_timer > 0) show_state_timer--;
+	else {
+		show_state++;	
+		show_state_timer = show_state_time;
+		audio_play_sound(sdLevel_select_show_state, SOUNDPRIORITY.MENUS, false);
+	}
 }

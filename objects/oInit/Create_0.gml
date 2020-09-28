@@ -29,6 +29,7 @@ global.hud = true;
 // Demo
 #macro DEMO false
 #macro Demo:DEMO true
+global.demo_level_limit = 1;
 
 // levels
 function level(level_room, level_name, level_description) constructor {
@@ -49,6 +50,11 @@ global.levels = [
 	new level(
 		rWarehouse1, 
 		"First Encounter"
+	),
+	
+	new level(
+		rTitle_page, 
+		"First Encounter 2"
 	),
 ];
 
