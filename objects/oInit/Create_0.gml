@@ -50,12 +50,7 @@ global.levels = [
 	new level(
 		rWarehouse1, 
 		"First Encounter"
-	),
-	
-	new level(
-		rTitle_page, 
-		"First Encounter 2"
-	),
+	)
 ];
 
 randomize();
