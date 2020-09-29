@@ -395,10 +395,9 @@
     {"folderPath":"folders/Objects/Teleporters.yy","order":4,"resourceVersion":"1.0","name":"Teleporters","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts.yy","order":42,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects.yy","order":43,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/Breakables.yy","order":5,"resourceVersion":"1.0","name":"Breakables","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Cover.yy","order":0,"resourceVersion":"1.0","name":"Cover","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Music and audio manager.yy","order":44,"resourceVersion":"1.0","name":"Music and audio manager","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/Cover/Breakables.yy","order":0,"resourceVersion":"1.0","name":"Breakables","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Breakables.yy","order":5,"resourceVersion":"1.0","name":"Breakables","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},

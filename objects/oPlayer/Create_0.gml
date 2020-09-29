@@ -54,8 +54,6 @@ draw_function = function draw_player() {
 
 horizontal_movement = 0;
 verticle_movement = 0;
-horizontal_belt_movement = 0;
-verticle_belt_movement = 0;
 function move() {
 	var hDir = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 	var vDir = keyboard_check(ord("S")) - keyboard_check(ord("W"));
@@ -76,17 +74,25 @@ function move() {
 	}
 	
 	// Belts
+	var horizontal_belt_movement = 0, verticle_belt_movement = 0;
 	if(layer_exists("Belts")) {
 		var belts_layer = layer_get_id("Belts");
 		var belts_tilemap = layer_tilemap_get_id(belts_layer);
-		var c = tilemap_get_cell_x_at_pixel(belts_tilemap, x, y);
-		var r = tilemap_get_cell_y_at_pixel(belts_tilemap, x, y);
-		var belts_cell = tilemap_get(belts_tilemap, c, r);
-		if(belts_cell < 1) {
-			horizontal_belt_movement = 0;	
-			verticle_belt_movement = 0;	
+		var belt_points_check = [
+			[bbox_left, bbox_top],
+			[bbox_left, bbox_bottom],
+			[bbox_right, bbox_top],
+			[bbox_right, bbox_bottom]
+		
+		]
+		var belts_cell = -1;
+		for(var i = 0; i < array_length(belt_points_check); i++) {
+			var c = tilemap_get_cell_x_at_pixel(belts_tilemap, belt_points_check[i][0], belt_points_check[i][1]);
+			var r = tilemap_get_cell_y_at_pixel(belts_tilemap, belt_points_check[i][0], belt_points_check[i][1]);
+			var belts_cell_temp = tilemap_get(belts_tilemap, c, r);
+			if(belts_cell < belts_cell_temp) belts_cell = belts_cell_temp;
 		}
-		else {
+		if(belts_cell > 0) {
 			var belt_direction_index = ceil(belts_cell/8);
 			var belt_spd = 1;
 			switch(belt_direction_index) {
@@ -97,7 +103,6 @@ function move() {
 			}
 		}
 	}
-	show_debug_message(horizontal_belt_movement);
 	hsp = horizontal_movement + horizontal_belt_movement;
 	vsp = verticle_movement + verticle_belt_movement;
 }
