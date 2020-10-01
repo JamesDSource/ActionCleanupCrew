@@ -49,7 +49,7 @@ function player_state_free() {
 	else if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	
 	// if holding a body, go to the body state
-	if(instance_exists(body_held)) state = states.holding;
+	if(instance_exists(obj_held)) state = states.holding;
 	
 	event_inherited();
 }
@@ -63,16 +63,11 @@ function player_state_holding() {
 	event_inherited();
 	if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	
-	if(instance_exists(body_held)) {
-		body_held.x = x;
-		body_held.y = y + 1;
-		body_held.z = 10;
-		
+	if(instance_exists(obj_held)) {
 		if(keyboard_check_pressed(vk_space) && !instance_exists(selected_interactable)) {
-			body_held = noone;
+			obj_held = noone;
 			state = states.free;
 		}
-	
 	}
 	else state = states.free;
 }

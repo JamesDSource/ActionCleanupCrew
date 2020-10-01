@@ -116,6 +116,7 @@
     {"id":{"name":"sdSecretary","path":"sounds/sdSecretary/sdSecretary.yy",},"order":2,},
     {"id":{"name":"sdVacuum","path":"sounds/sdVacuum/sdVacuum.yy",},"order":4,},
     {"id":{"name":"sLaser_pistol_shot_white","path":"sprites/sLaser_pistol_shot_white/sLaser_pistol_shot_white.yy",},"order":29,},
+    {"id":{"name":"oPick_up","path":"objects/oPick_up/oPick_up.yy",},"order":0,},
     {"id":{"name":"sdDeath_man2","path":"sounds/sdDeath_man2/sdDeath_man2.yy",},"order":1,},
     {"id":{"name":"rLevel1_jam","path":"rooms/rLevel1_jam/rLevel1_jam.yy",},"order":0,},
     {"id":{"name":"tCeiling_hub","path":"tilesets/tCeiling_hub/tCeiling_hub.yy",},"order":5,},
@@ -397,6 +398,7 @@
     {"folderPath":"folders/Objects.yy","order":43,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Music and audio manager.yy","order":44,"resourceVersion":"1.0","name":"Music and audio manager","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Breakables.yy","order":5,"resourceVersion":"1.0","name":"Breakables","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Pick Up.yy","order":45,"resourceVersion":"1.0","name":"Pick Up","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},

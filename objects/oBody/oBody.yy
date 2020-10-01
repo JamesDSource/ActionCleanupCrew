@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oDepth_object",
-    "path": "objects/oDepth_object/oDepth_object.yy",
+    "name": "oPick_up",
+    "path": "objects/oPick_up/oPick_up.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

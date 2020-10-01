@@ -8,3 +8,6 @@ else {
 	sprite_index = sIncinerator_opened;
 	is_interactable = true;
 }
+
+if(instance_exists(oPlayer) && instance_exists(oPlayer.obj_held) && oPlayer.obj_held.object_index == oBody) is_interactable = true;
+else is_interactable = false;

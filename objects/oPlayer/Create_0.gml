@@ -22,7 +22,7 @@ helmat_on = true;
 helmat_time = 4 * room_speed;
 helmat_timer = helmat_time;
 
-body_held = noone;
+obj_held = noone;
 
 states = {
 	free: player_state_free,
