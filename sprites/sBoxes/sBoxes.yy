@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Boxes",
-    "path": "folders/Cover/Boxes.yy",
+    "path": "folders/Objects/Cover/Boxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBoxes",

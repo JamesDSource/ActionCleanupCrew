@@ -32,7 +32,7 @@
   ],
   "parent": {
     "name": "Vases",
-    "path": "folders/Objects/Cover/Breakables/Vases.yy",
+    "path": "folders/Objects/Cloning Machine/Breakables/Vases.yy",
   },
   "resourceVersion": "1.0",
   "name": "oVase",

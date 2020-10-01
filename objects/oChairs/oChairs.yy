@@ -34,7 +34,7 @@
   ],
   "parent": {
     "name": "Chairs",
-    "path": "folders/Objects/Cover/Breakables/Chairs.yy",
+    "path": "folders/Objects/Cloning Machine/Breakables/Chairs.yy",
   },
   "resourceVersion": "1.0",
   "name": "oChairs",

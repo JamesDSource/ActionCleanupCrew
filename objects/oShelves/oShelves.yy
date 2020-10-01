@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shelves",
-    "path": "folders/Cover/Shelves.yy",
+    "path": "folders/Objects/Cover/Shelves.yy",
   },
   "resourceVersion": "1.0",
   "name": "oShelves",

@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Desks",
-    "path": "folders/Cover/Desks.yy",
+    "path": "folders/Objects/Cover/Desks.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDesk",
