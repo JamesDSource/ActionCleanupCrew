@@ -29,8 +29,8 @@
     {"propertyId":{"name":"has_shadow","path":"objects/oDepth_object/oDepth_object.yy",},"objectId":{"name":"oDepth_object","path":"objects/oDepth_object/oDepth_object.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Entity",
-    "path": "folders/Entity.yy",
+    "name": "Body",
+    "path": "folders/Entity/Body.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBody",

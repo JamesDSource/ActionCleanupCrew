@@ -38,20 +38,27 @@ function bleed(blood_min, blood_max) {
 }
 
 kill_function = function kill(death_type) {
+	function leave_body(burn_body) {
+		if(death_sprite != noone) {
+			var new_body = instance_create_layer(x, y, "Instances", oBody); 
+			with(new_body) {
+				sprite_index = other.death_sprite;
+				blood_type = other.blood_type;
+				size = other.size;
+				burn = burn_body;
+			}
+			return new_body;
+		}
+		return noone;
+	}
 	hp--;
 	flash_frames_left = flash_frames;
-	if(hp <= 0) {
+	if(hp <= 0) {			
 		if(death_type == "random") death_type = irandom_range(0, DEATHS-1);
 		switch(death_type) {
 			case DEATHTYPE.PIERCING:
 				bleed(40, 60);
-				if(death_sprite != noone) {
-					with(instance_create_layer(x, y, "Instances", oBody)) {
-						sprite_index = other.death_sprite;
-						blood_type = other.blood_type;
-						size = other.size;
-					}
-				}
+				leave_body(false);
 				break;
 		
 			case DEATHTYPE.BURN:
@@ -69,8 +76,9 @@ kill_function = function kill(death_type) {
 				}
 				
 				repeat(ash_amount) {
-					instance_create_layer(x + irandom_range(-5, 5), y + irandom_range(-5, 5), "Instances", oAsh_pile);
+					instance_create_layer(x + irandom_range(-8, 8), y + irandom_range(-8, 8), "Instances", oAsh_pile);
 				}
+				leave_body(true);
 				break;
 				
 			case DEATHTYPE.EXPLOSION:

@@ -7,6 +7,3 @@ More sound effects
 	-Claw sounds for eating bodies
 	-Mop sounds
 	-New soldier death sounds
-
---Later Consideration--
-Abilities and ability shop

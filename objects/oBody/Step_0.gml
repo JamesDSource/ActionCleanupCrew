@@ -8,3 +8,8 @@ if(being_held && irandom_range(1, 100) < 5) {
 		esp = 0;
 	}
 }
+
+if(burn) {
+	burn_progress = approach(burn_progress, 1.0, 0.01);
+	if(burn_progress == 1) instance_destroy();	
+}

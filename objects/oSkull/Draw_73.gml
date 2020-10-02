@@ -1,1 +1,1 @@
-draw_self();
+if(draw) draw_self();
