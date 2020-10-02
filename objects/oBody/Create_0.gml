@@ -16,12 +16,12 @@ draw_function = function draw_body() {
 		}
 		var u_percent = shader_get_uniform(shDissolve, "percent");
 		var u_texel_height = shader_get_uniform(shDissolve, "texel_height");
-		var u_height = shader_get_uniform(shDissolve, "height");
+		var u_bottom = shader_get_uniform(shDissolve, "bottom");
 		var u_top = shader_get_uniform(shDissolve, "top");
 		shader_set(shDissolve);	
 		shader_set_uniform_f(u_percent, burn_progress);
 		shader_set_uniform_f(u_texel_height, texel_height);
-		shader_set_uniform_f(u_height, uvs[3] - uvs[1]);
+		shader_set_uniform_f(u_bottom, uvs[3]);
 		shader_set_uniform_f(u_top, uvs[1]);
 	}
 	

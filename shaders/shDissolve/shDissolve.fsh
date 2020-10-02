@@ -5,12 +5,13 @@ varying vec4 v_vColour;
 
 uniform float percent;
 uniform float texel_height;
-uniform float height;
 uniform float top;
+uniform float bottom;
 
 void main() {
 	float mix_weight = 0.2;
     vec4 color = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord);
+	float height = bottom - top;
 	if((v_vTexcoord.y - top)/height <= percent) {
 		color.a = 0.0;
 	}

@@ -16,3 +16,5 @@ function suck_bits() {
 	}
 	else bit_timer--;
 }
+
+scale = 0;

@@ -4,14 +4,15 @@ if(instance_exists(oPlayer)) {
 		is_interactable = false;
 		if(oPlayer.obj_held == id) {
 			x = oPlayer.x;	
-			y = oPlayer.y+2;	
-			z = 10;
+			y = oPlayer.y+5;	
+			z = 13;
 			being_held = true;
-		}
-		else {	
-			push_out(oSolid);	
-			z = 0;	
 		}
 	}
 	else is_interactable = true;
+}
+
+if(!being_held) {
+	push_out(oSolid);	
+	z = 0;		
 }

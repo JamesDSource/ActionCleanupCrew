@@ -73,7 +73,7 @@
   ],
   "parent": {
     "name": "Vases",
-    "path": "folders/Objects/Cloning Machine/Breakables/Vases.yy",
+    "path": "folders/Objects/Breakable Objects/Vases.yy",
   },
   "resourceVersion": "1.0",
   "name": "sVase",

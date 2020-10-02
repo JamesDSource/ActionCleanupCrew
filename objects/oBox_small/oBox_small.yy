@@ -30,7 +30,7 @@
   ],
   "parent": {
     "name": "Boxes",
-    "path": "folders/Objects/Cloning Machine/Breakables/Boxes.yy",
+    "path": "folders/Objects/Breakable Objects/Boxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBox_small",
