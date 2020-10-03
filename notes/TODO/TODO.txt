@@ -4,6 +4,6 @@ More levels
 Space station title background
 Music
 More sound effects
-	-Claw sounds for eating bodies
 	-Mop sounds
 	-New soldier death sounds
+Add controller support

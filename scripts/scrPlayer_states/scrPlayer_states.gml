@@ -97,7 +97,10 @@ function player_state_read() {
 		if(dialogue_type_timer > 0) dialogue_type_timer--;	
 		else {
 			line_index++;
-			if(string_char_at(dialogues[dialogue_index], line_index) != " ")audio_play_sound(sdText_scroll, SOUNDPRIORITY.MENUS, false);
+			if(string_char_at(dialogues[dialogue_index], line_index) != " ") {
+				audio_sound_pitch(sdText_scroll, 1 + random_range(-0.15, 0.15));
+				audio_play_sound(sdText_scroll, SOUNDPRIORITY.MENUS, false);	
+			}
 			if(line_index > string_length(dialogues[dialogue_index])) dialogue_ready = true;
 			dialogue_type_timer = dialogue_type_time;
 		}
