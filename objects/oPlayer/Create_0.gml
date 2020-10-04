@@ -55,8 +55,8 @@ draw_function = function draw_player() {
 horizontal_movement = 0;
 verticle_movement = 0;
 function move() {
-	var hDir = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-	var vDir = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+	var hDir = check_action("right", INPUTTYPE.HELD) - check_action("left", INPUTTYPE.HELD);
+	var vDir = check_action("down", INPUTTYPE.HELD) - check_action("up", INPUTTYPE.HELD);
 	var acceleration = 0.2;
 	
 	// Keyboard Movement
@@ -129,7 +129,7 @@ function interactables() {
 		}
 	}
 	
-	if(keyboard_check_pressed(vk_space) && instance_exists(selected_interactable)) {
+	if(check_action("select", INPUTTYPE.PRESSED) && instance_exists(selected_interactable)) {
 		selected_interactable.interact_method();	
 	}
 	

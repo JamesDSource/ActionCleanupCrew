@@ -64,7 +64,7 @@ function player_state_holding() {
 	if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	
 	if(instance_exists(obj_held)) {
-		if(keyboard_check_pressed(vk_space) && !instance_exists(selected_interactable)) {
+		if(check_action("select", INPUTTYPE.PRESSED) && !instance_exists(selected_interactable)) {
 			obj_held = noone;
 			state = states.free;
 		}
@@ -79,7 +79,7 @@ function player_state_read() {
 	recharge_mask();
 	
 	if(dialogue_ready) {
-		if(keyboard_check_pressed(vk_space)) {
+		if(check_action("select", INPUTTYPE.PRESSED)) {
 			dialogue_index++;
 			if(dialogue_index >= array_length(dialogues)) state = states.free;
 			dialogue_ready = false;
@@ -89,7 +89,7 @@ function player_state_read() {
 		}
 	}
 	else {
-		if(keyboard_check_pressed(vk_space)) {
+		if(check_action("select", INPUTTYPE.PRESSED)) {
 			audio_play_sound(sdMenu_select, SOUNDPRIORITY.MENUS, false);
 			line_index = string_length(dialogues[dialogue_index]);
 			dialogue_ready = true;

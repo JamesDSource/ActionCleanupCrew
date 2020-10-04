@@ -9,15 +9,15 @@ if(locked) {
 else { 
 	progress = approach(progress, 1, progress_spd);
 
-	if(keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
+	if(check_action("left", INPUTTYPE.PRESSED)) {
 		level_index--;
 		audio_play_sound(sdLevel_select_scroll, SOUNDPRIORITY.MENUS, false);
 	}
-	else if(keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) {
+	else if(check_action("right", INPUTTYPE.PRESSED)) {
 		level_index++;
 		audio_play_sound(sdLevel_select_scroll, SOUNDPRIORITY.MENUS, false);
 	}
-	else if(keyboard_check_pressed(vk_space) && level_index <= global.level_lock) {
+	else if(check_action("select", INPUTTYPE.PRESSED) && level_index <= global.level_lock) {
 		global.level_target = global.levels[level_index];
 		audio_play_sound(sdLevel_select_choose, SOUNDPRIORITY.MENUS, false);
 	}	

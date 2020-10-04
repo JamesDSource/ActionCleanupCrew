@@ -179,6 +179,7 @@
     {"id":{"name":"sdDing","path":"sounds/sdDing/sdDing.yy",},"order":4,},
     {"id":{"name":"sBox_piecies","path":"sprites/sBox_piecies/sBox_piecies.yy",},"order":2,},
     {"id":{"name":"sPoster","path":"sprites/sPoster/sPoster.yy",},"order":2,},
+    {"id":{"name":"scrInput_manager","path":"scripts/scrInput_manager/scrInput_manager.yy",},"order":1,},
     {"id":{"name":"sVacuum_toob","path":"sprites/sVacuum_toob/sVacuum_toob.yy",},"order":2,},
     {"id":{"name":"rTitle_page","path":"rooms/rTitle_page/rTitle_page.yy",},"order":2,},
     {"id":{"name":"oIncinerator","path":"objects/oIncinerator/oIncinerator.yy",},"order":1,},
@@ -273,6 +274,7 @@
     {"id":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"order":0,},
     {"id":{"name":"oBreakable_bit","path":"objects/oBreakable_bit/oBreakable_bit.yy",},"order":3,},
     {"id":{"name":"oGrid","path":"objects/oGrid/oGrid.yy",},"order":5,},
+    {"id":{"name":"oInput_manager","path":"objects/oInput_manager/oInput_manager.yy",},"order":0,},
     {"id":{"name":"scrDrawing","path":"scripts/scrDrawing/scrDrawing.yy",},"order":1,},
     {"id":{"name":"oHub_wall_double","path":"objects/oHub_wall_double/oHub_wall_double.yy",},"order":5,},
     {"id":{"name":"sBoxes","path":"sprites/sBoxes/sBoxes.yy",},"order":0,},
@@ -401,6 +403,7 @@
     {"folderPath":"folders/Pick Up.yy","order":45,"resourceVersion":"1.0","name":"Pick Up","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Entity/Body.yy","order":5,"resourceVersion":"1.0","name":"Body","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Breakable Objects.yy","order":6,"resourceVersion":"1.0","name":"Breakable Objects","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Input Manager.yy","order":46,"resourceVersion":"1.0","name":"Input Manager","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},

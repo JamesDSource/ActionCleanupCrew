@@ -13,6 +13,7 @@ instance_create_depth(x, y, 0, oTransitions);
 instance_create_depth(x, y, 0, oRender);
 instance_create_depth(x, y, 0, oDev_console);
 instance_create_depth(x, y, 0, oAudio_manager);
+instance_create_depth(x, y, 0, oInput_manager);
 
 // Audio
 audio_falloff_set_model(audio_falloff_exponent_distance);
