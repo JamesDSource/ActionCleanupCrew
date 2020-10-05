@@ -12,6 +12,7 @@ tool_offset = {
 	y: 0,
 	magnitude: 0
 }
+tool_angle = 0;
 
 event_inherited();
 
@@ -55,13 +56,26 @@ draw_function = function draw_player() {
 horizontal_movement = 0;
 verticle_movement = 0;
 function move() {
-	var hDir = check_action("right", INPUTTYPE.HELD) - check_action("left", INPUTTYPE.HELD);
-	var vDir = check_action("down", INPUTTYPE.HELD) - check_action("up", INPUTTYPE.HELD);
+	var is_moveing = false;
+	var ang = 0;
+	if(global.gp_connected) {
+		var axis_h = gamepad_axis_value(global.gp_slot, gp_axislh);
+		var axis_v = gamepad_axis_value(global.gp_slot, gp_axislv);
+		if(max(abs(axis_h), abs(axis_v)) > GPDEADZONE) {
+			ang = point_direction(0, 0, axis_h, axis_v);
+			is_moveing = true;	
+		}
+	}
+	else {
+		var hDir = check_action("right", INPUTTYPE.HELD) - check_action("left", INPUTTYPE.HELD);
+		var vDir = check_action("down", INPUTTYPE.HELD) - check_action("up", INPUTTYPE.HELD);
+		ang = point_direction(0, 0, hDir, vDir);
+		if(hDir != 0 || vDir != 0) is_moveing = true;
+	}
 	var acceleration = 0.2;
 	
-	// Keyboard Movement
-	if(hDir != 0 || vDir != 0) { 
-		var ang = point_direction(0, 0, hDir, vDir);
+	// Control movement
+	if(is_moveing) { 
 		horizontal_movement = approach(horizontal_movement, lengthdir_x(spd, ang), acceleration);
 		verticle_movement = approach(verticle_movement, lengthdir_y(spd, ang), acceleration);
 		image_speed = 1;

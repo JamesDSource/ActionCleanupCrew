@@ -53,6 +53,6 @@ if(progress == 1) {
 
 var prompt_margin = 5;
 draw_key_prompt(sPrompt_a, ord("A"), prompt_margin, 0);
-draw_key_prompt(sPrompt_d, ord("D"), display_get_gui_width() - prompt_margin, 0);
-draw_key_prompt(sPrompt_space, vk_space, display_get_gui_width()/2, sprite_get_height(sPrompt_space));
-draw_key_prompt(sPrompt_esc, vk_escape, prompt_margin, dh);
+draw_key_prompt(sPrompt_d, ord("D"), display_get_gui_width() - prompt_margin, 0, fa_right, fa_top);
+draw_key_prompt(sPrompt_space, vk_space, display_get_gui_width()/2, 0, fa_center, fa_top);
+draw_key_prompt(sPrompt_esc, vk_escape, prompt_margin, dh, fa_left, fa_bottom);

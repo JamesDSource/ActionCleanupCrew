@@ -29,15 +29,15 @@ for(var i = 0; i < array_length(page); i++) {
 
 var key_margin = 5;
 var key_draw_x = display_get_gui_width() - key_margin;
-draw_key_prompt(sPrompt_w, ord("W"), key_draw_x, key_margin);
+draw_key_prompt(sPrompt_w, ord("W"), key_draw_x, key_margin, fa_right, fa_top);
 key_draw_x -= key_margin + sprite_get_width(sPrompt_w);
-draw_key_prompt(sPrompt_s, ord("S"), key_draw_x, key_margin);
-key_draw_x -= key_margin + sprite_get_width(sPrompt_s) + sprite_get_width(sPrompt_space)/2;
-draw_key_prompt(sPrompt_space, vk_space, key_draw_x, key_margin + sprite_get_yoffset(sPrompt_space));
-key_draw_x -= sprite_get_width(sPrompt_space)/2 + key_margin
+draw_key_prompt(sPrompt_s, ord("S"), key_draw_x, key_margin, fa_right, fa_top);
+key_draw_x -= key_margin + sprite_get_width(sPrompt_s);
+draw_key_prompt(sPrompt_space, vk_space, key_draw_x, key_margin, fa_right, fa_top);
+key_draw_x -= sprite_get_width(sPrompt_space) + key_margin
 if(show_horizontal_controls) {
-	draw_key_prompt(sPrompt_d, ord("D"), key_draw_x, key_margin);
-	key_draw_x -= sprite_get_width(sPrompt_d) + key_margin + sprite_get_width(sPrompt_a);
-	draw_key_prompt(sPrompt_a, ord("A"), key_draw_x, key_margin);
+	draw_key_prompt(sPrompt_d, ord("D"), key_draw_x, key_margin, fa_right, fa_top);
+	key_draw_x -= sprite_get_width(sPrompt_d) + key_margin;
+	draw_key_prompt(sPrompt_a, ord("A"), key_draw_x, key_margin, fa_right, fa_top);
 	show_horizontal_controls = false;
 }

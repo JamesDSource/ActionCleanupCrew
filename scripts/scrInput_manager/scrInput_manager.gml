@@ -23,6 +23,14 @@ function check_action(action, type) {
 				}
 				break;
 			case DEVICE.GAMEPAD:
+				switch(type) {
+					case INPUTTYPE.PRESSED:
+						return gamepad_button_check_pressed(global.gp_slot, input.key_id);
+					case INPUTTYPE.RELEASED:
+						return gamepad_button_check_released(global.gp_slot, input.key_id);
+					case INPUTTYPE.HELD:
+						return gamepad_button_check(global.gp_slot, input.key_id);
+				}
 				break;
 		}
 	}

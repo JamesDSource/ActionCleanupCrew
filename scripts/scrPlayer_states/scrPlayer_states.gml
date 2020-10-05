@@ -7,7 +7,7 @@ function player_state_free() {
 	// swapping tools
 	if(disarmed) tool_using = TOOL.NONE;
 	else {
-		if(mouse_wheel_up()) {
+		if(mouse_wheel_up() || check_action("switch tool", INPUTTYPE.PRESSED)) {
 			tool_index--;
 			if(tool_index < 0) tool_index = array_length(tools) - 1;	
 		}

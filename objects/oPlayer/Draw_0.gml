@@ -4,7 +4,12 @@ if(tool_using == TOOL.VACUUM) {
 
 event_inherited();
 
-tool_angle = point_direction(x, y - tool_height, mouse_x, mouse_y)
+if(global.gp_connected) {
+	var axis_h = gamepad_axis_value(global.gp_slot, gp_axisrh);
+	var axis_v = gamepad_axis_value(global.gp_slot, gp_axisrv);
+	if(max(abs(axis_h), abs(axis_v)) > GPDEADZONE)tool_angle = point_direction(0, 0, axis_h, axis_v);
+}
+else tool_angle = point_direction(x, y - tool_height, mouse_x, mouse_y)
 switch(tool_using) {
 	case TOOL.MOP:
 		var tool_offset_target = 0;

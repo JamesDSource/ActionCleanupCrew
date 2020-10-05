@@ -62,6 +62,7 @@ pages = {
 	],
 	
 	gameplay: [
+		new page_element(PAGEELEMENTTYPE.TOGGLE, "Use Gamepad", ["gamepad"]),
 		new page_element(PAGEELEMENTTYPE.SLIDER, "Screen Shake", ["screenshake", 0, 1, 0.05]),
 		new page_element(PAGEELEMENTTYPE.TRANSFER, "Back", ["settings"])
 	]

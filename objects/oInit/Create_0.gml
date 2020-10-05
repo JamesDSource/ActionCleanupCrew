@@ -32,6 +32,9 @@ global.hud = true;
 #macro Demo:DEMO true
 global.demo_level_limit = 1;
 
+// controls
+#macro GPDEADZONE 0.15
+
 // levels
 function level(level_room, level_name, level_description) constructor {
 	name = level_name;
