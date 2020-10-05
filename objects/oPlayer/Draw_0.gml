@@ -8,7 +8,7 @@ tool_angle = point_direction(x, y - tool_height, mouse_x, mouse_y)
 switch(tool_using) {
 	case TOOL.MOP:
 		var tool_offset_target = 0;
-		if(mouse_check_button(mb_left)) {
+		if(check_action("use", INPUTTYPE.HELD)) {
 			surface_set_target(global.liquid_surf);
 			gpu_set_blendmode(bm_subtract);
 			gpu_set_colorwriteenable(false, false, false, true);
@@ -27,7 +27,7 @@ switch(tool_using) {
 		break;
 	
 	case TOOL.VACUUM:
-		if(mouse_check_button(mb_left)) {
+		if(check_action("use", INPUTTYPE.HELD)) {
 			tool_offset.x = irandom_range(-1, 1);	
 			tool_offset.y = irandom_range(-1, 1);	
 		}

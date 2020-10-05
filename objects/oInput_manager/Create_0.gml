@@ -44,6 +44,9 @@ add_action_input(right_action, DEVICE.KEYBOARD, vk_right);
 // select
 select_action = add_action("select");
 add_action_input(select_action, DEVICE.KEYBOARD, vk_space);
+// use
+use_action = add_action("use");
+add_action_input(use_action, DEVICE.MOUSE, mb_left);
 // pause
 pause_action = add_action("pause");
 add_action_input(pause_action, DEVICE.KEYBOARD, vk_escape);

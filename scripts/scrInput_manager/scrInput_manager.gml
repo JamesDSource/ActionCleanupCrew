@@ -3,6 +3,14 @@ function check_action(action, type) {
 	function check_input(input, type) {
 		switch(input.device) {
 			case DEVICE.MOUSE:
+				switch(type) {
+					case INPUTTYPE.PRESSED:
+						return mouse_check_button_pressed(input.key_id);
+					case INPUTTYPE.RELEASED:
+						return mouse_check_button_released(input.key_id);
+					case INPUTTYPE.HELD:
+						return mouse_check_button(input.key_id);
+				}
 				break;
 			case DEVICE.KEYBOARD:
 				switch(type) {

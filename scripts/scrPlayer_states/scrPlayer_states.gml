@@ -19,8 +19,8 @@ function player_state_free() {
 	}
 	
 	// sucking with vaccum
-	if(tool_using == TOOL.VACUUM && mouse_check_button(mb_left)) {
-		if(mouse_check_button_pressed(mb_left)) {
+	if(tool_using == TOOL.VACUUM && check_action("use", INPUTTYPE.HELD)) {
+		if(check_action("use", INPUTTYPE.PRESSED)) {
 			audio_play_sound(sdVacuum, SOUNDPRIORITY.IMPORTANT, true);
 			screen_shake(1, 10);	
 		}

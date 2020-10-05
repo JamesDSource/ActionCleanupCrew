@@ -10,6 +10,7 @@ if(image_speed == 0 && !instance_exists(oPlayer)) {
 		else if(lives_remaining >= 0) {
 			image_speed = 1;
 			if(instance_exists(oCamera)) oCamera.follow = id;
+			audio_listener_position(x, y, 0);
 			audio_play_sound(sdCloning_machine, SOUNDPRIORITY.IMPORTANT, false);
 		}
 		respawn_timer = respawn_time;
