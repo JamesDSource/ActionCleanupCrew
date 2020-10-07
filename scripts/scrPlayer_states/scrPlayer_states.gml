@@ -20,10 +20,6 @@ function player_state_free() {
 	
 	// sucking with vaccum
 	if(tool_using == TOOL.VACUUM && check_action("use", INPUTTYPE.HELD)) {
-		if(check_action("use", INPUTTYPE.PRESSED)) {
-			audio_play_sound(sdVacuum, SOUNDPRIORITY.IMPORTANT, true);
-			screen_shake(1, 10);	
-		}
 		var list_x = x + lengthdir_x(10, tool_angle);
 		var list_y = y - tool_height + lengthdir_y(10, tool_angle);
 		var bits = ds_list_create();
@@ -46,7 +42,6 @@ function player_state_free() {
 		}
 		ds_list_destroy(bits);
 	}
-	else if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	
 	// if holding a body, go to the body state
 	if(instance_exists(obj_held)) state = states.holding;
@@ -61,7 +56,6 @@ function player_state_holding() {
 	recharge_mask();
 	interactables();
 	event_inherited();
-	if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	
 	if(instance_exists(obj_held)) {
 		if(check_action("select", INPUTTYPE.PRESSED) && !instance_exists(selected_interactable)) {
@@ -73,7 +67,6 @@ function player_state_holding() {
 }
 
 function player_state_read() {
-	if(audio_is_playing(sdVacuum)) audio_stop_sound(sdVacuum);
 	tool_using = TOOL.NONE;
 	image_speed = 0;
 	recharge_mask();
