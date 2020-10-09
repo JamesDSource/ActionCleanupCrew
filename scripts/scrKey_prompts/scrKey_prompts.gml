@@ -1,6 +1,12 @@
-function draw_key_prompt(spr, key_id, x_pos, y_pos, halign, valign) {
+function draw_key_prompt(spr, key_id, x_pos, y_pos, halign, valign, gamepad_button) {
 	var index = 0;
-	if((key_id == -1 && current_second % 2 == 0) || keyboard_check(key_id)) index = 1;
+	if(key_id == -1) {
+		if(current_second % 2 == 0) index = 1;
+	}
+	else {
+		if(argument_count >= 7 && gamepad_button && gamepad_button_check(global.gp_slot, key_id)) index = 1;
+		else if(keyboard_check(key_id)) index = 1;
+	}
 	
 	var offset = {x:0, y:0};
 	if(argument_count > 4) {

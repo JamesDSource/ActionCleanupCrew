@@ -5,6 +5,8 @@ if(instance_exists(selected_interactable)) {
 		draw_y = y - sprite_yoffset - 5;
 	}
 	draw_set_alpha(0.8);
-	draw_key_prompt(sPrompt_space, -1, draw_x, draw_y, fa_center, fa_bottom);
+	var prompt_sprite = sPrompt_space;
+	if(global.gp_connected) prompt_sprite = sPrompt_gp_a;
+	draw_key_prompt(prompt_sprite, -1, draw_x, draw_y, fa_center, fa_bottom);
 	draw_set_alpha(1);
 }
