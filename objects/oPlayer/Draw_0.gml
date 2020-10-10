@@ -13,15 +13,18 @@ else tool_angle = point_direction(x, y - tool_height, mouse_x, mouse_y)
 switch(tool_using) {
 	case TOOL.MOP:
 		var tool_offset_target = 0;
-		if(check_action("use", INPUTTYPE.HELD)) {
+		if(mop_using) {
+			var clean_pos = {
+				x: x + lengthdir_x(14, tool_angle),
+				y: y - tool_height + lengthdir_y(14, tool_angle)
+			}
 			surface_set_target(global.liquid_surf);
 			gpu_set_blendmode(bm_subtract);
 			gpu_set_colorwriteenable(false, false, false, true);
-			draw_sprite(sMop_mask, 0, x + lengthdir_x(10, tool_angle), y - tool_height + lengthdir_y(10, tool_angle));
+			draw_sprite(sMop_mask, 0, clean_pos.x, clean_pos.y);
 			gpu_set_colorwriteenable(true, true, true, true);
 			gpu_set_blendmode(bm_normal);
 			surface_reset_target();
-			
 			tool_offset_target = 4;
 		}
 		tool_offset.magnitude = approach(tool_offset.magnitude, tool_offset_target, 0.3);

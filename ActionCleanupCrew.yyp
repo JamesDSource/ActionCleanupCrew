@@ -236,6 +236,7 @@
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sDesk","path":"sprites/sDesk/sDesk.yy",},"order":1,},
     {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},"order":2,},
+    {"id":{"name":"sdMop","path":"sounds/sdMop/sdMop.yy",},"order":5,},
     {"id":{"name":"oMine","path":"objects/oMine/oMine.yy",},"order":1,},
     {"id":{"name":"fMenu","path":"fonts/fMenu/fMenu.yy",},"order":1,},
     {"id":{"name":"sPlayer_carry","path":"sprites/sPlayer_carry/sPlayer_carry.yy",},"order":7,},
