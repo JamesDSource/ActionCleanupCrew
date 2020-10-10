@@ -93,6 +93,7 @@
     {"id":{"name":"aYou_died","path":"animcurves/aYou_died/aYou_died.yy",},"order":2,},
     {"id":{"name":"sdClaw_snort1","path":"sounds/sdClaw_snort1/sdClaw_snort1.yy",},"order":7,},
     {"id":{"name":"oSecretary","path":"objects/oSecretary/oSecretary.yy",},"order":1,},
+    {"id":{"name":"rWarehouse2","path":"rooms/rWarehouse2/rWarehouse2.yy",},"order":7,},
     {"id":{"name":"oBit","path":"objects/oBit/oBit.yy",},"order":0,},
     {"id":{"name":"scrGrades","path":"scripts/scrGrades/scrGrades.yy",},"order":6,},
     {"id":{"name":"sdVoliore_goop","path":"sounds/sdVoliore_goop/sdVoliore_goop.yy",},"order":7,},
@@ -345,6 +346,7 @@
     {"name":"rResults","path":"rooms/rResults/rResults.yy",},
     {"name":"rLevel_tutorial","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
     {"name":"rWarehouse1","path":"rooms/rWarehouse1/rWarehouse1.yy",},
+    {"name":"rWarehouse2","path":"rooms/rWarehouse2/rWarehouse2.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Player.yy","order":0,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},

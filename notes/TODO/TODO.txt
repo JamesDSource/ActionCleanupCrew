@@ -1,9 +1,5 @@
 --For Release--
-More enemies
 More levels
-Space station title background
 Music
 More sound effects
-	-Mop sounds
 	-New soldier death sounds
-Add controller support
