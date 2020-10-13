@@ -199,6 +199,7 @@
     {"id":{"name":"scrCollisions","path":"scripts/scrCollisions/scrCollisions.yy",},"order":0,},
     {"id":{"name":"sBlood_chunks","path":"sprites/sBlood_chunks/sBlood_chunks.yy",},"order":0,},
     {"id":{"name":"sVoliore_shoot_red","path":"sprites/sVoliore_shoot_red/sVoliore_shoot_red.yy",},"order":4,},
+    {"id":{"name":"rWarehouse3","path":"rooms/rWarehouse3/rWarehouse3.yy",},"order":8,},
     {"id":{"name":"sdLevel_select_scroll","path":"sounds/sdLevel_select_scroll/sdLevel_select_scroll.yy",},"order":6,},
     {"id":{"name":"sCeiling_hub","path":"sprites/sCeiling_hub/sCeiling_hub.yy",},"order":4,},
     {"id":{"name":"sTeleporter","path":"sprites/sTeleporter/sTeleporter.yy",},"order":1,},
@@ -347,6 +348,7 @@
     {"name":"rLevel_tutorial","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
     {"name":"rWarehouse1","path":"rooms/rWarehouse1/rWarehouse1.yy",},
     {"name":"rWarehouse2","path":"rooms/rWarehouse2/rWarehouse2.yy",},
+    {"name":"rWarehouse3","path":"rooms/rWarehouse3/rWarehouse3.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Player.yy","order":0,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},

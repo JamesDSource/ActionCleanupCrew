@@ -8,10 +8,10 @@ enum TEAM {
 
 // helmat and hp
 helmat = false;
-max_hp = 2;
+max_hp = 1;
 if(irandom_range(1, 100) < 50) {
 	helmat = true;
-	max_hp = 3;
+	max_hp = 2;
 }
 hp = max_hp;
 hp_regen_time = room_speed * 2;

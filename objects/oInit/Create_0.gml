@@ -59,6 +59,11 @@ global.levels = [
 	new level(
 		rWarehouse2, 
 		"Belting Around"
+	),
+	
+	new level(
+		rWarehouse3, 
+		"Workplace Arena"
 	)
 ];
 

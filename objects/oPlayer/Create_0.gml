@@ -14,6 +14,8 @@ tool_offset = {
 }
 tool_angle = 0;
 
+mop_using = false;
+
 event_inherited();
 
 spd = 1.7;
