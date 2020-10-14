@@ -1,0 +1,1 @@
+if(draw_battery) event_inherited();

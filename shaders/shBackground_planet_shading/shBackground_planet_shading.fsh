@@ -1,5 +1,5 @@
 //
-// Simple passthrough fragment shader
+// Lighting shader for the planet
 //
 varying vec2 v_vTexcoord;
 varying vec2 v_vPosition;
