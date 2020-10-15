@@ -18,3 +18,4 @@ if(instance_exists(battery_holding)) {
 		battery_charge_timer = battery_charge_time;	
 	}
 }
+else battery_charge_timer = battery_charge_time;
