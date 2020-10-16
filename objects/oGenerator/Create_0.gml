@@ -13,7 +13,8 @@ hum_pitch = 1.0;
 target_hum_pitch = hum_pitch;
 hum_pitch_speed = 0.01;
 
-battery_held = noone;
+battery_held = instance_create_layer(x, y, "Instances", oBattery);
+battery_held.charge = battery_held.max_charge;
 battery_point_offset = {
 	x: -4,
 	y: -5

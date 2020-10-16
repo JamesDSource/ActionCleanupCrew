@@ -1,0 +1,1 @@
+if(broken) image_index = max_charge + 1;
