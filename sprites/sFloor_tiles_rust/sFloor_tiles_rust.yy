@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 16,
-  "bbox_right": 175,
+  "bbox_left": 0,
+  "bbox_right": 47,
   "bbox_top": 0,
-  "bbox_bottom": 15,
+  "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 176,
-  "height": 16,
+  "width": 48,
+  "height": 64,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"adad2d28-fb1e-496e-9b47-beeffea4ebb7","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"adad2d28-fb1e-496e-9b47-beeffea4ebb7","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"LayerId":{"name":"953798c4-c1c5-4339-9db7-5b4f2c6dbe61","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sFloor_tiles_rust","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","name":"adad2d28-fb1e-496e-9b47-beeffea4ebb7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"972d4951-c326-4e93-83d3-deedaf647760","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"972d4951-c326-4e93-83d3-deedaf647760","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"LayerId":{"name":"0163413a-ae89-4b24-8ec6-616909d67161","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sFloor_tiles_rust","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","name":"972d4951-c326-4e93-83d3-deedaf647760","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sFloor_tiles_rust","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0a28cc2c-da4d-4254-96db-d24a0d205fa8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"adad2d28-fb1e-496e-9b47-beeffea4ebb7","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3c3a7946-9f27-40c1-9d42-ba44b1c7202f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"972d4951-c326-4e93-83d3-deedaf647760","path":"sprites/sFloor_tiles_rust/sFloor_tiles_rust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"953798c4-c1c5-4339-9db7-5b4f2c6dbe61","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0163413a-ae89-4b24-8ec6-616909d67161","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Rust Warehouse",

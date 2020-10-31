@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oCover",
-    "path": "objects/oCover/oCover.yy",
+    "name": "oSolid",
+    "path": "objects/oSolid/oSolid.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Boxes",
-    "path": "folders/Objects/Cover/Boxes.yy",
+    "path": "folders/Objects/Props/Boxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBoxes",

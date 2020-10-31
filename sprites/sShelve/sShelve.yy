@@ -81,7 +81,7 @@
   ],
   "parent": {
     "name": "Shelves",
-    "path": "folders/Objects/Cover/Shelves.yy",
+    "path": "folders/Objects/Props/Shelves.yy",
   },
   "resourceVersion": "1.0",
   "name": "sShelve",

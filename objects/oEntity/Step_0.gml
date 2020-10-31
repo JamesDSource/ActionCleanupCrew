@@ -49,7 +49,7 @@ if(object_index == oPlayer) check_for_collisions(oPlayer_solid);
 x += hsp;
 y += vsp;
 
-push_out(oSolid);
-if(object_index == oPlayer) push_out(oPlayer_solid);
+SETPUSHOUT;
+if(object_index == oPlayer) set_position(push_out(oPlayer_solid, x, y));
 
 audio_emitter_position(audio_emitter, x, y, 0);

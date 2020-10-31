@@ -30,7 +30,7 @@ global.hud = true;
 // Demo
 #macro DEMO false
 #macro Demo:DEMO true
-global.demo_level_limit = 1;
+global.demo_level_limit = 3;
 
 // controls
 #macro GPDEADZONE 0.15

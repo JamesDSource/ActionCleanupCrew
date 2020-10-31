@@ -29,6 +29,7 @@ peek_timer = 0;
 entity_states.free = function soldier_state_free() {
 	// cover
 	if(!instance_exists(cover)) new_cover();
+
 	if(cover_timer > 0) cover_timer--;
 	else {
 		new_cover();
@@ -37,20 +38,21 @@ entity_states.free = function soldier_state_free() {
 	
 	// peeking
 	if(peek_timer > 0) peek_timer--;
-	else {
+	else if(instance_exists(cover)) {
 		peek = !peek;
 		if(peek) {
-			peek_timer = irandom_range(peek_time_min, peek_time_max);
-			if(irandom_range(1, 100) < 50) peek_direction = 1;
-			else peek_direction = -1;
+			var cover_pos = cover.get_exposure_point();
+			cover_point = push_out(oSolid, cover_pos.x, cover_pos.y);
 		}
-		else peek_timer = irandom_range(peek_recharge_min, peek_recharge_max);
+		else {
+			var cover_pos = random_point_rectange(cover.bbox_left, cover.bbox_top, cover.bbox_right, cover.bbox_bottom);
+			cover_point = push_out(oSolid, cover_pos.x, cover_pos.y);
+		}
+		peek_timer = irandom_range(peek_recharge_min, peek_recharge_max);
 	}
 	
 	// move point
-	var x_offset = 0;
-	if(peek && instance_exists(cover))	x_offset = peek_direction*(cover.sprite_width/2 + sprite_width);
-	new_move_point(cover_point.x + x_offset, cover_point.y);
+	new_move_point(cover_point.x, cover_point.y);
 	
 	// finding target
 	gun_target = noone;
@@ -306,8 +308,11 @@ function new_cover() {
 	for(var i = 0; i < sz; i++) {
 		if(covers[| i] != cover && covers[| i].team == team) {
 			var another_using = false;
+			var temp_check_path = path_add();
+			var can_reach = true;//mp_grid_path(global.grid, temp_check_path, x, y, cover.x[| i], covers[| i].y, true);
+			path_delete(temp_check_path);
 			with(oSoldier) if(covers[| i] == cover) another_using = true;
-			if(!another_using) result[array_length(result)] = covers[| i];
+			if(!another_using && can_reach) result[array_length(result)] = covers[| i];
 		}
 	}
 	ds_list_destroy(covers);
@@ -315,9 +320,6 @@ function new_cover() {
 	if(array_length(result) > 0) {
 		var rand_cover_index = irandom_range(0, array_length(result)-1);
 		cover = result[rand_cover_index];
-		cover_point.x = cover.x - cover.sprite_xoffset + cover.sprite_width/2;
-		if(team == TEAM.WHITE) cover_point.y = cover.bbox_bottom + 8;
-		else cover_point.y = cover.bbox_top - 8;
 	}
 	else {
 		var new_point_found = false;	

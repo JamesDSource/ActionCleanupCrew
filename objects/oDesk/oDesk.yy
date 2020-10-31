@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oCover",
-    "path": "objects/oCover/oCover.yy",
+    "name": "oSolid",
+    "path": "objects/oSolid/oSolid.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Desks",
-    "path": "folders/Objects/Cover/Desks.yy",
+    "path": "folders/Objects/Props/Desks.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDesk",

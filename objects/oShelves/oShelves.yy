@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oCover",
-    "path": "objects/oCover/oCover.yy",
+    "name": "oSolid",
+    "path": "objects/oSolid/oSolid.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Shelves",
-    "path": "folders/Objects/Cover/Shelves.yy",
+    "path": "folders/Objects/Props/Shelves.yy",
   },
   "resourceVersion": "1.0",
   "name": "oShelves",

@@ -1,52 +1,61 @@
-function push_out(obj) {
-	if(place_meeting(x ,y, obj)) {
+#macro SETPUSHOUT set_position(push_out(oSolid, x, y));
+
+function set_position(pos) {
+	x = pos.x;
+	y = pos.y;
+}
+
+function push_out(obj, x_pos, y_pos) {
+	var new_point = {x: x_pos, y: y_pos};
+	if(place_meeting(x_pos ,y_pos, obj)) {
 		for(var i = 0; i < 100; i++) {
 			// right
-			if(!place_meeting(x + i, y, obj)) {
-				x += i;
+			if(!place_meeting(x_pos + i, y_pos, obj)) {
+				new_point.x += i;
 				break;
 			}
 			// left
-			if(!place_meeting(x - i, y, obj)) {
-				x -= i;
+			if(!place_meeting(x_pos - i, y_pos, obj)) {
+				new_point.x -= i;
 				break;
 			}
 			// top
-			if(!place_meeting(x, y - i, obj)) {
-				y -= i;
+			if(!place_meeting(x_pos, y_pos - i, obj)) {
+				new_point.y -= i;
 				break;
 			}
 			// down
-			if(!place_meeting(x, y + i, obj)) {
-				y += i;
+			if(!place_meeting(x_pos, y_pos + i, obj)) {
+				new_point.y += i;
 				break;
 			}
 			// top left
-			if(!place_meeting(x - i, y - i, obj)) {
-				x -= i;
-				y -= i;
+			if(!place_meeting(x_pos - i, y_pos - i, obj)) {
+				new_point.x -= i;
+				new_point.y -= i;
 				break;
 			}
 				// top right
-			if(!place_meeting(x + i, y - i, obj)) {
-				x += i;
-				y -= i;
+			if(!place_meeting(x_pos + i, y_pos - i, obj)) {
+				new_point.x += i;
+				new_point.y -= i;
 				break;
 			}
 			// down left
-			if(!place_meeting(x - i, y + i, obj)) {
-				x -= i;
-				y += i;
+			if(!place_meeting(x_pos - i, y_pos + i, obj)) {
+				new_point.x -= i;
+				new_point.y += i;
 				break;
 			}
 			// down right
-			if(!place_meeting(x + i, y + i, obj)) {
-				x += i;
-				y += i;
+			if(!place_meeting(x_pos + i, y_pos + i, obj)) {
+				new_point.x += i;
+				new_point.y += i;
 				break; 
 			}		
 		}
 	}
+	return new_point;
 }
 
 function get_push_offset(x_pos, y_pos, obj) {

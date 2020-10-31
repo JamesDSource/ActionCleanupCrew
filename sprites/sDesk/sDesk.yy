@@ -77,7 +77,7 @@
   ],
   "parent": {
     "name": "Desks",
-    "path": "folders/Objects/Cover/Desks.yy",
+    "path": "folders/Objects/Props/Desks.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDesk",
