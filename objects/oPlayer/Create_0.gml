@@ -18,7 +18,7 @@ mop_using = false;
 
 event_inherited();
 
-spd = 1.7;
+spd = 2;
 
 
 helmat_on = true;

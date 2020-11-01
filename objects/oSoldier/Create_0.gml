@@ -129,7 +129,7 @@ guns[? "pistol"] = new gun(
 	oPistol_shot,			// bullet
 	1,						// bullets
 	25,						// bullet spread
-	room_speed/1.2,			// recharge time
+	room_speed*2,			// recharge time
 	1,						// burst
 	0,						// burst time
 	sPistol,				// sprite
@@ -199,7 +199,7 @@ guns[? "submachine_gun"] = new gun(
 	oSubmachine_gun_shot,
 	1,
 	10,
-	room_speed,
+	room_speed*3,
 	4,
 	5,
 	sSubmachine_gun,
@@ -213,7 +213,7 @@ guns[? "laser_canon"] = new gun(
 	oLaser_canon_shot,
 	1,
 	0,
-	room_speed * 5,
+	room_speed*5,
 	1,
 	1,
 	sLaser_canon,
@@ -227,9 +227,9 @@ guns[? "shotgun"] = new gun(
 	oShotgun_shot,
 	6,
 	40,
-	room_speed * 2,
+	room_speed*4,
 	3,
-	room_speed,
+	room_speed*2,
 	sShotgun,
 	200,
 	6,

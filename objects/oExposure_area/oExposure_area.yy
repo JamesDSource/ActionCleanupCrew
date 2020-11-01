@@ -4,7 +4,7 @@
     "path": "sprites/sExposure_area/sExposure_area.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
