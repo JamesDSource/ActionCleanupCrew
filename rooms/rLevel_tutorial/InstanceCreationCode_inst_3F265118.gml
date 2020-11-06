@@ -1,1 +1,0 @@
-sprite_index = sSoldier_black_corpse_helmat;
