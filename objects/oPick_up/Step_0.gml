@@ -13,6 +13,6 @@ if(instance_exists(oPlayer)) {
 }
 
 if(!being_held) {
-	push_out(x, y);	
+	SETPUSHOUT;
 	z = 0;		
 }

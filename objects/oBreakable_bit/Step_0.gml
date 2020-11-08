@@ -11,4 +11,4 @@ y += vsp;
 z += esp;
 z = max(z, 0);
 
-push_out(x, y);
+SETPUSHOUT;

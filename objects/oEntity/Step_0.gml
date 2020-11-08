@@ -48,6 +48,6 @@ check_for_collisions();
 x += hsp;
 y += vsp;
 
-push_out(x, y);
+SETPUSHOUT;
 
 audio_emitter_position(audio_emitter, x, y, 0);

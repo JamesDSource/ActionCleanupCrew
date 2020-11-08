@@ -53,7 +53,7 @@
     "spriteId": {"name":"sDoor_fancy","path":"sprites/sDoor_fancy/sDoor_fancy.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 8.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -97,7 +97,7 @@
   ],
   "parent": {
     "name": "Doors",
-    "path": "folders/Solid/Player Solid/Doors.yy",
+    "path": "folders/Objects/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDoor_fancy",

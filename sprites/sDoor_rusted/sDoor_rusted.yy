@@ -121,7 +121,7 @@
   ],
   "parent": {
     "name": "Doors",
-    "path": "folders/Solid/Player Solid/Doors.yy",
+    "path": "folders/Objects/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDoor_rusted",

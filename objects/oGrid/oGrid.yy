@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Enemies.yy",
+    "name": "Entity",
+    "path": "folders/Entity.yy",
   },
   "resourceVersion": "1.0",
   "name": "oGrid",

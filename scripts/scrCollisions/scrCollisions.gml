@@ -1,3 +1,5 @@
+#macro SETPUSHOUT set_position(push_out(x, y));
+
 function set_position(pos) {
 	x = pos.x;
 	y = pos.y;
@@ -65,7 +67,7 @@ function is_collision(x_pos, y_pos) {
 	instance_place_list(x_pos, y_pos, oSolid, collision_check, false);
 	for(var i = 0; i < ds_list_size(collision_check); i++) {
 		var current_solid = collision_check[| i];
-		if(current_solid.enabled && (!current_solid.player_only || is_player)) return_value = true;
+		if(current_solid.solid_enabled && (!current_solid.player_only || is_player)) return_value = true;
 	}
 	ds_list_destroy(collision_check);
 	return return_value;
