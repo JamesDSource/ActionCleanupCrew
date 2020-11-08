@@ -1,3 +1,5 @@
+if (live_call()) return live_result;
+
 if(image_speed == 0 && !instance_exists(oPlayer)) {
 	if(respawn_timer > 0) respawn_timer--;
 	else {
