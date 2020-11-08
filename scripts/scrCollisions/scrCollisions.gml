@@ -1,54 +1,52 @@
-#macro SETPUSHOUT set_position(push_out(oSolid, x, y));
-
 function set_position(pos) {
 	x = pos.x;
 	y = pos.y;
 }
 
-function push_out(obj, x_pos, y_pos) {
+function push_out(x_pos, y_pos) {
 	var new_point = {x: x_pos, y: y_pos};
-	if(place_meeting(x_pos ,y_pos, obj)) {
+	if(is_collision(x_pos ,y_pos)) {
 		for(var i = 0; i < 100; i++) {
 			// right
-			if(!place_meeting(x_pos + i, y_pos, obj)) {
+			if(!is_collision(x_pos + i, y_pos)) {
 				new_point.x += i;
 				break;
 			}
 			// left
-			if(!place_meeting(x_pos - i, y_pos, obj)) {
+			if(!is_collision(x_pos - i, y_pos)) {
 				new_point.x -= i;
 				break;
 			}
 			// top
-			if(!place_meeting(x_pos, y_pos - i, obj)) {
+			if(!is_collision(x_pos, y_pos - i)) {
 				new_point.y -= i;
 				break;
 			}
 			// down
-			if(!place_meeting(x_pos, y_pos + i, obj)) {
+			if(!is_collision(x_pos, y_pos + i)) {
 				new_point.y += i;
 				break;
 			}
 			// top left
-			if(!place_meeting(x_pos - i, y_pos - i, obj)) {
+			if(!is_collision(x_pos - i, y_pos - i)) {
 				new_point.x -= i;
 				new_point.y -= i;
 				break;
 			}
 				// top right
-			if(!place_meeting(x_pos + i, y_pos - i, obj)) {
+			if(!is_collision(x_pos + i, y_pos - i)) {
 				new_point.x += i;
 				new_point.y -= i;
 				break;
 			}
 			// down left
-			if(!place_meeting(x_pos - i, y_pos + i, obj)) {
+			if(!is_collision(x_pos - i, y_pos + i)) {
 				new_point.x -= i;
 				new_point.y += i;
 				break;
 			}
 			// down right
-			if(!place_meeting(x_pos + i, y_pos + i, obj)) {
+			if(!is_collision(x_pos + i, y_pos + i,)) {
 				new_point.x += i;
 				new_point.y += i;
 				break; 
@@ -56,6 +54,21 @@ function push_out(obj, x_pos, y_pos) {
 		}
 	}
 	return new_point;
+}
+
+function is_collision(x_pos, y_pos) {
+	var is_player = false;
+	if(object_index == oPlayer) is_player = true;
+	
+	var return_value = false;
+	var collision_check = ds_list_create();
+	instance_place_list(x_pos, y_pos, oSolid, collision_check, false);
+	for(var i = 0; i < ds_list_size(collision_check); i++) {
+		var current_solid = collision_check[| i];
+		if(current_solid.enabled && (!current_solid.player_only || is_player)) return_value = true;
+	}
+	ds_list_destroy(collision_check);
+	return return_value;
 }
 
 function get_push_offset(x_pos, y_pos, obj) {

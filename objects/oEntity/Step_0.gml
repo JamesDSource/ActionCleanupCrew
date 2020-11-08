@@ -43,13 +43,11 @@ if(uses_pathfinding) {
 	}
 }
 
-check_for_collisions(oSolid);
-if(object_index == oPlayer) check_for_collisions(oPlayer_solid);
+check_for_collisions();
 
 x += hsp;
 y += vsp;
 
-SETPUSHOUT;
-if(object_index == oPlayer) set_position(push_out(oPlayer_solid, x, y));
+push_out(x, y);
 
 audio_emitter_position(audio_emitter, x, y, 0);

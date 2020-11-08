@@ -108,14 +108,14 @@ kill_function = function kill(death_type) {
 
 event_inherited();
 
-function check_for_collisions(obj) {
-	if(place_meeting(x + hsp, y, obj)) {
-		repeat(hsp) if(!place_meeting(x + sign(hsp), y, obj)) x += sign(hsp);
+function check_for_collisions() {
+	if(is_collision(x + hsp, y)) {
+		repeat(hsp) if(!is_collision(x + sign(hsp), y)) x += sign(hsp);
 		hsp = 0;
 	}
 
-	if(place_meeting(x, y + vsp, obj)) {
-		repeat(vsp) if(!place_meeting(x, y + sign(vsp), obj)) y += sign(vsp);
+	if(is_collision(x, y + vsp)) {
+		repeat(vsp) if(!is_collision(x, y + sign(vsp))) y += sign(vsp);
 		vsp = 0;
 	}
 }
