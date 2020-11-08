@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Office",
-    "path": "folders/Solid/Walls/Office.yy",
+    "path": "folders/Objects/Walls/Office.yy",
   },
   "resourceVersion": "1.0",
   "name": "sOffice_wall",

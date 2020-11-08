@@ -25,21 +25,9 @@ if(started) {
 				global.game_score.life *= oCloning_machine.lives_remaining/oCloning_machine.max_lives;
 			}
 			// blood
-			var buffer = buffer_create(4 * room_width * room_height, buffer_fixed, 1);
-			buffer_get_surface(buffer, global.liquid_surf, buffer_surface_copy, 0, 0);
-		
-			var red_count = 0;
-			for(var i = 0; i < room_width; i++) {
-				for(var j = 0; j < room_height; j++) {
-					var offset = 4 * (i + (j * room_width));
-					var alpha = buffer_peek(buffer, offset + 3, buffer_u8);
-					if(alpha > 20) red_count++;
-				}
-			}
-			buffer_delete(buffer);
-			min_score = 12000;
-			show_debug_message(red_count);
-			red_count = clamp(red_count, 0, min_score);
+			var stain_count = get_stain_pixels(0, 0, room_width, room_height);
+			var min_score = 12000;
+			stain_count = clamp(stain_count, 0, min_score);
 			global.game_score.blood *= 1 - red_count/min_score;
 			// ash piles
 			global.game_score.ash -= clamp(instance_number(oAsh_pile)*5, 0, 100);

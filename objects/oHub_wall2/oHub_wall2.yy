@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Hub",
-    "path": "folders/Solid/Walls/Hub.yy",
+    "path": "folders/Objects/Walls/Hub.yy",
   },
   "resourceVersion": "1.0",
   "name": "oHub_wall2",

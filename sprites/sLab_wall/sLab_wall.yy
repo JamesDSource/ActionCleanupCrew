@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Lab",
-    "path": "folders/Solid/Walls/Lab.yy",
+    "path": "folders/Objects/Walls/Lab.yy",
   },
   "resourceVersion": "1.0",
   "name": "sLab_wall",
