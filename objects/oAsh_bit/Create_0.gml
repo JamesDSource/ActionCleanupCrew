@@ -8,4 +8,4 @@ colors = [
 
 image_blend = colors[irandom_range(0, array_length(colors) - 1)];
 
-life = room_speed * irandom_range(8, 15);
+life = room_speed * irandom_range(3, 5);

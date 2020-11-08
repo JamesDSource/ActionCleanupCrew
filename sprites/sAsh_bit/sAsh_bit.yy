@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Ash",
-    "path": "folders/Bits/Ash.yy",
+    "path": "folders/Objects/Ash.yy",
   },
   "resourceVersion": "1.0",
   "name": "sAsh_bit",
