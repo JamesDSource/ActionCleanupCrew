@@ -1,0 +1,1 @@
+room_set_live(rLevel_tutorial, true);
