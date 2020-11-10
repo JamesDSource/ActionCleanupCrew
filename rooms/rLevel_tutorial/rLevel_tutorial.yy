@@ -219,6 +219,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oHub_wall_double","path":"objects/oHub_wall_double/oHub_wall_double.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":144.0,"resourceVersion":"1.0","name":"inst_CC07B35","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oHub_wall_double","path":"objects/oHub_wall_double/oHub_wall_double.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":272.0,"y":144.0,"resourceVersion":"1.0","name":"inst_6A5929F2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oDoor_fancy","path":"objects/oDoor_fancy/oDoor_fancy.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":0.0,"resourceVersion":"1.0","name":"inst_3FE01C7E","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oTutorial_laser","path":"objects/oTutorial_laser/oTutorial_laser.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":48.0,"resourceVersion":"1.0","name":"inst_6599DBF4","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oLiquids","path":"objects/oLiquids/oLiquids.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_3CEAB046","path":"rooms/rLevel_parent/rLevel_parent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":64.0,"resourceVersion":"1.0","name":"inst_3CEAB046","tags":[],"resourceType":"GMRInstance",},
@@ -480,6 +481,7 @@
     {"name":"inst_7B0BC799","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
     {"name":"inst_4331F901","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
     {"name":"inst_67AD0AF4","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
+    {"name":"inst_6599DBF4","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,
