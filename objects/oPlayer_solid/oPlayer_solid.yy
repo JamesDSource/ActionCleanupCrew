@@ -33,6 +33,7 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"","path":"",},"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"player_only","path":"objects/oSolid/oSolid.yy",},"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Player Solid",

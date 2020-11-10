@@ -28,7 +28,7 @@ if(started) {
 			var stain_count = get_stain_pixels(0, 0, room_width, room_height);
 			var min_score = 12000;
 			stain_count = clamp(stain_count, 0, min_score);
-			global.game_score.blood *= 1 - red_count/min_score;
+			global.game_score.blood *= 1 - stain_count/min_score;
 			// ash piles
 			global.game_score.ash -= clamp(instance_number(oAsh_pile)*5, 0, 100);
 			// bits

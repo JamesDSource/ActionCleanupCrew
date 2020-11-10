@@ -42,11 +42,11 @@ entity_states.free = function soldier_state_free() {
 		peek = !peek;
 		if(peek) {
 			var cover_pos = cover.get_exposure_point();
-			cover_point = push_out(oSolid, cover_pos.x, cover_pos.y);
+			cover_point = push_out(cover_pos.x, cover_pos.y);
 		}
 		else {
 			var cover_pos = random_point_rectange(cover.bbox_left, cover.bbox_top, cover.bbox_right, cover.bbox_bottom);
-			cover_point = push_out(oSolid, cover_pos.x, cover_pos.y);
+			cover_point = push_out(cover_pos.x, cover_pos.y);
 		}
 		peek_timer = irandom_range(peek_recharge_min, peek_recharge_max);
 	}

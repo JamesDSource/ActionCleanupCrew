@@ -2,7 +2,7 @@ event_inherited();
 
 laser_active = false;
 move_dir = 1;
-spd = 1.5;
+spd = 1;
 
 laser_progress = 0;
 laser_progress_spd = 0.1;
