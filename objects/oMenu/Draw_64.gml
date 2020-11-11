@@ -30,31 +30,31 @@ for(var i = 0; i < array_length(page); i++) {
 var key_margin = 5;
 var key_draw_x = display_get_gui_width() - key_margin;
 if(global.gp_connected) {
-	draw_key_prompt(sPrompt_gp_dpad_up, gp_padu, key_draw_x, key_margin, fa_right, fa_top, true);
+	draw_key_prompt(sPrompt_gp_dpad_up, gp_padu, key_draw_x, key_margin, fa_right, fa_top, DEVICE.GAMEPAD);
 	key_draw_x -= key_margin + sprite_get_width(sPrompt_gp_dpad_up);
-	draw_key_prompt(sPrompt_gp_dpad_down, gp_padd, key_draw_x, key_margin, fa_right, fa_top, true);
+	draw_key_prompt(sPrompt_gp_dpad_down, gp_padd, key_draw_x, key_margin, fa_right, fa_top, DEVICE.GAMEPAD);
 	key_draw_x -= key_margin + sprite_get_width(sPrompt_gp_dpad_down);
-	draw_key_prompt(sPrompt_gp_a, gp_face1, key_draw_x, key_margin, fa_right, fa_top, true);
+	draw_key_prompt(sPrompt_gp_a, gp_face1, key_draw_x, key_margin, fa_right, fa_top, DEVICE.GAMEPAD);
 	key_draw_x -= sprite_get_width(sPrompt_gp_a) + key_margin
 }
 else {
-	draw_key_prompt(sPrompt_w, ord("W"), key_draw_x, key_margin, fa_right, fa_top, false);
+	draw_key_prompt(sPrompt_w, ord("W"), key_draw_x, key_margin, fa_right, fa_top, DEVICE.KEYBOARD);
 	key_draw_x -= key_margin + sprite_get_width(sPrompt_w);
-	draw_key_prompt(sPrompt_s, ord("S"), key_draw_x, key_margin, fa_right, fa_top, false);
+	draw_key_prompt(sPrompt_s, ord("S"), key_draw_x, key_margin, fa_right, fa_top, DEVICE.KEYBOARD);
 	key_draw_x -= key_margin + sprite_get_width(sPrompt_s);
-	draw_key_prompt(sPrompt_space, vk_space, key_draw_x, key_margin, fa_right, fa_top, false);
+	draw_key_prompt(sPrompt_space, vk_space, key_draw_x, key_margin, fa_right, fa_top, DEVICE.KEYBOARD);
 	key_draw_x -= sprite_get_width(sPrompt_space) + key_margin
 }
 if(show_horizontal_controls) {
 	if(global.gp_connected) {
-		draw_key_prompt(sPrompt_gp_dpad_right, gp_padr, key_draw_x, key_margin, fa_right, fa_top, true);
+		draw_key_prompt(sPrompt_gp_dpad_right, gp_padr, key_draw_x, key_margin, fa_right, fa_top,DEVICE.GAMEPAD);
 		key_draw_x -= sprite_get_width(sPrompt_gp_dpad_right) + key_margin;
-		draw_key_prompt(sPrompt_gp_dpad_left, gp_padl, key_draw_x, key_margin, fa_right, fa_top, true);
+		draw_key_prompt(sPrompt_gp_dpad_left, gp_padl, key_draw_x, key_margin, fa_right, fa_top, DEVICE.GAMEPAD);
 	}
 	else {
-		draw_key_prompt(sPrompt_d, ord("D"), key_draw_x, key_margin, fa_right, fa_top, false);
+		draw_key_prompt(sPrompt_d, ord("D"), key_draw_x, key_margin, fa_right, fa_top, DEVICE.KEYBOARD);
 		key_draw_x -= sprite_get_width(sPrompt_d) + key_margin;
-		draw_key_prompt(sPrompt_a, ord("A"), key_draw_x, key_margin, fa_right, fa_top, false);
+		draw_key_prompt(sPrompt_a, ord("A"), key_draw_x, key_margin, fa_right, fa_top, DEVICE.KEYBOARD);
 	}
 	show_horizontal_controls = false;
 }

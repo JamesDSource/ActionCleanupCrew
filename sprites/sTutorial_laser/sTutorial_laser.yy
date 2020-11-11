@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"35e0ce50-2f17-429d-98a4-02be7bccf68b","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"35e0ce50-2f17-429d-98a4-02be7bccf68b","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"LayerId":{"name":"8d824f5d-9391-43a9-ba33-ffdc87f0f5d7","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sTutorial_laser","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"resourceVersion":"1.0","name":"35e0ce50-2f17-429d-98a4-02be7bccf68b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cf08152b-2ec8-4e11-81f9-3ad66b4e6157","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cf08152b-2ec8-4e11-81f9-3ad66b4e6157","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"LayerId":{"name":"bca3bc4c-cb8e-44eb-a2e6-31073cc7f024","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTutorial_laser","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"resourceVersion":"1.0","name":"cf08152b-2ec8-4e11-81f9-3ad66b4e6157","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sTutorial_laser","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"069cc619-d9f3-4397-9d86-b613546751a0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"35e0ce50-2f17-429d-98a4-02be7bccf68b","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"66ef4649-3e6e-4b04-b018-56c9a88ac8a0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cf08152b-2ec8-4e11-81f9-3ad66b4e6157","path":"sprites/sTutorial_laser/sTutorial_laser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8d824f5d-9391-43a9-ba33-ffdc87f0f5d7","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bca3bc4c-cb8e-44eb-a2e6-31073cc7f024","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Tutorial Laser",

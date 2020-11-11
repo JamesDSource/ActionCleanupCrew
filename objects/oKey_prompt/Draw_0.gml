@@ -1,0 +1,1 @@
+draw_key_prompt(prompt, key_id, x, y, halign, valign, device);

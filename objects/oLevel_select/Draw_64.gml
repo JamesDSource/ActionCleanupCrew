@@ -53,14 +53,14 @@ if(progress == 1) {
 
 var prompt_margin = 5;
 if(global.gp_connected) {
-	draw_key_prompt(sPrompt_gp_dpad_left, gp_padl, prompt_margin, 0, fa_left, fa_top, true);
-	draw_key_prompt(sPrompt_gp_dpad_right, gp_padr, display_get_gui_width() - prompt_margin, 0, fa_right, fa_top, true);
-	draw_key_prompt(sPrompt_gp_a, gp_face1, display_get_gui_width()/2, 0, fa_center, fa_top, true);
-	draw_key_prompt(sPrompt_gp_options, gp_start, prompt_margin, dh, fa_left, fa_bottom, true);
+	draw_key_prompt(sPrompt_gp_dpad_left, gp_padl, prompt_margin, 0, fa_left, fa_top, DEVICE.GAMEPAD);
+	draw_key_prompt(sPrompt_gp_dpad_right, gp_padr, display_get_gui_width() - prompt_margin, 0, fa_right, fa_top, DEVICE.GAMEPAD);
+	draw_key_prompt(sPrompt_gp_a, gp_face1, display_get_gui_width()/2, 0, fa_center, fa_top, DEVICE.GAMEPAD);
+	draw_key_prompt(sPrompt_gp_options, gp_start, prompt_margin, dh, fa_left, fa_bottom, DEVICE.GAMEPAD);
 }
 else {
-	draw_key_prompt(sPrompt_a, ord("A"), prompt_margin, 0, fa_left, fa_top, false);
-	draw_key_prompt(sPrompt_d, ord("D"), display_get_gui_width() - prompt_margin, 0, fa_right, fa_top, false);
-	draw_key_prompt(sPrompt_space, vk_space, display_get_gui_width()/2, 0, fa_center, fa_top, false);
-	draw_key_prompt(sPrompt_esc, vk_escape, prompt_margin, dh, fa_left, fa_bottom, false);
+	draw_key_prompt(sPrompt_a, ord("A"), prompt_margin, 0, fa_left, fa_top, DEVICE.KEYBOARD);
+	draw_key_prompt(sPrompt_d, ord("D"), display_get_gui_width() - prompt_margin, 0, fa_right, fa_top, DEVICE.KEYBOARD);
+	draw_key_prompt(sPrompt_space, vk_space, display_get_gui_width()/2, 0, fa_center, fa_top, DEVICE.KEYBOARD);
+	draw_key_prompt(sPrompt_esc, vk_escape, prompt_margin, dh, fa_left, fa_bottom, DEVICE.KEYBOARD);
 }
