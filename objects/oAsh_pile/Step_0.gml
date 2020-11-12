@@ -11,3 +11,4 @@ else sprite_index = sAsh_small;
 scale = approach(scale, 1.0, 0.01);
 image_xscale = scale;
 image_yscale = scale;
+

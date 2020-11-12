@@ -91,6 +91,12 @@
             {"propertyId":{"name":"halign","path":"objects/oKey_prompt/oKey_prompt.yy",},"objectId":{"name":"oKey_prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"value":"fa_center","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"valign","path":"objects/oKey_prompt/oKey_prompt.yy",},"objectId":{"name":"oKey_prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"value":"fa_middle","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oKey_prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":48.0,"y":224.0,"resourceVersion":"1.0","name":"inst_513C1D05","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"halign","path":"objects/oKey_prompt/oKey_prompt.yy",},"objectId":{"name":"oKey_prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"value":"fa_center","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"valign","path":"objects/oKey_prompt/oKey_prompt.yy",},"objectId":{"name":"oKey_prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"value":"fa_middle","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"key_id","path":"objects/oKey_prompt/oKey_prompt.yy",},"objectId":{"name":"oKey_prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"value":"gp_axislh","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"objectId":{"name":"oKey_prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"value":"sPrompt_gp_left_joystick","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"oKey_prompt","path":"objects/oKey_prompt/oKey_prompt.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":26.0,"y":752.0,"resourceVersion":"1.0","name":"inst_7B6EAC4E","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Above","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tCeiling_hub","path":"tilesets/tCeiling_hub/tCeiling_hub.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":20,"SerialiseHeight":50,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,
@@ -517,6 +523,7 @@
     {"name":"inst_1F2FBCEB","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
     {"name":"inst_254261DB","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
     {"name":"inst_513C1D05","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
+    {"name":"inst_7B6EAC4E","path":"rooms/rLevel_tutorial/rLevel_tutorial.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,

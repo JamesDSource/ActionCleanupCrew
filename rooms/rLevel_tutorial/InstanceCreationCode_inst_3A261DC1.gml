@@ -4,7 +4,7 @@ trigger_function = function breakables_trigger_function() {
 		"Loudspeaker",
 		[
 			"Look at this mess!",
-			"For this, you'll definetly need your\nACC extreme vacuume for extreme suction.",
+			"For this, you'll definitely need your\nACC extreme vacuum for extreme suction.",
 			"Good luck."
 		]
 	);

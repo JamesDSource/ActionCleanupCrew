@@ -76,7 +76,8 @@ kill_function = function kill(death_type) {
 				}
 				
 				repeat(ash_amount) {
-					instance_create_layer(x + irandom_range(-8, 8), y + irandom_range(-8, 8), "Instances", oAsh_pile);
+					var ash_pos = push_out(x + irandom_range(-8, 8), y + irandom_range(-8, 8));
+					instance_create_layer(ash_pos.x, ash_pos.y, "Instances", oAsh_pile);
 				}
 				leave_body(true);
 				break;
