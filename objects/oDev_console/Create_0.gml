@@ -57,6 +57,10 @@ function evaluate_command(cmd) {
 								blood_fill = true;
 								return [LOGTYPE.CHANGE, "Blood filled"]
 								break;
+							case "destroy":
+								surface_free(global.liquid_surf);
+								return [LOGTYPE.CHANGE, "Blood surface destroyed"];
+								break;
 							default: return [LOGTYPE.ERROR, invalid_command_error(words[1])]; break;
 						}
 					}
