@@ -1,11 +1,21 @@
+if(live_call()) return live_result;
+
 if(follow != noone && instance_exists(follow)) {
 	target_x = follow.x;	
 	target_y = follow.y;
 	
 	if(follow.object_index == oPlayer && !oPlayer.disarmed && oPlayer.state == oPlayer.states.free) {
-		var ang = point_direction(follow.x, follow.y, mouse_x, mouse_y);
-		target_x += lengthdir_x(jut, ang);
-		target_y += lengthdir_y(jut, ang);
+		var ang = 0;
+		var cam_jut = jut;
+		if(global.gp_connected) {
+			var axis_h = gamepad_axis_value(global.gp_slot, gp_axisrh);
+			var axis_v =  gamepad_axis_value(global.gp_slot, gp_axisrv);
+			ang = point_direction(0, 0, axis_h, axis_v);
+			cam_jut *= point_distance(0, 0, axis_h, axis_v);
+		}
+		else ang = point_direction(follow.x, follow.y, mouse_x, mouse_y);
+		target_x += lengthdir_x(cam_jut, ang);
+		target_y += lengthdir_y(cam_jut, ang);
 	}
 }
 
