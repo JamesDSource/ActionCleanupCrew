@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"sIncinerator_opened","path":"sprites/sIncinerator_opened/sIncinerator_opened.yy",},"order":2,},
+    {"id":{"name":"sIncinerator","path":"sprites/sIncinerator/sIncinerator.yy",},"order":2,},
     {"id":{"name":"tCarpet","path":"tilesets/tCarpet/tCarpet.yy",},"order":1,},
     {"id":{"name":"oDev_console","path":"objects/oDev_console/oDev_console.yy",},"order":0,},
     {"id":{"name":"sGrades_background","path":"sprites/sGrades_background/sGrades_background.yy",},"order":5,},
@@ -145,7 +145,7 @@
     {"id":{"name":"sdDeath_man2","path":"sounds/sdDeath_man2/sdDeath_man2.yy",},"order":1,},
     {"id":{"name":"rLevel1_jam","path":"rooms/rLevel1_jam/rLevel1_jam.yy",},"order":0,},
     {"id":{"name":"tCeiling_hub","path":"tilesets/tCeiling_hub/tCeiling_hub.yy",},"order":5,},
-    {"id":{"name":"sIncinerator_closed","path":"sprites/sIncinerator_closed/sIncinerator_closed.yy",},"order":0,},
+    {"id":{"name":"sIncinerator_hatch","path":"sprites/sIncinerator_hatch/sIncinerator_hatch.yy",},"order":0,},
     {"id":{"name":"sdClaw_snort2","path":"sounds/sdClaw_snort2/sdClaw_snort2.yy",},"order":8,},
     {"id":{"name":"sBox_large","path":"sprites/sBox_large/sBox_large.yy",},"order":0,},
     {"id":{"name":"sSniper_shot","path":"sprites/sSniper_shot/sSniper_shot.yy",},"order":13,},

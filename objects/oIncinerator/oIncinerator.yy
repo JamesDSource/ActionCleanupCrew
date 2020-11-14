@@ -1,13 +1,13 @@
 {
   "spriteId": {
-    "name": "sIncinerator_opened",
-    "path": "sprites/sIncinerator_opened/sIncinerator_opened.yy",
+    "name": "sIncinerator",
+    "path": "sprites/sIncinerator/sIncinerator.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "sIncinerator_closed",
-    "path": "sprites/sIncinerator_closed/sIncinerator_closed.yy",
+    "name": "sIncinerator",
+    "path": "sprites/sIncinerator/sIncinerator.yy",
   },
   "persistent": false,
   "parentObjectId": {

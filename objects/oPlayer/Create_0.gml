@@ -35,7 +35,7 @@ states = {
 state = states.free;
 
 kill_function = function kill_player(death_type) {
-	if(!global.godmode) {
+	if(!global.godmode && iframes == 0) {
 		screen_shake(3, 5);
 		audio_play_sound(sdPlayer_hurt, SOUNDPRIORITY.IMPORTANT, false);
 		if(helmat_on) {
@@ -43,7 +43,7 @@ kill_function = function kill_player(death_type) {
 			iframes = 30;
 			flash_frames_left = flash_frames;
 		}
-		else if(iframes == 0){
+		else {
 			kill(death_type);
 		}
 	}

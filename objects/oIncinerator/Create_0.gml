@@ -8,6 +8,8 @@ audio_play_sound_on(emitter, sdIncinerator, true, SOUNDPRIORITY.AMBIENCE);
 burn_time = room_speed * 8;
 burn_timer = 0;
 
+hatch_index = 0;
+
 init_interactable(
 	function action_incinerator() {
 		with(oPlayer) {
@@ -19,3 +21,8 @@ init_interactable(
 		}
 	}
 );
+
+draw_function = function() {
+	draw_depth_object();
+	draw_sprite(sIncinerator_hatch, hatch_index, x, y);
+}

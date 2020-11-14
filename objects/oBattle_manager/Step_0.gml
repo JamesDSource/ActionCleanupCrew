@@ -36,7 +36,7 @@ if(started) {
 			// bodies
 			global.game_score.bodies -= clamp(instance_number(oBody)*5, 0, 100);
 		
-			global.game_score.total = round((global.game_score.blood + global.game_score.ash + global.game_score.bits + global.game_score.bodies)/4.0);
+			global.game_score.total = round((global.game_score.blood + global.game_score.ash + global.game_score.bits + global.game_score.bodies + global.game_score.life)/5.0);
 			global.game_score.finished = true;
 		
 			instance_destroy(oPause);
