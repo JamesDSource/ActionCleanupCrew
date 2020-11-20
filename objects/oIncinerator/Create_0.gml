@@ -26,3 +26,5 @@ draw_function = function() {
 	draw_depth_object();
 	draw_sprite(sIncinerator_hatch, hatch_index, x, y);
 }
+
+image_index = irandom_range(0, sprite_get_number(sprite_index)-1);
