@@ -9,5 +9,5 @@ else {
 	is_interactable = true;
 }
 
-if(instance_exists(oPlayer) && instance_exists(oPlayer.obj_held) && oPlayer.obj_held.object_index == oBody && burn_timer <= 0) is_interactable = true;
+if(instance_exists(oPlayer) && instance_exists(oPlayer.obj_held) && oPlayer.obj_held.can_burn && burn_timer <= 0) is_interactable = true;
 else is_interactable = false;

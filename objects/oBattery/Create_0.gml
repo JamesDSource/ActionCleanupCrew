@@ -7,9 +7,11 @@ draw_battery = true;
 
 broken = false;
 function depleat_charge() {
+	var charge_before = charge;
 	charge = max(charge -1, 0);	
-	if(charge == 0) {
+	if(charge == 0 && charge_before > 0) {
 		// break the battery	
 		broken = true;
+		can_burn = true;
 	}
 }

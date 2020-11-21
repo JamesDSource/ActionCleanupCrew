@@ -1,28 +1,21 @@
-if(!helmat_on && global.hud) {
-	var str = "Recharging Helmat..."
+if(!helmat_on && global.hud || true) {
 	
 	var margin = 10;
-	draw_set_font(fHUD);
-	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-	draw_set_color(c_white);
-	
-	draw_text(margin, margin, str);
-	
 	var progress = 1 - (helmat_timer/helmat_time);
-	var bar_w = string_width(str);
-	var bar_h = 5;
-	var x1 = margin;
-	var y1 = margin + string_height(str);
-	
-	draw_set_color(c_gray);
-	draw_set_alpha(0.5);
-	draw_rectangle(x1, y1, x1 + bar_w, y1 + bar_h, false);
-	
-	draw_set_color(c_lime);
-	draw_set_alpha(1);
-	draw_rectangle(x1, y1, x1 + bar_w*progress, y1 + bar_h, false);
+	var angle = -90 + progress*360;
+	if (angle > 180) angle = -(180 - angle%180);
+	shader_set(shRotational_fill);
+	var u_angle_1 = shader_get_uniform(shRotational_fill, "angle_1");
+	var u_angle_2 = shader_get_uniform(shRotational_fill, "angle_2");
+	var u_axis_point = shader_get_uniform(shRotational_fill, "axis_point");
+	shader_set_uniform_f(u_angle_1, -90);
+	shader_set_uniform_f(u_angle_2, angle);
+	shader_set_uniform_f_array(u_axis_point, [margin + 8, margin + 8]);
+	draw_sprite(sPlayer_helmat_icon, 0, margin, margin);
+	shader_reset();
 }
+
+draw_text(30, 30, radtodeg(arctan2((mouse_y - y), (mouse_x - x))));
 
 // dialogue box
 if(state == states.read) {

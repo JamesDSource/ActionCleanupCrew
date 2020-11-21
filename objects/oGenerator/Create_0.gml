@@ -20,7 +20,7 @@ battery_point_offset = {
 	y: -5
 	
 }
-battery_depleat_time = room_speed;
+battery_depleat_time = room_speed * 5;
 battery_depleat_timer = battery_depleat_time;
 
 init_interactable(
