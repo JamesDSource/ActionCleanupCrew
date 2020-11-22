@@ -1,21 +1,38 @@
+if(live_call()) return live_result;
+
 if(!helmat_on && global.hud || true) {
 	
 	var margin = 10;
-	var progress = 1 - (helmat_timer/helmat_time);
-	var angle = -90 + progress*360;
-	if (angle > 180) angle = -(180 - angle%180);
+	var progress = 1 -(helmat_timer/helmat_time);
+	var cutoff_angle = 90 - progress*360;
+	if(cutoff_angle < 0) cutoff_angle = 360 - abs(cutoff_angle);
 	shader_set(shRotational_fill);
-	var u_angle_1 = shader_get_uniform(shRotational_fill, "angle_1");
-	var u_angle_2 = shader_get_uniform(shRotational_fill, "angle_2");
+	var u_start_angle = shader_get_uniform(shRotational_fill, "start_angle");
+	var u_end_angle = shader_get_uniform(shRotational_fill, "end_angle");
 	var u_axis_point = shader_get_uniform(shRotational_fill, "axis_point");
-	shader_set_uniform_f(u_angle_1, -90);
-	shader_set_uniform_f(u_angle_2, angle);
+	shader_set_uniform_f(u_start_angle, cutoff_angle);
+	shader_set_uniform_f(u_end_angle, 90);
 	shader_set_uniform_f_array(u_axis_point, [margin + 8, margin + 8]);
 	draw_sprite(sPlayer_helmat_icon, 0, margin, margin);
 	shader_reset();
 }
 
-draw_text(30, 30, radtodeg(arctan2((mouse_y - y), (mouse_x - x))));
+var draw_ang = radtodeg(arctan2(mouse_y - y, mouse_x - x));
+if(draw_ang < 0) draw_ang *= -1;
+else draw_ang = 180 + (180 - draw_ang);
+draw_text(30, 30, draw_ang);
+var ang_1 = 180;
+var ang_2 = 90;
+
+ang_2 -= ang_1;
+draw_ang -= ang_1;
+ang_1 = 0;
+
+if(draw_ang < 0) draw_ang += 360;
+if(ang_2 < 0) ang_2 += 360;
+
+var in_range = draw_ang >= ang_2;	
+draw_text(30, 50, in_range);
 
 // dialogue box
 if(state == states.read) {
