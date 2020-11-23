@@ -11,7 +11,7 @@ uniform vec2 axis_point;
 
 void main() {
     vec4 col = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
-    if(col.a > 0.0) {
+    if(col.a > 0.0 && start_angle != end_angle) {
 		vec2 offset_from_axis = vec2(v_vPosition.x - axis_point.x, v_vPosition.y - axis_point.y);
 	    float angle = degrees(atan(offset_from_axis.y, offset_from_axis.x));
 	    if(angle < 0.0) {
@@ -32,7 +32,8 @@ void main() {
 		}
     
 	    if(angle >= angle_end_point) {
-	        col.a = 0.5;
+			float average = (col.a + col.g + col.b)/3.0;
+	       col.rgb = vec3(average);
 	    }
 	}
     gl_FragColor = col;
