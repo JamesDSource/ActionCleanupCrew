@@ -75,7 +75,7 @@ function load() {
 
 function load_settings() {
 	ini_open(SAVEFILESETTINGSNAME);
-	global.master_audio = ini_read_real("audio", "master", 1.0);
+	global.master_audio = ini_read_real("audio", "master", 0.5);
 	global.music_audio = ini_read_real("audio", "music", 1.0);
 	global.screams_audio = ini_read_real("audio", "screams", 1.0);
 	global.weapons_audio = ini_read_real("audio", "weapons", 1.0);

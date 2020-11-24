@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sdVacuum.wav",
-  "duration": 3.410583,
+  "duration": 3.877042,
   "parent": {
     "name": "Tools",
     "path": "folders/Player/Tools.yy",
