@@ -2,7 +2,11 @@ if(burn_timer > 0) {
 	hatch_index = 0;
 	burn_timer--;
 	is_interactable = false;
-	if(burn_timer == 0) audio_play_sound_on(emitter, sdDing, false, SOUNDPRIORITY.IMPORTANT)
+	if(burn_timer == 0) {
+		audio_play_sound_on(emitter, sdDing, false, SOUNDPRIORITY.IMPORTANT);
+		audio_sound_gain(loop_closed, 0.0, 0.0);
+		audio_sound_gain(loop, 1.0, 0.0);
+	}
 }
 else {
 	hatch_index = 1;

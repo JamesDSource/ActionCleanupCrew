@@ -1,5 +1,3 @@
-if(live_call()) return live_result;
-
 if(follow != noone && instance_exists(follow)) {
 	target_x = follow.x;	
 	target_y = follow.y;

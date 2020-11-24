@@ -15,7 +15,7 @@ global.game_score = {
 	finished: false	
 };
 
-retreat_time = 15;
+retreat_time = 30;
 
 // auto kill
 autokill_time = room_speed * 30;

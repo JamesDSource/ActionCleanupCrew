@@ -15,6 +15,7 @@ else {
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
+	draw_set_font(fMenu);
 	for(var i = -1; i < array_length(details_breakdown); i++) {
 		if(i == -1) draw_text(details_surf_w/2, draw_y_breakdown - seperation, "Grade Breakdown") 
 		else {

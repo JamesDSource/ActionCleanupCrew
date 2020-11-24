@@ -1,9 +1,11 @@
 event_inherited();
 
 emitter = audio_emitter_create();
-audio_emitter_falloff(emitter, 10, 200, 1);
+audio_emitter_falloff(emitter, 100, 500, 1);
 audio_emitter_position(emitter, x, y, 0);
-audio_play_sound_on(emitter, sdIncinerator, true, SOUNDPRIORITY.AMBIENCE);
+loop = audio_play_sound_on(emitter, sdIncinerator, true, SOUNDPRIORITY.AMBIENCE);
+loop_closed = audio_play_sound_on(emitter, sdIncinerator_closed, true, SOUNDPRIORITY.AMBIENCE);
+audio_sound_gain(loop_closed, 0.0, 0.0);
 
 burn_time = room_speed * 8;
 burn_timer = 0;
@@ -18,6 +20,8 @@ init_interactable(
 			state = states.free;
 			other.burn_timer = other.burn_time;
 			audio_play_sound_on(other.emitter, sdIncinerator_door_close, false, SOUNDPRIORITY.IMPORTANT);
+			audio_sound_gain(other.loop, 0.0, 0.0);
+			audio_sound_gain(other.loop_closed, 1.0, 0.0);
 		}
 	}
 );

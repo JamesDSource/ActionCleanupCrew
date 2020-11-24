@@ -1,5 +1,3 @@
-if(live_call()) return live_result;
-
 if(global.hud && room != rHub) {
 	var margin = 10;
 	if(!helmat_on) {

@@ -3,5 +3,5 @@ if(surface_exists(global.liquid_surf)) {
 }
 else {
 	global.liquid_surf = surface_create(room_width, room_height);
-	buffer_set_surface(failsafe_buffer, global.liquid_surf, buffer_surface_copy, 0, 0);
+	buffer_set_surface(failsafe_buffer, global.liquid_surf, 0);
 }
