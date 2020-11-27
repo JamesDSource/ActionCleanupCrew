@@ -1,11 +1,8 @@
 event_inherited();
 powered = true;
 
-steam_sound_played = false;
-pulse_sound_played = false;
-
 audio_emitter = audio_emitter_create();
-audio_emitter_falloff(audio_emitter, 10, 200, 1);
+audio_emitter_falloff(audio_emitter, 100, 600, 1);
 audio_emitter_position(audio_emitter, x, y, 0);
 
 audio_play_sound_on(audio_emitter, sdGenerator_hum, true, SOUNDPRIORITY.AMBIENCE);

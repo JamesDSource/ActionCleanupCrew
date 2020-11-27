@@ -25,6 +25,10 @@ init_interactable(
 		}
 	}
 );
+interactable_prompt_offset = {
+	x: 4,
+	y: 22
+}
 
 draw_function = function() {
 	draw_depth_object();

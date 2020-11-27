@@ -309,7 +309,7 @@ function new_cover() {
 		if(covers[| i] != cover && covers[| i].team == team) {
 			var another_using = false;
 			var temp_check_path = path_add();
-			var can_reach = true;//mp_grid_path(global.grid, temp_check_path, x, y, cover.x[| i], covers[| i].y, true);
+			var can_reach = mp_grid_path(global.grid, temp_check_path, x, y, covers[| i].x, covers[| i].y, true);
 			path_delete(temp_check_path);
 			with(oSoldier) if(covers[| i] == cover) another_using = true;
 			if(!another_using && can_reach) result[array_length(result)] = covers[| i];

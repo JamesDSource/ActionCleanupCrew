@@ -1,0 +1,34 @@
+
+Vacuum Suction.png
+size: 64,16
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+VacuumSuctionCone
+  rotate: true
+  xy: 56, 9
+  size: 4, 6
+  orig: 4, 6
+  offset: 0, 0
+  index: -1
+VacuumSuctionSlice1
+  rotate: true
+  xy: 2, 2
+  size: 11, 16
+  orig: 11, 16
+  offset: 0, 0
+  index: -1
+VacuumSuctionSlice2
+  rotate: true
+  xy: 20, 2
+  size: 11, 16
+  orig: 11, 16
+  offset: 0, 0
+  index: -1
+VacuumSuctionSlice3
+  rotate: true
+  xy: 38, 2
+  size: 11, 16
+  orig: 11, 16
+  offset: 0, 0
+  index: -1

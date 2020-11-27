@@ -4,4 +4,3 @@ if(has_shadow) {
 	draw_set_alpha(1);
 }
 if(is_method(draw_function)) draw_function();
-

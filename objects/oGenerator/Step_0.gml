@@ -39,21 +39,5 @@ if(hum_pitch != target_hum_pitch) {
 	audio_sound_gain(sdGenerator_hum, hum_pitch, 0);
 }
 
-if(sprite_index == sGenerator) {
-	switch(round(image_index)) {
-		case 9:
-			if(!pulse_sound_played) {
-				audio_play_sound_on(audio_emitter, sdGenerator_pulse, false, SOUNDPRIORITY.AMBIENCE);
-				pulse_sound_played = true;	
-			}
-			break;
-		case 16:
-			if(!steam_sound_played) {
-				audio_play_sound_on(audio_emitter, sdGenerator_steam_released, false, SOUNDPRIORITY.AMBIENCE);
-				steam_sound_played = true;	
-			}
-			break;
-	}
-	target_hum_pitch = 1.0;
-}
+if(sprite_index == sGenerator) target_hum_pitch = 1.0;
 else target_hum_pitch = 0.0;
