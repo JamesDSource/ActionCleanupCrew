@@ -10,6 +10,13 @@ if(being_held && irandom_range(1, 100) < 5) {
 }
 
 if(burn) {
+	if(burn_sound == -1) {
+		burn_sound = audio_play_sound_at(sdBody_sizzle, x, y, 0, 50, 200, 1, true, SOUNDPRIORITY.AMBIENCE);
+		audio_sound_set_track_position(burn_sound, irandom_range(0, floor(audio_sound_length(burn_sound))))	
+	}
 	burn_progress = approach(burn_progress, 1.0, 0.01);
-	if(burn_progress == 1) instance_destroy();	
+	if(burn_progress == 1) {
+		audio_stop_sound(burn_sound);
+		instance_destroy();
+	}
 }

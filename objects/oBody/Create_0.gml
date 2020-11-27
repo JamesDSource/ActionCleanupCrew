@@ -30,3 +30,4 @@ draw_function = function draw_body() {
 }
 burn = false;
 burn_progress = 0;
+burn_sound = -1;

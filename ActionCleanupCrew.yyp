@@ -210,6 +210,7 @@
     {"id":{"name":"sAsh_mid","path":"sprites/sAsh_mid/sAsh_mid.yy",},"order":1,},
     {"id":{"name":"sdLaser_canon","path":"sounds/sdLaser_canon/sdLaser_canon.yy",},"order":6,},
     {"id":{"name":"sdDeath_voliore2","path":"sounds/sdDeath_voliore2/sdDeath_voliore2.yy",},"order":6,},
+    {"id":{"name":"sdBody_sizzle","path":"sounds/sdBody_sizzle/sdBody_sizzle.yy",},"order":2,},
     {"id":{"name":"sLaser_shotgun_shot_white","path":"sprites/sLaser_shotgun_shot_white/sLaser_shotgun_shot_white.yy",},"order":20,},
     {"id":{"name":"sdDing","path":"sounds/sdDing/sdDing.yy",},"order":4,},
     {"id":{"name":"sBox_piecies","path":"sprites/sBox_piecies/sBox_piecies.yy",},"order":2,},

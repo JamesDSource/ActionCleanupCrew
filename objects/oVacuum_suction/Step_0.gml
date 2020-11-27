@@ -26,7 +26,9 @@ for(var i = 0; i < ds_list_size(debris_list); i++) {
     if(point_distance(debris.x, debris.y, x, y) == 0) {
         instance_destroy(debris);
         if(suction_sound == -1 || !audio_is_playing(suction_sound)) {
-			suction_sound = audio_play_sound(choose(sdVacuum_suction1, sdVacuum_suction2, sdVacuum_suction3), SOUNDPRIORITY.GUNS, false);
+			var suction_sound_playing = choose(sdVacuum_suction1, sdVacuum_suction2, sdVacuum_suction3);
+			audio_sound_pitch(suction_sound_playing, 1 + random_range(-0.1, 0.1));
+			suction_sound = audio_play_sound(suction_sound_playing, SOUNDPRIORITY.GUNS, false);
 			screen_shake(1, 5);	
 		}
     }
