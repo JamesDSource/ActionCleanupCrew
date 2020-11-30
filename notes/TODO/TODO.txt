@@ -1,18 +1,29 @@
 --For Release--
 More levels
+
 Music
+
 battery charger redesign?
+
 create a grizzled veteran character for tutorials instead of the level select
+
 expand the HUB area
+
 Integrate soldier redesigns
+
 Add more controller key prompts to tutorial
+
 Make mop more fun to use
+
 More sound effects
 	- New soldier death sounds
 	- Breakables breaking
-	- Body dissintigration sizzle
 	- Door opening
 	- Pick up grunt
 	- Battery dispenser sound
 	- Battery charger sound
 	- Grade cycle click sound for reveil
+
+Change up drop pod and cloneing machine
+
+Give all entities a sprite for moveing backwards

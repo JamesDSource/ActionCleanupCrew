@@ -1,5 +1,5 @@
-if(instance_exists(oPlayer) && !oPlayer.disarmed)spr_cursor = sCursor;
-else spr_cursor = noone;
+if(instance_exists(oPlayer) && !oPlayer.disarmed && !global.gp_connected) window_set_cursor_sprite_ext(sCursor, 0, 10, 10, c_white, 1);
+else window_set_cursor_normal();
 
 if(!is_undefined(init_window)) init_window--;
 
