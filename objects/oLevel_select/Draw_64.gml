@@ -6,6 +6,8 @@ draw_set_color(c_black);
 nine_slice_streach(sNine_slice_level, dw/2 - current_w/2 - border_w, y_org - border_w, current_w + border_w*2, h + border_w*2);
 
 if(progress == 1) {
+	shader_set(shLevel_select);
+	
 	var text_color = merge_color(c_green, c_white, 0.9);
 	if(show_state >= 3) {
 		draw_set_font(fLevel_select);
@@ -49,6 +51,7 @@ if(progress == 1) {
 			draw_text(x_org + w - demo_message_margin, y_org + demo_message_margin, "Level not\navailable\nin Demo");
 		}
 	}
+	shader_reset();
 }
 
 var prompt_margin = 5;

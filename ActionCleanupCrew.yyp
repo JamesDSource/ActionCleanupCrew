@@ -128,6 +128,7 @@
     {"id":{"name":"sSoldier_black_corpse_helmat","path":"sprites/sSoldier_black_corpse_helmat/sSoldier_black_corpse_helmat.yy",},"order":3,},
     {"id":{"name":"sHit_spark","path":"sprites/sHit_spark/sHit_spark.yy",},"order":0,},
     {"id":{"name":"sLab_wall","path":"sprites/sLab_wall/sLab_wall.yy",},"order":0,},
+    {"id":{"name":"shLevel_select","path":"shaders/shLevel_select/shLevel_select.yy",},"order":14,},
     {"id":{"name":"oDoor_rusted","path":"objects/oDoor_rusted/oDoor_rusted.yy",},"order":0,},
     {"id":{"name":"window_set_cursor","path":"extensions/window_set_cursor/window_set_cursor.yy",},"order":0,},
     {"id":{"name":"sTitle_background_sun","path":"sprites/sTitle_background_sun/sTitle_background_sun.yy",},"order":5,},
