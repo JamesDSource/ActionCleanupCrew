@@ -4,7 +4,7 @@ function player_state_free() {
 	interactables();
 	sprite_index = sPlayer;
 	
-	// swapping tools
+	// Swapping tools
 	if(disarmed) tool_using = TOOL.NONE;
 	else {
 		if(mouse_wheel_up() || check_action("switch tool", INPUTTYPE.PRESSED)) {
@@ -18,7 +18,7 @@ function player_state_free() {
 		tool_using = tools[tool_index];
 	}
 	
-	// tools
+	// Tools
 	if(check_action("use", INPUTTYPE.HELD)) {
 		switch(tool_using) {
 			case TOOL.MOP:
@@ -28,26 +28,6 @@ function player_state_free() {
 				}
 				break;
 			case TOOL.VACUUM:
-				//var list_x = x + lengthdir_x(10, tool_angle);
-				//var list_y = y - tool_height + lengthdir_y(10, tool_angle);
-				//var bits = ds_list_create();
-				//collision_circle_list(list_x + lengthdir_x(20, tool_angle), list_y + lengthdir_y(20, tool_angle), 30, oBit, false, true, bits, false);
-				//for(var i = 0; i < ds_list_size(bits); i++) {
-				//	var bit = bits[| i];
-				//	with(bit) {
-				//		var dist_div = point_distance(x, y, list_x, list_y) div 3;
-				//		x += (sign(list_x - x)*8)/dist_div;
-				//		y += (sign(list_y - y)*8)/dist_div;
-				//		if(point_distance(x, y, list_x, list_y) < 5) instance_destroy();
-				//	}
-				//}
-				//ds_list_clear(bits);
-
-				//collision_circle_list(list_x + lengthdir_x(30, tool_angle), list_y + lengthdir_y(30, tool_angle), 30, oAsh_pile, false, true, bits, false);
-				//for(var i = 0; i < ds_list_size(bits); i++) {
-				//	bits[| i].suck_bits();
-				//}
-				//ds_list_destroy(bits);
 				if(!instance_exists(oVacuum_suction)) instance_create_layer(x, y, "Above", oVacuum_suction);
 				with(oVacuum_suction) {
 					direction = other.tool_angle;
@@ -63,8 +43,11 @@ function player_state_free() {
 	}
 	else mop_using = false;
 	
-	// if holding a body, go to the body state
-	if(instance_exists(obj_held)) state = states.holding;
+	// If holding a body, go to the body state
+	if(instance_exists(obj_held)) {
+		screen_shake(2, 5);
+		state = states.holding;
+	}
 	
 	event_inherited();
 }

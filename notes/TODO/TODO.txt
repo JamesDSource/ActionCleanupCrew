@@ -23,6 +23,7 @@ More sound effects
 	- Battery dispenser sound
 	- Battery charger sound
 	- Grade cycle click sound for reveil
+	- Broken battery beep sound
 
 Change up drop pod and cloneing machine
 
