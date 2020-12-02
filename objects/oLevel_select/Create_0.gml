@@ -1,3 +1,4 @@
+t = 0;
 dw = display_get_gui_width();
 dh = display_get_gui_height();
 border_w = 6;
@@ -31,5 +32,15 @@ init = false;
 progress = 0;
 
 locked = false;
+
+scan_lines_odd = false;
+
+flickers_min = 2;
+flickers_max = 3;
+flickers_remaining = irandom_range(flickers_min, flickers_max);
+flicker_dim = false;
+flickering = false;
+flicker_time = 3 * room_speed;
+flicker_timer = flicker_time;
 
 audio_play_sound(sdLevel_select_open, SOUNDPRIORITY.MENUS, false);

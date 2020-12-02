@@ -43,6 +43,7 @@ function level(level_room, level_name, level_description) constructor {
 	x_pos = 0;
 	y_pos = 0;
 	scale = 0;
+	alpha = 1;
 }
 
 global.levels = [

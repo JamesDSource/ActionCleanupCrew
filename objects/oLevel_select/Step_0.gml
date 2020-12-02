@@ -1,3 +1,4 @@
+t++;
 var progress_spd = 0.05;
 if(!global.pause) locked = true 	
 
@@ -29,31 +30,38 @@ else {
 	for(var i = 0; i < array_length(global.levels); i++) {
 		var target_x = 0;
 		var target_scale = 0;
-		var padding = 5;
+		var target_alpha = 0;
+		var padding = 2;
 	
 		if(i == level_index_left) {
 			target_x = string_width(global.levels[i].name)/2 + padding;
 			target_scale = 0.5;
+			target_alpha = 0.5;
 		}
 		else if(i < level_index) target_x = string_width(global.levels[i].name) + padding;
 		else if(i == level_index_right) {
 			target_x = w - string_width(global.levels[i].name)/2 - padding;
 			target_scale = 0.5;
+			target_alpha = 0.5;
 		}
 		else if(i > level_index) target_x = w - string_width(global.levels[i].name) - padding;
 		else {
 			target_x = w/2;
 			target_scale = 1;
+			target_alpha = 1;
+			
 		}
 	
 
 		if(!init) {
 			global.levels[i].x_pos = target_x;
 			global.levels[i].scale = target_scale;
+			global.levels[i].alpha = target_alpha;
 		}
 		else {
 			global.levels[i].x_pos = approach(global.levels[i].x_pos, target_x, pos_spd);
 			global.levels[i].scale = approach(global.levels[i].scale, target_scale, scale_spd);
+			global.levels[i].alpha = approach(global.levels[i].alpha, target_alpha, scale_spd);
 		}
 	}
 	init = true;
