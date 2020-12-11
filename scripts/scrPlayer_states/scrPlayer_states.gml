@@ -19,7 +19,14 @@ function player_state_free() {
 	}
 	
 	// Tools
-	if(check_action("use", INPUTTYPE.HELD)) {
+	if(global.toggle_tool_use) {
+		if(check_action("use", INPUTTYPE.PRESSED)) using_tool = !using_tool;	
+	}
+	else {
+		using_tool = check_action("use", INPUTTYPE.HELD);
+	}
+	
+	if(using_tool) {
 		switch(tool_using) {
 			case TOOL.MOP:
 				if(!mop_using) {
@@ -45,7 +52,6 @@ function player_state_free() {
 	
 	// If holding a body, go to the body state
 	if(instance_exists(obj_held)) {
-		screen_shake(2, 5);
 		state = states.holding;
 	}
 	
@@ -63,6 +69,7 @@ function player_state_holding() {
 	if(instance_exists(obj_held)) {
 		if(check_action("select", INPUTTYPE.PRESSED) && !instance_exists(selected_interactable)) {
 			obj_held = noone;
+			screen_shake(2, 5);
 			state = states.free;
 		}
 	}

@@ -40,7 +40,7 @@ flickers_max = 3;
 flickers_remaining = irandom_range(flickers_min, flickers_max);
 flicker_dim = false;
 flickering = false;
-flicker_time = 3 * room_speed;
+flicker_time = 1.5 * room_speed;
 flicker_timer = flicker_time;
 
 audio_play_sound(sdLevel_select_open, SOUNDPRIORITY.MENUS, false);

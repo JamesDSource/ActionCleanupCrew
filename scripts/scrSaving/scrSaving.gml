@@ -85,6 +85,7 @@ function load_settings() {
 	global.gamma = ini_read_real("graphics", "gamma", 1.0);
 	global.gamepad = ini_read_real("gameplay", "gamepad", false);
 	global.screenshake = ini_read_real("gameplay", "screenshake", 1.0);
+	global.toggle_tool_use = ini_read_real("gameplay", "toggle tool use", false);
 	ini_close();
 }
 
@@ -100,5 +101,6 @@ function save_settings() {
 	ini_write_real("graphics", "gamma", global.gamma);
 	ini_write_real("gameplay", "gamepad", global.gamepad);
 	ini_write_real("gameplay", "screenshake", global.screenshake);
+	ini_write_real("gameplay", "toggle tool use", global.toggle_tool_use);
 	ini_close();
 }

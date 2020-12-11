@@ -13,7 +13,7 @@ else tool_angle = point_direction(x, y - tool_height, mouse_x, mouse_y)
 switch(tool_using) {
 	case TOOL.MOP:
 		var tool_offset_target = 0;
-		if(mop_using) {
+		if(using_tool) {
 			var clean_pos = {
 				x: x + lengthdir_x(14, tool_angle),
 				y: y - tool_height + lengthdir_y(14, tool_angle)
@@ -35,7 +35,7 @@ switch(tool_using) {
 		break;
 	
 	case TOOL.VACUUM:
-		if(check_action("use", INPUTTYPE.HELD)) {
+		if(using_tool) {
 			tool_offset.x = irandom_range(-1, 1);	
 			tool_offset.y = irandom_range(-1, 1);	
 		}

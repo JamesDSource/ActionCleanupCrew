@@ -15,6 +15,7 @@ tool_offset = {
 tool_angle = 0;
 
 mop_using = false;
+using_tool = false;
 vacuum_pitch_volume = 1.0;
 
 event_inherited();
