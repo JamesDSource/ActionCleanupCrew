@@ -69,13 +69,13 @@ if(progress == 1) {
 		draw_text(x_org + w/2, y_org + hs_y_margin, hs_str);
 		var hs_name = "level " + room_get_name(global.levels[level_index].room_index);
 		var hs_spr_x = x_org + w/2;
-		var hs_spr_y = y_org + hs_y_margin + sprite_get_height(sGrade_letter)/2 + string_height(hs_str)/2;
+		var hs_spr_y = y_org + h/4;
 		if(variable_struct_exists(global.highest_grades, hs_name)) {
 			var hs_index = variable_struct_get(global.highest_grades, hs_name);
 			hs_index = grade_index_from_percent(hs_index);
 			draw_sprite(sGrade_letter, hs_index, hs_spr_x, hs_spr_y);
 		}
-		else draw_sprite(sNot_applicable, 0, hs_spr_x, hs_spr_y)
+		else draw_sprite(sNot_applicable, 0, hs_spr_x, hs_spr_y);
 	
 		if(DEMO && level_index > global.demo_level_limit) {
 			var demo_message_margin = 5;

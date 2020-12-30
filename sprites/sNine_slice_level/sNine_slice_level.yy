@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 23,
-  "bbox_top": 0,
-  "bbox_bottom": 23,
+  "bbox_left": 1,
+  "bbox_right": 47,
+  "bbox_top": 1,
+  "bbox_bottom": 46,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 24,
-  "height": 24,
+  "width": 48,
+  "height": 48,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"77c0064b-5818-4702-9290-454d84b45ddb","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"77c0064b-5818-4702-9290-454d84b45ddb","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"LayerId":{"name":"47fcc86d-a28a-40ef-a4e3-cde4721d1ba1","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sNine_slice_level","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"resourceVersion":"1.0","name":"77c0064b-5818-4702-9290-454d84b45ddb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2fd7db6f-7538-4668-8dd4-1a1533aaa0cc","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2fd7db6f-7538-4668-8dd4-1a1533aaa0cc","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"LayerId":{"name":"f04e6f46-fa64-4d02-9107-f9b5f0ab7bbf","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sNine_slice_level","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"resourceVersion":"1.0","name":"2fd7db6f-7538-4668-8dd4-1a1533aaa0cc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sNine_slice_level","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b48608ac-b97e-49a5-bdcd-56373b4a1ea3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"77c0064b-5818-4702-9290-454d84b45ddb","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6416e221-afac-4e5b-bb00-a80caa8ef71b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2fd7db6f-7538-4668-8dd4-1a1533aaa0cc","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47fcc86d-a28a-40ef-a4e3-cde4721d1ba1","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f04e6f46-fa64-4d02-9107-f9b5f0ab7bbf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Level Select",

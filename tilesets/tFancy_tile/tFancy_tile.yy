@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "sFancy_pearl",
-    "path": "sprites/sFancy_pearl/sFancy_pearl.yy",
+    "name": "sFancy_tile",
+    "path": "sprites/sFancy_tile/sFancy_tile.yy",
   },
-  "tileWidth": 16,
-  "tileHeight": 16,
+  "tileWidth": 32,
+  "tileHeight": 32,
   "tilexoff": 0,
   "tileyoff": 0,
   "tilehsep": 0,
@@ -38,7 +38,7 @@
     "path": "folders/Floor Tiles/Fancy Pearl.yy",
   },
   "resourceVersion": "1.0",
-  "name": "tFancy_pearl",
+  "name": "tFancy_tile",
   "tags": [],
   "resourceType": "GMTileSet",
 }

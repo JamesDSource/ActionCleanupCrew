@@ -1,6 +1,6 @@
 t++;
 var progress_spd = 0.05;
-if(!global.pause) locked = true 	
+if(!global.pause) locked = true;	
 
 if(locked) {
 	if(progress == 1) audio_play_sound(sdLevel_select_close, SOUNDPRIORITY.MENUS, false);
@@ -22,7 +22,7 @@ else {
 		global.level_target = global.levels[level_index];
 		audio_play_sound(sdLevel_select_choose, SOUNDPRIORITY.MENUS, false);
 	}	
-	level_index = clamp(level_index, 0, array_length(global.levels)-1)
+	level_index = clamp(level_index, 0, array_length(global.levels)-1);
 	level_index_left = level_index - 1;
 	level_index_right = level_index + 1;
 

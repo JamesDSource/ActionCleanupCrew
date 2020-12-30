@@ -1,9 +1,9 @@
 // Screen and view sizes
-#macro VIEWWIDTH 320
-#macro VIEWHEIGHT 180
+#macro VIEWWIDTH 640
+#macro VIEWHEIGHT 360
 #macro SCREENWIDTH display_get_width()
 #macro SCREENHEIGHT display_get_height()
-surface_resize(application_surface, SCREENWIDTH, SCREENHEIGHT);
+surface_resize(application_surface, VIEWWIDTH, VIEWHEIGHT);
 window_set_size(SCREENWIDTH, SCREENHEIGHT);
 display_set_gui_size(VIEWWIDTH, VIEWHEIGHT);
 
