@@ -15,14 +15,14 @@ for(var i = 0; i < array_length(page); i++) {
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	if(i == index) {
-		draw_set_color(c_yellow);
+		draw_set_color($36fbf2);
 		var channel = animcurve_get_channel(aMenu, "push");
 		var curve = animcurve_channel_evaluate(channel, push_progress);
 		x_offset = push*curve;
 	}
-	else draw_set_color(c_white);
+	else draw_set_color(UILIGHTCOL);
 	
-	draw_rectangle_border(-box_padding, draw_y - box_padding, string_width(page[i].str) + margin_x + box_padding*2 + x_offset, string_height(page[i].str) + box_padding*2, 1, c_black, c_white);
+	draw_rectangle_border(-box_padding, draw_y - box_padding, string_width(page[i].str) + margin_x + box_padding*2 + x_offset, string_height(page[i].str) + box_padding*2, 1, UIDARKCOL, UILIGHTCOL);
 	draw_text(margin_x + x_offset, draw_y, page[i].str);
 	draw_y += margin_y + string_height(page[i].str);
 }

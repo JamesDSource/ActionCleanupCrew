@@ -7,6 +7,9 @@ surface_resize(application_surface, VIEWWIDTH, VIEWHEIGHT);
 window_set_size(SCREENWIDTH, SCREENHEIGHT);
 display_set_gui_size(VIEWWIDTH, VIEWHEIGHT);
 
+// UI
+#macro UIDARKCOL $312c1e
+#macro UILIGHTCOL $e0f6e8
 
 // Persistant objects
 instance_create_depth(x, y, 0, oTransitions);

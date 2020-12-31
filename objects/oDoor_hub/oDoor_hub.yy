@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sDoor_fancy",
-    "path": "sprites/sDoor_fancy/sDoor_fancy.yy",
+    "name": "sDoor_hub",
+    "path": "sprites/sDoor_hub/sDoor_hub.yy",
   },
   "solid": false,
   "visible": true,
@@ -31,7 +31,7 @@
     "path": "folders/Objects/Doors.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oDoor_fancy",
+  "name": "oDoor_hub",
   "tags": [],
   "resourceType": "GMObject",
 }
