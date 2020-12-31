@@ -1,4 +1,3 @@
-display_set_gui_size(surface_get_width(application_surface), surface_get_height(application_surface));
 shader_set(shPostprocessing);
 var u_brightness = shader_get_uniform(shPostprocessing, "brightness");
 var u_gamma = shader_get_uniform(shPostprocessing, "gamma");
@@ -17,7 +16,17 @@ else {
 		sprite_delete(global.sPause);	
 		global.sPause = noone;
 	}
-	draw_surface(application_surface, 0, 0);
+	if(surface_exists(global.view_surface)) {
+		var ax = 0, ay = 0;
+		if(instance_exists(oCamera)) {
+			ax = camera_get_view_x(view_camera[0]) - oCamera.x;
+			ay = camera_get_view_y(view_camera[0]) - oCamera.y;
+		}
+		draw_surface(global.view_surface, ax, ay);
+	}
 }
-display_set_gui_size(VIEWWIDTH, VIEWHEIGHT);
 shader_reset();
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_text(0, 0, global.mouse_position);

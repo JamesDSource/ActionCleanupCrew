@@ -4,7 +4,7 @@ pause_toggle = function toggle_pause() {
 	global.pause = !global.pause;
 	
 	if(global.pause) {
-		global.sPause = sprite_create_from_surface(application_surface, 0, 0, SCREENWIDTH, SCREENHEIGHT, false, false, 0, 0);
+		if(surface_exists(global.view_surface)) global.sPause = sprite_create_from_surface(global.view_surface, 0, 0, VIEWWIDTH, VIEWHEIGHT, false, false, 0, 0);
 		show_pause_menu = true;
 		if(argument_count > 0 && !argument[0]) show_pause_menu = false;
 		
