@@ -74,7 +74,7 @@ if(!is_level) {
 		new page_element(PAGEELEMENTTYPE.SCRIPT, "Resume", [pause_toggle]),
 		new page_element(PAGEELEMENTTYPE.TRANSFER, "Settings", ["settings"]),
 		new page_element(PAGEELEMENTTYPE.SCRIPT, "Quit", [transition_quit])
-	]
+	];
 }
 
 page = pages.pause;

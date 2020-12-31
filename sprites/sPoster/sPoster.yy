@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 13,
+  "bbox_right": 27,
   "bbox_top": 0,
-  "bbox_bottom": 8,
+  "bbox_bottom": 17,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 14,
-  "height": 9,
+  "width": 28,
+  "height": 18,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2e337719-36bb-43d4-9125-72200a3682ea","path":"sprites/sPoster/sPoster.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2e337719-36bb-43d4-9125-72200a3682ea","path":"sprites/sPoster/sPoster.yy",},"LayerId":{"name":"0abefff4-ca42-4e8f-859c-d4639f520279","path":"sprites/sPoster/sPoster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPoster","path":"sprites/sPoster/sPoster.yy",},"resourceVersion":"1.0","name":"2e337719-36bb-43d4-9125-72200a3682ea","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"348e8bd2-b747-48d2-823f-4f65d32b7490","path":"sprites/sPoster/sPoster.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"348e8bd2-b747-48d2-823f-4f65d32b7490","path":"sprites/sPoster/sPoster.yy",},"LayerId":{"name":"90b40cd3-26a7-4f29-a0ee-77357d5edef4","path":"sprites/sPoster/sPoster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPoster","path":"sprites/sPoster/sPoster.yy",},"resourceVersion":"1.0","name":"348e8bd2-b747-48d2-823f-4f65d32b7490","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sPoster","path":"sprites/sPoster/sPoster.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ac859806-4a50-4f69-b562-cb9e60ef0dc2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2e337719-36bb-43d4-9125-72200a3682ea","path":"sprites/sPoster/sPoster.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e79f91e1-7a93-435d-a780-53addcc9a946","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"348e8bd2-b747-48d2-823f-4f65d32b7490","path":"sprites/sPoster/sPoster.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 7,
-    "yorigin": 9,
+    "xorigin": 14,
+    "yorigin": 18,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sPoster","path":"sprites/sPoster/sPoster.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0abefff4-ca42-4e8f-859c-d4639f520279","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"90b40cd3-26a7-4f29-a0ee-77357d5edef4","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Hub",

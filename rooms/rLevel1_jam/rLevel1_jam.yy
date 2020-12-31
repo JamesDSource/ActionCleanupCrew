@@ -18,7 +18,7 @@
   "layers": [
     {"instances":[
         {"properties":[
-            {"propertyId":{"name":"bound","path":"objects/oCamera/oCamera.yy",},"objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"","path":"",},"objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_597291B8","path":"rooms/rLevel_parent/rLevel_parent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":448.0,"resourceVersion":"1.0","name":"inst_597291B8","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oGrid","path":"objects/oGrid/oGrid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_4F835C1F","path":"rooms/rLevel_parent/rLevel_parent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":32.0,"resourceVersion":"1.0","name":"inst_4F835C1F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
