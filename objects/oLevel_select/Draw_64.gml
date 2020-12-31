@@ -2,7 +2,7 @@ var channel = animcurve_get_channel(aLevel_select, "toggle");
 var curve = animcurve_channel_evaluate(channel, progress);
 current_w = max(w*curve, 1);
 
-draw_set_color(c_black);
+draw_set_color(UIDARKCOL);
 nine_slice_streach(sNine_slice_level, dw/2 - current_w/2 - border_w, y_org - border_w, current_w + border_w*2, h + border_w*2);
 
 if(progress == 1) {
@@ -40,7 +40,7 @@ if(progress == 1) {
 	shader_set_uniform_f(u_odds, scan_lines_odd);
 	
 	
-	var text_color = c_white;
+	var text_color = UILIGHTCOL;
 	if(show_state >= 3) {
 		draw_set_font(fLevel_select);
 		draw_set_halign(fa_center);
@@ -79,7 +79,7 @@ if(progress == 1) {
 	
 		if(DEMO && level_index > global.demo_level_limit) {
 			var demo_message_margin = 5;
-			draw_set_color(c_red);
+			draw_set_color(make_color_rgb(236, 39, 63));
 			draw_set_halign(fa_right);
 			draw_set_valign(fa_top);
 			draw_text(x_org + w - demo_message_margin, y_org + demo_message_margin, "Level not\navailable\nin Demo");

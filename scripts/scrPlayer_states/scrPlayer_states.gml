@@ -2,7 +2,6 @@ function player_state_free() {
 	move();
 	recharge_mask();
 	interactables();
-	sprite_index = sPlayer;
 	
 	// Swapping tools
 	if(disarmed) tool_using = TOOL.NONE;
@@ -59,7 +58,6 @@ function player_state_free() {
 }
 
 function player_state_holding() {
-	sprite_index = sPlayer_carry;
 	tool_using = TOOL.NONE;
 	move();
 	recharge_mask();
@@ -78,7 +76,7 @@ function player_state_holding() {
 
 function player_state_read() {
 	tool_using = TOOL.NONE;
-	image_speed = 0;
+	sprite_index = sPlayer_idle;
 	recharge_mask();
 	
 	if(dialogue_ready) {

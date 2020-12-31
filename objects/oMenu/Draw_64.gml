@@ -15,7 +15,7 @@ for(var i = 0; i < array_length(page); i++) {
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
 	if(i == index) {
-		draw_set_color($36fbf2);
+		draw_set_color(make_color_rgb(243, 168, 51));
 		var channel = animcurve_get_channel(aMenu, "push");
 		var curve = animcurve_channel_evaluate(channel, push_progress);
 		x_offset = push*curve;

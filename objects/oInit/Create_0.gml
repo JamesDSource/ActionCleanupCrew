@@ -8,8 +8,8 @@ window_set_size(SCREENWIDTH, SCREENHEIGHT);
 display_set_gui_size(VIEWWIDTH, VIEWHEIGHT);
 
 // UI
-#macro UIDARKCOL $312c1e
-#macro UILIGHTCOL $e0f6e8
+#macro UIDARKCOL make_color_rgb(44, 30, 49)
+#macro UILIGHTCOL make_color_rgb(246, 232, 224)
 
 // Persistant objects
 instance_create_depth(x, y, 0, oTransitions);
@@ -33,7 +33,7 @@ global.hud = true;
 // Demo
 #macro DEMO false
 #macro Demo:DEMO true
-global.demo_level_limit = 3;
+global.demo_level_limit = 2;
 
 // controls
 #macro GPDEADZONE 0.15

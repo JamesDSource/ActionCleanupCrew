@@ -71,6 +71,7 @@
     {"instances":[
         {"properties":[
             {"propertyId":{"name":"","path":"",},"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"","path":"",},"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"disarmed","path":"objects/oPlayer/oPlayer.yy",},"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":160.0,"resourceVersion":"1.0","name":"inst_91BA9C3","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oDepth","path":"objects/oDepth/oDepth.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":80.0,"resourceVersion":"1.0","name":"inst_13B4FA31","tags":[],"resourceType":"GMRInstance",},
@@ -99,9 +100,9 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oLiquids","path":"objects/oLiquids/oLiquids.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_3CEAB046","path":"rooms/rLevel_parent/rLevel_parent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":64.0,"resourceVersion":"1.0","name":"inst_3CEAB046","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Liquids","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tFancy_carpet","path":"tilesets/tFancy_carpet/tFancy_carpet.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":30,"SerialiseHeight":34,"TileSerialiseData":[
-2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,0,11,13,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
-2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,0,11,13,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
-0,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,44,28,27,2,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
+2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,0,22,24,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
+2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
+0,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,44,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
 0,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,11,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
 0,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,11,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
 0,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,0,0,0,0,0,11,12,12,13,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,

@@ -32,8 +32,9 @@ void main() {
 		}
     
 	    if(angle >= angle_end_point) {
-			float average = (col.a + col.g + col.b)/3.0;
-	       col.rgb = vec3(average);
+			//float average = (col.r + col.g + col.b)/3.0;
+			//col.rgb = vec3(average);
+			col.a = 0.0;
 	    }
 	}
     gl_FragColor = col;

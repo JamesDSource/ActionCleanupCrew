@@ -20,7 +20,7 @@ vacuum_pitch_volume = 1.0;
 
 event_inherited();
 
-spd = 2;
+spd = 3;
 
 
 helmat_on = true;
@@ -53,7 +53,18 @@ kill_function = function kill_player(death_type) {
 
 draw_function = function draw_player() {
 	draw_depth_object();
-	if(helmat_on) draw_sprite_ext(sPlayer_helmat, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+	if(helmat_on) {
+		var helmat_spr = noone;
+		switch(sprite_index) {
+			case sPlayer_idle:
+				helmat_spr = sPlayer_idle_helmat;
+				break;
+			case sPlayer_run:
+				helmat_spr = sPlayer_run_helmat;
+				break;
+		}
+		draw_sprite_ext(helmat_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+	}
 }
 
 horizontal_movement = 0;
@@ -73,7 +84,9 @@ function move() {
 		var hDir = check_action("right", INPUTTYPE.HELD) - check_action("left", INPUTTYPE.HELD);
 		var vDir = check_action("down", INPUTTYPE.HELD) - check_action("up", INPUTTYPE.HELD);
 		ang = point_direction(0, 0, hDir, vDir);
-		if(hDir != 0 || vDir != 0) is_moveing = true;
+		if(hDir != 0 || vDir != 0) {
+			is_moveing = true;
+		}
 	}
 	var acceleration = 0.2;
 	
@@ -81,11 +94,12 @@ function move() {
 	if(is_moveing) { 
 		horizontal_movement = approach(horizontal_movement, lengthdir_x(spd, ang), acceleration);
 		verticle_movement = approach(verticle_movement, lengthdir_y(spd, ang), acceleration);
-		image_speed = 1;
+		
+		sprite_index = sPlayer_run; 
+		if(horizontal_movement != 0) image_xscale = sign(horizontal_movement);
 	}
 	else {
-		image_speed = 0;
-		image_index = 0;
+		sprite_index = sPlayer_idle;
 		horizontal_movement = 0;
 		verticle_movement = 0;
 	}
@@ -100,8 +114,7 @@ function move() {
 			[bbox_left, bbox_bottom],
 			[bbox_right, bbox_top],
 			[bbox_right, bbox_bottom]
-		
-		]
+		];
 		var belts_cell = -1;
 		for(var i = 0; i < array_length(belt_points_check); i++) {
 			var c = tilemap_get_cell_x_at_pixel(belts_tilemap, belt_points_check[i][0], belt_points_check[i][1]);

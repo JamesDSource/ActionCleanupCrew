@@ -1,6 +1,7 @@
 if(global.hud && room != rHub) {
 	var margin = 10;
 	if(!helmat_on) {
+		draw_sprite(sPlayer_helmat_icon_dark, 0, margin, margin);
 		var progress = 1 -(helmat_timer/helmat_time);
 		var cutoff_angle = 90 - progress*360;
 		if(cutoff_angle < 0) cutoff_angle = 360 - abs(cutoff_angle);
