@@ -6,7 +6,7 @@ enum TOOL {
 tools = [TOOL.MOP, TOOL.VACUUM];
 tool_index = 0;
 tool_using = tools[tool_index];
-tool_height = 6;
+tool_height = 18;
 tool_offset = {
 	x: 0,
 	y: 0,

@@ -15,8 +15,8 @@ switch(tool_using) {
 		var tool_offset_target = 0;
 		if(using_tool) {
 			var clean_pos = {
-				x: x + lengthdir_x(14, tool_angle),
-				y: y - tool_height + lengthdir_y(14, tool_angle)
+				x: x + lengthdir_x(24, tool_angle),
+				y: y - tool_height + lengthdir_y(24, tool_angle)
 			}
 			surface_set_target(global.liquid_surf);
 			gpu_set_blendmode(bm_subtract);
@@ -31,7 +31,7 @@ switch(tool_using) {
 		tool_offset.x = lengthdir_x(tool_offset_target, tool_angle);
 		tool_offset.y = lengthdir_y(tool_offset_target, tool_angle);
 		
-		draw_sprite_ext(sMop, 0, x + tool_offset.x, y - tool_height + tool_offset.y, image_xscale, image_yscale, tool_angle, image_blend, image_alpha);	
+		draw_sprite_ext(sMop, 0, x + tool_offset.x, y - tool_height + tool_offset.y, 1, 1, tool_angle, image_blend, image_alpha);	
 		break;
 	
 	case TOOL.VACUUM:
