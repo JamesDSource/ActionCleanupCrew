@@ -47,7 +47,7 @@ if(progress == 1) {
 		draw_set_valign(fa_top);
 		for(var i = 0; i < array_length(global.levels); i++) {
 			draw_set_alpha(global.levels[i].alpha);
-			if(global.level_target == global.levels[i]) draw_set_color(c_yellow);
+			if(global.level_target == global.levels[i]) draw_set_color(make_color_rgb(251, 242, 54));
 			else draw_set_color(text_color);
 			var level_name_string = global.levels[i].name;
 			if(i > global.level_lock) level_name_string = "???";

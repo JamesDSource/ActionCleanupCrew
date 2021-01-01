@@ -14,7 +14,7 @@
   ],
   "layers": [
     {"assets":[
-        {"sequenceId":{"name":"seqTitle_card","path":"sequences/seqTitle_card/seqTitle_card.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":160.0,"resourceVersion":"1.0","name":"graphic_69AD2A46","tags":[],"resourceType":"GMRSequenceGraphic",},
+        {"sequenceId":{"name":"seqTitle_card","path":"sequences/seqTitle_card/seqTitle_card.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":192.0,"resourceVersion":"1.0","name":"graphic_69AD2A46","tags":[],"resourceType":"GMRSequenceGraphic",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Title","tags":[],"resourceType":"GMRAssetLayer",},
     {"instances":[
         {"properties":[
