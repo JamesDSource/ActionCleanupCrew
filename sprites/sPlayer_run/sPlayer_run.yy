@@ -96,8 +96,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"10eff5c2-029b-4051-bd10-ef188166270c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Player",
-    "path": "folders/Player.yy",
+    "name": "Run",
+    "path": "folders/Player/Animations/Run.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayer_run",

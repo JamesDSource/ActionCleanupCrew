@@ -53,6 +53,7 @@ kill_function = function kill_player(death_type) {
 
 draw_function = function draw_player() {
 	draw_depth_object();
+	// Choosing helmat sprites
 	if(helmat_on) {
 		var helmat_spr = noone;
 		switch(sprite_index) {
@@ -64,6 +65,24 @@ draw_function = function draw_player() {
 				break;
 		}
 		draw_sprite_ext(helmat_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+	}
+	
+	// Choosing hand sprites
+	if(tool_using == TOOL.NONE) {
+		var hands_spr = noone;
+		
+		if(state == states.holding) hands_spr = sPlayer_holding_hands;
+		else {
+			switch(sprite_index) {
+				case sPlayer_idle:
+					hands_spr = sPlayer_idle_hands;
+					break;
+				case sPlayer_run:
+					hands_spr = sPlayer_run_hands;
+					break;
+			}
+		}
+		draw_sprite_ext(hands_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 	}
 }
 

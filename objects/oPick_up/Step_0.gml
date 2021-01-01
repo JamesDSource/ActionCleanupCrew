@@ -5,7 +5,7 @@ if(instance_exists(oPlayer)) {
 		if(oPlayer.obj_held == id) {
 			x = oPlayer.x;	
 			y = oPlayer.y+5;	
-			z = 15;
+			z = 43;
 			being_held = true;
 		}
 	}

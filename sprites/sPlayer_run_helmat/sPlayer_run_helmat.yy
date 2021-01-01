@@ -96,8 +96,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47e3c84d-177c-4ae1-9aa1-bbad5e930fe6","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Player",
-    "path": "folders/Player.yy",
+    "name": "Run",
+    "path": "folders/Player/Animations/Run.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPlayer_run_helmat",
