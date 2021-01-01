@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 25,
-  "bbox_top": 13,
-  "bbox_bottom": 21,
+  "bbox_right": 51,
+  "bbox_top": 34,
+  "bbox_bottom": 43,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 26,
-  "height": 22,
+  "width": 52,
+  "height": 44,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,24 +24,24 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"dac2e73c-bacb-4654-b1df-6e88c92bd57d","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dac2e73c-bacb-4654-b1df-6e88c92bd57d","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"2a3e414b-5ade-464e-afae-a32278b14ee5","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"dac2e73c-bacb-4654-b1df-6e88c92bd57d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e6a7d3e3-a67d-489a-8e8d-281ac292cad2","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e6a7d3e3-a67d-489a-8e8d-281ac292cad2","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"2a3e414b-5ade-464e-afae-a32278b14ee5","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"e6a7d3e3-a67d-489a-8e8d-281ac292cad2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ac47697d-f969-4b0f-84ec-4c245db76754","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ac47697d-f969-4b0f-84ec-4c245db76754","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"2a3e414b-5ade-464e-afae-a32278b14ee5","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"ac47697d-f969-4b0f-84ec-4c245db76754","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ba25dc6a-a681-4f89-a695-368e5f871960","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ba25dc6a-a681-4f89-a695-368e5f871960","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"2a3e414b-5ade-464e-afae-a32278b14ee5","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"ba25dc6a-a681-4f89-a695-368e5f871960","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9a0276ff-8e78-401c-b4ce-d8b7424a2e8a","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9a0276ff-8e78-401c-b4ce-d8b7424a2e8a","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"2a3e414b-5ade-464e-afae-a32278b14ee5","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"9a0276ff-8e78-401c-b4ce-d8b7424a2e8a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5b6f153e-b943-4f67-83b7-77f1b4f2143a","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5b6f153e-b943-4f67-83b7-77f1b4f2143a","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"2a3e414b-5ade-464e-afae-a32278b14ee5","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"5b6f153e-b943-4f67-83b7-77f1b4f2143a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a36e5fa7-4c5d-4074-b138-61a25cff0d03","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a36e5fa7-4c5d-4074-b138-61a25cff0d03","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"ffe93e49-d4e6-40d8-8db0-540e746775cf","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"a36e5fa7-4c5d-4074-b138-61a25cff0d03","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"eba3fd89-f2bc-4da9-b5d3-7b962b2c2928","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"eba3fd89-f2bc-4da9-b5d3-7b962b2c2928","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"ffe93e49-d4e6-40d8-8db0-540e746775cf","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"eba3fd89-f2bc-4da9-b5d3-7b962b2c2928","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a0e18ea6-3e8f-4017-a133-7c6be1dd30ca","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a0e18ea6-3e8f-4017-a133-7c6be1dd30ca","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"ffe93e49-d4e6-40d8-8db0-540e746775cf","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"a0e18ea6-3e8f-4017-a133-7c6be1dd30ca","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0e4327f1-b35a-407b-bcf9-b824dade889e","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0e4327f1-b35a-407b-bcf9-b824dade889e","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"ffe93e49-d4e6-40d8-8db0-540e746775cf","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"0e4327f1-b35a-407b-bcf9-b824dade889e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b387685f-2e2c-4944-a777-7c0cc19fe85e","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b387685f-2e2c-4944-a777-7c0cc19fe85e","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"ffe93e49-d4e6-40d8-8db0-540e746775cf","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"b387685f-2e2c-4944-a777-7c0cc19fe85e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"851c284f-cf91-41ac-8e52-b5a5ae1c4dae","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"851c284f-cf91-41ac-8e52-b5a5ae1c4dae","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"LayerId":{"name":"ffe93e49-d4e6-40d8-8db0-540e746775cf","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","name":"851c284f-cf91-41ac-8e52-b5a5ae1c4dae","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},
@@ -56,12 +56,12 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ca37dffc-b1cc-4697-9d56-81d3e289c5d3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dac2e73c-bacb-4654-b1df-6e88c92bd57d","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"b3506eef-d5b5-4163-a4d7-d995bec53cf9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e6a7d3e3-a67d-489a-8e8d-281ac292cad2","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"655b56cb-fd10-42db-8a46-bfa2057f43b1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ac47697d-f969-4b0f-84ec-4c245db76754","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"cc06a542-8eba-4c2d-b9ad-2eb82b0ca7f8","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ba25dc6a-a681-4f89-a695-368e5f871960","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"fee96f1d-9635-4374-9ceb-4e6cceb7405c","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a0276ff-8e78-401c-b4ce-d8b7424a2e8a","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"6c99470f-af58-4f9f-b026-df293cf0dfb0","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5b6f153e-b943-4f67-83b7-77f1b4f2143a","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c3b3789f-1be5-4395-8053-ab236781e68d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a36e5fa7-4c5d-4074-b138-61a25cff0d03","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"39e684e7-e87a-453f-a874-617f3421840b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eba3fd89-f2bc-4da9-b5d3-7b962b2c2928","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"82b3f8e7-f24c-46ce-b8ac-508bc0dacf95","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a0e18ea6-3e8f-4017-a133-7c6be1dd30ca","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9d506df9-639c-4f9f-8c73-ce43133a1bfc","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0e4327f1-b35a-407b-bcf9-b824dade889e","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cc092bfa-bb17-4e22-9292-fd8310136ea3","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b387685f-2e2c-4944-a777-7c0cc19fe85e","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b94f4cb3-4752-4715-81b3-2639d5e7bbf7","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"851c284f-cf91-41ac-8e52-b5a5ae1c4dae","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -74,8 +74,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 13,
-    "yorigin": 22,
+    "xorigin": 26,
+    "yorigin": 44,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBattery_dispenser","path":"sprites/sBattery_dispenser/sBattery_dispenser.yy",},
@@ -85,7 +85,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2a3e414b-5ade-464e-afae-a32278b14ee5","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ffe93e49-d4e6-40d8-8db0-540e746775cf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Dispenser",

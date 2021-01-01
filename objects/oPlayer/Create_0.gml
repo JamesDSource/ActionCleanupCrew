@@ -147,7 +147,7 @@ function recharge_mask() {
 }
 
 selected_interactable = noone;
-interactable_radius = 20;
+interactable_radius = 35;
 function interactables() {
 	selected_interactable = noone;
 	var interactable_list = ds_list_create();

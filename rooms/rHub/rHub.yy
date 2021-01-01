@@ -95,6 +95,10 @@
         {"properties":[
             {"propertyId":{"name":"auto_open","path":"objects/oDoor/oDoor.yy",},"objectId":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oDoor_hub","path":"objects/oDoor_hub/oDoor_hub.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":0.0,"resourceVersion":"1.0","name":"inst_3474625","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oIncinerator","path":"objects/oIncinerator/oIncinerator.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":448.0,"y":432.0,"resourceVersion":"1.0","name":"inst_2CF5BDD3","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oGenerator","path":"objects/oGenerator/oGenerator.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":448.0,"y":496.0,"resourceVersion":"1.0","name":"inst_4DE4B154","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oBattery_charger","path":"objects/oBattery_charger/oBattery_charger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":368.0,"y":400.0,"resourceVersion":"1.0","name":"inst_4C2F1705","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oBattery_dispenser","path":"objects/oBattery_dispenser/oBattery_dispenser.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":352.0,"y":480.0,"resourceVersion":"1.0","name":"inst_430EA58","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oLiquids","path":"objects/oLiquids/oLiquids.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_3CEAB046","path":"rooms/rLevel_parent/rLevel_parent.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":64.0,"resourceVersion":"1.0","name":"inst_3CEAB046","tags":[],"resourceType":"GMRInstance",},
@@ -206,6 +210,10 @@
     {"name":"inst_3ED7B6D","path":"rooms/rHub/rHub.yy",},
     {"name":"inst_67DB70B1","path":"rooms/rHub/rHub.yy",},
     {"name":"inst_3474625","path":"rooms/rHub/rHub.yy",},
+    {"name":"inst_2CF5BDD3","path":"rooms/rHub/rHub.yy",},
+    {"name":"inst_4DE4B154","path":"rooms/rHub/rHub.yy",},
+    {"name":"inst_4C2F1705","path":"rooms/rHub/rHub.yy",},
+    {"name":"inst_430EA58","path":"rooms/rHub/rHub.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
