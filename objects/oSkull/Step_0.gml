@@ -5,10 +5,10 @@ if(life_remaining > 0) {
 	y = ystart;
 	if(instance_exists(oCamera)) {
 		var borders = {
-			x1: oCamera.x - VIEWWIDTH/2,
-			y1: oCamera.y - VIEWHEIGHT/2,
-			x2: oCamera.x + VIEWWIDTH/2,
-			y2: oCamera.y + VIEWHEIGHT/2
+			x1: oCamera,
+			y1: oCamera,
+			x2: oCamera.x + VIEWWIDTH,
+			y2: oCamera.y + VIEWHEIGHT
 		}
 		if(point_in_rectangle(x, y, borders.x1, borders.y1, borders.x2, borders.y2)) draw = false;
 		else {

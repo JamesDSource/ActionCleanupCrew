@@ -20,7 +20,7 @@ for(var i = 0; i < ds_list_size(debris_list); i++) {
     var debris = debris_list[| i];
     var ang = point_direction(debris.x, debris.y, x, y);
     var dist = point_distance(debris.x, debris.y, x, y);
-    var spd = 8/(dist/3);
+    var spd = 16/(dist/3);
     debris.x = approach(debris.x, x, abs(lengthdir_x(spd, ang)));
     debris.y = approach(debris.y, y, abs(lengthdir_y(spd, ang)));
     if(point_distance(debris.x, debris.y, x, y) == 0) {
