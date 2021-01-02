@@ -1,5 +1,5 @@
 if(tool_using == TOOL.VACUUM) {
-	draw_sprite_ext(sVacuum_pack, 0, x, y - 10, image_xscale, image_yscale, image_angle, image_blend, image_alpha);	
+	draw_sprite_ext(sVacuum_pack, 0, x, y - 20, image_xscale, image_yscale, image_angle, image_blend, image_alpha);	
 }
 
 event_inherited();
@@ -39,6 +39,6 @@ switch(tool_using) {
 			tool_offset.x = irandom_range(-1, 1);	
 			tool_offset.y = irandom_range(-1, 1);	
 		}
-		draw_sprite_ext(sVacuum_toob, 0, x + tool_offset.x, y - tool_height + tool_offset.y, image_xscale, image_yscale, tool_angle, image_blend, image_alpha);	
+		draw_sprite_ext(sVacuum_toob, 0, x + tool_offset.x, y - tool_height + tool_offset.y, 1, 1, tool_angle, image_blend, image_alpha);	
 		break;
 }

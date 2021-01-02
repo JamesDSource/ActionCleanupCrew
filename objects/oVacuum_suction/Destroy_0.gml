@@ -1,5 +1,5 @@
 var ps = part_system_create();
-var emitter = part_emitter_create(ps)
+var emitter = part_emitter_create(ps);
 part_emitter_region(ps, emitter, bbox_left, bbox_right, bbox_top, bbox_bottom, ps_shape_rectangle, ps_distr_gaussian);
 
 var air = part_type_create();

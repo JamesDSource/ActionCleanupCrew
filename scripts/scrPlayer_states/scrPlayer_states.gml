@@ -41,8 +41,8 @@ function player_state_free() {
 						look_angle = direction;
 						init = false;	
 					}
-					x = other.x + lengthdir_x(10, direction);
-					y = other.y - other.tool_height + lengthdir_y(10, direction);
+					x = other.x + lengthdir_x(22, direction);
+					y = other.y - other.tool_height + lengthdir_y(22, direction);
 				}
 				break;
 		}
