@@ -3,7 +3,7 @@ trigger_function = function welcome_trigger() {
 		"Loudspeaker",
 		[
 			"Welcome newcomer.",
-			"Today we will be completing your\nACC janitor training course.",
+			"Today we will be completing your ACC janitor training course.",
 			"Please proceed."
 		]
 	);

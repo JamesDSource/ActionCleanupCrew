@@ -3,7 +3,7 @@ trigger_function = function blood_trigger() {
 		"Loudspeaker",
 		[
 			"Do you see the pile of blood ahead?",
-			"Fear not, this blood is no\nmatch for your ACC combat mop.",
+			"Fear not, this blood is no match for your ACC combat mop.",
 		]
 	);
 }

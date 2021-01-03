@@ -190,7 +190,12 @@ audio_listener_orientation(0, 1, 0, 0, 0, 1);
 // read state
 dialogues = array_create(0);
 function play_lines(speaker, lines) {
-	dialogues = lines;
+	draw_set_font(fHUD);
+	dialogues = [];
+	for(var i = 0 ; i < array_length(lines); i++) {
+		dialogues[i] = string_resize(lines[i], display_get_gui_width()*(2/3));	
+	}
+	
 	dialogue_speaker = speaker;
 	dialogue_index = 0;
 	line_index = 1;

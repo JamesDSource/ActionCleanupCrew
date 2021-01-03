@@ -23,3 +23,33 @@ function string_create_paragraph() {
 	}
 	return str;
 }
+
+function string_stitch() {
+	var str = "";
+	for(var i = 0; i < argument_count; i++) {
+		str += argument[i];
+	}
+	return str;
+}
+
+function string_resize(str, width) {
+	str = string_replace_all(str, "\n", "");
+	var last_space = -1;
+	for(var i = 1; i <= string_length(str); i++) {
+		if(string_char_at(str, i) == " ") {
+			last_space = i;	
+		}
+		var substr = string_copy(str, 1, i);
+		if(string_width(substr) > width) {
+			if(last_space == -1) {
+				str = string_insert("\n", str, i)
+			}
+			else {
+				str = string_delete(str, last_space, 1);
+				str = string_insert("\n", str, last_space);
+				last_space = -1;
+			}
+		}
+	}
+	return str;
+}
