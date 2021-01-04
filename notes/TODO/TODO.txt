@@ -3,8 +3,6 @@ More levels
 
 Music
 
-battery charger redesign?
-
 create a grizzled veteran character for tutorials instead of the level select
 
 expand the HUB area
@@ -26,5 +24,3 @@ More sound effects
 	- Broken battery beep sound
 
 Change up drop pod and cloneing machine
-
-Give all entities a sprite for moveing backwards

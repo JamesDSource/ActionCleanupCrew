@@ -35,7 +35,7 @@
     "spriteId": {"name":"sIncinerator_hatch","path":"sprites/sIncinerator_hatch/sIncinerator_hatch.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 1.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
