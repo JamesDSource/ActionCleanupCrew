@@ -26,8 +26,8 @@ init_interactable(
 	}
 );
 interactable_prompt_offset = {
-	x: 4,
-	y: 22
+	x: 0,
+	y: 44
 }
 
 draw_function = function() {

@@ -13,8 +13,8 @@ hum_pitch_speed = 0.01;
 battery_held = instance_create_layer(x, y, "Instances", oBattery);
 battery_held.charge = battery_held.max_charge;
 battery_point_offset = {
-	x: -4,
-	y: -5
+	x: -9,
+	y: -10
 	
 }
 battery_depleat_time = room_speed * 5;
@@ -27,3 +27,8 @@ init_interactable(
 		battery_held.draw_battery = false;
 	}
 );
+
+interactable_prompt_offset = {
+	x: 0,
+	y: 20
+}
