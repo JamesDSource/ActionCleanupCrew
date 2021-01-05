@@ -4,6 +4,7 @@ charge = 0;
 max_charge = 5;
 image_speed = 0;
 draw_battery = true;
+can_burn = true;
 
 broken = false;
 function depleat_charge() {
@@ -12,6 +13,5 @@ function depleat_charge() {
 	if(charge == 0 && charge_before > 0) {
 		// break the battery	
 		broken = true;
-		can_burn = true;
 	}
 }
