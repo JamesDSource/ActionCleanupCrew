@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ed300058-b315-4754-9ddc-147c2eacc3b1","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ed300058-b315-4754-9ddc-147c2eacc3b1","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"LayerId":{"name":"f559781c-800c-4094-ab1e-0fd2cf04934d","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sTutorial_laser_spark","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","name":"ed300058-b315-4754-9ddc-147c2eacc3b1","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d6d1500b-95a3-4c20-a08e-a8d1ebd32750","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d6d1500b-95a3-4c20-a08e-a8d1ebd32750","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"LayerId":{"name":"f559781c-800c-4094-ab1e-0fd2cf04934d","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sTutorial_laser_spark","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","name":"d6d1500b-95a3-4c20-a08e-a8d1ebd32750","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cac88de0-9b6d-4175-b5bd-5f5f456bb48b","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cac88de0-9b6d-4175-b5bd-5f5f456bb48b","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"LayerId":{"name":"5d14781d-9941-43fe-9cf4-93e1f8334585","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTutorial_laser_spark","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","name":"cac88de0-9b6d-4175-b5bd-5f5f456bb48b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"34df325e-8499-49ef-91d5-3b07ac52f944","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"34df325e-8499-49ef-91d5-3b07ac52f944","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"LayerId":{"name":"5d14781d-9941-43fe-9cf4-93e1f8334585","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTutorial_laser_spark","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","name":"34df325e-8499-49ef-91d5-3b07ac52f944","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sTutorial_laser_spark","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0fcb1dc5-f7d5-42b0-b717-01e3809b362e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ed300058-b315-4754-9ddc-147c2eacc3b1","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"6b3f268c-0fd9-46de-9496-dd8e39925671","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d6d1500b-95a3-4c20-a08e-a8d1ebd32750","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ef571378-524b-4c15-8e8a-acc7b2461d21","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cac88de0-9b6d-4175-b5bd-5f5f456bb48b","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9a0f3b74-ae74-4402-9f8b-347dfb625daf","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"34df325e-8499-49ef-91d5-3b07ac52f944","path":"sprites/sTutorial_laser_spark/sTutorial_laser_spark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f559781c-800c-4094-ab1e-0fd2cf04934d","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5d14781d-9941-43fe-9cf4-93e1f8334585","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Tutorial Laser",

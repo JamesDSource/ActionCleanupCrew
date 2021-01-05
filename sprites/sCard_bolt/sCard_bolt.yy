@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 63,
+  "bbox_right": 127,
   "bbox_top": 0,
-  "bbox_bottom": 93,
+  "bbox_bottom": 186,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
-  "height": 94,
+  "width": 128,
+  "height": 187,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6e5039c3-0022-44c0-8911-21c8c2e5be4f","path":"sprites/sCard_bolt/sCard_bolt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6e5039c3-0022-44c0-8911-21c8c2e5be4f","path":"sprites/sCard_bolt/sCard_bolt.yy",},"LayerId":{"name":"bfaefe8c-1880-46d5-8b92-62aebe27c206","path":"sprites/sCard_bolt/sCard_bolt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCard_bolt","path":"sprites/sCard_bolt/sCard_bolt.yy",},"resourceVersion":"1.0","name":"6e5039c3-0022-44c0-8911-21c8c2e5be4f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"45956689-4de8-4370-88cd-2d5107d0a269","path":"sprites/sCard_bolt/sCard_bolt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"45956689-4de8-4370-88cd-2d5107d0a269","path":"sprites/sCard_bolt/sCard_bolt.yy",},"LayerId":{"name":"4ed93713-5274-4735-aec1-7f4e11990521","path":"sprites/sCard_bolt/sCard_bolt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCard_bolt","path":"sprites/sCard_bolt/sCard_bolt.yy",},"resourceVersion":"1.0","name":"45956689-4de8-4370-88cd-2d5107d0a269","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sCard_bolt","path":"sprites/sCard_bolt/sCard_bolt.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"91dfd33d-5d25-4c8d-9ffd-9200fbf68627","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e5039c3-0022-44c0-8911-21c8c2e5be4f","path":"sprites/sCard_bolt/sCard_bolt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"04f82c35-9beb-4d9d-ad5f-f24dca7588b7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"45956689-4de8-4370-88cd-2d5107d0a269","path":"sprites/sCard_bolt/sCard_bolt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 32,
-    "yorigin": 47,
+    "xorigin": 64,
+    "yorigin": 93,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sCard_bolt","path":"sprites/sCard_bolt/sCard_bolt.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bfaefe8c-1880-46d5-8b92-62aebe27c206","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4ed93713-5274-4735-aec1-7f4e11990521","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Title Card",
