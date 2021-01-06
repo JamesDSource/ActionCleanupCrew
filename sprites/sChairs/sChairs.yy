@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"7226e2da-2552-4d97-bbba-939ed7a1f897","path":"sprites/sChairs/sChairs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7226e2da-2552-4d97-bbba-939ed7a1f897","path":"sprites/sChairs/sChairs.yy",},"LayerId":{"name":"095c2684-ac13-4b31-975a-1f41b878162b","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sChairs","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","name":"7226e2da-2552-4d97-bbba-939ed7a1f897","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3ed205f9-e6bc-40a5-be32-abf5314101dd","path":"sprites/sChairs/sChairs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3ed205f9-e6bc-40a5-be32-abf5314101dd","path":"sprites/sChairs/sChairs.yy",},"LayerId":{"name":"095c2684-ac13-4b31-975a-1f41b878162b","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sChairs","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","name":"3ed205f9-e6bc-40a5-be32-abf5314101dd","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a9aeb831-56c1-4c85-87b6-9b1a5538bfd1","path":"sprites/sChairs/sChairs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a9aeb831-56c1-4c85-87b6-9b1a5538bfd1","path":"sprites/sChairs/sChairs.yy",},"LayerId":{"name":"fe6e5ec5-5c9b-43db-a25d-7bfba7a1ce80","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChairs","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","name":"a9aeb831-56c1-4c85-87b6-9b1a5538bfd1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8e1d3521-bfdd-4a67-90a4-ed9c0151fc39","path":"sprites/sChairs/sChairs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8e1d3521-bfdd-4a67-90a4-ed9c0151fc39","path":"sprites/sChairs/sChairs.yy",},"LayerId":{"name":"fe6e5ec5-5c9b-43db-a25d-7bfba7a1ce80","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sChairs","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","name":"8e1d3521-bfdd-4a67-90a4-ed9c0151fc39","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sChairs","path":"sprites/sChairs/sChairs.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"95bc5ab8-07fc-4b39-8226-be0ee1820590","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7226e2da-2552-4d97-bbba-939ed7a1f897","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"efe517e2-de67-4e0b-a30c-f69f39606dde","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3ed205f9-e6bc-40a5-be32-abf5314101dd","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e0edf67a-5078-4038-b3db-dcae7129af9d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a9aeb831-56c1-4c85-87b6-9b1a5538bfd1","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"36e8bcda-702e-48c6-9b4d-ca4edb81d856","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8e1d3521-bfdd-4a67-90a4-ed9c0151fc39","path":"sprites/sChairs/sChairs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"095c2684-ac13-4b31-975a-1f41b878162b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fe6e5ec5-5c9b-43db-a25d-7bfba7a1ce80","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Chairs",
