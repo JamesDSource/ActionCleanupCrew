@@ -29,6 +29,8 @@ load_settings();
 #macro Dev:DEVBUILD true
 global.godmode = false;
 global.hud = true;
+if(DEVBUILD) show_debug_overlay(true);
+
 
 // Demo
 #macro DEMO false

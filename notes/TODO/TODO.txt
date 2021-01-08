@@ -13,6 +13,10 @@ Add more controller key prompts to tutorial
 
 Make mop more fun to use
 
+Try to get pixel counting shader to work again
+
+Run tests to see if new pixel counting method works better
+
 More sound effects
 	- New soldier death sounds
 	- Breakables breaking

@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ActionCleanupCrew",
-    "path": "ActionCleanupCrew.yyp",
+    "name": "Liquids",
+    "path": "folders/Liquids.yy",
   },
   "resourceVersion": "1.0",
   "name": "oLiquids",

@@ -18,13 +18,11 @@ switch(tool_using) {
 				x: x + lengthdir_x(24, tool_angle),
 				y: y - tool_height + lengthdir_y(24, tool_angle)
 			}
-			surface_set_target(global.liquid_surf);
 			gpu_set_blendmode(bm_subtract);
 			gpu_set_colorwriteenable(false, false, false, true);
-			draw_sprite(sMop_mask, 0, clean_pos.x, clean_pos.y);
+			draw_sprite_on_liquid(clean_pos.x, clean_pos.y, sMop_mask, 0, 1, 1, true);
 			gpu_set_colorwriteenable(true, true, true, true);
 			gpu_set_blendmode(bm_normal);
-			surface_reset_target();
 			tool_offset_target = 4;
 		}
 		tool_offset.magnitude = approach(tool_offset.magnitude, tool_offset_target, 0.3);

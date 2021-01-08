@@ -24,15 +24,24 @@ if(started) {
 			if(instance_exists(oCloning_machine)) {
 				global.game_score.life *= oCloning_machine.lives_remaining/oCloning_machine.max_lives;
 			}
+			
 			// blood
-			var stain_count = get_stain_pixels(0, 0, room_width, room_height);
+			
+			// Old method
+			//var buffer = buffer_create(4*room_width*room_height, buffer_fixed, 1);
+			//buffer_get_surface(buffer, global.liquid_surf, 0);
+			//var stain_count = get_stain_pixels(0, 0, room_width, room_height, buffer);
+			
 			var min_score = 12000;
-			stain_count = clamp(stain_count, 0, min_score);
+			var stain_count = clamp(global.stain_pixels, 0, min_score);
 			global.game_score.blood *= 1 - stain_count/min_score;
+			
 			// ash piles
 			global.game_score.ash -= clamp(instance_number(oAsh_pile)*5, 0, 100);
+			
 			// bits
 			global.game_score.bits -= clamp(instance_number(oBit)*2, 0, 100);
+			
 			// bodies
 			global.game_score.bodies -= clamp(instance_number(oBody)*5, 0, 100);
 		
