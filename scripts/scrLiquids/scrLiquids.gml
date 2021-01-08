@@ -32,7 +32,6 @@ function draw_sprite_on_liquid(x_pos, y_pos, spr, subimage, xscale, yscale, subt
 			var w = sprite_get_width(spr);
 			var h = sprite_get_height(spr);
 			var points = [
-				{x: origin.x + w/2, y: origin.y + h/2},		// Center
 				origin,										// Top left
 				{x: origin.x + w, y: origin.y},				// Top Right
 				{x: origin.x, y: origin.y + h},				// Bottom left

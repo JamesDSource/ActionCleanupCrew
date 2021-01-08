@@ -1,4 +1,3 @@
-stains = undefined;
+stains = 0;
 
 row = 0;
-temp_stains = 0;

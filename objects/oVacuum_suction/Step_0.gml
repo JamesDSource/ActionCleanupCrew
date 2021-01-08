@@ -8,6 +8,8 @@ for(var i = 1; i <= chain_length; i++) {
     ds_map_destroy(bone_state);
 }
 
+if(!instance_exists(oPlayer)) instance_destroy();
+
 image_angle = direction;
 look_angle = direction;
 

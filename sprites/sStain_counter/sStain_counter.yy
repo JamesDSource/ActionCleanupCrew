@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Stain Counter",
-    "path": "folders/Stain Counter.yy",
+    "path": "folders/Liquids/Stain Counter.yy",
   },
   "resourceVersion": "1.0",
   "name": "sStain_counter",

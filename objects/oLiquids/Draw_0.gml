@@ -6,7 +6,7 @@ else {
 	buffer_set_surface(failsafe_buffer, global.liquid_surf, 0);
 }
 
-if(frame%50 == 0 && array_length(stain_cells_marked) > 0) {
+if(frame%10 == 0 && array_length(stain_cells_marked) > 0) {
 	var buffer = buffer_create(4 * room_width * room_height, buffer_fixed, 1);
 	buffer_get_surface(buffer, global.liquid_surf, 0);
 	for(var i = 0; i < array_length(stain_cells_marked); i++) {
