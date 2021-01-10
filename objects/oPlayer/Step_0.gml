@@ -22,3 +22,9 @@ if(vacuum_pitch_volume != audio_sound_get_gain(sdVacuum) || vacuum_pitch_volume 
 	audio_sound_pitch(sdVacuum, vacuum_pitch_volume);
 }
 if(state != states.free) using_tool = false;
+
+if(!instance_exists(light)) {
+	light = instance_create_layer(x, y, "Instances", oLight);
+	oLight.follow = id;
+	oLight.offset_y = -tool_height;
+}

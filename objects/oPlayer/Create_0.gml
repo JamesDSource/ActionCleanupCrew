@@ -22,6 +22,7 @@ event_inherited();
 
 spd = 3;
 
+light = noone;
 
 helmat_on = true;
 helmat_time = 4 * room_speed;
