@@ -99,8 +99,8 @@ function player_state_read() {
 		else {
 			line_index++;
 			if(string_char_at(dialogues[dialogue_index], line_index) != " ") {
-				audio_sound_pitch(sdText_scroll, 1 + random_range(-0.15, 0.15));
-				audio_play_sound(sdText_scroll, SOUNDPRIORITY.MENUS, false);	
+				audio_sound_pitch(dialogue_sound, 1 + random_range(-0.15, 0.15));
+				audio_play_sound(dialogue_sound, SOUNDPRIORITY.MENUS, false);	
 			}
 			if(line_index > string_length(dialogues[dialogue_index])) dialogue_ready = true;
 			dialogue_type_timer = dialogue_type_time;

@@ -12,37 +12,6 @@ if(frame%10 == 0 && array_length(stain_cells_marked) > 0) {
 	buffer_get_surface(buffer, global.liquid_surf, 0);
 	for(var i = 0; i < cells_counted; i++) {
 		var marked = stain_cells_marked[i];
-		/**
-		var count_surface = surface_create(1, 1);
-		surface_set_target(count_surface);
-		
-		shader_set(shStain_count);
-		
-		// Texture
-		var tex = surface_get_texture(global.liquid_surf);
-		texture_set_stage(u_surface, tex);
-		
-		// UVs
-		var tex_uvs = texture_get_uvs(tex);
-		shader_set_uniform_f(u_texel_size, tex_uvs[2] - tex_uvs[0], tex_uvs[3] - tex_uvs[1]);
-		
-		// Origin
-		shader_set_uniform_f(u_cell_origin, marked.x, marked.y);
-		
-		// Size
-		shader_set_uniform_f(u_cell_size, stain_cell_size);
-		
-		// Threashold
-		shader_set_uniform_f(u_alpha_threashold, 0.2);
-		
-		draw_point(0, 0);
-		
-		shader_reset();
-		surface_reset_target();
-		var color = surface_getpixel(count_surface, 0, 0);
-		surface_free(count_surface);
-		
-		var stain_pixels = (color_get_red(color)/255)*power(stain_cell_size, 2);**/
 		var stain_pixels = get_stain_pixels(marked.x*stain_cell_size, marked.y*stain_cell_size, (marked.x + 1)*stain_cell_size - 1, (marked.y + 1)*stain_cell_size - 1, buffer);
 		stain_cells[# marked.x, marked.y] = stain_pixels;
 	}

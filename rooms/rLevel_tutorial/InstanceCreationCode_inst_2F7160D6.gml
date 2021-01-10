@@ -1,6 +1,6 @@
 trigger_function = function cloned_trigger() {
 	oPlayer.play_lines(
-		"Loudspeaker",
+		global.profiles.loudspeaker,
 		[
 			"Congratulations, you have just escaped the clutches of death.",
 			"All thanks to our new cloning machine.",

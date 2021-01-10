@@ -27,6 +27,7 @@ if(state == states.read) {
 	draw_set_color(UILIGHTCOL);
 	
 	draw_rectangle_border(0, display_get_gui_height() - dialogue_box_height, display_get_gui_width(), dialogue_box_height, border, UIDARKCOL, UILIGHTCOL);
+	if(sprite_exists(dialogue_portrait)) draw_sprite(dialogue_portrait, round(wave(0, 1, 0.8, 0)), 0, display_get_gui_height() - dialogue_box_height);
 	
 	var str_whole = dialogues[dialogue_index];
 	var str_cut = string_copy(str_whole, 1, line_index);
