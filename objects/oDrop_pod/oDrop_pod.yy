@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "sDrop_pod",
-    "path": "sprites/sDrop_pod/sDrop_pod.yy",
+    "name": "sDrop_pod_idle",
+    "path": "sprites/sDrop_pod_idle/sDrop_pod_idle.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sDrop_pod_launch",
+    "path": "sprites/sDrop_pod_launch/sDrop_pod_launch.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oSolid",
