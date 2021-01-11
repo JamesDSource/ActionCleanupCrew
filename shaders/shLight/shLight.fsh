@@ -14,17 +14,19 @@ void main() {
 	float x_pos = floor(v_vPosition.x);
 	float y_pos = floor(v_vPosition.y);
     if(base_color.r == 1.0) { // Two step from light
-        if(mod(x_pos, 2.0) == 0.0 && mod(y_pos, 2.0) != 0.0) {
+        if(mod(x_pos, 5.0) == 0.0 && mod(y_pos, 5.0) == 0.0) {
             new_color.a = 0.0;
         }
     }
     else if(base_color.g == 1.0) { // One steps from light
-        if((mod(x_pos, 2.0) == 0.0 && mod(y_pos, 2.0) != 0.0) || (mod(x_pos, 2.0) != 0.0 && mod(y_pos, 2.0) == 0.0)) {
+        if(mod(x_pos, 2.0) == 0.0 && mod(y_pos, 2.0) == 0.0) {
             new_color.a = 0.0;
         }
     }
     else if(base_color.b == 1.0) { // Complete Light
-        new_color.a = 0.0;
+        if((mod(x_pos, 2.0) == 0.0 && mod(y_pos, 2.0) != 0.0) || (mod(x_pos, 2.0) != 0.0 && mod(y_pos, 2.0) == 0.0)) {
+            new_color.a = 0.0;
+        }
     }
 	else { // Complete darkness
 	    if(mod(x_pos, 10.0) == 0.0 && mod(y_pos, 10.0) == 0.0) {
