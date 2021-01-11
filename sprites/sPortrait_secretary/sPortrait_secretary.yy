@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cac0dd7b-7872-4cd3-baf1-1e50c349355a","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Portraits",
-    "path": "folders/Portraits.yy",
+    "name": "Profiles",
+    "path": "folders/Profiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPortrait_secretary",

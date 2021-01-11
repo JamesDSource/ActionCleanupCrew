@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4f8b8012-0100-43dd-92df-c368815d299d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Portraits",
-    "path": "folders/Portraits.yy",
+    "name": "Profiles",
+    "path": "folders/Profiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sPortrait_loudspeaker",

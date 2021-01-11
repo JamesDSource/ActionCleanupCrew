@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sdText_scroll.wav",
+  "soundFile": "sdText_scroll_loudspeaker.wav",
   "duration": 0.084909,
   "parent": {
-    "name": "Player",
-    "path": "folders/Player.yy",
+    "name": "Profiles",
+    "path": "folders/Profiles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sdText_scroll",
+  "name": "sdText_scroll_loudspeaker",
   "tags": [],
   "resourceType": "GMSound",
 }
