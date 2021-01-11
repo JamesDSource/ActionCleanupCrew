@@ -10,6 +10,8 @@ pause_toggle = function toggle_pause() {
 		
 		instance_deactivate_object(oDepth_object);
 		instance_deactivate_object(oBattle_manager);
+		instance_deactivate_object(oLight_manager);
+		instance_deactivate_object(oLight);
 		instance_deactivate_object(oCamera);
 		
 		audio_pause_all();

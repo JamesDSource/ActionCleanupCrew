@@ -235,6 +235,7 @@
     {"id":{"name":"sMiddle_line","path":"sprites/sMiddle_line/sMiddle_line.yy",},"order":9,},
     {"id":{"name":"sVoliore_shoot_red","path":"sprites/sVoliore_shoot_red/sVoliore_shoot_red.yy",},"order":4,},
     {"id":{"name":"rWarehouse3","path":"rooms/rWarehouse3/rWarehouse3.yy",},"order":8,},
+    {"id":{"name":"sPortrait_loudspeaker","path":"sprites/sPortrait_loudspeaker/sPortrait_loudspeaker.yy",},"order":1,},
     {"id":{"name":"sdLevel_select_scroll","path":"sounds/sdLevel_select_scroll/sdLevel_select_scroll.yy",},"order":6,},
     {"id":{"name":"sCeiling_hub","path":"sprites/sCeiling_hub/sCeiling_hub.yy",},"order":4,},
     {"id":{"name":"sTeleporter","path":"sprites/sTeleporter/sTeleporter.yy",},"order":1,},

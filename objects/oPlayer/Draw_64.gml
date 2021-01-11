@@ -1,4 +1,4 @@
-if(global.hud && room != rHub) {
+if(global.hud && room != rHub && state != states.read) {
 	var margin = 10;
 	if(!helmat_on) {
 		draw_sprite(sPlayer_helmat_icon_dark, 0, margin, margin);

@@ -6,5 +6,5 @@ function profile(profile_name, profile_portrait, profile_sound) constructor {
 
 global.profiles = {
 	secretary: new profile("Secretary", sPortrait_secretary, sdText_scroll),
-	loudspeaker: new profile("Loudspeaker", noone, sdText_scroll)
+	loudspeaker: new profile("Loudspeaker", sPortrait_loudspeaker, sdText_scroll)
 }
