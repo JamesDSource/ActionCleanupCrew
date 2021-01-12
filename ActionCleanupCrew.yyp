@@ -165,6 +165,7 @@
     {"id":{"name":"sdShotgun","path":"sounds/sdShotgun/sdShotgun.yy",},"order":16,},
     {"id":{"name":"sSkull","path":"sprites/sSkull/sSkull.yy",},"order":0,},
     {"id":{"name":"oLaser_shotgun_shot","path":"objects/oLaser_shotgun_shot/oLaser_shotgun_shot.yy",},"order":18,},
+    {"id":{"name":"sDissolve_mask","path":"sprites/sDissolve_mask/sDissolve_mask.yy",},"order":3,},
     {"id":{"name":"oBox_small","path":"objects/oBox_small/oBox_small.yy",},"order":3,},
     {"id":{"name":"oRender","path":"objects/oRender/oRender.yy",},"order":1,},
     {"id":{"name":"sNine_slice_level","path":"sprites/sNine_slice_level/sNine_slice_level.yy",},"order":5,},

@@ -2,32 +2,36 @@ event_inherited();
 blood_type = BLOOD.RED;
 size = SIZE.NORMAL;
 
-init_texels = true;
-uvs = [];
-texel_height = 0;
+u_uv_origin = shader_get_uniform(shDissolve, "uv_origin");
+u_uv_size = shader_get_uniform(shDissolve, "uv_size");
+u_mask = shader_get_sampler_index(shDissolve, "mask");
+u_mask_uv_origin = shader_get_uniform(shDissolve, "mask_uv_origin");
+u_mask_uv_size = shader_get_uniform(shDissolve, "mask_uv_size");
+u_dissolve_percent = shader_get_uniform(shDissolve, "dissolve_percent");
+u_dissolve_rim_color = shader_get_uniform(shDissolve, "dissolve_rim_color");
+
 
 draw_function = function draw_body() {
 	if(burn) {
-		if(init_texels) {
-			var texture = sprite_get_texture(sprite_index, 0);
-			uvs = texture_get_uvs(texture);
-			texel_height = texture_get_texel_height(texture);
-			init_texels = false;
-		}
-		var u_percent = shader_get_uniform(shDissolve, "percent");
-		var u_texel_height = shader_get_uniform(shDissolve, "texel_height");
-		var u_bottom = shader_get_uniform(shDissolve, "bottom");
-		var u_top = shader_get_uniform(shDissolve, "top");
-		shader_set(shDissolve);	
-		shader_set_uniform_f(u_percent, burn_progress);
-		shader_set_uniform_f(u_texel_height, texel_height);
-		shader_set_uniform_f(u_bottom, uvs[3]);
-		shader_set_uniform_f(u_top, uvs[1]);
+		shader_set(shDissolve);
+		
+		var uvs = sprite_get_uvs(sprite_index, image_index);
+		shader_set_uniform_f(u_uv_origin, uvs[0], uvs[1]);
+		shader_set_uniform_f(u_uv_size, uvs[2] - uvs[0], uvs[3] - uvs[1]);
+		
+		var mask_tex = sprite_get_texture(sDissolve_mask, 0);
+		var mask_uvs = texture_get_uvs(mask_tex);
+		texture_set_stage(u_mask, mask_tex);
+		shader_set_uniform_f(u_mask_uv_origin, mask_uvs[0], mask_uvs[1]);
+		shader_set_uniform_f(u_mask_uv_size, mask_uvs[2] - mask_uvs[0], mask_uvs[3] - mask_uvs[1]);
+		
+		shader_set_uniform_f(u_dissolve_percent, burn_progress);
+		shader_set_uniform_f(u_dissolve_rim_color, 250/255, 110/255, 121/255);
 	}
 	
 	draw_depth_object();
 	shader_reset();
 }
 burn = false;
-burn_progress = 0;
+burn_progress = 1;
 burn_sound = -1;

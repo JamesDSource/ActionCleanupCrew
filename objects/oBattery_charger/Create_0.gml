@@ -1,6 +1,6 @@
 event_inherited();
 battery_holding = noone;
-battery_charge_time = room_speed*3;
+battery_charge_time = room_speed;
 battery_charge_timer = battery_charge_time;
 
 init_interactable(
