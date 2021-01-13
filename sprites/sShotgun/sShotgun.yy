@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 15,
+  "bbox_right": 31,
   "bbox_top": 0,
-  "bbox_bottom": 4,
+  "bbox_bottom": 10,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 16,
-  "height": 6,
+  "width": 32,
+  "height": 11,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"482bb37d-dbc8-4a18-97ed-a0348e241a47","path":"sprites/sShotgun/sShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"482bb37d-dbc8-4a18-97ed-a0348e241a47","path":"sprites/sShotgun/sShotgun.yy",},"LayerId":{"name":"73e56ea6-dff7-417f-b3d9-7f44a99e6e7c","path":"sprites/sShotgun/sShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sShotgun","path":"sprites/sShotgun/sShotgun.yy",},"resourceVersion":"1.0","name":"482bb37d-dbc8-4a18-97ed-a0348e241a47","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c82e21cb-6197-4b4c-b69a-49a9781e1888","path":"sprites/sShotgun/sShotgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c82e21cb-6197-4b4c-b69a-49a9781e1888","path":"sprites/sShotgun/sShotgun.yy",},"LayerId":{"name":"14b0132a-0cc5-467e-9c17-0fc12caa4e12","path":"sprites/sShotgun/sShotgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sShotgun","path":"sprites/sShotgun/sShotgun.yy",},"resourceVersion":"1.0","name":"c82e21cb-6197-4b4c-b69a-49a9781e1888","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sShotgun","path":"sprites/sShotgun/sShotgun.yy",},
@@ -41,11 +41,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"71ca174a-7920-4f88-a768-fc116b87f8e7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"482bb37d-dbc8-4a18-97ed-a0348e241a47","path":"sprites/sShotgun/sShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"43da0001-1ec7-48f0-acbc-a114bfeb5ad3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c82e21cb-6197-4b4c-b69a-49a9781e1888","path":"sprites/sShotgun/sShotgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
-    "lockOrigin": false,
+    "lockOrigin": true,
     "showBackdrop": true,
     "showBackdropImage": false,
     "backdropImagePath": "",
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 8,
-    "yorigin": 2,
+    "xorigin": 14,
+    "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sShotgun","path":"sprites/sShotgun/sShotgun.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"73e56ea6-dff7-417f-b3d9-7f44a99e6e7c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"14b0132a-0cc5-467e-9c17-0fc12caa4e12","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Guns",

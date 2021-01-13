@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 8,
+  "bbox_right": 15,
   "bbox_top": 0,
-  "bbox_bottom": 6,
+  "bbox_bottom": 11,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 9,
-  "height": 7,
+  "width": 16,
+  "height": 12,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b9f496cb-4d7f-4000-94f7-f6a83193d7f5","path":"sprites/sPistol/sPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b9f496cb-4d7f-4000-94f7-f6a83193d7f5","path":"sprites/sPistol/sPistol.yy",},"LayerId":{"name":"6bd1616a-8298-4ad9-8fb2-b910b3ccb45c","path":"sprites/sPistol/sPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPistol","path":"sprites/sPistol/sPistol.yy",},"resourceVersion":"1.0","name":"b9f496cb-4d7f-4000-94f7-f6a83193d7f5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c905ed09-78a9-4930-962d-2729505a4729","path":"sprites/sPistol/sPistol.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c905ed09-78a9-4930-962d-2729505a4729","path":"sprites/sPistol/sPistol.yy",},"LayerId":{"name":"7e857135-9918-4417-a17c-f6b5ca290976","path":"sprites/sPistol/sPistol.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPistol","path":"sprites/sPistol/sPistol.yy",},"resourceVersion":"1.0","name":"c905ed09-78a9-4930-962d-2729505a4729","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sPistol","path":"sprites/sPistol/sPistol.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"baeeea3d-f079-48fc-a87d-5b74f6c8b01f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b9f496cb-4d7f-4000-94f7-f6a83193d7f5","path":"sprites/sPistol/sPistol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"160ea3de-bda8-4d62-b326-9861eb725fe9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c905ed09-78a9-4930-962d-2729505a4729","path":"sprites/sPistol/sPistol.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,7 +54,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 3,
+    "xorigin": 5,
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6bd1616a-8298-4ad9-8fb2-b910b3ccb45c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7e857135-9918-4417-a17c-f6b5ca290976","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Guns",

@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 23,
+  "bbox_right": 47,
   "bbox_top": 0,
-  "bbox_bottom": 7,
+  "bbox_bottom": 11,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 24,
-  "height": 8,
+  "width": 48,
+  "height": 12,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"065d37c9-1855-4e4f-994a-79085c701683","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"065d37c9-1855-4e4f-994a-79085c701683","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"LayerId":{"name":"3714aa16-6a52-4771-b719-56eb85bca7e2","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSniper_rifle","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","name":"065d37c9-1855-4e4f-994a-79085c701683","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"705f5120-4586-4f98-a27c-2d6e79e29a23","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"705f5120-4586-4f98-a27c-2d6e79e29a23","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"LayerId":{"name":"62d88b36-b76a-4a12-b316-d0860af93aeb","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sSniper_rifle","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","name":"705f5120-4586-4f98-a27c-2d6e79e29a23","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sSniper_rifle","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},
@@ -41,11 +41,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4c97bf9c-190f-4e3f-813c-24c0ecda0efb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"065d37c9-1855-4e4f-994a-79085c701683","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f150f904-475f-4517-ae39-105c5e0ebe6f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"705f5120-4586-4f98-a27c-2d6e79e29a23","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
-    "lockOrigin": false,
+    "lockOrigin": true,
     "showBackdrop": true,
     "showBackdropImage": false,
     "backdropImagePath": "",
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 10,
-    "yorigin": 4,
+    "xorigin": 13,
+    "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSniper_rifle","path":"sprites/sSniper_rifle/sSniper_rifle.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3714aa16-6a52-4771-b719-56eb85bca7e2","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"62d88b36-b76a-4a12-b316-d0860af93aeb","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Guns",

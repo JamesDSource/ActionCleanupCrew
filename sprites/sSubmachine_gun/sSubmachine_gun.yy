@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 4,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 15,
+  "bbox_right": 31,
   "bbox_top": 0,
-  "bbox_bottom": 8,
+  "bbox_bottom": 15,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 16,
-  "height": 9,
+  "width": 32,
+  "height": 16,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9e6c512d-51f7-48cf-8942-d275d35fe508","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9e6c512d-51f7-48cf-8942-d275d35fe508","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"LayerId":{"name":"3116121a-dcb3-4f05-b27a-2812e378fde5","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSubmachine_gun","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","name":"9e6c512d-51f7-48cf-8942-d275d35fe508","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c78fbf06-e035-4331-9641-c3a6cb539ffa","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c78fbf06-e035-4331-9641-c3a6cb539ffa","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"LayerId":{"name":"5f051acd-1e50-4998-bc2b-566863db3a5f","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sSubmachine_gun","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","name":"c78fbf06-e035-4331-9641-c3a6cb539ffa","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sSubmachine_gun","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},
@@ -41,11 +41,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e4ee6b0e-4576-4a2a-a9b9-796e3e47fe60","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9e6c512d-51f7-48cf-8942-d275d35fe508","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a9847cbb-26c2-4e53-b82c-de86849cb3ee","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c78fbf06-e035-4331-9641-c3a6cb539ffa","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
-    "lockOrigin": false,
+    "lockOrigin": true,
     "showBackdrop": true,
     "showBackdropImage": false,
     "backdropImagePath": "",
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 8,
-    "yorigin": 4,
+    "xorigin": 15,
+    "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sSubmachine_gun","path":"sprites/sSubmachine_gun/sSubmachine_gun.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3116121a-dcb3-4f05-b27a-2812e378fde5","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5f051acd-1e50-4998-bc2b-566863db3a5f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Guns",
