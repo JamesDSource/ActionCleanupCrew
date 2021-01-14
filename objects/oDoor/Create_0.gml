@@ -1,7 +1,7 @@
 event_inherited();
 
 open_condition = function() {
-	// replace with something else
+	// Replace with something else
 	return false;
 }
 if(auto_open) {
