@@ -5,10 +5,10 @@ varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 varying vec2 v_vPosition;
 
-uniform float circle_distance;
-uniform float fill;
-uniform vec2 size;
-uniform float inverse;
+uniform float   circle_distance;
+uniform float   fill;
+uniform vec2    size;
+uniform float   inverse;
 
 void main() {
     vec4 base_col = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord);

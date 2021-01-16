@@ -117,6 +117,7 @@
     {"id":{"name":"scrGrades","path":"scripts/scrGrades/scrGrades.yy",},"order":6,},
     {"id":{"name":"sDrop_pod_idle","path":"sprites/sDrop_pod_idle/sDrop_pod_idle.yy",},"order":15,},
     {"id":{"name":"sdVoliore_goop","path":"sounds/sdVoliore_goop/sdVoliore_goop.yy",},"order":7,},
+    {"id":{"name":"shOutline","path":"shaders/shOutline/shOutline.yy",},"order":3,},
     {"id":{"name":"sHazard_floor","path":"sprites/sHazard_floor/sHazard_floor.yy",},"order":0,},
     {"id":{"name":"oDepth_object","path":"objects/oDepth_object/oDepth_object.yy",},"order":0,},
     {"id":{"name":"oDoor_lab","path":"objects/oDoor_lab/oDoor_lab.yy",},"order":7,},
