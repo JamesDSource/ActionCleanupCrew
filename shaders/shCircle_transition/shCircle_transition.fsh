@@ -16,6 +16,7 @@ void main() {
     vec2 cell_pos = vec2(cell_index.x*circle_distance, cell_index.y*circle_distance);
     
     float weight = abs(inverse - (v_vPosition.x/size.x + v_vPosition.y/size.y)/2.0);
+	weight = smoothstep(0.0, 1.0, weight);
     float fill_ext = fill + fill*weight;
     float fill_smooth = smoothstep(0.0, 1.0, fill_ext);
     

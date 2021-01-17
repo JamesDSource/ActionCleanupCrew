@@ -9,7 +9,7 @@ if(global.transition_percent > 0) {
 	shader_set_uniform_f(u_size, display_get_gui_width(), display_get_gui_height());
 	shader_set_uniform_f(u_inverse, mode == TRANSITIONMODE.INTRO);
 	draw_set_color(col);
-	draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
+	draw_sprite(sTransition, 0, 0, 0);
 	shader_reset();
 	surface_reset_target();
 	

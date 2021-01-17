@@ -15,3 +15,8 @@ jut = 40;
 screen_shake_force = 0;
 screen_shake_time = 0;
 screen_shake_timer = 0;
+
+if(instance_exists(follow)) {
+	x = follow.x - (VIEWWIDTH+1)/2;
+	y = follow.y - (VIEWHEIGHT+1)/2;
+}

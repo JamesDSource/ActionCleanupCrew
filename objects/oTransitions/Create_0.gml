@@ -6,7 +6,7 @@ enum TRANSITIONMODE {
 }
 
 transition_surf = -1;
-global.transition_percent = 1;
+global.transition_percent = 0;
 mode = TRANSITIONMODE.INTRO;
 transition_speed = 0.02;
 target = noone;

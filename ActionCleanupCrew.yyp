@@ -276,6 +276,7 @@
     {"id":{"name":"scrNumbers","path":"scripts/scrNumbers/scrNumbers.yy",},"order":2,},
     {"id":{"name":"sCeiling_rust","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"order":0,},
     {"id":{"name":"scrProfiles","path":"scripts/scrProfiles/scrProfiles.yy",},"order":6,},
+    {"id":{"name":"sTransition","path":"sprites/sTransition/sTransition.yy",},"order":4,},
     {"id":{"name":"sdText_scroll_secretary","path":"sounds/sdText_scroll_secretary/sdText_scroll_secretary.yy",},"order":3,},
     {"id":{"name":"oHub_wall1","path":"objects/oHub_wall1/oHub_wall1.yy",},"order":0,},
     {"id":{"name":"fLevel_select","path":"fonts/fLevel_select/fLevel_select.yy",},"order":3,},
