@@ -19,9 +19,6 @@ hp_regen_timer = hp_regen_time;
 
 // peeking
 peek = false;
-peek_direction = 1;
-peek_time_min = room_speed * 3;
-peek_time_max = room_speed * 6;
 peek_recharge_min = room_speed * 5;
 peek_recharge_max = room_speed * 10;
 peek_timer = 0;
@@ -82,6 +79,7 @@ entity_states.free = function soldier_state_free() {
 						z = other.gun_height;
 						team = other.team;
 						ang = other.gun_angle_real + bullet_spread;
+						image_angle = ang;
 					}
 				}
 				

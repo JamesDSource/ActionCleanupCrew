@@ -26,7 +26,7 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"spd","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"2.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"spd","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Projectile",

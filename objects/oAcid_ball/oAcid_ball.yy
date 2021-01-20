@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"death_type","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"DEATHTYPE.PIERCING","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"spd","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"2.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"spd","path":"objects/oProjectile/oProjectile.yy",},"objectId":{"name":"oProjectile","path":"objects/oProjectile/oProjectile.yy",},"value":"4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Projectile",
