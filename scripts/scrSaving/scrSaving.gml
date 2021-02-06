@@ -75,32 +75,42 @@ function load() {
 
 function load_settings() {
 	ini_open(SAVEFILESETTINGSNAME);
+	
 	global.master_audio = ini_read_real("audio", "master", 0.5);
 	global.music_audio = ini_read_real("audio", "music", 1.0);
 	global.screams_audio = ini_read_real("audio", "screams", 1.0);
 	global.weapons_audio = ini_read_real("audio", "weapons", 1.0);
+	
 	global.fullscreen = ini_read_real("graphics", "fullscreen", true);
 	global.vsync = ini_read_real("graphics", "vsync", true);
 	global.brightness = ini_read_real("graphics", "brightness", 0.0);
 	global.gamma = ini_read_real("graphics", "gamma", 1.0);
+	
 	global.gamepad = ini_read_real("gameplay", "gamepad", false);
 	global.screenshake = ini_read_real("gameplay", "screenshake", 1.0);
 	global.toggle_tool_use = ini_read_real("gameplay", "toggle tool use", false);
+	global.death_indicators = ini_read_real("gameplay", "death indicators", true);
+	
 	ini_close();
 }
 
 function save_settings() {
 	ini_open(SAVEFILESETTINGSNAME);
+	
 	ini_write_real("audio", "master", global.master_audio);
 	ini_write_real("audio", "music", global.music_audio);
 	ini_write_real("audio", "screams", global.screams_audio);
 	ini_write_real("audio", "weapons", global.weapons_audio);
+	
 	ini_write_real("graphics", "fullscreen", global.fullscreen);
 	ini_write_real("graphics", "vsync", global.vsync);
 	ini_write_real("graphics", "brightness", global.brightness);
 	ini_write_real("graphics", "gamma", global.gamma);
+	
 	ini_write_real("gameplay", "gamepad", global.gamepad);
 	ini_write_real("gameplay", "screenshake", global.screenshake);
 	ini_write_real("gameplay", "toggle tool use", global.toggle_tool_use);
+	ini_write_real("gameplay", "death indicators", global.death_indicators);
+	
 	ini_close();
 }

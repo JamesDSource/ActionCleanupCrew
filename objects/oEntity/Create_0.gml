@@ -101,7 +101,7 @@ kill_function = function kill(death_type) {
 		}
 		else audio_emitter_free(audio_emitter);
 			
-		instance_create_layer(x, y, "Above", oSkull);
+		if(global.death_indicators) instance_create_layer(x, y, "Above", oSkull);
 		instance_destroy();
 	}
 	else bleed(0, 3);
