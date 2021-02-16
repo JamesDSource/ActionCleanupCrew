@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ebff9fe2-8e89-4ced-8691-7d3da87a317d","path":"sprites/sPlayer_helmat_icon_dark/sPlayer_helmat_icon_dark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ebff9fe2-8e89-4ced-8691-7d3da87a317d","path":"sprites/sPlayer_helmat_icon_dark/sPlayer_helmat_icon_dark.yy",},"LayerId":{"name":"0b4527ca-b09c-4ebf-a777-16af653219ac","path":"sprites/sPlayer_helmat_icon_dark/sPlayer_helmat_icon_dark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlayer_helmat_icon_dark","path":"sprites/sPlayer_helmat_icon_dark/sPlayer_helmat_icon_dark.yy",},"resourceVersion":"1.0","name":"ebff9fe2-8e89-4ced-8691-7d3da87a317d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ebff9fe2-8e89-4ced-8691-7d3da87a317d","path":"sprites/sPlayer_helmet_icon_dark/sPlayer_helmet_icon_dark.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ebff9fe2-8e89-4ced-8691-7d3da87a317d","path":"sprites/sPlayer_helmet_icon_dark/sPlayer_helmet_icon_dark.yy",},"LayerId":{"name":"0b4527ca-b09c-4ebf-a777-16af653219ac","path":"sprites/sPlayer_helmet_icon_dark/sPlayer_helmet_icon_dark.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlayer_helmet_icon_dark","path":"sprites/sPlayer_helmet_icon_dark/sPlayer_helmet_icon_dark.yy",},"resourceVersion":"1.0","name":"ebff9fe2-8e89-4ced-8691-7d3da87a317d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sPlayer_helmat_icon_dark","path":"sprites/sPlayer_helmat_icon_dark/sPlayer_helmat_icon_dark.yy",},
+    "spriteId": {"name":"sPlayer_helmet_icon_dark","path":"sprites/sPlayer_helmet_icon_dark/sPlayer_helmet_icon_dark.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fd38eb4a-ad0b-4294-b42c-a0b1aa31574e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ebff9fe2-8e89-4ced-8691-7d3da87a317d","path":"sprites/sPlayer_helmat_icon_dark/sPlayer_helmat_icon_dark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fd38eb4a-ad0b-4294-b42c-a0b1aa31574e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ebff9fe2-8e89-4ced-8691-7d3da87a317d","path":"sprites/sPlayer_helmet_icon_dark/sPlayer_helmet_icon_dark.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sPlayer_helmat_icon_dark","path":"sprites/sPlayer_helmat_icon_dark/sPlayer_helmat_icon_dark.yy",},
+    "parent": {"name":"sPlayer_helmet_icon_dark","path":"sprites/sPlayer_helmet_icon_dark/sPlayer_helmet_icon_dark.yy",},
     "resourceVersion": "1.3",
-    "name": "sPlayer_helmat_icon_dark",
+    "name": "sPlayer_helmet_icon_dark",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -72,7 +72,7 @@
     "path": "folders/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sPlayer_helmat_icon_dark",
+  "name": "sPlayer_helmet_icon_dark",
   "tags": [],
   "resourceType": "GMSprite",
 }

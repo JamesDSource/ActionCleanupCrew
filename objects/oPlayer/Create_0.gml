@@ -24,9 +24,9 @@ spd = 3;
 
 light = noone;
 
-helmat_on = true;
-helmat_time = 4 * room_speed;
-helmat_timer = helmat_time;
+helmet_on = true;
+helmet_time = 4 * room_speed;
+helmet_timer = helmet_time;
 
 obj_held = noone;
 
@@ -41,8 +41,8 @@ kill_function = function kill_player(death_type) {
 	if(!global.godmode && iframes == 0) {
 		screen_shake(3, 5);
 		audio_play_sound(sdPlayer_hurt, SOUNDPRIORITY.IMPORTANT, false);
-		if(helmat_on) {
-			helmat_on = false;
+		if(helmet_on) {
+			helmet_on = false;
 			iframes = 30;
 			flash_frames_left = flash_frames;
 		}
@@ -54,18 +54,18 @@ kill_function = function kill_player(death_type) {
 
 draw_function = function draw_player() {
 	draw_depth_object();
-	// Choosing helmat sprites
-	if(helmat_on) {
-		var helmat_spr = noone;
+	// Choosing helmet sprites
+	if(helmet_on) {
+		var helmet_spr = noone;
 		switch(sprite_index) {
 			case sPlayer_idle:
-				helmat_spr = sPlayer_idle_helmat;
+				helmet_spr = sPlayer_idle_helmet;
 				break;
 			case sPlayer_run:
-				helmat_spr = sPlayer_run_helmat;
+				helmet_spr = sPlayer_run_helmet;
 				break;
 		}
-		draw_sprite_ext(helmat_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(helmet_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 	}
 	
 	// Choosing hand sprites
@@ -159,10 +159,10 @@ function move() {
 
 function recharge_mask() {
 	// mask recharge
-	if(!helmat_on && helmat_timer > 0) helmat_timer--;
-	else if(!helmat_on) {
-		helmat_on = true;
-		helmat_timer = helmat_time;
+	if(!helmet_on && helmet_timer > 0) helmet_timer--;
+	else if(!helmet_on) {
+		helmet_on = true;
+		helmet_timer = helmet_time;
 	}
 }
 

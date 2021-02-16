@@ -6,11 +6,11 @@ enum TEAM {
 	NONE
 }
 
-// helmat and hp
-helmat = false;
+// helmet and hp
+helmet = false;
 max_hp = 1;
 if(irandom_range(1, 100) < 50) {
-	helmat = true;
+	helmet = true;
 	max_hp = 2;
 }
 hp = max_hp;
@@ -357,21 +357,21 @@ draw_function = function draw_soldier() {
 	
 	if(team == TEAM.WHITE) {
 		sprite_index = sSoldier_white;
-		if(helmat) death_sprite = sSoldier_white_corpse_helmat;
+		if(helmet) death_sprite = sSoldier_white_corpse_helmet;
 		else death_sprite = sSoldier_white_corpse;
 	}
 	else {
 		sprite_index = sSoldier_black;
-		if(helmat) death_sprite = sSoldier_black_corpse_helmat;
+		if(helmet) death_sprite = sSoldier_black_corpse_helmet;
 		else death_sprite = sSoldier_black_corpse;
 	}
 	
-	// helmat
-	if(helmat) {
-		var helmat_spr = noone;
-		if(team == TEAM.BLACK) helmat_spr = sSoldier_black_mask;
-		else if(team == TEAM.WHITE) helmat_spr = sSoldier_white_mask;
+	// helmet
+	if(helmet) {
+		var helmet_spr = noone;
+		if(team == TEAM.BLACK) helmet_spr = sSoldier_black_mask;
+		else if(team == TEAM.WHITE) helmet_spr = sSoldier_white_mask;
 	
-		if(helmat_spr != noone) draw_sprite_ext(helmat_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+		if(helmet_spr != noone) draw_sprite_ext(helmet_spr, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 	}
 }

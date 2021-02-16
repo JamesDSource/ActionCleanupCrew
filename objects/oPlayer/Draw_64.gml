@@ -1,8 +1,8 @@
 if(global.hud && room != rHub && state != states.read) {
 	var margin = 10;
-	if(!helmat_on) {
-		draw_sprite(sPlayer_helmat_icon_dark, 0, margin, margin);
-		var progress = 1 -(helmat_timer/helmat_time);
+	if(!helmet_on) {
+		draw_sprite(sPlayer_helmet_icon_dark, 0, margin, margin);
+		var progress = 1 -(helmet_timer/helmet_time);
 		var cutoff_angle = 90 - progress*360;
 		if(cutoff_angle < 0) cutoff_angle = 360 - abs(cutoff_angle);
 		shader_set(shRotational_fill);
@@ -11,9 +11,9 @@ if(global.hud && room != rHub && state != states.read) {
 		var u_axis_point = shader_get_uniform(shRotational_fill, "axis_point");
 		shader_set_uniform_f(u_start_angle, cutoff_angle);
 		shader_set_uniform_f(u_end_angle, 90);
-		shader_set_uniform_f_array(u_axis_point, [margin + sprite_get_width(sPlayer_helmat_icon)/2, margin + sprite_get_height(sPlayer_helmat_icon)/2]);
+		shader_set_uniform_f_array(u_axis_point, [margin + sprite_get_width(sPlayer_helmet_icon)/2, margin + sprite_get_height(sPlayer_helmet_icon)/2]);
 	}
-	draw_sprite(sPlayer_helmat_icon, 0, margin, margin);
+	draw_sprite(sPlayer_helmet_icon, 0, margin, margin);
 	shader_reset();
 }
 

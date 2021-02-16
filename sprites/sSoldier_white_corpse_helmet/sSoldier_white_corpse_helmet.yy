@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5f0dbc31-1500-444c-8584-4a2896cc8594","path":"sprites/sSoldier_white_corpse_helmat/sSoldier_white_corpse_helmat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5f0dbc31-1500-444c-8584-4a2896cc8594","path":"sprites/sSoldier_white_corpse_helmat/sSoldier_white_corpse_helmat.yy",},"LayerId":{"name":"5f8f2195-47b4-49d3-9eb0-06d37f20346c","path":"sprites/sSoldier_white_corpse_helmat/sSoldier_white_corpse_helmat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSoldier_white_corpse_helmat","path":"sprites/sSoldier_white_corpse_helmat/sSoldier_white_corpse_helmat.yy",},"resourceVersion":"1.0","name":"5f0dbc31-1500-444c-8584-4a2896cc8594","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5f0dbc31-1500-444c-8584-4a2896cc8594","path":"sprites/sSoldier_white_corpse_helmet/sSoldier_white_corpse_helmet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5f0dbc31-1500-444c-8584-4a2896cc8594","path":"sprites/sSoldier_white_corpse_helmet/sSoldier_white_corpse_helmet.yy",},"LayerId":{"name":"5f8f2195-47b4-49d3-9eb0-06d37f20346c","path":"sprites/sSoldier_white_corpse_helmet/sSoldier_white_corpse_helmet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sSoldier_white_corpse_helmet","path":"sprites/sSoldier_white_corpse_helmet/sSoldier_white_corpse_helmet.yy",},"resourceVersion":"1.0","name":"5f0dbc31-1500-444c-8584-4a2896cc8594","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sSoldier_white_corpse_helmat","path":"sprites/sSoldier_white_corpse_helmat/sSoldier_white_corpse_helmat.yy",},
+    "spriteId": {"name":"sSoldier_white_corpse_helmet","path":"sprites/sSoldier_white_corpse_helmet/sSoldier_white_corpse_helmet.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c54ea1ef-f030-432e-822c-e4a14876509d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5f0dbc31-1500-444c-8584-4a2896cc8594","path":"sprites/sSoldier_white_corpse_helmat/sSoldier_white_corpse_helmat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c54ea1ef-f030-432e-822c-e4a14876509d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5f0dbc31-1500-444c-8584-4a2896cc8594","path":"sprites/sSoldier_white_corpse_helmet/sSoldier_white_corpse_helmet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sSoldier_white_corpse_helmat","path":"sprites/sSoldier_white_corpse_helmat/sSoldier_white_corpse_helmat.yy",},
+    "parent": {"name":"sSoldier_white_corpse_helmet","path":"sprites/sSoldier_white_corpse_helmet/sSoldier_white_corpse_helmet.yy",},
     "resourceVersion": "1.3",
-    "name": "sSoldier_white_corpse_helmat",
+    "name": "sSoldier_white_corpse_helmet",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -72,7 +72,7 @@
     "path": "folders/Enemies/Soldiers/Soldier White.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sSoldier_white_corpse_helmat",
+  "name": "sSoldier_white_corpse_helmet",
   "tags": [],
   "resourceType": "GMSprite",
 }

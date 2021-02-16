@@ -1,11 +1,11 @@
-camera = view_camera[0];
+cam = view_camera[0];
 
 view_enabled = true;
 
-camera_set_view_size(camera, VIEWWIDTH + 1, VIEWHEIGHT + 1);
+camera_set_view_size(cam, VIEWWIDTH + 1, VIEWHEIGHT + 1);
 
 view_set_visible(0, true);
-view_set_camera(0, camera);
+view_set_camera(0, cam);
 
 slow = 20;
 target_x = x;

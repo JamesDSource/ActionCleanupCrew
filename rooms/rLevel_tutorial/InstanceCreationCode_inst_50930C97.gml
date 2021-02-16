@@ -1,1 +1,1 @@
-sprite_index = choose(sSoldier_white_corpse, sSoldier_white_corpse_helmat);
+sprite_index = choose(sSoldier_white_corpse, sSoldier_white_corpse_helmet);
