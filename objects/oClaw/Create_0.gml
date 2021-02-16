@@ -78,7 +78,7 @@ entity_states.free = function claw_state_free() {
 				else vq = 2;
 				var tries = 300;
 				while(tries > 0) {
-					new_point = random_point_room_quadrent(0, vq);
+					new_point = {x: 0, y: 0}; // TODO: Replace with clan regions
 					if(!place_meeting(new_point.x, new_point.y, oSolid)) {
 						new_move_point(new_point.x, new_point.y);
 						delete new_point;

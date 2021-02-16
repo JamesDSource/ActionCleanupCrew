@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sExposure_area",
-    "path": "sprites/sExposure_area/sExposure_area.yy",
+    "name": "sPlay_area",
+    "path": "sprites/sPlay_area/sPlay_area.yy",
   },
   "solid": false,
   "visible": false,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Cover",
-    "path": "folders/Regions/Cover.yy",
+    "name": "Regions",
+    "path": "folders/Regions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oExposure_area",
+  "name": "oPlay_area",
   "tags": [],
   "resourceType": "GMObject",
 }

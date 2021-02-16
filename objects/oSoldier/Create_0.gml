@@ -325,7 +325,7 @@ function new_cover() {
 		while(!new_point_found && new_point_attempts < 50) {
 			var v_quad = 1;
 			if(team == TEAM.WHITE) v_quad = 2;
-			var new_point = random_point_room_quadrent(0, v_quad);
+			var new_point = {x: 0, y: 0}; // TODO: Replace with clan regions
 			if(place_meeting(new_point.x, new_point.y, oSolid)) {
 				cover_point = new_point;
 				new_point_found = true;

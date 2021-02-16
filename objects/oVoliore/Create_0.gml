@@ -53,7 +53,7 @@ entity_states.free = function voliore_state_free() {
 				}
 				
 				while(!np_found) {
-					new_mp = random_point_room_quadrent(0, np_quad_verticle);
+					new_mp = {x: 0, y: 0}; // TODO: Replace with clan regions
 					if(!place_meeting(new_mp.x, new_mp.y, oSolid)) {
 						new_move_point(new_mp.x, new_mp.y);
 						break;

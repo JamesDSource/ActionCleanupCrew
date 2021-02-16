@@ -96,7 +96,7 @@ if(started) {
 				var padding = 30;
 				var cx = oCamera.x - padding;
 				var cy = oCamera.y - padding;
-				if(!point_in_rectangle(x, y, cx, cy, cx + VIEWWIDTH + padding, cy + VIEWHEIGHT + padding) && point_in_rectangle(x, y, 0, 32, room_width, room_height)) {
+				if(!point_in_rectangle(x, y, cx, cy, cx + VIEWWIDTH + padding, cy + VIEWHEIGHT + padding) && collision_point(x, y, oPlay_area, false, true) != noone) {
 					kill_entity = id;
 				}
 			}
