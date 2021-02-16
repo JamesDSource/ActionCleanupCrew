@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 15,
-  "bbox_top": 16,
-  "bbox_bottom": 31,
+  "bbox_right": 31,
+  "bbox_top": 31,
+  "bbox_bottom": 63,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 16,
-  "height": 32,
+  "width": 32,
+  "height": 64,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8124e889-303f-4664-9b90-bfce34f6c9b8","path":"sprites/sRusted_wall/sRusted_wall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8124e889-303f-4664-9b90-bfce34f6c9b8","path":"sprites/sRusted_wall/sRusted_wall.yy",},"LayerId":{"name":"757a7057-624f-4df2-b49f-e0befdb2fe53","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sRusted_wall","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","name":"8124e889-303f-4664-9b90-bfce34f6c9b8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2a377654-53bd-447f-8eb6-33076cced2b0","path":"sprites/sRusted_wall/sRusted_wall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2a377654-53bd-447f-8eb6-33076cced2b0","path":"sprites/sRusted_wall/sRusted_wall.yy",},"LayerId":{"name":"3e049403-6bb6-4044-9c21-d668dd77fc94","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sRusted_wall","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","name":"2a377654-53bd-447f-8eb6-33076cced2b0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sRusted_wall","path":"sprites/sRusted_wall/sRusted_wall.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2b3beeb8-5b0f-479e-9438-ca57c4279cd7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8124e889-303f-4664-9b90-bfce34f6c9b8","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a427eb67-530e-4ec7-98c1-627bc8fffa22","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a377654-53bd-447f-8eb6-33076cced2b0","path":"sprites/sRusted_wall/sRusted_wall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,11 +65,11 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"757a7057-624f-4df2-b49f-e0befdb2fe53","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3e049403-6bb6-4044-9c21-d668dd77fc94","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Rusted",
-    "path": "folders/Objects/Walls/Rusted.yy",
+    "name": "Brick",
+    "path": "folders/Objects/Walls/Brick.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRusted_wall",

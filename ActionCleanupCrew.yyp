@@ -461,7 +461,7 @@
     {"folderPath":"folders/Floor Tiles/Fancy Pearl.yy","order":4,"resourceVersion":"1.0","name":"Fancy Pearl","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Walls/Hub.yy","order":0,"resourceVersion":"1.0","name":"Hub","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Walls/Office.yy","order":2,"resourceVersion":"1.0","name":"Office","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/Walls/Rusted.yy","order":3,"resourceVersion":"1.0","name":"Rusted","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Walls/Brick.yy","order":3,"resourceVersion":"1.0","name":"Brick","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/NPCs.yy","order":58,"resourceVersion":"1.0","name":"NPCs","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Levels/Level Select.yy","order":4,"resourceVersion":"1.0","name":"Level Select","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Dev Console.yy","order":59,"resourceVersion":"1.0","name":"Dev Console","tags":[],"resourceType":"GMFolder",},

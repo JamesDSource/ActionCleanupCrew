@@ -94,8 +94,8 @@ if(started) {
 		for(var i = 0; i < ds_list_size(entities); i++) {
 			with(entities[| i]) {
 				var padding = 30;
-				var cx = oCamera.x - VIEWWIDTH/2 - padding;
-				var cy = oCamera.y - VIEWHEIGHT/2 - padding;
+				var cx = oCamera.x - padding;
+				var cy = oCamera.y - padding;
 				if(!point_in_rectangle(x, y, cx, cy, cx + VIEWWIDTH + padding, cy + VIEWHEIGHT + padding) && point_in_rectangle(x, y, 0, 32, room_width, room_height)) {
 					kill_entity = id;
 				}
