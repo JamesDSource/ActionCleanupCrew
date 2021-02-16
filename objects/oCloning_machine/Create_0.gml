@@ -2,10 +2,6 @@ event_inherited();
 
 max_lives = 3;
 lives_remaining = max_lives;
-image_speed = 0;
-image_index = 0;
-
-frame_respawn = 63;
 
 respawn_time = room_speed * 2;
 respawn_timer = respawn_time;

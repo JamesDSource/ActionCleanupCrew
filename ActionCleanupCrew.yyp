@@ -364,6 +364,7 @@
     {"id":{"name":"sPlayer_run_hands","path":"sprites/sPlayer_run_hands/sPlayer_run_hands.yy",},"order":2,},
     {"id":{"name":"oTitle_background_planet","path":"objects/oTitle_background_planet/oTitle_background_planet.yy",},"order":3,},
     {"id":{"name":"sLetter_background","path":"sprites/sLetter_background/sLetter_background.yy",},"order":4,},
+    {"id":{"name":"sCloning_machine_idle","path":"sprites/sCloning_machine_idle/sCloning_machine_idle.yy",},"order":4,},
     {"id":{"name":"sAsh_large","path":"sprites/sAsh_large/sAsh_large.yy",},"order":0,},
     {"id":{"name":"shRotational_fill","path":"shaders/shRotational_fill/shRotational_fill.yy",},"order":12,},
     {"id":{"name":"sSoldier_black_mask","path":"sprites/sSoldier_black_mask/sSoldier_black_mask.yy",},"order":1,},

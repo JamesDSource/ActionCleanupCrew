@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "sCloning_machine",
-    "path": "sprites/sCloning_machine/sCloning_machine.yy",
+    "name": "sCloning_machine_idle",
+    "path": "sprites/sCloning_machine_idle/sCloning_machine_idle.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sCloning_machine",
+    "path": "sprites/sCloning_machine/sCloning_machine.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oSolid",

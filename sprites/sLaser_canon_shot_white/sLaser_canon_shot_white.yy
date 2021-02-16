@@ -41,7 +41,7 @@
     "spriteId": {"name":"sLaser_canon_shot_white","path":"sprites/sLaser_canon_shot_white/sLaser_canon_shot_white.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 3.0,
+    "playbackSpeed": 6.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
