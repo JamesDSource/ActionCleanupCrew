@@ -84,6 +84,7 @@
     {"id":{"name":"sCursor","path":"sprites/sCursor/sCursor.yy",},"order":175,},
     {"id":{"name":"oRifle_shot","path":"objects/oRifle_shot/oRifle_shot.yy",},"order":16,},
     {"id":{"name":"sdYou_died","path":"sounds/sdYou_died/sdYou_died.yy",},"order":3,},
+    {"id":{"name":"oTeam_region","path":"objects/oTeam_region/oTeam_region.yy",},"order":0,},
     {"id":{"name":"oLevel_panel","path":"objects/oLevel_panel/oLevel_panel.yy",},"order":1,},
     {"id":{"name":"sPrompt_d","path":"sprites/sPrompt_d/sPrompt_d.yy",},"order":5,},
     {"id":{"name":"scrTitle_card","path":"scripts/scrTitle_card/scrTitle_card.yy",},"order":6,},
@@ -386,6 +387,8 @@
     {"id":{"name":"oTitle_menu","path":"objects/oTitle_menu/oTitle_menu.yy",},"order":0,},
     {"id":{"name":"oExposure_area","path":"objects/oExposure_area/oExposure_area.yy",},"order":2,},
     {"id":{"name":"shCircle_transition","path":"shaders/shCircle_transition/shCircle_transition.yy",},"order":2,},
+    {"id":{"name":"oTeam_white_region","path":"objects/oTeam_white_region/oTeam_white_region.yy",},"order":1,},
+    {"id":{"name":"oTeam_black_region","path":"objects/oTeam_black_region/oTeam_black_region.yy",},"order":2,},
   ],
   "Options": [
     {"name":"HTML5","path":"options/html5/options_html5.yy",},
@@ -507,6 +510,7 @@
     {"folderPath":"folders/Profiles.yy","order":199,"resourceVersion":"1.0","name":"Profiles","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Light.yy","order":200,"resourceVersion":"1.0","name":"Light","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Regions.yy","order":201,"resourceVersion":"1.0","name":"Regions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Regions/Team Regions.yy","order":3,"resourceVersion":"1.0","name":"Team Regions","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
