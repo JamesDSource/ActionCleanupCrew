@@ -26,7 +26,7 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"teams","path":"objects/oTeam_region/oTeam_region.yy",},"objectId":{"name":"oTeam_region","path":"objects/oTeam_region/oTeam_region.yy",},"value":"TEAM.BLACK","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"team","path":"objects/oTeam_region/oTeam_region.yy",},"objectId":{"name":"oTeam_region","path":"objects/oTeam_region/oTeam_region.yy",},"value":"TEAM.BLACK","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Team Regions",

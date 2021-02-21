@@ -32,7 +32,7 @@ if(started) {
 			//buffer_get_surface(buffer, global.liquid_surf, 0);
 			//var stain_count = get_stain_pixels(0, 0, room_width, room_height, buffer);
 			
-			var min_score = 12000;
+			var min_score = 22000;
 			var stain_count = clamp(global.stain_pixels, 0, min_score);
 			global.game_score.blood *= 1 - stain_count/min_score;
 			

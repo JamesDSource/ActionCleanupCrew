@@ -1,6 +1,8 @@
 event_inherited();
-if(y < room_height/2) team = TEAM.BLACK;
-else team = TEAM.WHITE;
+var inst_tRegion = instance_place(x, y, oTeam_region);
+if(inst_tRegion != noone) {
+	team = inst_tRegion.team;	
+}
 
 exposure_areas = ds_list_create();
 collision_rectangle_list(bbox_left - check_margin, bbox_top - check_margin, bbox_right + check_margin, bbox_bottom + check_margin, oExposure_area, false, true, exposure_areas, false);

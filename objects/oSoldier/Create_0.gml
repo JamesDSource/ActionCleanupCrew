@@ -23,7 +23,7 @@ peek_recharge_min = room_speed * 5;
 peek_recharge_max = room_speed * 10;
 peek_timer = 0;
 
-entity_states.free = function soldier_state_free() {
+entity_states.free = function() {
 	// cover
 	if(!instance_exists(cover)) new_cover();
 
@@ -131,7 +131,7 @@ guns[? "pistol"] = new gun(
 	1,						// burst
 	0,						// burst time
 	sPistol,				// sprite
-	250,					// range
+	500,					// range
 	3,						// gun kick
 	sdPistol				// sound
 );
@@ -145,7 +145,7 @@ guns[? "laser_pistol"] = new gun(
 	6,						
 	room_speed/3,			
 	sLaser_pistol,				
-	250,					
+	500,					
 	3,						
 	sdLaser_rifle					
 );
@@ -159,7 +159,7 @@ guns[? "rifle"] = new gun(
 	2,			
 	10,			
 	sRifle,		
-	300,		
+	600,		
 	5,			
 	sdRifle		
 );
@@ -173,7 +173,7 @@ guns[? "laser_gun"] = new gun(
 	1,
 	1,
 	sLaser_gun,
-	300,
+	600,
 	3,
 	sdLaser_rifle
 );
@@ -187,7 +187,7 @@ guns[? "sniper"] = new gun(
 	1,
 	1,
 	sSniper_rifle,
-	500,
+	1000,
 	8,
 	sdSniper
 );
@@ -201,7 +201,7 @@ guns[? "submachine_gun"] = new gun(
 	4,
 	5,
 	sSubmachine_gun,
-	250,
+	500,
 	2,
 	sdRifle
 );
@@ -215,7 +215,7 @@ guns[? "laser_canon"] = new gun(
 	1,
 	1,
 	sLaser_canon,
-	600,
+	1200,
 	12,
 	sdLaser_canon
 );
@@ -229,7 +229,7 @@ guns[? "shotgun"] = new gun(
 	3,
 	room_speed*2,
 	sShotgun,
-	200,
+	400,
 	6,
 	sdShotgun
 );
@@ -243,7 +243,7 @@ guns[? "laser_shotgun"] = new gun(
 	2,
 	room_speed/2,
 	sLaser_shotgun,
-	200,
+	400,
 	4,
 	sdLaser_rifle
 );
@@ -257,7 +257,7 @@ guns[? "rpg"] = new gun(
 	1,
 	0,
 	sRPG_loaded,
-	300,
+	600,
 	6,
 	sdRPG
 );
@@ -265,13 +265,13 @@ guns[? "rpg"] = new gun(
 guns[? "cluster_rpg"] = new gun(
 	"Cluster RPG",
 	oCluster_rocket,
-	4,
+	2,
 	20,
 	room_speed * 9,
 	2,
 	room_speed/2,
 	sCluster_RPG,
-	300,
+	600,
 	6,
 	sdCluster_RPG
 );

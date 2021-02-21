@@ -1,5 +1,5 @@
-var hsp = lengthdir_x(spd * hDir, ang);
-var vsp = lengthdir_y(spd * vDir, ang);
+var hsp = lengthdir_x(spd, ang);
+var vsp = lengthdir_y(spd, ang);
 
 var breakable_inst = instance_place(x + hsp, y + vsp, oBreakable);
 if(breakable_inst != noone) {
@@ -12,6 +12,7 @@ if(bounce > 0) {
 	if(place_meeting(x + hsp, y, oSolid) || place_meeting(x + hsp, y, oPlayer_solid)) {
 		bounce--;
 		hDir *= -1;
+		ang = point_direction(x, y, x + hsp*hDir, y + vsp*vDir);
 		hsp = 0;
 		vsp = 0;
 		hit_spark();
@@ -19,6 +20,7 @@ if(bounce > 0) {
 	else if(place_meeting(x, y + vsp, oSolid) || place_meeting(x, y + vsp, oPlayer_solid)) {
 		bounce--;
 		vDir *= -1;
+		ang = point_direction(x, y, x + hsp*hDir, y + vsp*vDir);
 		hsp = 0;
 		vsp = 0;
 		hit_spark();

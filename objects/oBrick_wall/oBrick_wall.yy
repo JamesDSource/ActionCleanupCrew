@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sRusted_wall",
-    "path": "sprites/sRusted_wall/sRusted_wall.yy",
+    "name": "sBrick_wall",
+    "path": "sprites/sBrick_wall/sBrick_wall.yy",
   },
   "solid": false,
   "visible": true,
@@ -31,7 +31,7 @@
     "path": "folders/Objects/Walls/Brick.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oRusted_wall",
+  "name": "oBrick_wall",
   "tags": [],
   "resourceType": "GMObject",
 }

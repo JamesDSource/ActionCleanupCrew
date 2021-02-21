@@ -23,7 +23,7 @@
         "TEAM.WHITE",
         "TEAM.BLACK",
         "TEAM.NONE",
-      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"teams","tags":[],"resourceType":"GMObjectProperty",},
+      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"team","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

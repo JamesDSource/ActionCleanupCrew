@@ -1,8 +1,8 @@
 event_inherited();
 
-z = irandom_range(1, 6);
+z = irandom_range(1, 8);
 
-spd = random_range(0.1, 1.5);
+spd = random_range(0.1, 2);
 ang = irandom_range(0, 359);
 
 hsp = lengthdir_x(spd, ang);

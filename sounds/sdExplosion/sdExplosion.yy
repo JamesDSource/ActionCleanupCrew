@@ -4,7 +4,7 @@
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
-  "type": 2,
+  "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
     "name": "Weapons",
