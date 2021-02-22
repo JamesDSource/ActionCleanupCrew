@@ -17,9 +17,9 @@ if(life_remaining > 0 && global.death_indicators) {
 			draw_set_alpha(image_alpha);
 			draw_sprite(sprite_index, 0, sprite_width/2 + (display_get_gui_width() - sprite_width)*x_offset_perc, sprite_height/2 + (display_get_gui_height() - sprite_height)*y_offset_perc);
 			draw_set_alpha(1);
-			life_remaining--;
 		}
 	}
+	life_remaining--;
 }
 else instance_destroy();
 

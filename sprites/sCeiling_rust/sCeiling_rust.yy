@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 175,
+  "bbox_right": 351,
   "bbox_top": 0,
-  "bbox_bottom": 79,
+  "bbox_bottom": 159,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 176,
-  "height": 80,
+  "width": 352,
+  "height": 160,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d5aa24e9-592d-433e-a5ea-f3a15a56415d","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d5aa24e9-592d-433e-a5ea-f3a15a56415d","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"LayerId":{"name":"8e4f0c2e-a31a-47e4-b9d3-eacb2165c404","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCeiling_rust","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"resourceVersion":"1.0","name":"d5aa24e9-592d-433e-a5ea-f3a15a56415d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"558c903b-1fdc-4ae2-a4eb-65d9e71a8db2","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"558c903b-1fdc-4ae2-a4eb-65d9e71a8db2","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"LayerId":{"name":"da16bd62-1aea-44bc-a3e5-96c1b13e782a","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCeiling_rust","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"resourceVersion":"1.0","name":"558c903b-1fdc-4ae2-a4eb-65d9e71a8db2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sCeiling_rust","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1ccdc09e-dd78-40fc-a738-378011eb54c4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d5aa24e9-592d-433e-a5ea-f3a15a56415d","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6b072944-f890-4ac2-9775-e0198105a897","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"558c903b-1fdc-4ae2-a4eb-65d9e71a8db2","path":"sprites/sCeiling_rust/sCeiling_rust.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8e4f0c2e-a31a-47e4-b9d3-eacb2165c404","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"da16bd62-1aea-44bc-a3e5-96c1b13e782a","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Ceiling Tiles",
