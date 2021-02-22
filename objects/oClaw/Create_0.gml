@@ -73,12 +73,9 @@ entity_states.free = function claw_state_free() {
 					x: 0,
 					y: 0
 				}
-				var vq = 0;
-				if(team == TEAM.WHITE) vq = 1;
-				else vq = 2;
 				var tries = 300;
 				while(tries > 0) {
-					new_point = {x: 0, y: 0}; // TODO: Replace with clan regions
+					new_point = random_point_team(team);
 					if(!place_meeting(new_point.x, new_point.y, oSolid)) {
 						new_move_point(new_point.x, new_point.y);
 						delete new_point;
