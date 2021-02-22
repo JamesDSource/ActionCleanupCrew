@@ -9,7 +9,7 @@ details_surface = -1;
 details_surf_w = display_get_gui_width()/2;
 details_surf_h = display_get_gui_height();
 details_breakdown = [
-	["Survival", "life"],
+	["Clone useage", "life"],
 	["Blood Cleanup", "blood"],
 	["Ash Cleanup", "ash"],
 	["Debree Cleanup", "bits"],
