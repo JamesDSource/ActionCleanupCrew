@@ -52,6 +52,7 @@ pages = {
 		new page_element(PAGEELEMENTTYPE.TOGGLE, "Vsync", ["vsync"]),
 		new page_element(PAGEELEMENTTYPE.SLIDER, "Brightness", ["brightness", -0.3, 0.3, 0.05]),
 		new page_element(PAGEELEMENTTYPE.SLIDER, "Gamma", ["gamma", 0.7, 1.3, 0.05]),
+		new page_element(PAGEELEMENTTYPE.TOGGLE, "Grayscale Floor", ["bg_grayscale"]),
 		new page_element(PAGEELEMENTTYPE.TRANSFER, "Back", ["settings"])
 	],
 	

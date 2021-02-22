@@ -277,7 +277,7 @@
     {"id":{"name":"sdLevel_select_open","path":"sounds/sdLevel_select_open/sdLevel_select_open.yy",},"order":7,},
     {"id":{"name":"sPrompt_s","path":"sprites/sPrompt_s/sPrompt_s.yy",},"order":4,},
     {"id":{"name":"sSoldier_white_corpse_helmet","path":"sprites/sSoldier_white_corpse_helmet/sSoldier_white_corpse_helmet.yy",},"order":3,},
-    {"id":{"name":"shPostprocessing","path":"shaders/shPostprocessing/shPostprocessing.yy",},"order":4,},
+    {"id":{"name":"shPostprocessing","path":"shaders/shPostprocessing/shPostprocessing.yy",},"order":3,},
     {"id":{"name":"oExplosion","path":"objects/oExplosion/oExplosion.yy",},"order":1,},
     {"id":{"name":"oAudio_manager","path":"objects/oAudio_manager/oAudio_manager.yy",},"order":0,},
     {"id":{"name":"oInit","path":"objects/oInit/oInit.yy",},"order":1,},
@@ -395,6 +395,7 @@
     {"id":{"name":"shCircle_transition","path":"shaders/shCircle_transition/shCircle_transition.yy",},"order":2,},
     {"id":{"name":"oTeam_white_region","path":"objects/oTeam_white_region/oTeam_white_region.yy",},"order":1,},
     {"id":{"name":"oTeam_black_region","path":"objects/oTeam_black_region/oTeam_black_region.yy",},"order":2,},
+    {"id":{"name":"shFloor_grayscale","path":"shaders/shFloor_grayscale/shFloor_grayscale.yy",},"order":4,},
   ],
   "Options": [
     {"name":"HTML5","path":"options/html5/options_html5.yy",},

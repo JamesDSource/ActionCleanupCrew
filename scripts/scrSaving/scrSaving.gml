@@ -85,6 +85,7 @@ function load_settings() {
 	global.vsync = ini_read_real("graphics", "vsync", true);
 	global.brightness = ini_read_real("graphics", "brightness", 0.0);
 	global.gamma = ini_read_real("graphics", "gamma", 1.0);
+	global.bg_grayscale = ini_read_real("graphics", "bg grayscale", 0.0);
 	
 	global.gamepad = ini_read_real("gameplay", "gamepad", false);
 	global.screenshake = ini_read_real("gameplay", "screenshake", 1.0);
@@ -106,6 +107,7 @@ function save_settings() {
 	ini_write_real("graphics", "vsync", global.vsync);
 	ini_write_real("graphics", "brightness", global.brightness);
 	ini_write_real("graphics", "gamma", global.gamma);
+	ini_write_real("graphics", "bg grayscale", global.bg_grayscale);
 	
 	ini_write_real("gameplay", "gamepad", global.gamepad);
 	ini_write_real("gameplay", "screenshake", global.screenshake);

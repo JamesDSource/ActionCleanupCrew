@@ -13,3 +13,10 @@ global.mouse_position = {
 
 init_window = 15;
 center_window = false;
+
+grayscale_layers = [
+	"FloorTiles",
+	"Carpet",
+	"Hazard"
+];
+u_active = shader_get_uniform(shFloor_grayscale, "active");
