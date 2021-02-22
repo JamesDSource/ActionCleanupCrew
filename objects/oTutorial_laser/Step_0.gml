@@ -24,4 +24,10 @@ if(laser_active) {
 	
 	var player_detection = collision_line(x, y, x + sprite_width + distance_from_wall, y, oPlayer, false, true);
 	if(player_detection != noone) player_detection.kill_function(DEATHTYPE.BURN);
+	
+	snd_pitch = approach(snd_pitch, 1.0, 0.05);
+	audio_sound_pitch(snd, snd_pitch);
+	audio_sound_gain(snd, snd_pitch, 0);
 }
+
+audio_emitter_position(emitter, x, y, 0);

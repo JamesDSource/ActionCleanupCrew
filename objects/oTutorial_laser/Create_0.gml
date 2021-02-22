@@ -19,3 +19,11 @@ draw_function = function draw_tutorial_laser() {
 		if(laser_progress == 1) draw_sprite(sTutorial_laser_spark, spark_frame, x + sprite_width + distance_from_wall, y);
 	}
 }
+
+emitter = audio_emitter_create();
+audio_emitter_falloff(emitter, 200, 500, 1);
+snd = audio_play_sound_on(emitter, sdTutorial_laser, true, SOUNDPRIORITY.GUNS);
+
+snd_pitch = 0.0;
+audio_sound_pitch(snd, snd_pitch);
+audio_sound_gain(snd, snd_pitch, 0);

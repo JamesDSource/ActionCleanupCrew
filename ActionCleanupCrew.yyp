@@ -188,6 +188,7 @@
     {"id":{"name":"TODO","path":"notes/TODO/TODO.yy",},"order":186,},
     {"id":{"name":"sdLaser_rifle","path":"sounds/sdLaser_rifle/sdLaser_rifle.yy",},"order":4,},
     {"id":{"name":"sdTeleporter","path":"sounds/sdTeleporter/sdTeleporter.yy",},"order":3,},
+    {"id":{"name":"sdTutorial_laser","path":"sounds/sdTutorial_laser/sdTutorial_laser.yy",},"order":4,},
     {"id":{"name":"fHUD","path":"fonts/fHUD/fHUD.yy",},"order":5,},
     {"id":{"name":"oPlayer_solid","path":"objects/oPlayer_solid/oPlayer_solid.yy",},"order":1,},
     {"id":{"name":"sNot_applicable","path":"sprites/sNot_applicable/sNot_applicable.yy",},"order":8,},
