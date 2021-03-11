@@ -26,7 +26,11 @@
   "properties": [
     {"varType":5,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"bits_sprite","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"","path":"",},"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"is_cover","path":"objects/oSolid/oSolid.yy",},"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"is_cover","path":"objects/oSolid/oSolid.yy",},"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Bits",
     "path": "folders/Bits.yy",

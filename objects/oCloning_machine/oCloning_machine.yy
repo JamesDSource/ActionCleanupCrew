@@ -33,7 +33,9 @@
     {"isDnD":false,"eventNum":0,"eventType":12,"collisionObjectId":null,"parent":{"name":"oCloning_machine","path":"objects/oCloning_machine/oCloning_machine.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"is_cover","path":"objects/oSolid/oSolid.yy",},"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Cloning Machine",
     "path": "folders/Objects/Cloning Machine.yy",

@@ -35,7 +35,9 @@
         "\"yellow\"",
       ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"group","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"is_cover","path":"objects/oSolid/oSolid.yy",},"objectId":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Teleporters",
     "path": "folders/Objects/Teleporters.yy",
