@@ -17,8 +17,44 @@ director_node_list = ds_list_create();
 director_solid_nodes = ds_list_create();
 director_init = false;
 
-function is_visible_from(p1x, p1y, p2x, p2y) {
+function check_is_sold(px, py) {
+	return director_node_list[| director_grid[# px, py]].is_solid;	
+}
+
+// Bresenham's line algorithm
+function get_points_between(p1x, p1y, p2x, p2y) {
+	// Checking if they are the same point
+	if(p1x == p2x && p1y == p2y) {
+		return [{x: p1x, y: p1y}];	
+	}
 	
+	var dx = p2x - p1x,
+		sx = dx < 0 ? -1 : 1,
+		dy = p2y - p1y,
+		sy = dy < 0 ? -1 : 1,
+		return_list = [];
+	
+	if(abs(dy) < abs(dx)) { // Rise over run
+		var slope = dy/dx,
+			pitch = p1y - slope*p1x;
+		
+		while(p1x != p2x) {
+			var point = {x: p1x, y: round(slope*p1x + pitch)};
+			array_push(return_list, point);
+			p1x += sx;
+		}
+	}
+	else { // Run over rise
+		var slope = dx/dy,
+			pitch = p1x - slope*p1x;
+		
+		while(p1y != p2y) {
+			var point = {x: round(slope*p1y + pitch), y: p1y};
+			array_push(return_list, point);
+			p1y += sy;
+		}
+	}
+	return return_list;	
 }
 
 alarm[0] = 1;
