@@ -7,3 +7,33 @@ if(instance_exists(oSolid)) {
 		}
 	}
 }
+
+// Updating sightlines
+if(director_init) {
+	repeat(director_iterations) {
+		var node = director_node_list[| director_grid[# director_col, director_row]];
+		node.sights[$ TEAM.WHITE] = 0;
+		node.sights[$ TEAM.BLACK] = 0;
+
+		if(instance_exists(oEntity) && !node.is_solid) {
+			with(oEntity) {
+				if(team == TEAM.BLACK || team == TEAM.WHITE) {
+					var ex = x div other.cell_size;
+					var ey = y div other.cell_size;
+	
+					if(other.is_visible_from(ex, ey, node.x, node.y)) {
+						node.sights[$ team]++;	
+					}
+				}
+			}
+		}
+		director_col++;
+		if(director_col >= ds_grid_width(director_grid)) {
+			director_col = 0;
+			director_row++;
+			if(director_row >= ds_grid_height(director_grid)) {
+				director_row = 0;
+			}
+		}
+	}
+}

@@ -8,6 +8,11 @@ if(director_init) {
 		
 		draw_set_color(node.is_solid ? c_red : c_lime);
 		draw_rectangle(xorg, yorg, xorg + cell_size - 1, yorg + cell_size - 1, false);
+		
+		draw_set_color(c_black);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_middle);
+		draw_text(xorg + cell_size/2, yorg + cell_size/2, string(node.sights[$ TEAM.WHITE]) + "," + string(node.sights[$ TEAM.BLACK]));
 	}
 	draw_set_alpha(1.0);
 }
