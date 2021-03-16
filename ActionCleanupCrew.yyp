@@ -396,6 +396,7 @@
     {"id":{"name":"oTeam_white_region","path":"objects/oTeam_white_region/oTeam_white_region.yy",},"order":1,},
     {"id":{"name":"oTeam_black_region","path":"objects/oTeam_black_region/oTeam_black_region.yy",},"order":2,},
     {"id":{"name":"shFloor_grayscale","path":"shaders/shFloor_grayscale/shFloor_grayscale.yy",},"order":4,},
+    {"id":{"name":"scrBehaviorTree","path":"scripts/scrBehaviorTree/scrBehaviorTree.yy",},"order":6,},
   ],
   "Options": [
     {"name":"HTML5","path":"options/html5/options_html5.yy",},

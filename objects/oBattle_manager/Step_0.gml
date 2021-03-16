@@ -55,26 +55,11 @@ if(started) {
 	
 	// retreating and winning sides
 	if(frames_left <= retreat_time*room_speed) {
-		var winner;
-		var exit_points;
 		if(global.white_kills < global.black_kills) {
-			winner = TEAM.BLACK;
-			exit_points = white_spawns;
+			global.victory = TEAM.BLACK;
 		}
 		else {
-			winner = TEAM.WHITE;
-			exit_points = black_spawns;			
-		}
-		
-		for(var i = 0; i < array_length(enemies_available); i++) { 
-			with(enemies[? enemies_available[i]].entity) {
-				if(state != entity_states.flee) {
-					ds_list_shuffle(exit_points);
-					var flee_point = exit_points[| 0];
-					new_move_point(flee_point.x, flee_point.y);
-					state = entity_states.flee;
-				}
-			}
+			global.victory = TEAM.WHITE;			
 		}
 	}
 	

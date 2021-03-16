@@ -1,7 +1,7 @@
-// states
-if(uses_entity_states && is_method(state)) state();
+// Behavior tree
+if(uses_behavior_tree) entity_behavior_tree.tree_update();
 
-// pathfinding
+// Pathfinding
 if(uses_pathfinding) {
 	t++;
 	if(path_update && t%10 == 0) {

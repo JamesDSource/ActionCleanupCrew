@@ -21,8 +21,10 @@ if(director_init) {
 					var ex = x div other.cell_size;
 					var ey = y div other.cell_size;
 	
-					if(other.is_visible_from(ex, ey, node.x, node.y)) {
+					var points = other.get_points_between(ex, ey, node.x, node.y);
+					if(other.is_visible(points)) {
 						node.sights[$ team]++;	
+						node.enemy_distance = min(node.enemy_distance, array_length(points)*other.cell_size);
 					}
 				}
 			}

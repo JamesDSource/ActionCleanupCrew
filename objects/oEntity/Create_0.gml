@@ -7,16 +7,45 @@ enum SIZE {
 vsp = 0;
 hsp = 0;
 
-// entity states
-entity_states = {
-	free: -1,	
-	flee: -1
+// Behavior tree
+entity_behavior_tree = new behavior_tree(id);
+
+br_check = new behavior_node();
+
+with(br_check) {
+	node_update = function() {
+		if(array_length(children) >= 3) {
+			if(global.victory == TEAM.NONE) {
+				return children[2].node_update();	
+			}
+			else if(global.victory == parent_obj.team) {
+				return children[0].update();	
+			}
+			else {
+				return children[1].update();
+			}
+		}
+	}	
 }
 
-entity_states.flee = function entity_flee() {
-	if(place_meeting(x, y, oSpawn_point)) instance_destroy();
+
+entity_behavior_tree.root.add_child(br_check);
+
+br_check.add_child(new behavior_node());
+
+var bn_flee = new behavior_node();
+with(bn_flee) {
+	node_update = function() {
+		var closest_extract = instance_nearest(x, y, oSpawn_point);
+		new_move_point(closest_extract.x, closest_extract.y);
+		if(point_distance(x, y, closest_extract.x, closest_extract.y) < 4) {
+			instance_destroy();	
+		}
+	} 	
 }
-state = entity_states.free;
+
+br_check.add_child(bn_flee);
+
 
 enum BLOOD {
 	RED,
@@ -54,7 +83,7 @@ kill_function = function kill(death_type) {
 	hp--;
 	flash_frames_left = flash_frames;
 	if(hp <= 0) {			
-		if(death_type == "random") death_type = irandom_range(0, DEATHS-1);
+		if(death_type == "random") death_type = irandom_range(0, DEATHS - 1);
 		switch(death_type) {
 			case DEATHTYPE.PIERCING:
 				bleed(40, 60);

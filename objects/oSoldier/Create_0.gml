@@ -8,10 +8,9 @@ enum TEAM {
 
 // helmet and hp
 helmet = false;
-max_hp = 1;
+max_hp = 2;
 if(irandom_range(1, 100) < 50) {
 	helmet = true;
-	max_hp = 2;
 }
 hp = max_hp;
 hp_regen_time = room_speed * 2;
@@ -23,7 +22,104 @@ peek_recharge_min = room_speed * 5;
 peek_recharge_max = room_speed * 10;
 peek_timer = 0;
 
-entity_states.free = function() {
+#region Behavior leaf nodes
+behavior_node_attack = function() {
+	var bn = new behavior_node();
+	
+	with(bn) {
+		node_update = function() {
+			return BEHAVIORNODERESULT.CONTINUE;	
+		}
+	}
+	
+	return bn;
+}
+
+behavior_node_cover = function() {
+	var bn = new behavior_node();
+	
+	with(bn) {
+		node_update = function() {
+			return BEHAVIORNODERESULT.CONTINUE;	
+		}
+	}
+	
+	return bn;
+}
+
+behavior_node_run = function() {
+	var bn = new behavior_node();
+	
+	with(bn) {
+		node_update = function() {
+			return BEHAVIORNODERESULT.CONTINUE;	
+		}
+	}
+	
+	return bn;
+}
+
+behavior_node_move_into_range = function() {
+	var bn = new behavior_node();
+	
+	with(bn) {
+		node_update = function() {
+			return BEHAVIORNODERESULT.CONTINUE;	
+		}
+	}
+	
+	return bn;
+}
+#endregion
+
+#region Behavior tree
+var root_selector = behavior_node_selector();
+br_check.add_child(root_selector);
+
+// Threatended branch
+var check_if_threatended = new behavior_node();
+	
+with(check_if_threatended) {
+	node_update = function() {
+		if(array_length(children) > 0 && parent_obj.hp < parent_obj.max_hp) {
+			return children[0].node_update();
+		}
+		else {
+			return BEHAVIORNODERESULT.FALURE;	
+		}
+	}
+}
+
+
+var cft_doall = behavior_node_do_all();
+cft_doall.add_child(behavior_node_attack());
+cft_doall.add_child(behavior_node_sequence());
+cft_doall.children[1].add_child(behavior_node_cover());
+var cover_timer = behavior_node_wait();
+cover_timer.set_time(5);
+cft_doall.children[1].add_child(cover_timer);
+
+var cft_selector = behavior_node_selector();
+cft_selector.add_child(cft_doall);
+cft_selector.add_child(behavior_node_run());
+
+check_if_threatended.add_child(cft_selector);
+root_selector.add_child(check_if_threatended);
+
+// Attack branch
+var attack_doall = behavior_node_do_all();
+
+attack_doall.add_child(behavior_node_attack());
+
+attack_doall.add_child(behavior_node_selector());
+attack_doall.children[1].add_child(behavior_node_move_into_range());
+attack_doall.children[1].add_child(behavior_node_run());
+
+root_selector.add_child(attack_doall);
+
+#endregion
+
+free = function() {
 	// cover
 	if(!instance_exists(cover)) new_cover();
 
@@ -99,8 +195,6 @@ entity_states.free = function() {
 		else gun_shoot_recharge--;
 	}
 }
-
-state = entity_states.free;
 
 // gun
 function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_time, burst_amount, gun_burst_time, gun_sprite, gun_range, gun_kickback, gun_sound) constructor {

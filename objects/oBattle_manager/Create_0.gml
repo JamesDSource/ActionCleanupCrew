@@ -14,6 +14,7 @@ global.game_score = {
 	total: 0,
 	finished: false	
 };
+global.victory = TEAM.NONE;
 
 retreat_time = 30;
 

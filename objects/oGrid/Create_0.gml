@@ -6,6 +6,7 @@ global.grid = mp_grid_create(-offshoot * cell_size, -offshoot * cell_size, ceil(
 function director_node() constructor {
 	is_solid = false;
 	sights = {};
+	enemy_distance = infinity;
 	x = 0;
 	y = 0;
 }
@@ -16,7 +17,6 @@ director_solid_nodes = ds_list_create();
 director_col = 0;
 director_row = 0;
 director_iterations = max(ds_grid_width(director_grid)*ds_grid_height(director_grid) div 140, 1);
-show_debug_message(director_iterations);
 director_init = false;
 
 function check_is_sold(px, py) {
@@ -69,15 +69,13 @@ function get_points_between(p1x, p1y, p2x, p2y) {
 	return return_list;	
 }
 
-function is_visible_from(p1x, p1y, p2x, p2y) {
-	var points = get_points_between(p1x, p1y, p2x, p2y);
+function is_visible(points) {
 	
 	var last_point = pointer_null;
 	for(var i = 0; i < array_length(points); i++) {
 		// Checks if the point is accessable
 		if (
 			check_is_sold(points[i].x, points[i].y) ||
-			
 			(	// Checks if the point is diagnal and is blocked off
 				last_point != pointer_null && 
 				last_point.x != points[i].x &&
