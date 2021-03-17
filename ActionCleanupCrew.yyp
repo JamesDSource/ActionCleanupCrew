@@ -48,6 +48,7 @@
     {"id":{"name":"oBattle_manager","path":"objects/oBattle_manager/oBattle_manager.yy",},"order":0,},
     {"id":{"name":"sDoor_hub","path":"sprites/sDoor_hub/sDoor_hub.yy",},"order":5,},
     {"id":{"name":"sGrade","path":"sprites/sGrade/sGrade.yy",},"order":2,},
+    {"id":{"name":"scrArray","path":"scripts/scrArray/scrArray.yy",},"order":7,},
     {"id":{"name":"oLevel_select","path":"objects/oLevel_select/oLevel_select.yy",},"order":0,},
     {"id":{"name":"tCeiling_office","path":"tilesets/tCeiling_office/tCeiling_office.yy",},"order":3,},
     {"id":{"name":"oOffice_wall","path":"objects/oOffice_wall/oOffice_wall.yy",},"order":0,},

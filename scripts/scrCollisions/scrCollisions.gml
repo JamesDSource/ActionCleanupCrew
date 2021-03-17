@@ -59,15 +59,36 @@ function push_out(x_pos, y_pos) {
 }
 
 function is_collision(x_pos, y_pos) {
-	var is_player = false;
-	if(object_index == oPlayer) is_player = true;
+	var is_player = (!is_struct(self) || variable_struct_exists(self, "object_index")) && 
+					object_index == oPlayer;
 	
 	var return_value = false;
 	var collision_check = ds_list_create();
 	instance_place_list(x_pos, y_pos, oSolid, collision_check, false);
 	for(var i = 0; i < ds_list_size(collision_check); i++) {
 		var current_solid = collision_check[| i];
-		if(current_solid.solid_enabled && (!current_solid.player_only || is_player)) return_value = true;
+		if(current_solid.solid_enabled && (!current_solid.player_only || is_player)) {
+			return_value = true;
+			break;	
+		}
+	}
+	ds_list_destroy(collision_check);
+	return return_value;
+}
+
+function ray_test(x_pos, y_pos, cast_x, cast_y) {
+	var is_player = (!is_struct(self) || variable_struct_exists(self, "object_index")) && 
+					object_index == oPlayer;
+	
+	var return_value = false;
+	var collision_check = ds_list_create();
+	collision_line_list(x_pos, y_pos, cast_x, cast_y, oSolid, false, true, collision_check, false);
+	for(var i = 0; i < ds_list_size(collision_check); i++) {
+		var current_solid = collision_check[| i];
+		if(current_solid.solid_enabled && !variable_instance_get(current_solid, "auto_open") && (!current_solid.player_only || is_player)) {
+			return_value = true;
+			break;	
+		}
 	}
 	ds_list_destroy(collision_check);
 	return return_value;

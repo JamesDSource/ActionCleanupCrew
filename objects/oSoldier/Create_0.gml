@@ -16,18 +16,75 @@ hp = max_hp;
 hp_regen_time = room_speed * 2;
 hp_regen_timer = hp_regen_time;
 
-// peeking
-peek = false;
-peek_recharge_min = room_speed * 5;
-peek_recharge_max = room_speed * 10;
-peek_timer = 0;
 
 #region Behavior leaf nodes
+
+// Has the soldier attacking 
 behavior_node_attack = function() {
 	var bn = new behavior_node();
 	
 	with(bn) {
+		gun_target = noone;
+		gun_shoot_recharge = 0;
+		x = 0;
+		y = 0;
+		
 		node_update = function() {
+			var gun_using = parent_obj.gun_using;
+			var p_team = parent_obj.team;
+			
+			x = parent_obj.x;
+			y = parent_obj.y;
+			
+			// Finding targets
+			gun_target = noone;
+			var gun_targets = ds_list_create();
+			collision_circle_list(x, y, gun_using.range, oEntity, false, true, gun_targets, true);
+			var highest_priority = -1;
+			for(var i = 0; i < ds_list_size(gun_targets); i++) {
+				var current_gun_target = gun_targets[| i];
+				if(current_gun_target.team != p_team && collision_line(x, y, current_gun_target.x, current_gun_target.y, oSolid, false, true) == noone && current_gun_target.priority > highest_priority) {
+					gun_target = current_gun_target;	
+					highest_priority = gun_target.priority;
+				}
+			}
+			ds_list_destroy(gun_targets);
+			
+			if(instance_exists(gun_target)) {
+				parent_obj.gun_angle = point_direction(x, y - parent_obj.gun_height, gun_target.x, gun_target.y);
+				
+				// recharge timer
+				if(gun_shoot_recharge <= 0) {
+					// burst timer
+					if(gun_using.burst_timer <= 0) {
+						// repeating shooting for each shot
+						repeat(gun_using.shots) {
+							var bullet_spread = irandom_range(-gun_using.spread, gun_using.spread);
+							with(instance_create_layer(x + lengthdir_x(parent_obj.gun_bullet_offset, parent_obj.gun_angle_real), y + lengthdir_y(parent_obj.gun_bullet_offset, parent_obj.gun_angle_real), "Instances", gun_using.bullet)) {
+								z = other.parent_obj.gun_height;
+								team = p_team
+								ang = other.parent_obj.gun_angle_real + bullet_spread;
+								image_angle = ang;
+							}
+						}
+						
+						audio_play_sound_on(parent_obj.audio_emitter, gun_using.sound, false, SOUNDPRIORITY.GUNS);
+						parent_obj.gun_kick = gun_using.kickback;
+						parent_obj.gun_flash = parent_obj.gun_flash_time;
+						
+						gun_using.burst_timer = gun_using.burst_time;
+						gun_using.bursts_left--;
+						if(gun_using.bursts_left == 0) {
+							gun_shoot_recharge = gun_using.recharge_time;
+							gun_using.bursts_left = gun_using.burst;
+						}
+					}
+					else gun_using.burst_timer--;
+				}
+				else gun_shoot_recharge--;
+			}
+			
+			
 			return BEHAVIORNODERESULT.CONTINUE;	
 		}
 	}
@@ -35,6 +92,7 @@ behavior_node_attack = function() {
 	return bn;
 }
 
+// Makes the soldier find cover
 behavior_node_cover = function() {
 	var bn = new behavior_node();
 	
@@ -47,6 +105,61 @@ behavior_node_cover = function() {
 	return bn;
 }
 
+// Makes the soldier run around aimlessly 
+behavior_node_wander = function() {
+	var bn = new behavior_node();
+	
+	with(bn) {
+		x = 0;
+		y = 0;
+		move_angle = undefined;
+		
+		node_update = function() {
+			parent_obj.uses_pathfinding = false;
+			x = parent_obj.x;
+			y = parent_obj.y;
+			
+			var angles = array_shuffle([0, 45, 90, 135, 180, 225, 270, 315]),
+				check_distance = 32;
+			
+			if(move_angle == undefined) {
+				for(var i = 0; i < array_length(angles); i++) {
+					var angle = angles[i];
+					var cast_to = {
+						x: x + lengthdir_x(check_distance, angle),
+						y: y + lengthdir_y(check_distance, angle)
+					}
+					if(!ray_test(x, y, cast_to.x, cast_to.y)) {
+						move_angle = angle;
+						break;
+					}
+				}
+			}
+			
+			if(move_angle == undefined) {
+				return BEHAVIORNODERESULT.FALURE;	
+			}
+			else {
+				var cast_to = {
+					x: x + lengthdir_x(check_distance, move_angle),
+					y: y + lengthdir_y(check_distance, move_angle)
+				}
+				if(ray_test(x, y, cast_to.x, cast_to.y)) {
+					move_angle = undefined;
+				}
+				else {
+					parent_obj.hsp = lengthdir_x(parent_obj.path_movement_speed, move_angle);
+					parent_obj.vsp = lengthdir_y(parent_obj.path_movement_speed, move_angle);
+				}
+			}
+			return BEHAVIORNODERESULT.CONTINUE;	
+		}
+	}
+	
+	return bn;
+}
+
+// Makes the soldier run from enemies
 behavior_node_run = function() {
 	var bn = new behavior_node();
 	
@@ -59,26 +172,25 @@ behavior_node_run = function() {
 	return bn;
 }
 
+// Makes the soldier run twords enemies
 behavior_node_move_into_range = function() {
 	var bn = new behavior_node();
 	
 	with(bn) {
 		node_update = function() {
-			return BEHAVIORNODERESULT.CONTINUE;	
+			return BEHAVIORNODERESULT.FALURE;	
 		}
 	}
 	
 	return bn;
 }
 #endregion
-
 #region Behavior tree
 var root_selector = behavior_node_selector();
 br_check.add_child(root_selector);
 
 // Threatended branch
 var check_if_threatended = new behavior_node();
-	
 with(check_if_threatended) {
 	node_update = function() {
 		if(array_length(children) > 0 && parent_obj.hp < parent_obj.max_hp) {
@@ -113,88 +225,11 @@ attack_doall.add_child(behavior_node_attack());
 
 attack_doall.add_child(behavior_node_selector());
 attack_doall.children[1].add_child(behavior_node_move_into_range());
-attack_doall.children[1].add_child(behavior_node_run());
+attack_doall.children[1].add_child(behavior_node_wander());
 
 root_selector.add_child(attack_doall);
 
 #endregion
-
-free = function() {
-	// cover
-	if(!instance_exists(cover)) new_cover();
-
-	if(cover_timer > 0) cover_timer--;
-	else {
-		new_cover();
-		cover_timer = irandom_range(cover_time_min, cover_time_max);
-	}
-	
-	// peeking
-	if(peek_timer > 0) peek_timer--;
-	else if(instance_exists(cover)) {
-		peek = !peek;
-		if(peek) {
-			var cover_pos = cover.get_exposure_point();
-			cover_point = push_out(cover_pos.x, cover_pos.y);
-		}
-		else {
-			var cover_pos = random_point_rectange(cover.bbox_left, cover.bbox_top, cover.bbox_right, cover.bbox_bottom);
-			cover_point = push_out(cover_pos.x, cover_pos.y);
-		}
-		peek_timer = irandom_range(peek_recharge_min, peek_recharge_max);
-	}
-	
-	// move point
-	new_move_point(cover_point.x, cover_point.y);
-	
-	// finding target
-	gun_target = noone;
-	var gun_targets = ds_list_create();
-	collision_circle_list(x, y, gun_using.range, oEntity, false, true, gun_targets, true);
-	var highest_priority = -1;
-	for(var i = 0; i < ds_list_size(gun_targets); i++) {
-		var current_gun_target = gun_targets[| i];
-		if(current_gun_target.team != team && collision_line(x, y, current_gun_target.x, current_gun_target.y, oSolid, false, true) == noone && current_gun_target.priority > highest_priority) {
-			gun_target = current_gun_target;	
-			highest_priority = gun_target.priority;
-		}
-	}
-	ds_list_destroy(gun_targets);
-	
-	if(instance_exists(gun_target)) {
-		gun_angle = point_direction(x, y - gun_height, gun_target.x, gun_target.y);
-		
-		// recharge timer
-		if(gun_shoot_recharge <= 0) {
-			// burst timer
-			if(gun_using.burst_timer <= 0) {
-				// repeating shooting for each shot
-				repeat(gun_using.shots) {
-					var bullet_spread = irandom_range(-gun_using.spread, gun_using.spread);
-					with(instance_create_layer(x + lengthdir_x(gun_bullet_offset, gun_angle_real), y + lengthdir_y(gun_bullet_offset, gun_angle_real), "Instances", gun_using.bullet)) {
-						z = other.gun_height;
-						team = other.team;
-						ang = other.gun_angle_real + bullet_spread;
-						image_angle = ang;
-					}
-				}
-				
-				audio_play_sound_on(audio_emitter, gun_using.sound, false, SOUNDPRIORITY.GUNS);
-				gun_kick = gun_using.kickback;
-				gun_flash = gun_flash_time;
-				
-				gun_using.burst_timer = gun_using.burst_time;
-				gun_using.bursts_left--;
-				if(gun_using.bursts_left == 0) {
-					gun_shoot_recharge = gun_using.recharge_time;
-					gun_using.bursts_left = gun_using.burst;
-				}
-			}
-			else gun_using.burst_timer--;
-		}
-		else gun_shoot_recharge--;
-	}
-}
 
 // gun
 function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_time, burst_amount, gun_burst_time, gun_sprite, gun_range, gun_kickback, gun_sound) constructor {
@@ -379,8 +414,6 @@ else gun_using = guns[? "pistol"];
 gun_height = 5;
 gun_angle = 0;
 gun_angle_real = 0;
-gun_target = noone;
-gun_shoot_recharge = 0;
 gun_kick = 0;
 gun_flash_time = 3;
 gun_flash = 0;
