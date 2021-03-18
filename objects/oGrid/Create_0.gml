@@ -9,6 +9,8 @@ function director_node() constructor {
 	enemy_distance = infinity;
 	x = 0;
 	y = 0;
+	clear_region_index = -1;
+	memory = {};
 }
 
 director_grid = ds_grid_create(room_width div cell_size, room_height div cell_size);
@@ -16,8 +18,10 @@ director_node_list = ds_list_create();
 director_solid_nodes = ds_list_create();
 director_col = 0;
 director_row = 0;
-director_iterations = max(ds_grid_width(director_grid)*ds_grid_height(director_grid) div 140, 1);
+director_iterations = max(round(ds_grid_width(director_grid)*ds_grid_height(director_grid)/220), 1);
 director_init = false;
+
+debug_region_colors = [];
 
 function check_is_sold(px, py) {
 	if(director_init) {

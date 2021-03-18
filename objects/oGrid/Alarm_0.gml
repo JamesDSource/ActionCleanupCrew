@@ -24,4 +24,66 @@ for(var i = 0; i < ds_grid_width(director_grid); i++) {
 	}
 }
 
+
+// Caculating clear region index
+var region_index = 0;
+for(var i = 0; i < ds_grid_width(director_grid); i++) {
+	for(var j = 0; j < ds_grid_height(director_grid); j++) {
+		var node = director_node_list[| director_grid[# i, j]];
+		if(node.clear_region_index == -1 && !node.is_solid) {
+			var can_expand_h = true, can_expand_v = true,
+				h_index = node.x, v_index = node.y;
+		
+			while(can_expand_h || can_expand_v) {
+				// Expand hoizontal	
+				if(can_expand_h) {
+					h_index++;
+					if(h_index < ds_grid_width(director_grid)) {
+						for(var c = node.y; c <= v_index; c++) {
+							if(director_node_list[| director_grid[# h_index, c]].is_solid) {
+								can_expand_h = false;
+								h_index--;
+								break;
+							}
+						}
+					}
+					else {
+						can_expand_h = false;
+						h_index--;
+					}
+				}
+			
+				// Expand verticle
+				if(can_expand_v) {
+					v_index++;
+					if(v_index < ds_grid_height(director_grid)) {
+						for(var c = node.x; c <= h_index; c++) {
+							if(director_node_list[| director_grid[# c, v_index]].is_solid) {
+								can_expand_v = false;
+								v_index--;
+								break;
+							}
+						}
+					}
+					else {
+						can_expand_v = false;
+						v_index--;
+					}
+				}
+			}
+		
+			// Setting the clear region index
+			if(h_index > node.x || v_index > node.y) {
+				for(var c = node.x; c <= h_index; c++) {
+					for(var k = node.y; k <= v_index; k++) {
+						director_node_list[| director_grid[# c, k]].clear_region_index = region_index;
+					}	
+				}
+				debug_region_colors[region_index] = make_color_rgb(irandom_range(0, 255), irandom_range(0, 255), irandom_range(0, 255));
+				region_index++;
+			}
+		}
+	}
+}
+
 director_init = true;

@@ -129,7 +129,7 @@ behavior_node_wander = function() {
 						x: x + lengthdir_x(check_distance, angle),
 						y: y + lengthdir_y(check_distance, angle)
 					}
-					if(!ray_test(x, y, cast_to.x, cast_to.y)) {
+					if(!ray_test(x, y, cast_to.x, cast_to.y, true)) {
 						move_angle = angle;
 						break;
 					}
@@ -144,7 +144,7 @@ behavior_node_wander = function() {
 					x: x + lengthdir_x(check_distance, move_angle),
 					y: y + lengthdir_y(check_distance, move_angle)
 				}
-				if(ray_test(x, y, cast_to.x, cast_to.y)) {
+				if(ray_test(x, y, cast_to.x, cast_to.y, true)) {
 					move_angle = undefined;
 				}
 				else {
@@ -260,7 +260,7 @@ guns[? "pistol"] = new gun(
 	1,						// burst
 	0,						// burst time
 	sPistol,				// sprite
-	500,					// range
+	300,					// range
 	3,						// gun kick
 	sdPistol				// sound
 );
@@ -274,7 +274,7 @@ guns[? "laser_pistol"] = new gun(
 	6,						
 	room_speed/3,			
 	sLaser_pistol,				
-	500,					
+	100,					
 	3,						
 	sdLaser_rifle					
 );
@@ -288,7 +288,7 @@ guns[? "rifle"] = new gun(
 	2,			
 	10,			
 	sRifle,		
-	600,		
+	300,		
 	5,			
 	sdRifle		
 );
@@ -302,7 +302,7 @@ guns[? "laser_gun"] = new gun(
 	1,
 	1,
 	sLaser_gun,
-	600,
+	400,
 	3,
 	sdLaser_rifle
 );
@@ -316,7 +316,7 @@ guns[? "sniper"] = new gun(
 	1,
 	1,
 	sSniper_rifle,
-	1000,
+	800,
 	8,
 	sdSniper
 );
@@ -330,7 +330,7 @@ guns[? "submachine_gun"] = new gun(
 	4,
 	5,
 	sSubmachine_gun,
-	500,
+	200,
 	2,
 	sdRifle
 );
@@ -344,7 +344,7 @@ guns[? "laser_canon"] = new gun(
 	1,
 	1,
 	sLaser_canon,
-	1200,
+	800,
 	12,
 	sdLaser_canon
 );
@@ -358,7 +358,7 @@ guns[? "shotgun"] = new gun(
 	3,
 	room_speed*2,
 	sShotgun,
-	400,
+	200,
 	6,
 	sdShotgun
 );
@@ -372,7 +372,7 @@ guns[? "laser_shotgun"] = new gun(
 	2,
 	room_speed/2,
 	sLaser_shotgun,
-	400,
+	200,
 	4,
 	sdLaser_rifle
 );

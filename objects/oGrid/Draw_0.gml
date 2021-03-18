@@ -1,4 +1,4 @@
-if(false && director_init) {
+if(director_init) {
 	draw_set_alpha(0.5);	
 	
 	for(var i = 0; i < ds_list_size(director_node_list); i++) {
@@ -6,8 +6,10 @@ if(false && director_init) {
 		var xorg = node.x*cell_size;
 		var yorg = node.y*cell_size;
 		
-		draw_set_color(node.is_solid ? c_red : c_lime);
-		draw_rectangle(xorg, yorg, xorg + cell_size - 1, yorg + cell_size - 1, false);
+		if(node.clear_region_index != -1) {
+			draw_set_color(debug_region_colors[node.clear_region_index]);
+			draw_rectangle(xorg, yorg, xorg + cell_size - 1, yorg + cell_size - 1, false);
+		}
 		
 		draw_set_color(c_black);
 		draw_set_halign(fa_center);

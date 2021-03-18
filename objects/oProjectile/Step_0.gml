@@ -9,7 +9,7 @@ if(breakable_inst != noone) {
 }
 
 if(bounce > 0) {
-	if(place_meeting(x + hsp, y, oSolid) || place_meeting(x + hsp, y, oPlayer_solid)) {
+	if(is_collision(x + hsp, y + vsp)) {
 		bounce--;
 		hDir *= -1;
 		ang = point_direction(x, y, x + hsp*hDir, y + vsp*vDir);
@@ -17,7 +17,7 @@ if(bounce > 0) {
 		vsp = 0;
 		hit_spark();
 	}
-	else if(place_meeting(x, y + vsp, oSolid) || place_meeting(x, y + vsp, oPlayer_solid)) {
+	else if(is_collision(x + hsp, y + vsp)) {
 		bounce--;
 		vDir *= -1;
 		ang = point_direction(x, y, x + hsp*hDir, y + vsp*vDir);
@@ -27,7 +27,7 @@ if(bounce > 0) {
 	}
 }
 
-if(place_meeting(x + hsp, y + vsp, oSolid) || place_meeting(x + hsp, y + vsp, oPlayer_solid)) {
+if(is_collision(x + hsp, y + vsp)) {
 	hit_spark();
 	instance_destroy();
 }
