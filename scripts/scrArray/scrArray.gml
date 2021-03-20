@@ -11,3 +11,21 @@ function array_shuffle(array) {
 	}
 	return return_array;
 }
+
+function array_contains(array, value) {
+	for(var i = 0; i < array_length(array); i++) {
+		if(array[i] == value) {
+			return true;	
+		}
+	}
+	return false;
+}
+
+function array_overlap(array1, array2) {
+	for(var i = 0; i < array_length(array1); i++) {
+		if(array_contains(array2, array1[i])) {
+			return true;	
+		}
+	}
+	return false;
+}

@@ -9,13 +9,11 @@ function director_node() constructor {
 	enemy_distance = infinity;
 	x = 0;
 	y = 0;
-	clear_region_index = -1;
-	memory = {};
+	clear_region_index = [];
 }
 
 director_grid = ds_grid_create(room_width div cell_size, room_height div cell_size);
 director_node_list = ds_list_create();
-director_solid_nodes = ds_list_create();
 director_col = 0;
 director_row = 0;
 director_iterations = max(round(ds_grid_width(director_grid)*ds_grid_height(director_grid)/220), 1);
@@ -54,9 +52,12 @@ function get_points_between(p1x, p1y, p2x, p2y) {
 		var slope = dy/dx,
 			pitch = p1y - slope*p1x;
 		
-		while(p1x != p2x) {
+		while(true) {
 			var point = {x: p1x, y: round(slope*p1x + pitch)};
 			array_push(return_list, point);
+			if(p1x == p2x) {
+				break;	
+			}
 			p1x += sx;
 		}
 	}
@@ -64,35 +65,59 @@ function get_points_between(p1x, p1y, p2x, p2y) {
 		var slope = dx/dy,
 			pitch = p1x - slope*p1y;
 		
-		while(p1y != p2y) {
+		while(true) {
 			var point = {x: round(slope*p1y + pitch), y: p1y};
 			array_push(return_list, point);
+			if(p1y == p2y) {
+				break;	
+			}
 			p1y += sy;
 		}
 	}
 	return return_list;	
 }
 
-function is_visible(points) {
+function is_visible(p1x, p1y, p2x, p2y) {
 	
-	var last_point = pointer_null;
-	for(var i = 0; i < array_length(points); i++) {
-		// Checks if the point is accessable
-		if (
-			check_is_sold(points[i].x, points[i].y) ||
-			(	// Checks if the point is diagnal and is blocked off
-				last_point != pointer_null && 
-				last_point.x != points[i].x &&
-				last_point.y != points[i].y &&
-				check_is_sold(last_point.x, points[i].y) &&
-				check_is_sold(points[i].x, last_point.y) && false
-			)) 
+	// Checking if they are the same point
+	if(p1x == p2x && p1y == p2y) {
+		return true;	
+	}
+	
+	var dx = p2x - p1x,
+		sx = dx < 0 ? -1 : 1,
+		dy = p2y - p1y,
+		sy = dy < 0 ? -1 : 1;
+	
+	if(abs(dy) < abs(dx)) { // Rise over run
+		var slope = dy/dx,
+			pitch = p1y - slope*p1x;
 		
-		{
-			return false;
+		while(true) {
+			var point = {x: p1x, y: round(slope*p1x + pitch)};
+			if(check_is_sold(point.x, point.y)) {
+				return false;	
+			}
+			if(p1x == p2x) {
+				break;	
+			}
+			p1x += sx;
 		}
+	}
+	else { // Run over rise
+		var slope = dx/dy,
+			pitch = p1x - slope*p1y;
 		
-		last_point = points[i];
+		while(true) {
+			var point = {x: round(slope*p1y + pitch), y: p1y};
+			if(check_is_sold(point.x, point.y)) {
+				return false;	
+			}
+			if(p1y == p2y) {
+				break;	
+			}
+			p1y += sy;
+		}
 	}
 	return true;
 }

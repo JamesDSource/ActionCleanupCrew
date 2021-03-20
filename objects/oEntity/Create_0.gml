@@ -7,8 +7,6 @@ enum SIZE {
 vsp = 0;
 hsp = 0;
 
-last_director_pos = undefined;
-
 // Behavior tree
 entity_behavior_tree = new behavior_tree(id);
 

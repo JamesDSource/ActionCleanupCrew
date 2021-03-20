@@ -14,6 +14,7 @@ if(director_init) {
 		var node = director_node_list[| director_grid[# director_col, director_row]];
 		node.sights[$ TEAM.WHITE] = 0;
 		node.sights[$ TEAM.BLACK] = 0;
+		node.enemy_distance = infinity;
 		
 		var w = ds_grid_width(director_grid);
 		var h = ds_grid_height(director_grid);
@@ -28,26 +29,17 @@ if(director_init) {
 					var is_node_visible = false;
 					
 					if(ent_dist <= max_distance) {
-						// Checking if this can be taken from memory
-						if(is_struct(last_director_pos) && last_director_pos.x = ex && last_director_pos.y == ey && variable_struct_exists(node.memory, id)) {
-							is_node_visible = node.memory[$ id];
+						// Checking if they are in the same clear region
+						if(ex > 0 && ex < w && ey > 0 && ey < h) {
+							var ent_node = other.director_node_list[| other.director_grid[# ex, ey]];
+							if(array_overlap(node.clear_region_index, ent_node.clear_region_index)) {
+								is_node_visible = true;
+							}
 						}
-						else {
-							// Checking if they are in the same clear region
-							if(ex > 0 && ex < w && ey > 0 && ey < h) {
-								var ent_node = other.director_node_list[| other.director_grid[# ex, ey]];
-								if(node.clear_region_index == ent_node.clear_region_index) {
-									is_node_visible = true;
-								}
-							}
 					
-							// Checking if the two nodes are in a line of sight
-							if(!is_node_visible) {
-								var points = other.get_points_between(ex, ey, node.x, node.y);
-								if(other.is_visible(points)) {
-									is_node_visible = true;
-								}
-							}
+						// Checking if the two nodes are in a line of sight
+						if(!is_node_visible && other.is_visible(ex, ey, node.x, node.y)) {
+							is_node_visible = true;
 						}
 					
 					
@@ -56,15 +48,6 @@ if(director_init) {
 							node.enemy_distance = min(node.enemy_distance, ent_dist);
 						}
 					}
-					node.memory[$ id] = is_node_visible;
-					if(is_struct(last_director_pos)) {
-						last_director_pos.x = ex;
-						last_director_pos.y = ey;
-					}
-					else last_director_pos = {
-						x: ex,
-						y: ey
-					};
 				}
 			}
 		}
