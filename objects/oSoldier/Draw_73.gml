@@ -3,5 +3,5 @@
 //	draw_path(path, path_get_point_x(path, 0), path_get_point_y(path, 0), true);
 //	draw_set_halign(fa_center);
 //	draw_set_valign(fa_bottom);
-//	draw_text(x, bbox_top, move_point);
+draw_text(x, bbox_top, debug_string + "/" + string(x div 32) + "/" + string(y div 32));
 //}

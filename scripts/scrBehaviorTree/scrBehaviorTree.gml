@@ -35,6 +35,9 @@ function behavior_node_selector() {
             if(array_length(children) > 0) {
                 var result = children[node_index].node_update();
                 switch(result) {
+					case BEHAVIORNODERESULT.CONTINUE:
+						return BEHAVIORNODERESULT.CONTINUE;
+						break;
                     case BEHAVIORNODERESULT.SUCCESS:
 						node_index = 0;
                         return BEHAVIORNODERESULT.SUCCESS;
@@ -66,6 +69,9 @@ function behavior_node_sequence() {
             if(array_length(children) > 0) {
                 var result = children[node_index].node_update();
                 switch(result) {
+					case BEHAVIORNODERESULT.CONTINUE:
+						return BEHAVIORNODERESULT.CONTINUE;
+						break;
                     case BEHAVIORNODERESULT.SUCCESS:
                         node_index++;
                         if(node_index < array_length(children)) {
@@ -102,7 +108,7 @@ function behavior_node_do_all() {
                         break;
                 }
             }
-            return BEHAVIORNODERESULT.FALURE;
+            return BEHAVIORNODERESULT.CONTINUE;
         }	
 	}
 	

@@ -8,7 +8,7 @@ enum TEAM {
 
 // helmet and hp
 helmet = false;
-max_hp = 2;
+max_hp = 3;
 if(irandom_range(1, 100) < 50) {
 	helmet = true;
 }
@@ -16,6 +16,8 @@ hp = max_hp;
 hp_regen_time = room_speed * 2;
 hp_regen_timer = hp_regen_time;
 
+
+debug_string = "";
 
 #region Behavior leaf nodes
 
@@ -98,7 +100,74 @@ behavior_node_cover = function() {
 	
 	with(bn) {
 		node_update = function() {
-			return BEHAVIORNODERESULT.CONTINUE;	
+			parent_obj.debug_string = "Cover";
+			
+			if(instance_exists(oGrid)) {
+				var cell_size = oGrid.cell_size,
+					grid_x = parent_obj.x div cell_size,
+					grid_y = parent_obj.y div cell_size,
+					grid_node = oGrid.get_grid_node(grid_x, grid_y);
+				
+				if(grid_node == undefined) {
+					return BEHAVIORNODERESULT.FALURE;	
+				}
+				
+				var connecting = oGrid.get_free_connecting(grid_x, grid_y),
+					team_lookout = parent_obj.team == TEAM.WHITE ? TEAM.BLACK : TEAM.WHITE,
+					highest_distance = -infinity,
+					lowest_sightlines = grid_node.sights[$ team_lookout],
+					canidates = [],
+					best_nodes = [];
+					
+				// Return a success if you have found cover
+				if(lowest_sightlines == 0) {
+					parent_obj.hsp = 0;
+					parent_obj.vsp = 0;
+					return BEHAVIORNODERESULT.SUCCESS;
+				}
+				
+				// Find the connecting nodes with the lowest sightlines on enemies
+				for(var i = 0; i < array_length(connecting); i++) {
+					var neighbor = connecting[i];
+					
+					var sightlines = neighbor.sights[$ team_lookout];
+					if(sightlines == lowest_sightlines) {
+						array_push(canidates, neighbor);	
+					}
+					else if(sightlines < lowest_sightlines) {
+						canidates = [neighbor];
+						lowest_sightlines = sightlines;
+					}
+				}
+				
+				// Loop through canidates and find the one with the highest distance
+				for(var i = 0; i < array_length(canidates); i++) {
+					var canidate = canidates[i];
+					
+					if(canidate.enemy_distance == highest_distance) {
+						array_push(best_nodes, canidate);	
+					}
+					else if(canidate.enemy_distance > highest_distance) {
+						best_nodes = [canidate];
+						highest_distance = canidate.enemy_distance;
+					}
+				}
+				
+				if(array_length(best_nodes) > 0) {
+					var target_node = best_nodes[irandom_range(0, array_length(best_nodes) - 1)];
+					var run_direction = point_direction(grid_node.x, grid_node.y, target_node.x, target_node.y);
+					parent_obj.hsp = lengthdir_x(parent_obj.path_movement_speed, run_direction);
+					parent_obj.vsp = lengthdir_y(parent_obj.path_movement_speed, run_direction);
+					return BEHAVIORNODERESULT.CONTINUE;
+				}
+				else {
+					parent_obj.hsp = 0;
+					parent_obj.vsp = 0;
+					return BEHAVIORNODERESULT.SUCCESS;
+				}
+				
+			}
+			return BEHAVIORNODERESULT.FALURE;	
 		}
 	}
 	
@@ -115,6 +184,8 @@ behavior_node_wander = function() {
 		move_angle = undefined;
 		
 		node_update = function() {
+			parent_obj.debug_string = "Wander";
+			
 			parent_obj.uses_pathfinding = false;
 			x = parent_obj.x;
 			y = parent_obj.y;
@@ -193,7 +264,13 @@ br_check.add_child(root_selector);
 var check_if_threatended = new behavior_node();
 with(check_if_threatended) {
 	node_update = function() {
-		if(array_length(children) > 0 && parent_obj.hp < parent_obj.max_hp) {
+		var cell_size = oGrid.cell_size,
+			grid_x = parent_obj.x div cell_size,
+			grid_y = parent_obj.y div cell_size,
+			grid_node = oGrid.get_grid_node(grid_x, grid_y),
+			sightlines = is_struct(grid_node) ? grid_node.sights[$ parent_obj.team == TEAM.WHITE ? TEAM.BLACK : TEAM.WHITE] : 0;
+		
+		if(array_length(children) > 0 && (parent_obj.hp < parent_obj.max_hp || sightlines > 2)) {
 			return children[0].node_update();
 		}
 		else {
@@ -425,40 +502,6 @@ cover = noone;
 cover_time_min = room_speed * 5;
 cover_time_max = room_speed * 40;
 cover_timer = irandom_range(cover_time_min, cover_time_max);
-
-function new_cover() {	
-	var covers = ds_list_create();
-	var sz = collision_rectangle_list(0, 0, room_width, room_height, oCover, false, true, covers, false);
-	var result = array_create(0);
-	for(var i = 0; i < sz; i++) {
-		if(covers[| i] != cover && covers[| i].team == team) {
-			var another_using = false;
-			var temp_check_path = path_add();
-			var can_reach = mp_grid_path(global.grid, temp_check_path, x, y, covers[| i].x, covers[| i].y, true);
-			path_delete(temp_check_path);
-			with(oSoldier) if(covers[| i] == cover) another_using = true;
-			if(!another_using && can_reach) result[array_length(result)] = covers[| i];
-		}
-	}
-	ds_list_destroy(covers);
-	
-	if(array_length(result) > 0) {
-		var rand_cover_index = irandom_range(0, array_length(result)-1);
-		cover = result[rand_cover_index];
-	}
-	else {
-		var new_point_found = false;	
-		var new_point_attempts = 0;
-		while(!new_point_found && new_point_attempts < 50) {
-			var new_point = random_point_team(team);
-			if(place_meeting(new_point.x, new_point.y, oSolid)) {
-				cover_point = new_point;
-				new_point_found = true;
-			}
-			new_point_attempts++;
-		}
-	}
-}
 
 // movement
 cover_point = {
