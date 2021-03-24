@@ -86,6 +86,13 @@ function evaluate_command(cmd) {
 								}
 								return [LOGTYPE.CHANGE, "All ai killed"]
 								break;
+							case "damage":
+								with(oEntity) {
+									if(object_index != oPlayer) {
+										kill_function("random");
+									}
+								}
+								return [LOGTYPE.CHANGE, "All ai damaged"]
 							default: return [LOGTYPE.ERROR, invalid_command_error(words[1])]; break;
 						}
 					}

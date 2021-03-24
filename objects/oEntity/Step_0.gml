@@ -43,11 +43,15 @@ if(uses_pathfinding) {
 	}
 }
 
-check_for_collisions();
+if(uses_collisions) {
+	check_for_collisions();
+}
 
 x += hsp;
 y += vsp;
 
-SETPUSHOUT;
+if(uses_collisions) {
+	SETPUSHOUT;
+}
 
 audio_emitter_position(audio_emitter, x, y, 0);

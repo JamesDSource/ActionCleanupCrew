@@ -13,9 +13,6 @@ if(irandom_range(1, 100) < 50) {
 	helmet = true;
 }
 hp = max_hp;
-hp_regen_time = room_speed * 2;
-hp_regen_timer = hp_regen_time;
-
 
 debug_string = "";
 
@@ -99,75 +96,121 @@ behavior_node_cover = function() {
 	var bn = new behavior_node();
 	
 	with(bn) {
+		move_to = -1;
+		
 		node_update = function() {
 			parent_obj.debug_string = "Cover";
 			
-			if(instance_exists(oGrid)) {
-				var cell_size = oGrid.cell_size,
-					grid_x = parent_obj.x div cell_size,
-					grid_y = parent_obj.y div cell_size,
-					grid_node = oGrid.get_grid_node(grid_x, grid_y);
-				
-				if(grid_node == undefined) {
-					return BEHAVIORNODERESULT.FALURE;	
-				}
-				
+			var cell_size = oGrid.cell_size,
+				grid_x = parent_obj.x div cell_size,
+				grid_y = parent_obj.y div cell_size,
+				grid_node = oGrid.get_grid_node(grid_x, grid_y),
+				team_lookout = parent_obj.team == TEAM.WHITE ? TEAM.BLACK : TEAM.WHITE,
+				target_node = undefined;
+			
+			if(grid_node == undefined) {
+				return BEHAVIORNODERESULT.FALURE;	
+			}
+			
+			if(is_struct(move_to) && move_to.x == grid_x && move_to.y == grid_y) {
+				move_to = -1;
+			}
+			
+			// Move to holds the position that the soldier wants to move to
+			// and only let's go of it once it's reached that position
+			if(is_struct(move_to)) {
+				target_node = oGrid.get_grid_node(move_to.x, move_to.y);
+			}
+			else {
 				var connecting = oGrid.get_free_connecting(grid_x, grid_y),
-					team_lookout = parent_obj.team == TEAM.WHITE ? TEAM.BLACK : TEAM.WHITE,
 					highest_distance = -infinity,
 					lowest_sightlines = grid_node.sights[$ team_lookout],
 					canidates = [],
 					best_nodes = [];
-					
+				
 				// Return a success if you have found cover
 				if(lowest_sightlines == 0) {
-					parent_obj.hsp = 0;
-					parent_obj.vsp = 0;
-					return BEHAVIORNODERESULT.SUCCESS;
-				}
-				
-				// Find the connecting nodes with the lowest sightlines on enemies
-				for(var i = 0; i < array_length(connecting); i++) {
-					var neighbor = connecting[i];
-					
-					var sightlines = neighbor.sights[$ team_lookout];
-					if(sightlines == lowest_sightlines) {
-						array_push(canidates, neighbor);	
-					}
-					else if(sightlines < lowest_sightlines) {
-						canidates = [neighbor];
-						lowest_sightlines = sightlines;
-					}
-				}
-				
-				// Loop through canidates and find the one with the highest distance
-				for(var i = 0; i < array_length(canidates); i++) {
-					var canidate = canidates[i];
-					
-					if(canidate.enemy_distance == highest_distance) {
-						array_push(best_nodes, canidate);	
-					}
-					else if(canidate.enemy_distance > highest_distance) {
-						best_nodes = [canidate];
-						highest_distance = canidate.enemy_distance;
-					}
-				}
-				
-				if(array_length(best_nodes) > 0) {
-					var target_node = best_nodes[irandom_range(0, array_length(best_nodes) - 1)];
-					var run_direction = point_direction(grid_node.x, grid_node.y, target_node.x, target_node.y);
-					parent_obj.hsp = lengthdir_x(parent_obj.path_movement_speed, run_direction);
-					parent_obj.vsp = lengthdir_y(parent_obj.path_movement_speed, run_direction);
-					return BEHAVIORNODERESULT.CONTINUE;
+					target_node = grid_node;
 				}
 				else {
-					parent_obj.hsp = 0;
-					parent_obj.vsp = 0;
-					return BEHAVIORNODERESULT.SUCCESS;
-				}
+					// Find the connecting nodes with the lowest sightlines on enemies
+					for(var i = 0; i < array_length(connecting); i++) {
+						var neighbor = connecting[i];
 				
+						var sightlines = neighbor.sights[$ team_lookout];
+						if(sightlines == lowest_sightlines) {
+							array_push(canidates, neighbor);	
+						}
+						else if(sightlines < lowest_sightlines) {
+							canidates = [neighbor];
+							lowest_sightlines = sightlines;
+						}
+					}
+			
+					// Loop through canidates and find the one with the highest distance
+					for(var i = 0; i < array_length(canidates); i++) {
+						var canidate = canidates[i];
+				
+						if(canidate.enemy_distance == highest_distance) {
+							array_push(best_nodes, canidate);	
+						}
+						else if(canidate.enemy_distance > highest_distance) {
+							best_nodes = [canidate];
+							highest_distance = canidate.enemy_distance;
+						}
+					}
+			
+					if(array_length(best_nodes) > 0) {
+						target_node = best_nodes[irandom_range(0, array_length(best_nodes) - 1)];
+					}
+					else {
+						target_node = grid_node
+					}	
+				}
 			}
-			return BEHAVIORNODERESULT.FALURE;	
+			
+			move_to = {x: target_node.x, y: target_node.y};
+			if(target_node == grid_node) {
+				parent_obj.hsp = 0;
+				parent_obj.vsp = 0;
+				if(grid_node.sights[$ team_lookout] == 0) {
+					return BEHAVIORNODERESULT.SUCCESS;	
+				}
+				else {
+					return BEHAVIORNODERESULT.FALURE;
+				}
+			}
+			else if(is_struct(target_node)) {
+				var run_direction = point_direction(grid_node.x, grid_node.y, target_node.x, target_node.y);
+				parent_obj.hsp = lengthdir_x(parent_obj.path_movement_speed, run_direction);
+				parent_obj.vsp = lengthdir_y(parent_obj.path_movement_speed, run_direction);
+				return BEHAVIORNODERESULT.CONTINUE;
+			}
+		}
+	}
+	
+	return bn;
+}
+
+// Makes the soldier heal
+behavior_node_heal = function() {
+	var bn = new behavior_node();
+	
+	with(bn) {
+		frames = room_speed * 3;
+		frames_remaining = frames;
+		
+		node_update = function() {
+			parent_obj.debug_string = "Heal";
+			
+			frames_remaining--;
+			
+			if(frames_remaining <= 0) {
+				frames_remaining = frames;
+				parent_obj.hp = min(parent_obj.hp + 1, parent_obj.max_hp);
+				return BEHAVIORNODERESULT.SUCCESS;
+			}
+			return BEHAVIORNODERESULT.CONTINUE;	
 		}
 	}
 	
@@ -183,6 +226,16 @@ behavior_node_wander = function() {
 		y = 0;
 		move_angle = undefined;
 		
+		check_for_solids = function(angle, distance) {
+			var len_x = lengthdir_x(distance, angle);
+			var len_y = lengthdir_y(distance, angle);
+			
+			return	ray_test(parent_obj.bbox_left,	parent_obj.bbox_top,	len_x, len_y, true) ||
+					ray_test(parent_obj.bbox_right, parent_obj.bbox_top,	len_x, len_y, true) ||
+					ray_test(parent_obj.bbox_left,	parent_obj.bbox_bottom, len_x, len_y, true) ||
+					ray_test(parent_obj.bbox_right, parent_obj.bbox_bottom, len_x, len_y, true);
+		}
+		
 		node_update = function() {
 			parent_obj.debug_string = "Wander";
 			
@@ -196,11 +249,7 @@ behavior_node_wander = function() {
 			if(move_angle == undefined) {
 				for(var i = 0; i < array_length(angles); i++) {
 					var angle = angles[i];
-					var cast_to = {
-						x: x + lengthdir_x(check_distance, angle),
-						y: y + lengthdir_y(check_distance, angle)
-					}
-					if(!ray_test(x, y, cast_to.x, cast_to.y, true)) {
+					if(!check_for_solids(angle, check_distance)) {
 						move_angle = angle;
 						break;
 					}
@@ -211,11 +260,7 @@ behavior_node_wander = function() {
 				return BEHAVIORNODERESULT.FALURE;	
 			}
 			else {
-				var cast_to = {
-					x: x + lengthdir_x(check_distance, move_angle),
-					y: y + lengthdir_y(check_distance, move_angle)
-				}
-				if(ray_test(x, y, cast_to.x, cast_to.y, true)) {
+				if(check_for_solids(move_angle, check_distance)) {
 					move_angle = undefined;
 				}
 				else {
@@ -257,21 +302,17 @@ behavior_node_move_into_range = function() {
 }
 #endregion
 #region Behavior tree
-var root_selector = behavior_node_selector();
-br_check.add_child(root_selector);
-
 // Threatended branch
 var check_if_threatended = new behavior_node();
 with(check_if_threatended) {
 	node_update = function() {
-		var cell_size = oGrid.cell_size,
-			grid_x = parent_obj.x div cell_size,
-			grid_y = parent_obj.y div cell_size,
-			grid_node = oGrid.get_grid_node(grid_x, grid_y),
-			sightlines = is_struct(grid_node) ? grid_node.sights[$ parent_obj.team == TEAM.WHITE ? TEAM.BLACK : TEAM.WHITE] : 0;
-		
-		if(array_length(children) > 0 && (parent_obj.hp < parent_obj.max_hp || sightlines > 2)) {
-			return children[0].node_update();
+		if(array_length(children) >= 2) {
+			if(parent_obj.hp < parent_obj.max_hp) {
+				return children[0].node_update();
+			}
+			else {
+				return children[1].node_update();	
+			}
 		}
 		else {
 			return BEHAVIORNODERESULT.FALURE;	
@@ -279,21 +320,22 @@ with(check_if_threatended) {
 	}
 }
 
+br_check.add_child(check_if_threatended);
 
-var cft_doall = behavior_node_do_all();
-cft_doall.add_child(behavior_node_attack());
-cft_doall.add_child(behavior_node_sequence());
-cft_doall.children[1].add_child(behavior_node_cover());
-var cover_timer = behavior_node_wait();
-cover_timer.set_time(5);
-cft_doall.children[1].add_child(cover_timer);
+
+var cover_sequence = behavior_node_sequence();
+
+cover_sequence.add_child(behavior_node_do_all());
+cover_sequence.children[0].add_child(behavior_node_attack());
+cover_sequence.children[0].add_child(behavior_node_cover());
+
+cover_sequence.add_child(behavior_node_heal());
 
 var cft_selector = behavior_node_selector();
-cft_selector.add_child(cft_doall);
+cft_selector.add_child(cover_sequence);
 cft_selector.add_child(behavior_node_run());
 
 check_if_threatended.add_child(cft_selector);
-root_selector.add_child(check_if_threatended);
 
 // Attack branch
 var attack_doall = behavior_node_do_all();
@@ -304,11 +346,10 @@ attack_doall.add_child(behavior_node_selector());
 attack_doall.children[1].add_child(behavior_node_move_into_range());
 attack_doall.children[1].add_child(behavior_node_wander());
 
-root_selector.add_child(attack_doall);
-
+check_if_threatended.add_child(attack_doall);
 #endregion
 
-// gun
+// Gun
 function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_time, burst_amount, gun_burst_time, gun_sprite, gun_range, gun_kickback, gun_sound) constructor {
 	name = gun_name;
 	bullet = bullet_projectile;
@@ -329,17 +370,17 @@ function gun(gun_name, bullet_projectile, bullets, bullet_spread, gun_recharge_t
 guns = ds_map_create();
 
 guns[? "pistol"] = new gun(
-	"Pistol",				// name
-	oPistol_shot,			// bullet
-	1,						// bullets
-	25,						// bullet spread
-	room_speed*2,			// recharge time
-	1,						// burst
-	0,						// burst time
-	sPistol,				// sprite
-	300,					// range
-	3,						// gun kick
-	sdPistol				// sound
+	"Pistol",				// Name
+	oPistol_shot,			// Bullet
+	1,						// Bullets
+	25,						// Bullet spread
+	room_speed*2,			// Recharge time
+	1,						// Burst
+	0,						// Burst time
+	sPistol,				// Sprite
+	300,					// Range
+	3,						// Gun kick
+	sdPistol				// Sound
 );
 
 guns[? "laser_pistol"] = new gun(
@@ -496,31 +537,14 @@ gun_flash_time = 3;
 gun_flash = 0;
 gun_bullet_offset = 6;
 
+path_movement_speed = 1.5;
 
-// cover
-cover = noone;
-cover_time_min = room_speed * 5;
-cover_time_max = room_speed * 40;
-cover_timer = irandom_range(cover_time_min, cover_time_max);
-
-// movement
-cover_point = {
-	x: xstart,
-	y: ystart
-};
-
-path_movement_speed = 1;
-
-kill_function = function kill_soldier(death_type) {
-	hp_regen_timer = hp_regen_time;
+kill_function = function(death_type) {
 	kill(death_type);
 }
 
-// shoot state
-shoot_timer = -1;
-
 // draw function
-draw_function = function draw_soldier() {
+draw_function = function() {
 	draw_depth_object();
 	
 	if(team == TEAM.WHITE) {

@@ -35,7 +35,7 @@ function push_out(x_pos, y_pos) {
 				new_point.y -= i;
 				break;
 			}
-				// top right
+			// top right
 			if(!is_collision(x_pos + i, y_pos - i)) {
 				new_point.x += i;
 				new_point.y -= i;
@@ -82,7 +82,7 @@ function ray_test(x_pos, y_pos, cast_x, cast_y, check_for_auto_open) {
 	
 	var return_value = false;
 	var collision_check = ds_list_create();
-	collision_line_list(x_pos, y_pos, cast_x, cast_y, oSolid, false, true, collision_check, false);
+	collision_line_list(x_pos, y_pos, x_pos + cast_x, y_pos + cast_y, oSolid, false, true, collision_check, false);
 	for(var i = 0; i < ds_list_size(collision_check); i++) {
 		var current_solid = collision_check[| i];
 		var auto_open_check = check_for_auto_open ? !variable_instance_get(current_solid, "auto_open") : true;

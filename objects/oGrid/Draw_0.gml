@@ -1,4 +1,4 @@
-if(false && director_init) {
+if(director_init) {
 	draw_set_alpha(0.5);	
 	
 	for(var i = 0; i < ds_list_size(director_node_list); i++) {

@@ -75,7 +75,6 @@ function behavior_node_sequence() {
                     case BEHAVIORNODERESULT.SUCCESS:
                         node_index++;
                         if(node_index < array_length(children)) {
-							node_index = 0;
                             return BEHAVIORNODERESULT.CONTINUE;
                         }
                         else {
@@ -84,6 +83,7 @@ function behavior_node_sequence() {
                         }
                         break;
                     case BEHAVIORNODERESULT.FALURE:
+						node_index = 0;
                         return BEHAVIORNODERESULT.FALURE;
                         break;
                 }
