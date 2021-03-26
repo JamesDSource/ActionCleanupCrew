@@ -14,7 +14,8 @@ if(director_init) {
 		var node = director_node_list[| director_grid[# director_col, director_row]];
 		node.sights[$ TEAM.WHITE] = 0;
 		node.sights[$ TEAM.BLACK] = 0;
-		node.enemy_distance = infinity;
+		node.enemy_distance[$ TEAM.WHITE] = infinity;
+		node.enemy_distance[$ TEAM.BLACK] = infinity;
 		
 		var w = ds_grid_width(director_grid);
 		var h = ds_grid_height(director_grid);
@@ -45,7 +46,7 @@ if(director_init) {
 					
 						if(is_node_visible) {
 							node.sights[$ team]++;	
-							node.enemy_distance = min(node.enemy_distance, ent_dist);
+							node.enemy_distance[$ team] = min(node.enemy_distance[$ team], ent_dist);
 						}
 					}
 				}

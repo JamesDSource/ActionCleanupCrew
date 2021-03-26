@@ -151,12 +151,12 @@ behavior_node_cover = function() {
 					for(var i = 0; i < array_length(canidates); i++) {
 						var canidate = canidates[i];
 				
-						if(canidate.enemy_distance == highest_distance) {
+						if(canidate.enemy_distance[$ team_lookout] == highest_distance) {
 							array_push(best_nodes, canidate);	
 						}
-						else if(canidate.enemy_distance > highest_distance) {
+						else if(canidate.enemy_distance[$ team_lookout] > highest_distance) {
 							best_nodes = [canidate];
-							highest_distance = canidate.enemy_distance;
+							highest_distance = canidate.enemy_distance[$ team_lookout];
 						}
 					}
 			
@@ -303,7 +303,7 @@ behavior_node_move_into_range = function() {
 				return 0;	
 			}
 			
-			var des_score = max(1000 - abs(node.enemy_distance - ideal_range), 1);
+			var des_score = max(1000 - abs(node.enemy_distance[$ enemy_team] - ideal_range), 1);
 			
 			// Cut the score in half if there is more than 3 enemies
 			if(sightlines_to_enemy > 3) {
@@ -337,7 +337,6 @@ behavior_node_move_into_range = function() {
 				target_node = oGrid.get_grid_node(move_to.x, move_to.y);
 			}
 			else {
-			
 				// Loop through neighbors and find the node with the highest desirability
 				var neighbor_nodes = oGrid.get_free_connecting(grid_x, grid_y),
 					highest_desirability = get_node_desirability(grid_node, team_lookout, 1),

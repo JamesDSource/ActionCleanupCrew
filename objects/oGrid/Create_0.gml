@@ -6,7 +6,7 @@ global.grid = mp_grid_create(-offshoot * cell_size, -offshoot * cell_size, ceil(
 function director_node() constructor {
 	is_solid = false;
 	sights = {};
-	enemy_distance = infinity;
+	enemy_distance = {};
 	x = 0;
 	y = 0;
 	clear_region_index = [];
