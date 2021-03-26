@@ -268,7 +268,7 @@ behavior_node_wander = function() {
 					parent_obj.vsp = lengthdir_y(parent_obj.path_movement_speed, move_angle);
 				}
 			}
-			return BEHAVIORNODERESULT.CONTINUE;	
+			return BEHAVIORNODERESULT.SUCCESS;	
 		}
 	}
 	
@@ -288,13 +288,89 @@ behavior_node_run = function() {
 	return bn;
 }
 
-// Makes the soldier run twords enemies
+// Makes the soldier run twords enemies within the correct range of their weapon
 behavior_node_move_into_range = function() {
 	var bn = new behavior_node();
 	
 	with(bn) {
+		move_to = -1;
+		
+		get_node_desirability = function(node, enemy_team, ideal_range) { // Ideal range is grid blocks
+			var sightlines_to_enemy = node.sights[$ enemy_team];
+			
+			// If that node can't see any enemies, return a desirability of 0
+			if(sightlines_to_enemy == 0) {
+				return 0;	
+			}
+			
+			var des_score = max(1000 - abs(node.enemy_distance - ideal_range), 1);
+			
+			// Cut the score in half if there is more than 3 enemies
+			if(sightlines_to_enemy > 3) {
+				des_score /= 2;
+			}
+			
+			return des_score;
+		}
+		
 		node_update = function() {
-			return BEHAVIORNODERESULT.FALURE;	
+			parent_obj.debug_string = "Moving into range";
+			
+			var cell_size = oGrid.cell_size,
+				grid_x = parent_obj.x div cell_size,
+				grid_y = parent_obj.y div cell_size,
+				grid_node = oGrid.get_grid_node(grid_x, grid_y),
+				team_lookout = parent_obj.team == TEAM.WHITE ? TEAM.BLACK : TEAM.WHITE;
+				
+			
+			if(grid_node == undefined) {
+				return BEHAVIORNODERESULT.FALURE;	
+			}
+			
+			// Move to holds the position that the soldier wants to move to
+			// and only let's go of it once it's reached that position
+			if(is_struct(move_to) && move_to.x == grid_x && move_to.y == grid_y) {
+				move_to = -1;
+			}
+			
+			if(is_struct(move_to)) {
+				target_node = oGrid.get_grid_node(move_to.x, move_to.y);
+			}
+			else {
+			
+				// Loop through neighbors and find the node with the highest desirability
+				var neighbor_nodes = oGrid.get_free_connecting(grid_x, grid_y),
+					highest_desirability = get_node_desirability(grid_node, team_lookout, 1),
+					target_node = grid_node;
+			
+				for(var i = 0; i < array_length(neighbor_nodes); i++) {
+					var neighbor = neighbor_nodes[i];
+					var des = get_node_desirability(neighbor, team_lookout, 1);
+				
+					if(des > highest_desirability) {
+						target_node = neighbor;
+						highest_desirability = des;	
+					}
+				}
+			}
+			
+			move_to = {x: target_node.x, y: target_node.y};
+			
+			if(get_node_desirability(target_node, team_lookout, 1) == 0) {
+				return BEHAVIORNODERESULT.FALURE;	
+			}
+			
+			if(target_node == grid_node) {
+				parent_obj.hsp = 0;
+				parent_obj.vsp = 0;
+				return BEHAVIORNODERESULT.SUCCESS;
+			}
+			else if(is_struct(target_node)) {
+				var run_direction = point_direction(grid_node.x, grid_node.y, target_node.x, target_node.y);
+				parent_obj.hsp = lengthdir_x(parent_obj.path_movement_speed, run_direction);
+				parent_obj.vsp = lengthdir_y(parent_obj.path_movement_speed, run_direction);
+				return BEHAVIORNODERESULT.CONTINUE;
+			}
 		}
 	}
 	
